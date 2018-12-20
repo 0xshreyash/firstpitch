@@ -5,14 +5,14 @@ import {
     View,
     TouchableOpacity,
     Dimensions,
-    Platform
+    Platform, Image
 } from 'react-native';
-
 import RNSiriWaveView from 'react-native-siri-wave-view'
 
 export default class App extends Component<{}> {
     constructor(props) {
         super(props);
+        this.onSettingPress = this.onSettingPress.bind(this);
         this.state = {
             startAnimation: true,
             stopAnimation: false,
@@ -24,11 +24,20 @@ export default class App extends Component<{}> {
         }
     }
 
+    onSettingPress() {
+        alert('Settings button was pressed')
+    }
+
     render() {
         return <View style={styles.container}>
-            <View style={[styles.topMenuContainer]}>
 
+            <View style={[styles.headerContainer]}>
+                <TouchableOpacity style={[styles.settingsButton]} onPress={this.onSettingsPress}>
+                    <Image source={require('./assets/icons/settings.png')} style={[styles.settingsButtonImage]}/>
+                </TouchableOpacity>
             </View>
+
+
             <View style={[styles.waveContainer]}>
                 <RNSiriWaveView height={300} width={this.state.screenWidth} amplitude={this.state.waveAmplitude}
                                 type={this.state.waveType} numberOfWaves={this.state.numberOfWaves}
@@ -65,7 +74,16 @@ const styles = StyleSheet.create({
         alignItems: "stretch",
         backgroundColor: "#FFFFFF",
     },
-    topMenuContainer: {
+    settingsButton: {
+        alignSelf: 'flex-end',
+        marginRight: 5,
+        marginTop: 5,
+    },
+    settingsButtonImage: {
+        height: 30,
+        width: 30
+    },
+    headerContainer: {
         flex: 1,
         alignItems: "stretch"
     },

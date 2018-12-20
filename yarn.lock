@@ -4542,6 +4542,16 @@ react-is@^16.6.3:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.6.3.tgz#d2d7462fcfcbe6ec0da56ad69047e47e56e7eac0"
   integrity sha512-u7FDWtthB4rWibG/+mFbVd5FvdI20yde86qKGx4lVUTWmPlSWQ4QxbBIrrs+HnXGbxOUlUzTAP/VDmvCwaP2yA==
 
+react-native-siri-wave-view@0.0.9:
+  version "0.0.9"
+  resolved "https://registry.yarnpkg.com/react-native-siri-wave-view/-/react-native-siri-wave-view-0.0.9.tgz#e2c5916dc703a649df9baae928de0cd2b12de5e6"
+  integrity sha512-6AOjSvi1v4PNo++rOCtqAlukg8WvtjdEXAZfJWLPLOSs/TEWSl3EZ/6E06VnPJmBCrv6z9MM8aMIdNtmqeiqMQ==
+
+react-native-sound-player@^0.5.3:
+  version "0.5.3"
+  resolved "https://registry.yarnpkg.com/react-native-sound-player/-/react-native-sound-player-0.5.3.tgz#138d93853abb0217924df871a1ee3a2c837584d5"
+  integrity sha512-GL/qXuzwzlbYkUIxQS84VqcRctSDYr1Ez9iIHLUaPVecuJkbgqOYSWRjiLln9Tif8xb7OINcvPKQl7PtdcUfKw==
+
 react-native@0.57.8:
   version "0.57.8"
   resolved "https://registry.yarnpkg.com/react-native/-/react-native-0.57.8.tgz#1a840fbe144cd3902cc14313a783ce28efc48cb9"

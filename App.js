@@ -26,8 +26,12 @@ export default class App extends Component {
         return files
     }
 
+    static getNotes() {
+        return ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'A#', 'C#', 'D#', 'F#', 'G#'];
+    }
+
     render() {
-        return <MainPage audioFiles={App.getAudioFiles()}/>;
+        return <MainPage audioFiles={App.getAudioFiles()} notes={App.getNotes()}/>;
     }
 }
 

@@ -23,6 +23,7 @@ export default class MainPage extends Component<{}> {
 
     render() {
         const track = this.props.audioFiles[this.state.currentPosition];
+
         /*
         const video = (<Video source={{uri: track}} // Can be a URL or a local file.
                               ref="audioElement"
@@ -45,7 +46,7 @@ export default class MainPage extends Component<{}> {
                       waveAmplitude={this.state.waveAmplitude} waveWidth={this.state.waveWidth}/>
             </View>
             <View style={[styles.bottomPanelContainer]}>
-                <BottomPanel/>
+                <BottomPanel paused={false} options={this.props.notes}/>
             </View>
         </View>;
     }

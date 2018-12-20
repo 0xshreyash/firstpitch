@@ -1,42 +1,55 @@
 import React from 'react';
 
+
 import {
     View,
     StyleSheet,
+    Text,
     Image,
     TouchableOpacity,
 } from 'react-native';
+import Button from 'react-native-button'
 
-const Controls = ({
-                      onPressPlay,
-                      onChooseAnswer,
-                      playing,
-                      correctAnswer,
-                      options
-                  }) => (
+const BottomPanel = ({
+                         onPressPlay,
+                         onChooseAnswer,
+                         paused,
+                         correctAnswer,
+                         options
+                     }) => (
     <View style={styles.container}>
-        {!playing ?
+        {paused ?
             <TouchableOpacity onPress={onPressPlay}>
                 <View style={styles.playButton}>
                     <Image source={require('../../../assets/icons/play-button.png')} style={[styles.playButtonImage]}/>
                 </View>
             </TouchableOpacity> :
-            <TouchableOpacity onPress={onPressPlay}>
-                <View style={styles.playButton}>
-                    <Image source={require('../../../assets/icons/settings.png')}/>
-                </View>
-            </TouchableOpacity>
+            <View style={styles.buttonContainer}>{options.map((option) => {
+                        return (<TouchableOpacity>
+                                <Text>
+                                {option}
+                                </Text>
+                        </TouchableOpacity>
+                        );
+                    }
+                )
+            }</View>
         }
     </View>
 );
 
-export default Controls;
+export default BottomPanel;
 
 const styles = StyleSheet.create({
     container: {
         flexDirection: 'row',
-        alignItems: 'center',
         justifyContent: 'center',
+        alignItems: 'center',
+        paddingTop: 8,
+    },
+    buttonContainer: {
+        flexDirection: 'row',
+        flexWrap: 'wrap',
         paddingTop: 8,
     },
     playButton: {
@@ -48,13 +61,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
     },
-    secondaryControl: {
-        height: 18,
-        width: 18,
-    },
-    off: {
-        opacity: 0.30,
-    },
+
     playButtonImage: {
         height: 80,
         width: 80

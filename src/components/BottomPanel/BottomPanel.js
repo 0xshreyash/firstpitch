@@ -10,12 +10,14 @@ import {
 } from 'react-native';
 import Button from 'react-native-button'
 
-const BottomPanel = ({onPressPlay, onChooseAnswer, paused, correctAnswer, options}) => (
+
+const playButton = '../../../assets/icons/play-button.png';
+const BottomPanel = ({onPressPlay, onChooseAnswer, started, options}) => (
     <View style={styles.container}>
-        {paused ?
+        {!started ?
             <TouchableOpacity onPress={onPressPlay}>
                 <View style={styles.playButton}>
-                    <Image source={require('../../../assets/icons/play-button.png')} style={[styles.playButtonImage]}/>
+                    <Image source={require(playButton)} style={[styles.playButtonImage]}/>
                 </View>
             </TouchableOpacity> :
             <View style={styles.buttonContainer}>{options.map((option) => {
@@ -29,6 +31,7 @@ const BottomPanel = ({onPressPlay, onChooseAnswer, paused, correctAnswer, option
                                     backgroundColor: '#EEEEEE',
                                     margin: 10,
                                 }} disabledContainerStyle={{backgroundColor: 'grey'}}
+                                onPress={(event) => onChooseAnswer(event, option)}
                                 style={{fontSize: 20, color: 'black',
                                     justifyContent: 'center', alignItems: 'center'}}>{option}</Button>
                         );

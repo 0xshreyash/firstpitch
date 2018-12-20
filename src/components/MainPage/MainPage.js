@@ -16,9 +16,49 @@ export default class MainPage extends Component<{}> {
             stopAnimation: false,
             waveAmplitude: Platform.OS === 'ios' ? 1 : 100,
             waveWidth: Platform.OS === 'ios' ? 3 : 250,
-            paused: true,
-            currentPosition: 0,
+            totalFiles: this.props.audioFiles.length,
+            numWrong: 0,
+            started: false,
+            currentPosition: -1,
+            currentTrack: undefined,
+            correctAnswer: undefined
         };
+        this.onPressPlay = this.onPressPlay.bind(this);
+        this.updateTrack = this.updateTrack.bind(this);
+        this.onChooseAnswer = this.onChooseAnswer.bind(this);
+    }
+
+    onPressPlay() {
+        this.setState({
+            started: true
+        });
+        this.updateTrack();
+    }
+
+    onChooseAnswer(event, buttonID) {
+        console.warn(buttonID);
+        if(!(this.state.correctAnswer === buttonID)) {
+            this.setState(prevState => ({
+                numWrong: prevState.numWrong + 1
+            }));
+        }
+        this.updateTrack();
+    }
+
+    updateTrack() {
+        let nextPos = this.state.currentPosition === undefined? 0 : this.state.currentPosition + 1;
+        let nextTrack = this.props.audioFiles[nextPos % this.state.totalFiles];
+        console.warn(nextTrack);
+        let parts = nextTrack.split('/');
+        let file = parts[parts.length - 1];
+        let name = (file.split('.'))[0];
+        let nextAns = name.slice(0, name.length - 1);
+        console.warn(nextAns);
+        this.setState({
+            currentPosition: nextPos,
+            currentTrack: nextTrack,
+            correctAnswer: nextAns,
+        });
     }
 
     render() {
@@ -46,7 +86,8 @@ export default class MainPage extends Component<{}> {
                       waveAmplitude={this.state.waveAmplitude} waveWidth={this.state.waveWidth}/>
             </View>
             <View style={[styles.bottomPanelContainer]}>
-                <BottomPanel paused={false} options={this.props.notes}/>
+                <BottomPanel started={this.state.started} options={this.props.notes}
+                  onPressPlay={this.onPressPlay} onChooseAnswer={this.onChooseAnswer}/>
             </View>
         </View>;
     }

@@ -12,7 +12,7 @@ export default class App extends Component {
         let notes = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'A#', 'C#', 'D#', 'F#', 'G#'];
         let octaves = ['2', '3'];
         let suffix = '.mp3';
-        let prefix = './assets/audio/';
+        let prefix = '../../../assets/audio/';
         let files = [];
         for(let i = 0; i < instruments.length; i++) {
             let instrument = instruments[i];

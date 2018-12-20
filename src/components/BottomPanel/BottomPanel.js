@@ -10,13 +10,7 @@ import {
 } from 'react-native';
 import Button from 'react-native-button'
 
-const BottomPanel = ({
-                         onPressPlay,
-                         onChooseAnswer,
-                         paused,
-                         correctAnswer,
-                         options
-                     }) => (
+const BottomPanel = ({onPressPlay, onChooseAnswer, paused, correctAnswer, options}) => (
     <View style={styles.container}>
         {paused ?
             <TouchableOpacity onPress={onPressPlay}>
@@ -35,7 +29,8 @@ const BottomPanel = ({
                                     backgroundColor: '#EEEEEE',
                                     margin: 10,
                                 }} disabledContainerStyle={{backgroundColor: 'grey'}}
-                                style={{fontSize: 20, color: 'black', justifyContent: 'center', alignItems: 'center'}}>{option}</Button>
+                                style={{fontSize: 20, color: 'black',
+                                    justifyContent: 'center', alignItems: 'center'}}>{option}</Button>
                         );
                     }
                 )

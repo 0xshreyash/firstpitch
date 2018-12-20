@@ -7,7 +7,8 @@ import {
     Dimensions,
     Platform, Image
 } from 'react-native';
-import RNSiriWaveView from 'react-native-siri-wave-view'
+import Header from './src/components/Header/Header';
+import Wave from './src/components/Wave/Wave';
 
 export default class App extends Component<{}> {
     constructor(props) {
@@ -16,10 +17,7 @@ export default class App extends Component<{}> {
         this.state = {
             startAnimation: true,
             stopAnimation: false,
-            screenWidth: Dimensions.get("window").width,
             waveAmplitude: Platform.OS === 'ios' ? 1 : 100,
-            waveType: 0,
-            numberOfWaves: 1,
             waveWidth: Platform.OS === 'ios' ? 3 : 250
         }
     }
@@ -30,20 +28,15 @@ export default class App extends Component<{}> {
 
     render() {
         return <View style={styles.container}>
-
             <View style={[styles.headerContainer]}>
-                <TouchableOpacity style={[styles.settingsButton]} onPress={this.onSettingsPress}>
-                    <Image source={require('./assets/icons/settings.png')} style={[styles.settingsButtonImage]}/>
-                </TouchableOpacity>
+                <Header/>
             </View>
-
 
             <View style={[styles.waveContainer]}>
-                <RNSiriWaveView height={300} width={this.state.screenWidth} amplitude={this.state.waveAmplitude}
-                                type={this.state.waveType} numberOfWaves={this.state.numberOfWaves}
-                                primaryWaveLineWidth={this.state.waveWidth}
-                                startAnimation={this.state.startAnimation} stopAnimation={this.state.stopAnimation}/>
+                <Wave startAnimation={this.state.startAnimation} stopAnimation={this.state.stopAnimation}
+                      waveAmplitude={this.state.waveAmplitude} waveWidth={this.state.waveWidth}/>
             </View>
+
             <View style={[styles.buttonContainer]}>
                 <TouchableOpacity style={[styles.button]} onPress={() => {
                     this.setState({
@@ -74,18 +67,8 @@ const styles = StyleSheet.create({
         alignItems: "stretch",
         backgroundColor: "#FFFFFF",
     },
-    settingsButton: {
-        alignSelf: 'flex-end',
-        marginRight: 5,
-        marginTop: 5,
-    },
-    settingsButtonImage: {
-        height: 30,
-        width: 30
-    },
     headerContainer: {
-        flex: 1,
-        alignItems: "stretch"
+        flex: 1
     },
     waveContainer: {
         flex: 3,

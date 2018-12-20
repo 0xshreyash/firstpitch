@@ -4,7 +4,7 @@ import React from 'react';
 import {
     View,
     StyleSheet,
-    Text,
+    ScrollView,
     Image,
     TouchableOpacity,
 } from 'react-native';
@@ -25,11 +25,17 @@ const BottomPanel = ({
                 </View>
             </TouchableOpacity> :
             <View style={styles.buttonContainer}>{options.map((option) => {
-                        return (<TouchableOpacity>
-                                <Text>
-                                {option}
-                                </Text>
-                        </TouchableOpacity>
+                        return (<Button
+                                containerStyle={{
+                                    padding: 10,
+                                    height: 50,
+                                    width: 70,
+                                    overflow: 'scroll',
+                                    borderRadius: 4,
+                                    backgroundColor: '#EEEEEE',
+                                    margin: 10,
+                                }} disabledContainerStyle={{backgroundColor: 'grey'}}
+                                style={{fontSize: 20, color: 'black', justifyContent: 'center', alignItems: 'center'}}>{option}</Button>
                         );
                     }
                 )
@@ -49,6 +55,7 @@ const styles = StyleSheet.create({
     },
     buttonContainer: {
         flexDirection: 'row',
+        justifyContent: 'center',
         flexWrap: 'wrap',
         paddingTop: 8,
     },

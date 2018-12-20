@@ -1,29 +1,22 @@
 import React, {Component} from 'react';
 import {
     StyleSheet,
-    Text,
     View,
-    TouchableOpacity,
-    Dimensions,
-    Platform, Image
+    Platform
 } from 'react-native';
 import Header from './src/components/Header/Header';
 import Wave from './src/components/Wave/Wave';
+import BottomPanel from './src/components/BottomPanel/BottomPanel';
 
 export default class App extends Component<{}> {
     constructor(props) {
         super(props);
-        this.onSettingPress = this.onSettingPress.bind(this);
         this.state = {
             startAnimation: true,
             stopAnimation: false,
             waveAmplitude: Platform.OS === 'ios' ? 1 : 100,
             waveWidth: Platform.OS === 'ios' ? 3 : 250
         }
-    }
-
-    onSettingPress() {
-        alert('Settings button was pressed')
     }
 
     render() {
@@ -38,22 +31,7 @@ export default class App extends Component<{}> {
             </View>
 
             <View style={[styles.buttonContainer]}>
-                <TouchableOpacity style={[styles.button]} onPress={() => {
-                    this.setState({
-                        startAnimation: true,
-                        stopAnimation: false
-                    });
-                }}>
-                    <Text>Start</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={[styles.button]} onPress={() => {
-                    this.setState({
-                        startAnimation: false,
-                        stopAnimation: true
-                    });
-                }}>
-                    <Text>Stop</Text>
-                </TouchableOpacity>
+                <BottomPanel/>
             </View>
         </View>;
     }

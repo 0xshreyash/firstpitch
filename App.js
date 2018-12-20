@@ -1,69 +1,33 @@
 import React, {Component} from 'react';
-import {
-    StyleSheet,
-    View,
-    Platform
-} from 'react-native';
-import Header from './src/components/Header/Header';
-import Wave from './src/components/Wave/Wave';
-import BottomPanel from './src/components/BottomPanel/BottomPanel';
+import MainPage from './src/components/MainPage/MainPage'
 
-export default class App extends Component<{}> {
+export default class App extends Component {
+
     constructor(props) {
         super(props);
-        this.state = {
-            startAnimation: true,
-            stopAnimation: false,
-            waveAmplitude: Platform.OS === 'ios' ? 1 : 100,
-            waveWidth: Platform.OS === 'ios' ? 3 : 250
+    }
+
+    static getAudioFiles() {
+        let instruments = ['piano'];
+        let notes = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'A#', 'C#', 'D#', 'F#', 'G#'];
+        let octaves = ['2', '3'];
+        let suffix = '.mp3';
+        let prefix = './assets/audio/';
+        let files = [];
+        for(let i = 0; i < instruments.length; i++) {
+            let instrument = instruments[i];
+            for(let j = 0; j < notes.length; j++) {
+                let note = notes[j];
+                for(let k = 0; k < octaves.length; k++) {
+                    files.push(prefix + instrument + '/' + note + octaves[k] + suffix)
+                }
+            }
         }
+        return files
     }
 
     render() {
-        return <View style={styles.container}>
-            <View style={[styles.headerContainer]}>
-                <Header/>
-            </View>
-
-            <View style={[styles.waveContainer]}>
-                <Wave startAnimation={this.state.startAnimation} stopAnimation={this.state.stopAnimation}
-                      waveAmplitude={this.state.waveAmplitude} waveWidth={this.state.waveWidth}/>
-            </View>
-
-            <View style={[styles.bottomPanelContainer]}>
-                <BottomPanel/>
-            </View>
-        </View>;
+        return <MainPage audioFiles={App.getAudioFiles()}/>;
     }
 }
 
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "stretch",
-        backgroundColor: "#FFFFFF",
-    },
-    headerContainer: {
-        flex: 1
-    },
-    waveContainer: {
-        flex: 3,
-        justifyContent: "center",
-        alignItems: "stretch",
-    },
-    bottomPanelContainer: {
-        flex: 3,
-        alignItems: "stretch",
-        justifyContent: "center",
-    },
-    button: {
-        height: 40,
-        width: 100,
-        backgroundColor: "#add8e6",
-        justifyContent: "center",
-        alignItems: "center",
-        marginTop: 10
-    }
-});

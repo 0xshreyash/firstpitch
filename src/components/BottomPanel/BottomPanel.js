@@ -12,17 +12,18 @@ const Controls = ({
                       onChooseAnswer,
                       playing,
                       correctAnswer,
+                      options
                   }) => (
     <View style={styles.container}>
         {!playing ?
             <TouchableOpacity onPress={onPressPlay}>
                 <View style={styles.playButton}>
-                <Image source={require('../../../assets/icons/play-button.png')} style={[styles.playButtonImage]}/>
+                    <Image source={require('../../../assets/icons/play-button.png')} style={[styles.playButtonImage]}/>
                 </View>
             </TouchableOpacity> :
             <TouchableOpacity onPress={onPressPlay}>
                 <View style={styles.playButton}>
-                <Image source={require('../../../assets/icons/settings.png')}/>
+                    <Image source={require('../../../assets/icons/settings.png')}/>
                 </View>
             </TouchableOpacity>
         }

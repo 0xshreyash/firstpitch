@@ -12,11 +12,11 @@ let waveType = 0;
 let numberOfWaves = 1;
 
 const Wave = ({
-                waveAmplitude,
-                waveWidth,
-                startAnimation,
-                stopAnimation,
-                }) => (
+                  waveAmplitude,
+                  waveWidth,
+                  startAnimation,
+                  stopAnimation,
+              }) => (
     <View style={styles.container}>
         <RNSiriWaveView height={height} width={screenWidth} amplitude={waveAmplitude}
                         type={waveType} numberOfWaves={numberOfWaves}

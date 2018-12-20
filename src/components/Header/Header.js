@@ -8,7 +8,8 @@ import {
 
 let settingsImage = '../../../assets/icons/settings.png';
 
-const Header = ({onSettingsPress
+const Header = ({
+                    onSettingsPress
                 }) => (
     <View style={styles.container}>
         <TouchableOpacity style={[styles.settingsButton]} onPress={onSettingsPress}>

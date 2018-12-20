@@ -8,50 +8,24 @@ import {
 } from 'react-native';
 
 const Controls = ({
-                      paused,
-                      shuffleOn,
-                      repeatOn,
                       onPressPlay,
-                      onPressPause,
-                      onBack,
-                      onForward,
-                      onPressShuffle,
-                      onPressRepeat,
-                      forwardDisabled,
+                      onChooseAnswer,
+                      playing,
+                      correctAnswer,
                   }) => (
     <View style={styles.container}>
-        <TouchableOpacity activeOpacity={0.0} onPress={onPressShuffle}>
-            <Image style={[styles.secondaryControl, shuffleOn ? [] : styles.off]}
-                   source={require('../../../assets/icons/settings.png')}/>
-        </TouchableOpacity>
-        <View style={{width: 40}} />
-        <TouchableOpacity onPress={onBack}>
-            <Image source={require('../../../assets/icons/settings.png')}/>
-        </TouchableOpacity>
-        <View style={{width: 20}} />
-        {!paused ?
-            <TouchableOpacity onPress={onPressPause}>
+        {!playing ?
+            <TouchableOpacity onPress={onPressPlay}>
                 <View style={styles.playButton}>
-                    <Image source={require('../../../assets/icons/settings.png')}/>
+                <Image source={require('../../../assets/icons/play-button.png')} style={[styles.playButtonImage]}/>
                 </View>
             </TouchableOpacity> :
             <TouchableOpacity onPress={onPressPlay}>
                 <View style={styles.playButton}>
-                    <Image source={require('../../../assets/icons/settings.png')}/>
+                <Image source={require('../../../assets/icons/settings.png')}/>
                 </View>
             </TouchableOpacity>
         }
-        <View style={{width: 20}} />
-        <TouchableOpacity onPress={onForward}
-                          disabled={forwardDisabled}>
-            <Image style={[forwardDisabled && {opacity: 0.3}]}
-                   source={require('../../../assets/icons/settings.png')}/>
-        </TouchableOpacity>
-        <View style={{width: 40}} />
-        <TouchableOpacity activeOpacity={0.0} onPress={onPressRepeat}>
-            <Image style={[styles.secondaryControl, repeatOn ? [] : styles.off]}
-                   source={require('../../../assets/icons/settings.png')}/>
-        </TouchableOpacity>
     </View>
 );
 
@@ -79,5 +53,10 @@ const styles = StyleSheet.create({
     },
     off: {
         opacity: 0.30,
+    },
+    playButtonImage: {
+        height: 80,
+        width: 80
     }
-})
+
+});

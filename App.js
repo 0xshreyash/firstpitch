@@ -30,7 +30,7 @@ export default class App extends Component<{}> {
                       waveAmplitude={this.state.waveAmplitude} waveWidth={this.state.waveWidth}/>
             </View>
 
-            <View style={[styles.buttonContainer]}>
+            <View style={[styles.bottomPanelContainer]}>
                 <BottomPanel/>
             </View>
         </View>;
@@ -51,18 +51,19 @@ const styles = StyleSheet.create({
     waveContainer: {
         flex: 3,
         justifyContent: "center",
-        alignItems: "stretch"
+        alignItems: "stretch",
     },
-    buttonContainer: {
+    bottomPanelContainer: {
         flex: 3,
-        alignItems: "stretch"
+        alignItems: "stretch",
+        justifyContent: "center",
     },
     button: {
         height: 40,
         width: 100,
         backgroundColor: "#add8e6",
-        justifyContent: 'center',
-        alignItems: 'center',
+        justifyContent: "center",
+        alignItems: "center",
         marginTop: 10
     }
 });

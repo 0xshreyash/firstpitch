@@ -5,8 +5,10 @@ import {
     View,
     TouchableOpacity,
     Dimensions,
-    Platform
+    Platform,
+    FlatList
 } from 'react-native';
+import Piano from './src/components/piano'
 
 import RNSiriWaveView from 'react-native-siri-wave-view'
 
@@ -20,14 +22,15 @@ export default class App extends Component<{}> {
             waveAmplitude: Platform.OS === 'ios' ? 1 : 100,
             waveType: 0,
             numberOfWaves: 1,
-            waveWidth: Platform.OS === 'ios' ? 3 : 250
+            waveWidth: Platform.OS === 'ios' ? 3 : 250,
+
         }
     }
 
     render() {
-        return <View style={styles.container}>
+        return (
+        <View style={styles.container}>
             <View style={[styles.topMenuContainer]}>
-
             </View>
             <View style={[styles.waveContainer]}>
                 <RNSiriWaveView height={300} width={this.state.screenWidth} amplitude={this.state.waveAmplitude}
@@ -52,8 +55,10 @@ export default class App extends Component<{}> {
                 }}>
                     <Text>Stop</Text>
                 </TouchableOpacity>
+                <Piano></Piano>
             </View>
-        </View>;
+        </View>
+    );
     }
 }
 
@@ -76,7 +81,9 @@ const styles = StyleSheet.create({
     },
     buttonContainer: {
         flex: 3,
-        alignItems: "stretch"
+        alignItems: "stretch",
+        backgroundColor: "#e75353",
+        position: "relative"
     },
     button: {
         height: 40,

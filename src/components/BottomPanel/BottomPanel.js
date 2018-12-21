@@ -55,7 +55,6 @@ export default class Piano extends Component {
         this.generatePianoStyle = this.generatePianoStyle.bind(this);
     }
 
-
     generatePianoStyle() {
         return {
             height: this.props.pianoHeight,

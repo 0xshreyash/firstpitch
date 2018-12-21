@@ -43,13 +43,12 @@ export default class MainPage extends Component<{}> {
         this.updateTrack = this.updateTrack.bind(this);
         this.onChooseAnswer = this.onChooseAnswer.bind(this);
         this.playSound = this.playSound.bind(this);
+        this.playNextTrack = this.playNextTrack.bind(this);
     }
 
     componentDidMount() {
         SoundPlayer.onFinishedPlaying((success: boolean) => { // success is true when the sound is played
-            this.setState({
-                buttonsDisabled: false
-            });
+          console.log("Finished playing note!", success);
         });
     }
 
@@ -66,7 +65,7 @@ export default class MainPage extends Component<{}> {
 
     onChooseAnswer(event, buttonID) {
         //console.warn(buttonID);
-        console.warn(this.state.correctAnswer, buttonID);
+        //console.warn(this.state.correctAnswer, buttonID);
         if (!(this.state.correctAnswer === buttonID)) {
             this.setState(prevState => ({
                 numWrong: prevState.numWrong + 1
@@ -81,6 +80,12 @@ export default class MainPage extends Component<{}> {
             buttonsDisabled: true
         });
         this.updateTrack();
+    }
+
+    playNextTrack() {
+        this.setState({
+            buttonsDisabled: false
+        }, this.playSound);
     }
 
     playSound() {
@@ -136,7 +141,7 @@ export default class MainPage extends Component<{}> {
             currentPosition: nextPos,
             currentTrack: nextTrack,
             correctAnswer: nextAns.toUpperCase(),
-        }, () => (setTimeout(this.playSound, 1000)));
+        }, () => (setTimeout(this.playNextTrack, 0)));
     }
     render() {
         // <Piano {...this.pianoProps}/>

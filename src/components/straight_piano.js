@@ -60,6 +60,7 @@ export default class StraightPiano extends Component{
 const styles = StyleSheet.create({
     noteText:{
         position: "absolute",
-        left: 200
+        left: 10,
+        top: -30,
     },
 });

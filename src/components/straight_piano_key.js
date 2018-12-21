@@ -16,6 +16,10 @@ export default class StraightPianoKey extends Component{
       super(props);
     }
 
+    onPress(){
+        this.props.setNote(this.props.keyName);
+    }
+
     generateStyle = function(){
         keyNum = this.props.keyNum;
         keyColor = this.props.keyColor;
@@ -53,9 +57,9 @@ export default class StraightPianoKey extends Component{
 
     render(){
         return (
-            <TouchableHighlight style = {this.generateStyle()}>
+            <TouchableOpacity style = {this.generateStyle()}  onPress= {()=>this.onPress()}>
                 <Text></Text>
-            </TouchableHighlight>
+            </TouchableOpacity>
         )
     }
 }

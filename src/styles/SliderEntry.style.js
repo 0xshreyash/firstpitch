@@ -8,9 +8,9 @@ function wp (percentage) {
     return Math.round(value);
 }
 
-const slideHeight = viewportHeight * 0.36;
-const slideWidth = wp(75);
-const itemHorizontalMargin = wp(2);
+const slideHeight = viewportHeight;
+const slideWidth = wp(100);
+const itemHorizontalMargin = wp(0);
 
 export const sliderWidth = viewportWidth;
 export const itemWidth = slideWidth + itemHorizontalMargin * 2;
@@ -22,7 +22,7 @@ export default StyleSheet.create({
         width: itemWidth,
         height: slideHeight,
         paddingHorizontal: itemHorizontalMargin,
-        paddingBottom: 18 // needed for shadow
+        paddingBottom: 18, // needed for shadow
     },
     imageContainer: {
         flex: 1,

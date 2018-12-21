@@ -44,7 +44,7 @@ export default class example extends Component {
                   dotsLength={ENTRIES1.length}
                   activeDotIndex={slider1ActiveSlide}
                   containerStyle={styles.paginationContainer}
-                  dotColor={'rgba(255, 255, 255, 0.92)'}
+                  dotColor={"black"}
                   dotStyle={styles.paginationDot}
                   inactiveDotColor={"black"}
                   inactiveDotOpacity={0.4}

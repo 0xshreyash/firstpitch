@@ -6,7 +6,7 @@ import SliderEntry from './SliderEntry';
 import styles from '../../styles/index.style';
 import { ENTRIES1 } from '../../static/entries';
 
-export default class example extends Component {
+export default class MainMenu extends Component {
 
     constructor (props) {
         super(props);
@@ -20,6 +20,7 @@ export default class example extends Component {
     }
 
     render () {
+        //The pictures are from ENTRIES1
         const { slider1ActiveSlide } = this.state;
         return (
             <View style={styles.exampleContainer}>

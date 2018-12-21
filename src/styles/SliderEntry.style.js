@@ -7,8 +7,8 @@ function wp (percentage) {
     const value = (percentage * viewportWidth) / 100;
     return Math.round(value);
 }
-
-const slideHeight = viewportHeight;
+//calculated the slideHeight from pagination dots height
+const slideHeight = viewportHeight - (32*2+15);
 const slideWidth = wp(100);
 const itemHorizontalMargin = wp(0);
 
@@ -18,11 +18,49 @@ export const itemWidth = slideWidth + itemHorizontalMargin * 2;
 const entryBorderRadius = 8;
 
 export default StyleSheet.create({
+    titles:{
+        position: "absolute",
+        left:viewportWidth*0.05,
+        top: viewportHeight*0.2,
+    },
+    titleText:{
+        fontSize: 30,
+        letterSpacing: 3,
+        color: "white",
+        fontWeight: "bold",
+    },
+    subtitleText:{
+        fontSize: 20,
+        letterSpacing: 3,
+        color: "white",
+    },
+    levelButtons:{
+        width: viewportWidth * 0.95,
+        height: viewportHeight * 0.5,
+        transform: [
+            {translateY: viewportHeight * 0.2}
+        ],
+        flexWrap: "wrap"
+    },
+    levelRow:{
+        flex:1,
+        flexDirection: "row"
+    },
+    topColour:{
+        position: "absolute",
+        top: 0,
+        left: 0,
+        width: viewportWidth,
+        height: viewportHeight * 0.5,
+        backgroundColor: "#aed9fd"
+    },
     slideInnerContainer: {
         width: itemWidth,
         height: slideHeight,
         paddingHorizontal: itemHorizontalMargin,
         paddingBottom: 18, // needed for shadow
+        alignItems: "center",
+        justifyContent: "center"
     },
     imageContainer: {
         flex: 1,

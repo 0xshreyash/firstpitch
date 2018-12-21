@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import MainMenu from './src/components/MainMenu/MainMenu'
+
 export default class App extends Component {
 
     constructor(props) {

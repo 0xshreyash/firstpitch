@@ -10,7 +10,7 @@ import Wave from '../Wave/Wave';
 import BottomPanel from '../BottomPanel/BottomPanel';
 
 
-export default class MainPage extends Component<{}> {
+export default class GamePage extends Component<{}> {
     constructor(props) {
         super(props);
         this.state = {

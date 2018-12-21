@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
-import MainPage from './src/components/MainPage/MainPage'
-
+import MainMenu from './src/components/MainMenu/MainMenu'
 export default class App extends Component {
 
     constructor(props) {
@@ -31,7 +30,6 @@ export default class App extends Component {
     }
 
     render() {
-        return <MainPage audioFiles={App.getAudioFiles()} notes={App.getNotes()}/>;
+        return <MainMenu/>;
     }
 }
-

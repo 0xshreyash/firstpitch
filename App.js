@@ -8,7 +8,8 @@ import {
     Platform,
     FlatList
 } from 'react-native';
-import Piano from './src/components/piano'
+
+import StraightPiano from './src/components/straight_piano'
 
 import RNSiriWaveView from 'react-native-siri-wave-view'
 
@@ -26,7 +27,25 @@ export default class App extends Component<{}> {
 
         }
     }
-
+    // It automatically fills the width of the parent
+        //innerColor (string) - the color used to fill the keys
+        //fillColor (boolean) - black and white (true) or pick the innerColor (false)
+        //keyMargin - the space between white keys
+        //blackWidth - width of black keys
+        //height - total height of piano
+        //whiteHeight - height of white keys
+        //blackHeight - height of black keys
+        //borderColor - color of the border around each key
+    pianoProps = {
+        fillColor: false,
+        innerColor: "#e75353",
+        keyMargin: 1,
+        blackWidth: 30,
+        height: 165 ,
+        whiteHeight: 150 ,
+        blackHeight: 100,
+        borderColor : "white"
+    }
     render() {
         return (
         <View style={styles.container}>
@@ -39,23 +58,8 @@ export default class App extends Component<{}> {
                                 startAnimation={this.state.startAnimation} stopAnimation={this.state.stopAnimation}/>
             </View>
             <View style={[styles.buttonContainer]}>
-                <TouchableOpacity style={[styles.button]} onPress={() => {
-                    this.setState({
-                        startAnimation: true,
-                        stopAnimation: false
-                    });
-                }}>
-                    <Text>Start</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={[styles.button]} onPress={() => {
-                    this.setState({
-                        startAnimation: false,
-                        stopAnimation: true
-                    });
-                }}>
-                    <Text>Stop</Text>
-                </TouchableOpacity>
-                <Piano></Piano>
+
+                <StraightPiano {...this.pianoProps}></StraightPiano>
             </View>
         </View>
     );
@@ -81,9 +85,7 @@ const styles = StyleSheet.create({
     },
     buttonContainer: {
         flex: 3,
-        alignItems: "stretch",
         backgroundColor: "#e75353",
-        position: "relative"
     },
     button: {
         height: 40,

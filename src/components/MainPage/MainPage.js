@@ -10,17 +10,6 @@ import Header from '../Header/Header';
 import Wave from '../Wave/Wave';
 import BottomPanel from '../BottomPanel/BottomPanel';
 
-const pianoProps = {
-        fillColor: true,
-        innerColor: "white",
-        keyMargin: 0,
-        blackWidth: 40,
-        whiteWidth: 40,
-        height: 250,
-        whiteHeight: 250,
-        blackHeight: 150,
-        borderColor : "black"
-    };
 export default class MainPage extends Component<{}> {
     constructor(props) {
         super(props);
@@ -47,7 +36,7 @@ export default class MainPage extends Component<{}> {
             correctAnswer: undefined,
             buttonsDisabled: true,
             pianoHeight: 250,
-            fillColor: true,
+            score: 0
 
         };
         this.onPressPlay = this.onPressPlay.bind(this);
@@ -77,9 +66,15 @@ export default class MainPage extends Component<{}> {
 
     onChooseAnswer(event, buttonID) {
         //console.warn(buttonID);
+        console.warn(this.state.correctAnswer, buttonID);
         if (!(this.state.correctAnswer === buttonID)) {
             this.setState(prevState => ({
                 numWrong: prevState.numWrong + 1
+            }));
+        }
+        else {
+            this.setState(prevState => ({
+                score: prevState.score + 1
             }));
         }
         this.setState({
@@ -140,14 +135,14 @@ export default class MainPage extends Component<{}> {
         this.setState({
             currentPosition: nextPos,
             currentTrack: nextTrack,
-            correctAnswer: nextAns,
+            correctAnswer: nextAns.toUpperCase(),
         }, () => (setTimeout(this.playSound, 1000)));
     }
     render() {
         // <Piano {...this.pianoProps}/>
         return <SafeAreaView style={styles.container}>
             <View style={[styles.headerContainer]}>
-                <Header/>
+                <Header score={this.state.score}/>
             </View>
             <View style={[styles.waveContainer]}>
                 <Wave startAnimation={this.state.startAnimation} stopAnimation={this.state.stopAnimation}

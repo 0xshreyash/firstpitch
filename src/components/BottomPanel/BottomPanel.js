@@ -40,6 +40,7 @@ export default class Piano extends Component {
                 'F#': ['B', 4],
                 'G#': ['B', 5],
             },
+            keys: ['C', 'D', 'E', 'F', 'G', 'A', 'B', 'C#', 'D#', 'F#', 'G#', 'A#'],
             keyProps: {
                 fillColor: true,
                 innerColor: "white",
@@ -76,12 +77,13 @@ export default class Piano extends Component {
                 </TouchableOpacity>
             </View> :
             <View style={[this.generatePianoStyle()]}>{
-                Object.keys(this.state.keyMap).map(
+                (this.state.keys).map(
                     (name) => {
                         return (
                             <PianoKey keyNum={this.state.keyMap[name][1]} keyColor={this.state.keyMap[name][0]}
                                       keyName={name} {...keyProps} disabled={this.props.disabled ||
-                                      !this.props.options.has(name)} onPress={this.props.onChooseAnswer}/>
+                                      !this.props.options.has(name)}
+                                      onPress={(event) => this.props.onChooseAnswer(event, name)}/>
                         );
                     }
                 )

@@ -9,7 +9,19 @@ import SoundPlayer from 'react-native-sound-player';
 import Header from '../Header/Header';
 import Wave from '../Wave/Wave';
 import BottomPanel from '../BottomPanel/BottomPanel';
+import Piano from '../Piano/Piano';
 
+const pianoProps = {
+        fillColor: true,
+        innerColor: "white",
+        keyMargin: 0,
+        blackWidth: 40,
+        whiteWidth: 40,
+        height: 250,
+        whiteHeight: 250,
+        blackHeight: 150,
+        borderColor : "black"
+    };
 export default class MainPage extends Component<{}> {
     constructor(props) {
         super(props);
@@ -35,17 +47,9 @@ export default class MainPage extends Component<{}> {
             currentTrack: undefined,
             correctAnswer: undefined,
             buttonsDisabled: true,
-            pianoProps: {
-                fillColor: true,
-                innerColor: "white",
-                keyMargin: 0,
-                blackWidth: 40,
-                whiteWidth: 40,
-                height: 250,
-                whiteHeight: 250,
-                blackHeight: 150,
-                borderColor : "black"
-            },
+            pianoHeight: 250,
+            fillColor: true,
+
         };
         this.onPressPlay = this.onPressPlay.bind(this);
         this.updateTrack = this.updateTrack.bind(this);
@@ -140,7 +144,6 @@ export default class MainPage extends Component<{}> {
             correctAnswer: nextAns,
         }, () => (setTimeout(this.playSound, 1000)));
     }
-
     render() {
         // <Piano {...this.pianoProps}/>
         return <SafeAreaView style={styles.container}>
@@ -154,10 +157,13 @@ export default class MainPage extends Component<{}> {
             <View style={[styles.bottomPanelContainer]}>
                 <BottomPanel started={this.state.started} options={this.props.notes}
                              onPressPlay={this.onPressPlay} onChooseAnswer={this.onChooseAnswer}
-                             disabled={this.state.buttonsDisabled}/>
-
+                             disabled={this.state.buttonsDisabled}
+                             pianoHeight={this.state.pianoHeight}/>
             </View>
+
         </SafeAreaView>;
+
+            /* */
     }
 }
 

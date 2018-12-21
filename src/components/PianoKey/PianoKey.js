@@ -21,13 +21,11 @@ export default class PianoKey extends Component {
       };
     }
 
-    onPress(){
-        this.props.setNote(this.props.keyName);
-    }
 
     generateStyle = function() {
         keyNum = this.props.keyNum;
         keyColor = this.props.keyColor;
+        console.warn(keyNum, keyColor);
         style = {
             height: this.props.whiteHeight,
             flex: 1,
@@ -68,13 +66,13 @@ export default class PianoKey extends Component {
         return style
     }
 
+    render() {
 
-
-    render(){
         return (
-            <TouchableOpacity style = {this.generateStyle()}  onPress= {()=>this.onPress()} disabled={this.props.disabled}>
+            <TouchableOpacity style = {this.generateStyle()}  onPress={()=>this.props.onPress()} disabled={this.props.disabled}>
                 <Text style = {{color: this.state.color, fontSize: 15, marginBottom: 20}}>{ this.props.keyName}</Text>
             </TouchableOpacity>
         )
+
     }
 }

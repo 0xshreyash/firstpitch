@@ -10,7 +10,6 @@ export default class App extends Component {
     constructor(props) {
         super(props);
     }
-
     static getAudioFiles() {
         let instruments = ['piano'];
         let notes = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'As', 'Cs', 'Ds', 'Fs', 'Gs'];
@@ -40,4 +39,7 @@ export default class App extends Component {
         return <MainPage audioFiles={App.getAudioFiles()} notes={App.getNotes()}/>;
     }
 }
+
+
+
 

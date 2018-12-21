@@ -1,13 +1,11 @@
 import React from 'react';
-
-
 import {
     View,
     StyleSheet,
-    ScrollView,
     Image,
     TouchableOpacity,
 } from 'react-native';
+import PianoKey from '../PianoKey/PianoKey';
 import Button from 'react-native-button'
 
 

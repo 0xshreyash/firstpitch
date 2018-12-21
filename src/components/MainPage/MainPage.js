@@ -10,10 +10,19 @@ import Header from '../Header/Header';
 import Wave from '../Wave/Wave';
 import BottomPanel from '../BottomPanel/BottomPanel';
 
-
 export default class MainPage extends Component<{}> {
     constructor(props) {
         super(props);
+        // It automatically fills the width of the parent
+        //innerColor (string) - the color used to fill the keys
+        //fillColor (boolean) - black and white (true) or pick the innerColor (false)
+        //keyMargin - the space between white keys
+        //blackWidth - width of black keys
+        //height - total height of piano
+        //whiteHeight - height of white keys
+        //blackHeight - height of black keys
+        //borderColor - color of the border around each key
+
         this.state = {
             startAnimation: true,
             stopAnimation: false,
@@ -26,6 +35,17 @@ export default class MainPage extends Component<{}> {
             currentTrack: undefined,
             correctAnswer: undefined,
             buttonsDisabled: true,
+            pianoProps: {
+                fillColor: true,
+                innerColor: "white",
+                keyMargin: 0,
+                blackWidth: 40,
+                whiteWidth: 40,
+                height: 250,
+                whiteHeight: 250,
+                blackHeight: 150,
+                borderColor : "black"
+            },
         };
         this.onPressPlay = this.onPressPlay.bind(this);
         this.updateTrack = this.updateTrack.bind(this);
@@ -122,6 +142,7 @@ export default class MainPage extends Component<{}> {
     }
 
     render() {
+        // <Piano {...this.pianoProps}/>
         return <SafeAreaView style={styles.container}>
             <View style={[styles.headerContainer]}>
                 <Header/>
@@ -134,6 +155,7 @@ export default class MainPage extends Component<{}> {
                 <BottomPanel started={this.state.started} options={this.props.notes}
                              onPressPlay={this.onPressPlay} onChooseAnswer={this.onChooseAnswer}
                              disabled={this.state.buttonsDisabled}/>
+
             </View>
         </SafeAreaView>;
     }

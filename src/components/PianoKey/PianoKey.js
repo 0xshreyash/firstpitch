@@ -11,16 +11,21 @@ import {
 
 
 
-export default class StraightPianoKey extends Component{
+export default class PianoKey extends Component {
+
     constructor(props) {
       super(props);
+      let fontColor = this.props.keyColor === 'B' ? 'white' : 'black';
+      this.state = {
+          color: fontColor,
+      };
     }
 
     onPress(){
         this.props.setNote(this.props.keyName);
     }
 
-    generateStyle = function(){
+    generateStyle = function() {
         keyNum = this.props.keyNum;
         keyColor = this.props.keyColor;
         style = {
@@ -29,8 +34,12 @@ export default class StraightPianoKey extends Component{
             margin: this.props.keyMargin,
             backgroundColor: "white",
             alignItems: "center",
-            justifyContent: "flex-end"
-        }
+            justifyContent: "flex-end",
+            borderBottomRightRadius: 10,
+            borderBottomLeftRadius: 10,
+            borderColor: 'black',
+            borderWidth: 2,
+        };
         styleBlack = {
             backgroundColor: "black",
             position: "absolute",
@@ -39,15 +48,19 @@ export default class StraightPianoKey extends Component{
             width: this.props.blackWidth,
             top: 0,
             height: this.props.blackHeight,
-        }
+
+        };
         styleNoFill = {
             backgroundColor: this.props.innerColor,
             borderWidth: 2,
             borderRadius: 2,
             borderColor: this.props.borderColor
-        }
+        };
         if(keyColor === "B"){
-            style = {...style, ...styleBlack}
+            style = {...style, ...styleBlack};
+        }
+        else {
+            style = {...style}
         }
         if(!this.props.fillColor){
             style = {...style, ...styleNoFill}
@@ -59,8 +72,8 @@ export default class StraightPianoKey extends Component{
 
     render(){
         return (
-            <TouchableOpacity style = {this.generateStyle()}  onPress= {()=>this.onPress()}>
-                <Text style = {{color: "white", fontSize: 15, marginBottom: 20}}>{ this.props.keyName}</Text>
+            <TouchableOpacity style = {this.generateStyle()}  onPress= {()=>this.onPress()} disabled={this.props.disabled}>
+                <Text style = {{color: this.state.color, fontSize: 15, marginBottom: 20}}>{ this.props.keyName}</Text>
             </TouchableOpacity>
         )
     }

@@ -9,7 +9,7 @@ import {
     FlatList
 } from 'react-native';
 
-import StraightPiano from './src/components/straight_piano'
+import StraightPiano from './src/components/Piano/Piano'
 
 import RNSiriWaveView from 'react-native-siri-wave-view'
 
@@ -37,15 +37,16 @@ export default class App extends Component<{}> {
         //blackHeight - height of black keys
         //borderColor - color of the border around each key
     pianoProps = {
-        fillColor: false,
-        innerColor: "#e75353",
-        keyMargin: 1,
-        blackWidth: 30,
-        height: 165 ,
-        whiteHeight: 150 ,
-        blackHeight: 100,
-        borderColor : "white"
-    }
+        fillColor: true,
+        innerColor: "white",
+        keyMargin: 0,
+        blackWidth: 40,
+        whiteWidth: 40,
+        height: 250,
+        whiteHeight: 250,
+        blackHeight: 150,
+        borderColor : "black"
+    };
     render() {
         return (
         <View style={styles.container}>
@@ -85,7 +86,7 @@ const styles = StyleSheet.create({
     },
     buttonContainer: {
         flex: 3,
-        backgroundColor: "#e75353",
+        backgroundColor: "white",
     },
     button: {
         height: 40,

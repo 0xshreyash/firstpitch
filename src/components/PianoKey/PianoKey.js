@@ -23,9 +23,10 @@ export default class PianoKey extends Component {
 
 
     generateStyle = function() {
-        keyNum = this.props.keyNum;
-        keyColor = this.props.keyColor;
-        console.warn(keyNum, keyColor);
+        let keyNum = this.props.keyNum;
+        let keyColor = this.props.keyColor;
+        let borderColor = !this.props.disabled ? 'black' : 'gray';
+        let blackColor = !this.props.disabled ? 'black' : 'gray';
         style = {
             height: this.props.whiteHeight,
             flex: 1,
@@ -35,11 +36,11 @@ export default class PianoKey extends Component {
             justifyContent: "flex-end",
             borderBottomRightRadius: 10,
             borderBottomLeftRadius: 10,
-            borderColor: 'black',
+            borderColor: borderColor,
             borderWidth: 2,
         };
         styleBlack = {
-            backgroundColor: "black",
+            backgroundColor: blackColor,
             position: "absolute",
             left: (100/7)*(keyNum-1) + (100*2/14) + "%",
             transform: [{translateX: -this.props.blackWidth/2-this.props.keyMargin}],

@@ -9,7 +9,6 @@ import SoundPlayer from 'react-native-sound-player';
 import Header from '../Header/Header';
 import Wave from '../Wave/Wave';
 import BottomPanel from '../BottomPanel/BottomPanel';
-import Piano from '../Piano/Piano';
 
 const pianoProps = {
         fillColor: true,
@@ -155,7 +154,7 @@ export default class MainPage extends Component<{}> {
                       waveAmplitude={this.state.waveAmplitude} waveWidth={this.state.waveWidth}/>
             </View>
             <View style={[styles.bottomPanelContainer]}>
-                <BottomPanel started={this.state.started} options={this.props.notes}
+                <BottomPanel started={this.state.started} options={new Set(this.props.notes)}
                              onPressPlay={this.onPressPlay} onChooseAnswer={this.onChooseAnswer}
                              disabled={this.state.buttonsDisabled}
                              pianoHeight={this.state.pianoHeight}/>
@@ -167,9 +166,7 @@ export default class MainPage extends Component<{}> {
     }
 }
 
-
-const
-    styles = StyleSheet.create({
+const styles = StyleSheet.create({
         container: {
             flex: 1,
             justifyContent: "center",

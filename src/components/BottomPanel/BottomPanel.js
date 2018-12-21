@@ -80,7 +80,8 @@ export default class Piano extends Component {
                     (name) => {
                         return (
                             <PianoKey keyNum={this.state.keyMap[name][1]} keyColor={this.state.keyMap[name][0]}
-                                      keyName={name} {...keyProps} disabled={this.props.disabled }/>
+                                      keyName={name} {...keyProps} disabled={this.props.disabled ||
+                                      !this.props.options.has(name)} onPress={this.props.onChooseAnswer}/>
                         );
                     }
                 )

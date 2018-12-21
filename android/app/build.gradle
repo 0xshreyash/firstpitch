@@ -137,8 +137,8 @@ android {
 }
 
 dependencies {
-    compile project(':react-native-sound')
     compile project(':react-native-sound-player')
+    compile project(':react-native-sound')
     compile project(':react-native-siri-wave-view')
     compile project(':siriwaveview')
     compile fileTree(dir: "libs", include: ["*.jar"])

@@ -1,5 +1,9 @@
 import React, {Component} from 'react';
+import {
+    Platform
+} from 'react-native';
 import MainPage from './src/components/MainPage/MainPage'
+
 
 export default class App extends Component {
 
@@ -9,7 +13,7 @@ export default class App extends Component {
 
     static getAudioFiles() {
         let instruments = ['piano'];
-        let notes = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'Ab', 'Cb', 'Db', 'Fb', 'Gb'];
+        let notes = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'As', 'Cs', 'Ds', 'Fs', 'Gs'];
         let octaves = ['2', '3'];
         let suffix = '.mp3';
         let prefix = './';
@@ -18,6 +22,9 @@ export default class App extends Component {
             let instrument = instruments[i];
             for(let j = 0; j < notes.length; j++) {
                 let note = notes[j];
+                if (Platform.OS === 'android') {
+                    note = note.toLowerCase();
+                }
                 for(let k = 0; k < octaves.length; k++) {
                     files.push(prefix + instrument + '_' + note + octaves[k] + suffix)
                 }

@@ -5,6 +5,7 @@ import {
     Platform
 } from 'react-native';
 import Sound from 'react-native-sound';
+import SoundPlayer from 'react-native-sound-player';
 import Header from '../Header/Header';
 import Wave from '../Wave/Wave';
 import BottomPanel from '../BottomPanel/BottomPanel';
@@ -31,6 +32,10 @@ export default class MainPage extends Component<{}> {
         this.playSound = this.playSound.bind(this);
     }
 
+    componentDidMount() {
+        Sound.setCategory('Playback');
+    }
+
     onPressPlay() {
         this.setState({
             started: true
@@ -40,7 +45,7 @@ export default class MainPage extends Component<{}> {
 
     onChooseAnswer(event, buttonID) {
         //console.warn(buttonID);
-        if(!(this.state.correctAnswer === buttonID)) {
+        if (!(this.state.correctAnswer === buttonID)) {
             this.setState(prevState => ({
                 numWrong: prevState.numWrong + 1
             }));
@@ -49,9 +54,18 @@ export default class MainPage extends Component<{}> {
     }
 
     playSound() {
-
-        Sound.setCategory('Playback');
+        //Sound.setCategory('Playback');
+        let index = this.state.currentTrack.lastIndexOf('.');
+        let name = this.state.currentTrack.slice(0, index);
+        let ext = this.state.currentTrack.slice(index + 1, this.state.currentTrack.length)
+        name = name.split('/');
+        name = name[1];
+        console.warn(name, ext);
+        SoundPlayer.playSoundFile(name, ext);
+        /*
+        console.warn('In play sound method');
         let note = new Sound(this.state.currentTrack, Sound.MAIN_BUNDLE, (error) => {
+            console.warn('Heard back');
             if (error) {
                 console.warn('Failed to load the sound', error);
             }
@@ -64,47 +78,54 @@ export default class MainPage extends Component<{}> {
                         note.reset();
                     }
                 });
+
             }
-            //console.warn('Duration in seconds: ' + note.getDuration() + 'number of channels: ' + note.getNumberOfChannels());
         });
-    }
+        //console.warn(Platform.OS);
+        */
 
-    updateTrack() {
-        let nextPos = this.state.currentPosition === undefined ? 0 : this.state.currentPosition + 1;
-        let nextTrack = this.props.audioFiles[nextPos % this.state.totalFiles];
-        //console.warn(nextTrack);
-        let parts = nextTrack.split('/');
-        let file = parts[parts.length - 1];
-        let name = (file.split('.'))[0];
-        name = name.split('_')[1];
-        let nextAns = name.slice(0, name.length - 1);
-        if(nextAns.charAt(1) === 'b') {
-            nextAns = nextAns[0] + '#';
-        }
-        console.warn(nextAns);
-        console.warn(nextTrack);
-        this.setState({
-            currentPosition: nextPos,
-            currentTrack: nextTrack,
-            correctAnswer: nextAns,
-        }, () => (setTimeout(this.playSound, 1000)));
     }
+    //console.warn('Duration in seconds: ' + note.getDuration() + 'number of channels: ' + note.getNumberOfChannels());
 
-    render() {
-        return <View style={styles.container}>
-            <View style={[styles.headerContainer]}>
-                <Header/>
-            </View>
-            <View style={[styles.waveContainer]}>
-                <Wave startAnimation={this.state.startAnimation} stopAnimation={this.state.stopAnimation}
-                      waveAmplitude={this.state.waveAmplitude} waveWidth={this.state.waveWidth}/>
-            </View>
-            <View style={[styles.bottomPanelContainer]}>
-                <BottomPanel started={this.state.started} options={this.props.notes}
-                  onPressPlay={this.onPressPlay} onChooseAnswer={this.onChooseAnswer}/>
-            </View>
-        </View>;
+
+updateTrack()
+{
+    let nextPos = this.state.currentPosition === undefined ? 0 : this.state.currentPosition + 1;
+    let nextTrack = this.props.audioFiles[nextPos % this.state.totalFiles];
+    //console.warn(nextTrack);
+    let parts = nextTrack.split('/');
+    let file = parts[parts.length - 1];
+    let name = (file.split('.'))[0];
+    name = name.split('_')[1];
+    let nextAns = name.slice(0, name.length - 1);
+    if (nextAns.charAt(1) === 'b') {
+        nextAns = nextAns[0].toUpperCase() + '#';
     }
+    //console.warn(nextAns);
+    //console.warn(nextTrack);
+    this.setState({
+        currentPosition: nextPos,
+        currentTrack: nextTrack,
+        correctAnswer: nextAns,
+    }, () => (setTimeout(this.playSound, 1000)));
+}
+
+render()
+{
+    return <View style={styles.container}>
+        <View style={[styles.headerContainer]}>
+            <Header/>
+        </View>
+        <View style={[styles.waveContainer]}>
+            <Wave startAnimation={this.state.startAnimation} stopAnimation={this.state.stopAnimation}
+                  waveAmplitude={this.state.waveAmplitude} waveWidth={this.state.waveWidth}/>
+        </View>
+        <View style={[styles.bottomPanelContainer]}>
+            <BottomPanel started={this.state.started} options={this.props.notes}
+                         onPressPlay={this.onPressPlay} onChooseAnswer={this.onChooseAnswer}/>
+        </View>
+    </View>;
+}
 }
 
 

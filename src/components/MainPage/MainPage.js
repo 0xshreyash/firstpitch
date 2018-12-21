@@ -2,9 +2,9 @@ import React, {Component} from 'react';
 import {
     StyleSheet,
     View,
-    Platform
+    Platform,
+    SafeAreaView
 } from 'react-native';
-import Sound from 'react-native-sound';
 import SoundPlayer from 'react-native-sound-player';
 import Header from '../Header/Header';
 import Wave from '../Wave/Wave';
@@ -24,7 +24,8 @@ export default class MainPage extends Component<{}> {
             started: false,
             currentPosition: -1,
             currentTrack: undefined,
-            correctAnswer: undefined
+            correctAnswer: undefined,
+            buttonsDisabled: true,
         };
         this.onPressPlay = this.onPressPlay.bind(this);
         this.updateTrack = this.updateTrack.bind(this);
@@ -33,9 +34,17 @@ export default class MainPage extends Component<{}> {
     }
 
     componentDidMount() {
-        Sound.setCategory('Playback');
+        SoundPlayer.onFinishedPlaying((success: boolean) => { // success is true when the sound is played
+            this.setState({
+                buttonsDisabled: false
+            });
+        });
     }
 
+    componentWillUnmount() {
+        SoundPlayer.unmount()
+    }
+    
     onPressPlay() {
         this.setState({
             started: true
@@ -50,6 +59,9 @@ export default class MainPage extends Component<{}> {
                 numWrong: prevState.numWrong + 1
             }));
         }
+        this.setState({
+            buttonsDisabled: true
+        });
         this.updateTrack();
     }
 
@@ -58,10 +70,13 @@ export default class MainPage extends Component<{}> {
         let index = this.state.currentTrack.lastIndexOf('.');
         let name = this.state.currentTrack.slice(0, index);
         let ext = this.state.currentTrack.slice(index + 1, this.state.currentTrack.length)
-        name = name.split('/');
-        name = name[1];
-        console.warn(name, ext);
-        SoundPlayer.playSoundFile(name, ext);
+        //console.warn(name, ext);
+        try {
+            SoundPlayer.playSoundFile(name, ext);
+        } catch (e) {
+            console.warn(`Cannot play the sound file`, e)
+        }
+
         /*
         console.warn('In play sound method');
         let note = new Sound(this.state.currentTrack, Sound.MAIN_BUNDLE, (error) => {
@@ -83,70 +98,67 @@ export default class MainPage extends Component<{}> {
         });
         //console.warn(Platform.OS);
         */
-
     }
-    //console.warn('Duration in seconds: ' + note.getDuration() + 'number of channels: ' + note.getNumberOfChannels());
 
-
-updateTrack()
-{
-    let nextPos = this.state.currentPosition === undefined ? 0 : this.state.currentPosition + 1;
-    let nextTrack = this.props.audioFiles[nextPos % this.state.totalFiles];
-    //console.warn(nextTrack);
-    let parts = nextTrack.split('/');
-    let file = parts[parts.length - 1];
-    let name = (file.split('.'))[0];
-    name = name.split('_')[1];
-    let nextAns = name.slice(0, name.length - 1);
-    if (nextAns.charAt(1) === 'b') {
-        nextAns = nextAns[0].toUpperCase() + '#';
+    updateTrack() {
+        let nextPos = this.state.currentPosition === undefined ? 0 : this.state.currentPosition + 1;
+        let nextTrack = this.props.audioFiles[nextPos % this.state.totalFiles];
+        //console.warn(nextTrack);
+        let parts = nextTrack.split('/');
+        let file = parts[parts.length - 1];
+        let name = (file.split('.'))[0];
+        name = name.split('_')[1];
+        let nextAns = name.slice(0, name.length - 1);
+        if (nextAns.charAt(1) === 'b') {
+            nextAns = nextAns[0].toUpperCase() + '#';
+        }
+        //console.warn(nextAns);
+        //console.warn(nextTrack);
+        this.setState({
+            currentPosition: nextPos,
+            currentTrack: nextTrack,
+            correctAnswer: nextAns,
+        }, () => (setTimeout(this.playSound, 1000)));
     }
-    //console.warn(nextAns);
-    //console.warn(nextTrack);
-    this.setState({
-        currentPosition: nextPos,
-        currentTrack: nextTrack,
-        correctAnswer: nextAns,
-    }, () => (setTimeout(this.playSound, 1000)));
-}
 
-render()
-{
-    return <View style={styles.container}>
-        <View style={[styles.headerContainer]}>
-            <Header/>
-        </View>
-        <View style={[styles.waveContainer]}>
-            <Wave startAnimation={this.state.startAnimation} stopAnimation={this.state.stopAnimation}
-                  waveAmplitude={this.state.waveAmplitude} waveWidth={this.state.waveWidth}/>
-        </View>
-        <View style={[styles.bottomPanelContainer]}>
-            <BottomPanel started={this.state.started} options={this.props.notes}
-                         onPressPlay={this.onPressPlay} onChooseAnswer={this.onChooseAnswer}/>
-        </View>
-    </View>;
-}
+    render() {
+        return <SafeAreaView style={styles.container}>
+            <View style={[styles.headerContainer]}>
+                <Header/>
+            </View>
+            <View style={[styles.waveContainer]}>
+                <Wave startAnimation={this.state.startAnimation} stopAnimation={this.state.stopAnimation}
+                      waveAmplitude={this.state.waveAmplitude} waveWidth={this.state.waveWidth}/>
+            </View>
+            <View style={[styles.bottomPanelContainer]}>
+                <BottomPanel started={this.state.started} options={this.props.notes}
+                             onPressPlay={this.onPressPlay} onChooseAnswer={this.onChooseAnswer}
+                             disabled={this.state.buttonsDisabled}/>
+            </View>
+        </SafeAreaView>;
+    }
 }
 
 
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "stretch",
-        backgroundColor: "#FFFFFF",
-    },
-    headerContainer: {
-        flex: 1
-    },
-    waveContainer: {
-        flex: 3,
-        justifyContent: "center",
-        alignItems: "stretch",
-    },
-    bottomPanelContainer: {
-        flex: 3,
-        alignItems: "stretch",
-        justifyContent: "center",
-    },
-});
+const
+    styles = StyleSheet.create({
+        container: {
+            flex: 1,
+            justifyContent: "center",
+            alignItems: "stretch",
+            backgroundColor: "#FFFFFF",
+        },
+        headerContainer: {
+            flex: 1
+        },
+        waveContainer: {
+            flex: 3,
+            justifyContent: "center",
+            alignItems: "stretch",
+        },
+        bottomPanelContainer: {
+            flex: 3,
+            alignItems: "stretch",
+            justifyContent: "center",
+        },
+    });

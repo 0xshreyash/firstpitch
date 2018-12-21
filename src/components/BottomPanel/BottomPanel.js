@@ -12,7 +12,7 @@ import Button from 'react-native-button'
 
 
 const playButton = '../../../assets/icons/play-button.png';
-const BottomPanel = ({onPressPlay, onChooseAnswer, started, options}) => (
+const BottomPanel = ({onPressPlay, onChooseAnswer, started, options, disabled}) => (
     <View style={styles.container}>
         {!started ?
             <TouchableOpacity onPress={onPressPlay}>
@@ -31,6 +31,7 @@ const BottomPanel = ({onPressPlay, onChooseAnswer, started, options}) => (
                                     backgroundColor: '#EEEEEE',
                                     margin: 10,
                                 }} disabledContainerStyle={{backgroundColor: 'grey'}}
+                                disabled={disabled}
                                 onPress={(event) => onChooseAnswer(event, option)}
                                 style={{fontSize: 20, color: 'black',
                                     justifyContent: 'center', alignItems: 'center'}}>{option}</Button>

@@ -16,7 +16,6 @@ export default class App extends Component {
         let notes = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'As', 'Cs', 'Ds', 'Fs', 'Gs'];
         let octaves = ['2', '3'];
         let suffix = '.mp3';
-        let prefix = './';
         let files = [];
         for(let i = 0; i < instruments.length; i++) {
             let instrument = instruments[i];
@@ -26,7 +25,7 @@ export default class App extends Component {
                     note = note.toLowerCase();
                 }
                 for(let k = 0; k < octaves.length; k++) {
-                    files.push(prefix + instrument + '_' + note + octaves[k] + suffix)
+                    files.push(instrument + '_' + note + octaves[k] + suffix)
                 }
             }
         }

@@ -9,17 +9,17 @@ export default class App extends Component {
 
     static getAudioFiles() {
         let instruments = ['piano'];
-        let notes = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'A#', 'C#', 'D#', 'F#', 'G#'];
+        let notes = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'Ab', 'Cb', 'Db', 'Fb', 'Gb'];
         let octaves = ['2', '3'];
         let suffix = '.mp3';
-        let prefix = '../../../assets/audio/';
+        let prefix = './';
         let files = [];
         for(let i = 0; i < instruments.length; i++) {
             let instrument = instruments[i];
             for(let j = 0; j < notes.length; j++) {
                 let note = notes[j];
                 for(let k = 0; k < octaves.length; k++) {
-                    files.push(prefix + instrument + '/' + note + octaves[k] + suffix)
+                    files.push(prefix + instrument + '_' + note + octaves[k] + suffix)
                 }
             }
         }

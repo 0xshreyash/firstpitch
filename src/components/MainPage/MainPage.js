@@ -4,7 +4,7 @@ import {
     View,
     Platform
 } from 'react-native';
-import SoundPlayer from 'react-native-sound-player'
+import Sound from 'react-native-sound';
 import Header from '../Header/Header';
 import Wave from '../Wave/Wave';
 import BottomPanel from '../BottomPanel/BottomPanel';
@@ -39,7 +39,7 @@ export default class MainPage extends Component<{}> {
     }
 
     onChooseAnswer(event, buttonID) {
-        console.warn(buttonID);
+        //console.warn(buttonID);
         if(!(this.state.correctAnswer === buttonID)) {
             this.setState(prevState => ({
                 numWrong: prevState.numWrong + 1
@@ -49,50 +49,48 @@ export default class MainPage extends Component<{}> {
     }
 
     playSound() {
-        try {
-            console.warn('One', this.state.currentTrack);
-            // play the file tone.mp3
-            let divideFrom = this.state.currentTrack.lastIndexOf('.');
-            let name = this.state.currentTrack.splice(0, divideFrom);
-            let ext = this.state.currentTrack.splice(divideFrom + 1, this.state.currentTrack.length - 1);
-            console.warn('Two', ext);
-            SoundPlayer.playSoundFile(name, ext);
-        } catch (e) {
-            console.log(`Cannot play the sound file`, e);
-        }
+
+        Sound.setCategory('Playback');
+        let note = new Sound(this.state.currentTrack, Sound.MAIN_BUNDLE, (error) => {
+            if (error) {
+                console.warn('Failed to load the sound', error);
+            }
+            else {
+                note.play((success) => {
+                    if (success) {
+                        console.warn('Successfully finished playing');
+                    } else {
+                        console.warn('Playback failed due to audio decoding errors');
+                        note.reset();
+                    }
+                });
+            }
+            //console.warn('Duration in seconds: ' + note.getDuration() + 'number of channels: ' + note.getNumberOfChannels());
+        });
     }
 
     updateTrack() {
-        let nextPos = this.state.currentPosition === undefined? 0 : this.state.currentPosition + 1;
+        let nextPos = this.state.currentPosition === undefined ? 0 : this.state.currentPosition + 1;
         let nextTrack = this.props.audioFiles[nextPos % this.state.totalFiles];
-        console.warn(nextTrack);
+        //console.warn(nextTrack);
         let parts = nextTrack.split('/');
         let file = parts[parts.length - 1];
         let name = (file.split('.'))[0];
+        name = name.split('_')[1];
         let nextAns = name.slice(0, name.length - 1);
+        if(nextAns.charAt(1) === 'b') {
+            nextAns = nextAns[0] + '#';
+        }
+        console.warn(nextAns);
+        console.warn(nextTrack);
         this.setState({
             currentPosition: nextPos,
             currentTrack: nextTrack,
             correctAnswer: nextAns,
-        }, this.playSound);
+        }, () => (setTimeout(this.playSound, 1000)));
     }
 
     render() {
-        const track = this.props.audioFiles[this.state.currentPosition];
-
-        /*
-        const video = (<Video source={{uri: track}} // Can be a URL or a local file.
-                              ref="audioElement"
-                              paused={this.state.paused}               // Pauses playback entirely.
-                              resizeMode="cover"           // Fill the whole screen at aspect ratio.
-                              repeat={false}                // Repeat forever.
-                              onLoadStart={this.loadStart} // Callback when video starts to load
-                              onLoad={this.setDuration.bind(this)}    // Callback when video loads
-                              onProgress={this.setTime.bind(this)}    // Callback every ~250ms with currentTime
-                              onEnd={this.onEnd}           // Callback when playback finishes
-                              onError={this.videoError}    // Callback when video cannot be loaded
-                              style={styles.audioElement}/>);
-        */
         return <View style={styles.container}>
             <View style={[styles.headerContainer]}>
                 <Header/>
@@ -129,12 +127,5 @@ const styles = StyleSheet.create({
         flex: 3,
         alignItems: "stretch",
         justifyContent: "center",
-    },
-    backgroundVideo: {
-        position: 'absolute',
-        top: 0,
-        left: 0,
-        bottom: 0,
-        right: 0,
     },
 });

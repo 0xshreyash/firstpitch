@@ -12,7 +12,7 @@ export default class App extends Component {
     }
     static getAudioFiles() {
         let instruments = ['piano'];
-        let notes = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'As', 'Cs', 'Ds', 'Fs', 'Gs'];
+        let notes = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'as', 'cs', 'ds', 'fs', 'ss'];
         let octaves = ['2', '3'];
         let suffix = '.mp3';
         let files = [];
@@ -20,9 +20,6 @@ export default class App extends Component {
             let instrument = instruments[i];
             for(let j = 0; j < notes.length; j++) {
                 let note = notes[j];
-                if (Platform.OS === 'android') {
-                    note = note.toLowerCase();
-                }
                 for(let k = 0; k < octaves.length; k++) {
                     files.push(instrument + '_' + note + octaves[k] + suffix)
                 }

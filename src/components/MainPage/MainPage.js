@@ -92,8 +92,8 @@ export default class MainPage extends Component<{}> {
         //Sound.setCategory('Playback');
         let index = this.state.currentTrack.lastIndexOf('.');
         let name = this.state.currentTrack.slice(0, index);
-        let ext = this.state.currentTrack.slice(index + 1, this.state.currentTrack.length)
-        //console.warn(name, ext);
+        let ext = this.state.currentTrack.slice(index + 1, this.state.currentTrack.length);
+        console.warn(name, ext);
         try {
             SoundPlayer.playSoundFile(name, ext);
         } catch (e) {
@@ -159,10 +159,7 @@ export default class MainPage extends Component<{}> {
                              disabled={this.state.buttonsDisabled}
                              pianoHeight={this.state.pianoHeight}/>
             </View>
-
         </SafeAreaView>;
-
-            /* */
     }
 }
 

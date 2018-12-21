@@ -27,7 +27,9 @@ export default class StraightPianoKey extends Component{
             height: this.props.whiteHeight,
             flex: 1,
             margin: this.props.keyMargin,
-            backgroundColor: "white"
+            backgroundColor: "white",
+            alignItems: "center",
+            justifyContent: "flex-end"
         }
         styleBlack = {
             backgroundColor: "black",
@@ -58,7 +60,7 @@ export default class StraightPianoKey extends Component{
     render(){
         return (
             <TouchableOpacity style = {this.generateStyle()}  onPress= {()=>this.onPress()}>
-                <Text></Text>
+                <Text style = {{color: "white", fontSize: 15, marginBottom: 20}}>{ this.props.keyName}</Text>
             </TouchableOpacity>
         )
     }

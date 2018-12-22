@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { Platform, View, ScrollView, Text, StatusBar, SafeAreaView } from 'react-native';
 import Carousel, { Pagination } from 'react-native-snap-carousel';
-import { sliderWidth, itemWidth } from '../../styles/SliderEntry.style';
-import SliderEntry from './SliderEntry';
-import styles from '../../styles/index.style';
-import { ENTRIES1 } from '../../static/entries';
+import { sliderWidth, itemWidth } from '../../styles/MenuEntryStyle';
+import MenuEntry from './MenuEntry';
+import styles from '../../styles/MenuStyle';
+import { MenuEntries } from '../../static/MenuEntries';
 
 export default class MainMenu extends Component {
 
@@ -16,21 +16,20 @@ export default class MainMenu extends Component {
     }
 
     _renderItem ({item, index}) {
-        return <SliderEntry data={item}/>;
+        return <MenuEntry data={item}/>;
     }
 
     render () {
-        //The pictures are from ENTRIES1
+        //The pictures are from MenuEntries
         const { slider1ActiveSlide } = this.state;
         return (
             <View style={styles.exampleContainer}>
                 <Carousel
                   ref={c => this._slider1Ref = c}
-                  data={ENTRIES1}
+                  data={MenuEntries}
                   renderItem={this._renderItem}
                   sliderWidth={sliderWidth}
                   itemWidth={itemWidth}
-                  hasParallaxImages={true}
                   firstItem={this.state.slider1ActiveSlide}
                   inactiveSlideScale={0.94}
                   inactiveSlideOpacity={0.7}
@@ -38,11 +37,10 @@ export default class MainMenu extends Component {
                   contentContainerCustomStyle={styles.sliderContentContainer}
                   loop={false}
                   loopClonesPerSide={2}
-                  autoplay={false}
                   onSnapToItem={(index) => this.setState({ slider1ActiveSlide: index }) }
                 />
                 <Pagination
-                  dotsLength={ENTRIES1.length}
+                  dotsLength={MenuEntries.length}
                   activeDotIndex={slider1ActiveSlide}
                   containerStyle={styles.paginationContainer}
                   dotColor={"black"}

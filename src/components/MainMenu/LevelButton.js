@@ -1,18 +1,45 @@
 import React, { Component } from 'react';
-import { View, Text, Image, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, Text, Image, TouchableOpacity, StyleSheet, Dimensions } from 'react-native';
+const { width: viewportWidth, height: viewportHeight } = Dimensions.get('window');
 
 
 export default class LevelButton extends Component {
+
+    buttonStyle(){
+        columns = this.props.columns;
+        margin = this.props.buttonMargin;
+        widthPercentage = this.props.widthPercentage;
+        heightPercentage = this.props.heightPercentage;
+        rows = 2;
+        return {
+                margin: margin,
+                shadowColor: "#7e7d7d",
+                shadowOffset: {
+                    width: 0,
+                    height: 2,
+                },
+                shadowOpacity: 0.30,
+                shadowRadius: 2,
+                elevation: 8,
+                backgroundColor: "white",
+                borderRadius: 5,
+                alignItems: "center",
+                justifyContent: "center",
+                flex: 1,
+                //the minus 3 is for rounding errors.
+                minWidth: (viewportWidth * widthPercentage * 0.01 - 2*margin*columns)/columns - 3,
+                height: (viewportHeight * heightPercentage * 0.01 - 2*margin*rows)/rows
+        }
+    }
     render () {
         return (
-            <TouchableOpacity
-                style = {[styles.levelButton]}
-            >
+            <TouchableOpacity style = {[this.buttonStyle()]}>
                 <Image
-                  source={{ uri: "https://images.vexels.com/media/users/3/143528/isolated/preview/cc4fe6d36794d677dbd7090cb2c9a9b2-eighth-note-music-by-vexels.png" }}
+                  source={{ uri: this.props.icon } }
                   style={styles.levelImage}
                 />
-                <Text style = {[styles.levelText]}>LEVEL 1</Text>
+                <Text style = {[styles.levelTitle]}>LEVEL { this.props.level }</Text>
+                <Text style = {[styles.levelSubtitle]}>{ this.props.text }</Text>
             </TouchableOpacity>
         );
     }
@@ -25,28 +52,19 @@ const styles = StyleSheet.create({
         width: "100%",
         margin: 40,
     },
-    levelButton:{
-            flex: 1,
-            margin: 5,
-            shadowColor: "#7e7d7d",
-            shadowOffset: {
-            	width: 0,
-            	height: 2,
-            },
-            shadowOpacity: 0.30,
-            shadowRadius: 2,
-            elevation: 8,
-            backgroundColor: "white",
-            borderRadius: 5,
-            alignItems: "center",
-            justifyContent: "center"
-    },
-    levelText:{
+    levelTitle:{
         flex: 1,
         fontFamily: 'Roboto',
         fontSize: 15,
         fontWeight: 'bold',
         letterSpacing: 4,
         color: "#d5d5d7",
+    },
+    levelSubtitle:{
+        flex: 1,
+        fontFamily: 'Roboto',
+        fontSize: 10,
+        fontWeight: 'bold',
+        letterSpacing: 2,
     }
 })

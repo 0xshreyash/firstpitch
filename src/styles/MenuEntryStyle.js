@@ -17,6 +17,7 @@ export const itemWidth = slideWidth + itemHorizontalMargin * 2;
 
 const entryBorderRadius = 8;
 
+
 export default StyleSheet.create({
     titles:{
         position: "absolute",
@@ -33,18 +34,6 @@ export default StyleSheet.create({
         fontSize: 20,
         letterSpacing: 3,
         color: "white",
-    },
-    levelButtons:{
-        width: viewportWidth * 0.95,
-        height: viewportHeight * 0.5,
-        transform: [
-            {translateY: viewportHeight * 0.2}
-        ],
-        flexWrap: "wrap"
-    },
-    levelRow:{
-        flex:1,
-        flexDirection: "row"
     },
     topColour:{
         position: "absolute",

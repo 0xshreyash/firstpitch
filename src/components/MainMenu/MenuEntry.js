@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { View, Text, Image, TouchableOpacity, Dimensions } from 'react-native';
 import PropTypes from 'prop-types';
 import styles from '../../styles/MenuEntryStyle';
-import LevelButton from "./LevelButton"
+import LevelButton from "./LevelButton";
+import Wave from '../Wave/Wave';
 
 const { width: viewportWidth, height: viewportHeight } = Dimensions.get('window');
 
@@ -16,7 +17,7 @@ export default class MenuEntry extends Component {
         const { data: { illustration }} = this.props;
         return (
             <Image
-              source={{ uri: illustration }}
+              source={ illustration }
               style={styles.image}
             />
         );
@@ -56,14 +57,16 @@ export default class MenuEntry extends Component {
 
 
     render () {
-        const { data: { title, subtitle, levels }} = this.props;
+        const { data: { title, subtitle, levels, waveCount }} = this.props;
 
         return (
             <View style = {styles.slideInnerContainer}>
                 <View style = {styles.topColour}>
-                    <View style={[styles.imageContainer]}>
-                        { this.image }
-                    </View>
+                <Wave startAnimation={true} stopAnimation={false}
+                        waveColor={'#ffffff'}
+                        numberOfWaves={ waveCount }
+                        primaryWaveLineWidth={100}
+                        height={200}/>
                 </View>
                 <View style = {this.levelButtonsStyling()}>
                     { this.generateButtons() }

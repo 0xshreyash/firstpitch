@@ -151,7 +151,8 @@ export default class MainPage extends Component<{}> {
             </View>
             <View style={[styles.waveContainer]}>
                 <Wave startAnimation={this.state.startAnimation} stopAnimation={this.state.stopAnimation}
-                      waveAmplitude={this.state.waveAmplitude} waveWidth={this.state.waveWidth}/>
+                      waveAmplitude={this.state.waveAmplitude} waveWidth={this.state.waveWidth}
+                      waveColor={'black'}/>
             </View>
             <View style={[styles.bottomPanelContainer]}>
                 <BottomPanel started={this.state.started} options={new Set(this.props.notes)}

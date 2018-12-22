@@ -1,56 +1,100 @@
+import MusicIcons from "@assets/music";
+
 export const MenuEntries = [
     {
         title: 'Stage 1',
         subtitle: 'The Basics',
-        illustration: 'https://i.imgur.com/UPrs1EWl.jpg',
+        illustration: require("@assets/icons/pattern.png"),
+        waveCount: 1,
         levels:[
                 {
                     level: 1,
-                    text: "Easy",
-                    icon: "https://images.vexels.com/media/users/3/143528/isolated/preview/cc4fe6d36794d677dbd7090cb2c9a9b2-eighth-note-music-by-vexels.png"
+                    text: "Starting with C and G",
+                    icon: MusicIcons.treble,
+                    instruments: ["piano"],
+                    octaves: [3],
+                    notes: ["c", "g"]
                 },
                 {
                     level: 2,
-                    text: "Easy 2",
-                    icon: "https://images.vexels.com/media/users/3/143528/isolated/preview/cc4fe6d36794d677dbd7090cb2c9a9b2-eighth-note-music-by-vexels.png"
+                    text: "E (z)",
+                    icon: MusicIcons.bass,
+                    instruments: ["piano"],
+                    octaves: [3],
+                    notes: ["c", "e", "g"]
                 },
                 {
                     level: 3,
-                    text: "Easy 3",
-                    icon: "https://images.vexels.com/media/users/3/143528/isolated/preview/cc4fe6d36794d677dbd7090cb2c9a9b2-eighth-note-music-by-vexels.png"
+                    text: "Meet D and A",
+                    icon: MusicIcons.equaliser,
+                    instruments: ["piano"],
+                    octaves: [3],
+                    notes: ["c", "e", "d", "a", "g"]
                 },
                 {
                     level: 4,
-                    text: "Easy 4",
-                    icon: "https://images.vexels.com/media/users/3/143528/isolated/preview/cc4fe6d36794d677dbd7090cb2c9a9b2-eighth-note-music-by-vexels.png"
+                    text: "The White Notes",
+                    icon: MusicIcons.violin,
+                    instruments: ["piano"],
+                    octaves: [3],
+                    notes: ["c", "e", "d", "f", "g", "a", "b"]
                 }
         ],
     },
     {
         title: 'Stage 2',
         subtitle: 'New Sound',
-        illustration: 'https://i.imgur.com/UPrs1EWl.jpg',
+        illustration: require("@assets/icons/pattern.png"),
+        waveCount: 2,
         levels:[
                 {
                     level: 1,
-                    text: "Introducing Synth",
-                    icon: "https://images.vexels.com/media/users/3/143528/isolated/preview/cc4fe6d36794d677dbd7090cb2c9a9b2-eighth-note-music-by-vexels.png"
+                    text: "Introducing the Synth",
+                    icon: MusicIcons.quaver,
+                    instruments: ["saw"],
+                    octaves: [3],
+                    notes: ["c", "e", "g", "a", "b"]
                 },
                 {
                     level: 2,
-                    text: "Intermediate",
-                    icon: "https://images.vexels.com/media/users/3/143528/isolated/preview/cc4fe6d36794d677dbd7090cb2c9a9b2-eighth-note-music-by-vexels.png"
+                    text: "Whites Keys on the Synth",
+                    icon: MusicIcons.ipod,
+                    instruments: ["saw"],
+                    octaves: [3],
+                    notes: ["a", "b", "c", "d", "e", "f", "g"]
                 },
                 {
                     level: 3,
-                    text: "Intermediate 2",
-                    icon: "https://images.vexels.com/media/users/3/143528/isolated/preview/cc4fe6d36794d677dbd7090cb2c9a9b2-eighth-note-music-by-vexels.png"
+                    text: "Lower Voices",
+                    icon: MusicIcons.tuba,
+                    instruments: ["saw"],
+                    octaves: [2],
+                    notes: ["a", "b", "c", "d", "e", "f", "g"]
+                },
+        ],
+    },
+    {
+        title: 'Stage 3',
+        subtitle: 'Expansion',
+        illustration: require("@assets/icons/pattern.png"),
+        waveCount: 3,
+        levels:[
+                {
+                    level: 1,
+                    text: "Introducing the Synth",
+                    icon: MusicIcons.quaver,
+                    instruments: ["saw"],
+                    octaves: [3],
+                    notes: ["c", "e", "g", "a", "b"]
                 },
                 {
-                    level: 4,
-                    text: "Intermediate 3",
-                    icon: "https://images.vexels.com/media/users/3/143528/isolated/preview/cc4fe6d36794d677dbd7090cb2c9a9b2-eighth-note-music-by-vexels.png"
-                }
+                    level: 2,
+                    text: "Whites Keys on the Synth",
+                    icon: MusicIcons.ipod,
+                    instruments: ["saw"],
+                    octaves: [3],
+                    notes: ["a", "b", "c", "d", "e", "f", "g"]
+                },
         ],
     },
 ];

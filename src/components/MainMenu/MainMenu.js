@@ -43,9 +43,9 @@ export default class MainMenu extends Component {
                   dotsLength={MenuEntries.length}
                   activeDotIndex={slider1ActiveSlide}
                   containerStyle={styles.paginationContainer}
-                  dotColor={"black"}
+                  dotColor={"white"}
                   dotStyle={styles.paginationDot}
-                  inactiveDotColor={"black"}
+                  inactiveDotColor={"white"}
                   inactiveDotOpacity={0.4}
                   inactiveDotScale={0.6}
                   carouselRef={this._slider1Ref}

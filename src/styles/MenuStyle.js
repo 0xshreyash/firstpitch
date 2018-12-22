@@ -4,7 +4,7 @@ const { width: viewportWidth, height: viewportHeight } = Dimensions.get('window'
 export default StyleSheet.create({
     exampleContainer: {
         paddingVertical: 0,
-        backgroundColor: "#f6f6f8",
+        backgroundColor: "#b4dafe",
         flex: 1,
     },
     slider: {

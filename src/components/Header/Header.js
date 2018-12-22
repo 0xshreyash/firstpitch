@@ -6,9 +6,7 @@ import {
     TouchableOpacity,
     Text
 } from 'react-native';
-
-let settingsImage = '../../../assets/icons/settings.png';
-
+import Buttons from '@assets/buttons';
 
 const Header = ({
                     onSettingsPress,
@@ -17,7 +15,7 @@ const Header = ({
     <View style={styles.container}>
         <Text style={styles.score}>{score}</Text>
         <TouchableOpacity style={[styles.settingsButton]} onPress={onSettingsPress}>
-            <Image source={require(settingsImage)} style={[styles.settingsButtonImage]}/>
+            <Image source={Buttons.settingsButton} style={[styles.settingsButtonImage]}/>
         </TouchableOpacity>
     </View>
 );

@@ -40,7 +40,6 @@ export default class PianoKey extends Component {
         let keyColor = this.props.keyColor;
         let borderColor = !this.props.disabled ? 'black' : 'gray';
         let blackColor = !this.props.disabled ? 'black' : 'gray';
-
         let style = {
             height: this.props.whiteHeight,
             flex: 1,
@@ -51,7 +50,7 @@ export default class PianoKey extends Component {
             borderBottomRightRadius: 10,
             borderBottomLeftRadius: 10,
             borderColor: borderColor,
-            borderWidth: 2,
+            borderWidth: 1,
         };
         let styleBlack = {
             backgroundColor: blackColor,
@@ -61,22 +60,22 @@ export default class PianoKey extends Component {
             width: this.props.blackWidth,
             top: 0,
             height: this.props.blackHeight,
-
+            borderLeftWidth: this.props.fillColor ? 0 : 5,
+            borderBottomWidth: this.props.fillColor ? 0 : 5,
         };
         let styleNoFill = {
             backgroundColor: 'white',
-            borderWidth: 2,
-            borderRadius: 2,
-            borderColor: this.props.borderColor
+            borderWidth: 1,
+            borderColor: this.props.borderColor,
         };
         if(keyColor === "B"){
             style = {...style, ...styleBlack};
         }
         else {
-            style = {...style}
+            style = {...style};
         }
         if(!this.props.fillColor){
-            style = {...style, ...styleNoFill}
+            style = {...style, ...styleNoFill};
         }
         return style
     }

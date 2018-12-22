@@ -4,14 +4,13 @@ import {
     StyleSheet,
     Image,
     TouchableOpacity,
-    Text,
 } from 'react-native';
 import Piano from '../Piano/Piano';
-// import Button from 'react-native-button'
+import Buttons from '@assets/buttons';
 
-const playButton = '../../../assets/icons/play-button.png';
 
 export default class BottomPanel extends Component {
+
     constructor(props) {
         super(props);
         this.state = {
@@ -25,7 +24,7 @@ export default class BottomPanel extends Component {
             <View style={styles.container}>
                 <TouchableOpacity onPress={this.props.onPressPlay}>
                     <View style={styles.playButton}>
-                        <Image source={require(playButton)} style={[styles.playButtonImage]}/>
+                        <Image source={Buttons.playButton} style={[styles.playButtonImage]}/>
                     </View>
                 </TouchableOpacity>
             </View> : <Piano height={this.state.pianoHeight} disabled={this.props.disabled}
@@ -44,7 +43,6 @@ const
             alignItems: 'center',
             paddingTop: 8,
         },
-
         playButton: {
             height: 72,
             width: 72,

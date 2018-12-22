@@ -1,8 +1,5 @@
 import React, {Component} from 'react';
-import {
-    Platform
-} from 'react-native';
-import MainPage from './src/components/MainPage/MainPage'
+import GamePage from './src/components/GamePage/GamePage';
 
 
 export default class App extends Component {
@@ -33,7 +30,7 @@ export default class App extends Component {
     }
 
     render() {
-        return <MainPage audioFiles={App.getAudioFiles()} notes={App.getNotes()}/>;
+        return <GamePage audioFiles={App.getAudioFiles()} notes={App.getNotes()}/>;
     }
 }
 

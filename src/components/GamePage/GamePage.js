@@ -10,52 +10,44 @@ import Header from '../Header/Header';
 import Wave from '../Wave/Wave';
 import BottomPanel from '../BottomPanel/BottomPanel';
 
-export default class MainPage extends Component<{}> {
+export default class GamesPage extends Component {
+
     constructor(props) {
         super(props);
-        // It automatically fills the width of the parent
-        //innerColor (string) - the color used to fill the keys
-        //fillColor (boolean) - black and white (true) or pick the innerColor (false)
-        //keyMargin - the space between white keys
-        //blackWidth - width of black keys
-        //height - total height of piano
-        //whiteHeight - height of white keys
-        //blackHeight - height of black keys
-        //borderColor - color of the border around each key
 
         this.state = {
+            // wave
             startAnimation: true,
             stopAnimation: false,
             waveAmplitude: Platform.OS === 'ios' ? 1 : 100,
             waveWidth: Platform.OS === 'ios' ? 3 : 250,
+            // file to choose from
             totalFiles: this.props.audioFiles.length,
+            // stats
             numWrong: 0,
             started: false,
             currentPosition: -1,
             currentTrack: undefined,
             correctAnswer: undefined,
             buttonsDisabled: true,
-            pianoHeight: 250,
-            score: 0
-
+            score: 0,
         };
         this.onPressPlay = this.onPressPlay.bind(this);
         this.updateTrack = this.updateTrack.bind(this);
         this.onChooseAnswer = this.onChooseAnswer.bind(this);
         this.playSound = this.playSound.bind(this);
-        this.playNextTrack = this.playNextTrack.bind(this);
     }
 
     componentDidMount() {
-        SoundPlayer.onFinishedPlaying((success: boolean) => { // success is true when the sound is played
-          console.log("Finished playing note!", success);
+        SoundPlayer.onFinishedPlaying((success: boolean) => {
+            console.log("Finished playing note!", success);
         });
     }
 
     componentWillUnmount() {
         SoundPlayer.unmount()
     }
-    
+
     onPressPlay() {
         this.setState({
             started: true
@@ -70,8 +62,7 @@ export default class MainPage extends Component<{}> {
             this.setState(prevState => ({
                 numWrong: prevState.numWrong + 1
             }));
-        }
-        else {
+        } else {
             this.setState(prevState => ({
                 score: prevState.score + 1
             }));
@@ -82,14 +73,11 @@ export default class MainPage extends Component<{}> {
         this.updateTrack();
     }
 
-    playNextTrack() {
-        this.setState({
-            buttonsDisabled: false
-        }, this.playSound);
-    }
-
     playSound() {
         //Sound.setCategory('Playback');
+        this.setState({
+            buttonsDisabled: false
+        });
         let index = this.state.currentTrack.lastIndexOf('.');
         let name = this.state.currentTrack.slice(0, index);
         let ext = this.state.currentTrack.slice(index + 1, this.state.currentTrack.length);
@@ -99,28 +87,6 @@ export default class MainPage extends Component<{}> {
         } catch (e) {
             console.warn(`Cannot play the sound file`, e)
         }
-
-        /*
-        console.warn('In play sound method');
-        let note = new Sound(this.state.currentTrack, Sound.MAIN_BUNDLE, (error) => {
-            console.warn('Heard back');
-            if (error) {
-                console.warn('Failed to load the sound', error);
-            }
-            else {
-                note.play((success) => {
-                    if (success) {
-                        console.warn('Successfully finished playing');
-                    } else {
-                        console.warn('Playback failed due to audio decoding errors');
-                        note.reset();
-                    }
-                });
-
-            }
-        });
-        //console.warn(Platform.OS);
-        */
     }
 
     updateTrack() {
@@ -141,18 +107,22 @@ export default class MainPage extends Component<{}> {
             currentPosition: nextPos,
             currentTrack: nextTrack,
             correctAnswer: nextAns.toUpperCase(),
-        }, () => (setTimeout(this.playNextTrack, 0)));
+        }, () => (setTimeout(this.playSound, 0)));
     }
+
     render() {
         // <Piano {...this.pianoProps}/>
         return <SafeAreaView style={styles.container}>
+
             <View style={[styles.headerContainer]}>
                 <Header score={this.state.score}/>
             </View>
+
             <View style={[styles.waveContainer]}>
                 <Wave startAnimation={this.state.startAnimation} stopAnimation={this.state.stopAnimation}
                       waveAmplitude={this.state.waveAmplitude} waveWidth={this.state.waveWidth}/>
             </View>
+
             <View style={[styles.bottomPanelContainer]}>
                 <BottomPanel started={this.state.started} options={new Set(this.props.notes)}
                              onPressPlay={this.onPressPlay} onChooseAnswer={this.onChooseAnswer}
@@ -164,23 +134,23 @@ export default class MainPage extends Component<{}> {
 }
 
 const styles = StyleSheet.create({
-        container: {
-            flex: 1,
-            justifyContent: "center",
-            alignItems: "stretch",
-            backgroundColor: "#FFFFFF",
-        },
-        headerContainer: {
-            flex: 1
-        },
-        waveContainer: {
-            flex: 3,
-            justifyContent: "center",
-            alignItems: "stretch",
-        },
-        bottomPanelContainer: {
-            flex: 3,
-            alignItems: "stretch",
-            justifyContent: "center",
-        },
-    });
+    container: {
+        flex: 1,
+        justifyContent: "center",
+        alignItems: "stretch",
+        backgroundColor: "#FFFFFF",
+    },
+    headerContainer: {
+        flex: 1
+    },
+    waveContainer: {
+        flex: 3,
+        justifyContent: "center",
+        alignItems: "stretch",
+    },
+    bottomPanelContainer: {
+        flex: 3,
+        alignItems: "stretch",
+        justifyContent: "center",
+    },
+});

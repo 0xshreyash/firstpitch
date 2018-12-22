@@ -12,14 +12,12 @@ import PianoKey from '../PianoKey/PianoKey';
 const playButton = '../../../assets/icons/play-button.png';
 const keyProps = {
     fillColor: true,
-    innerColor: "white",
     keyMargin: 0,
     blackWidth: 40,
     whiteWidth: 40,
-    height: 250,
     whiteHeight: 250,
     blackHeight: 150,
-    borderColor: "black"
+    borderColor: "black",
 };
 
 export default class Piano extends Component {

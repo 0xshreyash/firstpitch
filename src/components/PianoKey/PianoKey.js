@@ -1,33 +1,47 @@
 import React, {Component} from 'react';
 
 import {
-    StyleSheet,
     Text,
-    View,
     TouchableOpacity,
-    TouchableWithoutFeedback,
-    TouchableHighlight,
 } from 'react-native';
 
 
-
+/*
+Used for each key of the piano. Can be either white of black.
+ */
 export default class PianoKey extends Component {
 
     constructor(props) {
-      super(props);
-      let fontColor = this.props.keyColor === 'B' ? 'white' : 'black';
-      this.state = {
-          color: fontColor,
-      };
+        super(props);
+
+        this.generateKeyStyle = this.generateKeyStyle.bind(this);
+        this.generateTextStyle = this.generateTextStyle.bind(this);
     }
 
+    /*
+     Generate style for the text on the key
+     */
+    generateTextStyle() {
+        let color = 'black';
+        if(this.props.keyName === 'C#') {
+            console.warn(this.props.keyColor, this.props.fillColor);
+        }
+        if(this.props.keyColor === 'B' && this.props.fillColor) {
+            color = 'white';
+        }
+        return {color: color, fontSize: 15, marginBottom: 20};
+    }
 
-    generateStyle = function() {
+    /*
+     Generate style for this key
+     */
+    generateKeyStyle() {
         let keyNum = this.props.keyNum;
         let keyColor = this.props.keyColor;
         let borderColor = !this.props.disabled ? 'black' : 'gray';
         let blackColor = !this.props.disabled ? 'black' : 'gray';
-        style = {
+
+        let style = {
             height: this.props.whiteHeight,
             flex: 1,
             margin: this.props.keyMargin,
@@ -39,7 +53,7 @@ export default class PianoKey extends Component {
             borderColor: borderColor,
             borderWidth: 2,
         };
-        styleBlack = {
+        let styleBlack = {
             backgroundColor: blackColor,
             position: "absolute",
             left: (100/7)*(keyNum-1) + (100*2/14) + "%",
@@ -49,8 +63,8 @@ export default class PianoKey extends Component {
             height: this.props.blackHeight,
 
         };
-        styleNoFill = {
-            backgroundColor: this.props.innerColor,
+        let styleNoFill = {
+            backgroundColor: 'white',
             borderWidth: 2,
             borderRadius: 2,
             borderColor: this.props.borderColor
@@ -70,8 +84,8 @@ export default class PianoKey extends Component {
     render() {
 
         return (
-            <TouchableOpacity style = {this.generateStyle()}  onPress={()=>this.props.onPress()} disabled={this.props.disabled}>
-                <Text style = {{color: this.state.color, fontSize: 15, marginBottom: 20}}>{ this.props.keyName}</Text>
+            <TouchableOpacity style = {this.generateKeyStyle()}  onPress={()=>this.props.onPress()} disabled={this.props.disabled}>
+                <Text style ={this.generateTextStyle()}>{this.props.keyName}</Text>
             </TouchableOpacity>
         )
 

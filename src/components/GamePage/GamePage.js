@@ -9,8 +9,10 @@ import SoundPlayer from 'react-native-sound-player';
 import Header from '../Header/Header';
 import Wave from '../Wave/Wave';
 import BottomPanel from '../BottomPanel/BottomPanel';
+import {withMappedNavigationProps} from "react-navigation-props-mapper";
 
-export default class GamesPage extends Component {
+
+class GamesPage extends Component {
 
     constructor(props) {
         super(props);
@@ -139,6 +141,7 @@ export default class GamesPage extends Component {
         </SafeAreaView>;
     }
 }
+export default withMappedNavigationProps()(GamesPage)
 
 const styles = StyleSheet.create({
     container: {

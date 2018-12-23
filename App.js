@@ -1,6 +1,10 @@
 import React, {Component} from 'react';
+<<<<<<< HEAD
 import GamePage from './src/components/GamePage/GamePage';
 
+=======
+import MainMenu from './src/components/MainMenu/MainMenu'
+>>>>>>> main_menu
 
 export default class App extends Component {
 

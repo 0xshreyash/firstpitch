@@ -14,7 +14,6 @@ export default class GamesPage extends Component {
 
     constructor(props) {
         super(props);
-
         this.state = {
             // wave
             startAnimation: true,
@@ -36,6 +35,17 @@ export default class GamesPage extends Component {
         this.updateTrack = this.updateTrack.bind(this);
         this.onChooseAnswer = this.onChooseAnswer.bind(this);
         this.playSound = this.playSound.bind(this);
+        this.playNextTrack = this.playNextTrack.bind(this);
+    }
+
+    componentDidMount() {
+        SoundPlayer.onFinishedPlaying((success: boolean) => { // success is true when the sound is played
+          console.log("Finished playing note!", success);
+        });
+    }
+
+    componentWillUnmount() {
+        SoundPlayer.unmount()
     }
 
     componentDidMount() {
@@ -73,6 +83,12 @@ export default class GamesPage extends Component {
         this.updateTrack();
     }
 
+    playNextTrack() {
+        this.setState({
+            buttonsDisabled: false
+        }, this.playSound);
+    }
+
     playSound() {
         //Sound.setCategory('Playback');
         this.setState({
@@ -87,6 +103,28 @@ export default class GamesPage extends Component {
         } catch (e) {
             console.warn(`Cannot play the sound file`, e)
         }
+
+        /*
+        console.warn('In play sound method');
+        let note = new Sound(this.state.currentTrack, Sound.MAIN_BUNDLE, (error) => {
+            console.warn('Heard back');
+            if (error) {
+                console.warn('Failed to load the sound', error);
+            }
+            else {
+                note.play((success) => {
+                    if (success) {
+                        console.warn('Successfully finished playing');
+                    } else {
+                        console.warn('Playback failed due to audio decoding errors');
+                        note.reset();
+                    }
+                });
+
+            }
+        });
+        //console.warn(Platform.OS);
+        */
     }
 
     updateTrack() {
@@ -109,18 +147,17 @@ export default class GamesPage extends Component {
             correctAnswer: nextAns.toUpperCase(),
         }, () => (setTimeout(this.playSound, 0)));
     }
-
     render() {
         // <Piano {...this.pianoProps}/>
         return <SafeAreaView style={styles.container}>
-
             <View style={[styles.headerContainer]}>
                 <Header score={this.state.score}/>
             </View>
 
             <View style={[styles.waveContainer]}>
                 <Wave startAnimation={this.state.startAnimation} stopAnimation={this.state.stopAnimation}
-                      waveAmplitude={this.state.waveAmplitude} waveWidth={this.state.waveWidth}/>
+                      waveAmplitude={this.state.waveAmplitude} waveWidth={this.state.waveWidth}
+                      waveColor={'black'}/>
             </View>
 
             <View style={[styles.bottomPanelContainer]}>
@@ -154,3 +191,4 @@ const styles = StyleSheet.create({
         justifyContent: "center",
     },
 });
+

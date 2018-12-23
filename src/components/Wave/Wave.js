@@ -6,22 +6,14 @@ import {
 } from 'react-native';
 import RNSiriWaveView from "react-native-siri-wave-view";
 
-let height = 300;
-let screenWidth = Dimensions.get("window").width;
-let waveType = 0;
-let numberOfWaves = 1;
 
-const Wave = ({
-                  waveAmplitude,
-                  waveWidth,
-                  startAnimation,
-                  stopAnimation,
-              }) => (
+let width = {
+    width: Dimensions.get("window").width,
+}
+
+const Wave = (props) => (
     <View style={styles.container}>
-        <RNSiriWaveView height={height} width={screenWidth} amplitude={waveAmplitude}
-                        type={waveType} numberOfWaves={numberOfWaves}
-                        primaryWaveLineWidth={waveWidth}
-                        startAnimation={startAnimation} stopAnimation={stopAnimation}/>
+        <RNSiriWaveView {...props} {...width}/>
     </View>
 );
 

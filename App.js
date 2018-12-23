@@ -13,7 +13,7 @@ const AppNavigator = createStackNavigator({
     Game: {
         screen: GamePage
     },
-    Home: {
+    Menu: {
         screen: MainMenu
     },
 });

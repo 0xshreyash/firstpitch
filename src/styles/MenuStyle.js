@@ -4,7 +4,7 @@ const { width: viewportWidth, height: viewportHeight } = Dimensions.get('window'
 export default StyleSheet.create({
     menu: {
         paddingVertical: 0,
-        backgroundColor: "#b4dafe",
+        backgroundColor: "#ffffff",
         flex: 9,
     },
     header: {

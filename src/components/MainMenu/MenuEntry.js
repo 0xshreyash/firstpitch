@@ -65,10 +65,11 @@ export default class MenuEntry extends Component {
                 <View style = {styles.topColour}>
                 <Wave startAnimation={true} stopAnimation={false}
                         waveColor={'#000000'}
-                        backgroundColor={'blue'}
-                        numberOfWaves={ waveCount }
-                        primaryWaveLineWidth={Platform.OS === 'ios' ? 1 : 200}
-                        height={200}/>
+                        backgroundColor={'#ffffff'}
+                        numberOfWaves={2}
+                        primaryWaveLineWidth={Platform.OS === 'ios' ? 0.25 : 100}
+                        amplitude={0.25}
+                        height={100}/>
                 </View>
                 <View style = {this.levelButtonsStyling()}>
                     { this.generateButtons() }

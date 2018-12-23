@@ -27,9 +27,6 @@ export default class MainMenu extends Component {
         return (
 
             <View style={styles.menuContainer}>
-                <View style={styles.header}>
-                    <Header/>
-                </View>
                 <View style={styles.menu}>
                     <Carousel
                         ref={c => this._slider1Ref = c}

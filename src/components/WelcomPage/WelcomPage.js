@@ -1,11 +1,11 @@
 import {Text, View} from "react-native";
-import React, {Component} from "react";
+import React, {Component} from "react"
 import {withMappedNavigationProps} from "react-navigation-props-mapper";
 
 class WelcomePage extends Component {
 
     componentDidMount() {
-        setTimeout(() => this.props.navigation.replace("Game", {
+        setTimeout(() => this.props.navigation.replace("Menu", {
             audioFiles: getAudioFiles(),
             notes: getNotes()
         }), 1000);

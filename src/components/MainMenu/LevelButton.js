@@ -14,16 +14,18 @@ export default class LevelButton extends Component {
         let rows = 2;
         return {
             margin: margin,
-            // shadowColor: "#7e7d7d",
-            // shadowOffset: {
-            //     width: 0,
-            //     height: 2,
-            // },
-            // shadowOpacity: 0.30,
-            // shadowRadius: 2,
-            // elevation: 8,
-            backgroundColor: "white",
+            shadowColor: "#7e7d7d",
+             shadowOffset: {
+                 width: 0,
+                 height: 2,
+             },
+             shadowOpacity: 0.30,
+             shadowRadius: 2,
+             elevation: 8,
+            backgroundColor: "#eeeeee",
+
             borderRadius: 5,
+            borderColor: "blue",
             alignItems: "center",
             justifyContent: "center",
             flex: 1,
@@ -53,7 +55,7 @@ const styles = StyleSheet.create({
         fontSize: 50,
         fontWeight: 'bold',
         letterSpacing: 4,
-        color: "#d5d5d7",
+        color: "#444444",
     },
     levelSubtitle: {
         flex: 1,

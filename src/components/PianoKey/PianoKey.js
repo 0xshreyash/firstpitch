@@ -51,6 +51,8 @@ export default class PianoKey extends Component {
             borderBottomLeftRadius: 10,
             borderColor: borderColor,
             borderWidth: 1,
+
+
         };
         let styleBlack = {
             backgroundColor: blackColor,

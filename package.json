@@ -13,7 +13,7 @@
     "react-native-button": "^2.3.0",
     "react-native-gesture-handler": "^1.0.12",
     "react-native-linear-gradient": "^2.5.3",
-    "reac-native-siri-wave-view": "0.0.9",
+    "react-native-siri-wave-view": "0.0.9",
     "react-native-snap-carousel": "^3.7.5",
     "react-native-sound-player": "^0.5.3",
     "react-navigation": "^3.0.9"

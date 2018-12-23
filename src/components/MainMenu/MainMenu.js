@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Platform, View, ScrollView, Text, StatusBar, SafeAreaView } from 'react-native';
+import {  View  } from 'react-native';
 import Carousel, { Pagination } from 'react-native-snap-carousel';
 import { sliderWidth, itemWidth } from '../../styles/MenuEntryStyle';
 import MenuEntry from './MenuEntry';
@@ -15,7 +15,7 @@ export default class MainMenu extends Component {
         };
     }
 
-    _renderItem ({item, index}) {
+    _renderItem ({item, }) {
         return <MenuEntry data={item}/>;
     }
 

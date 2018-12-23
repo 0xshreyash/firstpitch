@@ -30,6 +30,8 @@ export default class GamesPage extends Component {
             correctAnswer: undefined,
             buttonsDisabled: true,
             score: 0,
+            waveColor: '#000000',
+            numberOfWaves: 5,
         };
         this.onPressPlay = this.onPressPlay.bind(this);
         this.updateTrack = this.updateTrack.bind(this);
@@ -43,17 +45,6 @@ export default class GamesPage extends Component {
           console.log("Finished playing note!", success);
         });
     }
-
-    componentWillUnmount() {
-        SoundPlayer.unmount()
-    }
-
-    componentDidMount() {
-        SoundPlayer.onFinishedPlaying((success: boolean) => {
-            console.log("Finished playing note!", success);
-        });
-    }
-
     componentWillUnmount() {
         SoundPlayer.unmount()
     }
@@ -103,28 +94,6 @@ export default class GamesPage extends Component {
         } catch (e) {
             console.warn(`Cannot play the sound file`, e)
         }
-
-        /*
-        console.warn('In play sound method');
-        let note = new Sound(this.state.currentTrack, Sound.MAIN_BUNDLE, (error) => {
-            console.warn('Heard back');
-            if (error) {
-                console.warn('Failed to load the sound', error);
-            }
-            else {
-                note.play((success) => {
-                    if (success) {
-                        console.warn('Successfully finished playing');
-                    } else {
-                        console.warn('Playback failed due to audio decoding errors');
-                        note.reset();
-                    }
-                });
-
-            }
-        });
-        //console.warn(Platform.OS);
-        */
     }
 
     updateTrack() {
@@ -148,7 +117,6 @@ export default class GamesPage extends Component {
         }, () => (setTimeout(this.playSound, 0)));
     }
     render() {
-        // <Piano {...this.pianoProps}/>
         return <SafeAreaView style={styles.container}>
             <View style={[styles.headerContainer]}>
                 <Header score={this.state.score}/>
@@ -157,7 +125,9 @@ export default class GamesPage extends Component {
             <View style={[styles.waveContainer]}>
                 <Wave startAnimation={this.state.startAnimation} stopAnimation={this.state.stopAnimation}
                       waveAmplitude={this.state.waveAmplitude} waveWidth={this.state.waveWidth}
-                      waveColor={'black'}/>
+                      waveColor={this.state.waveColor}
+                      numberOfWaves={this.state.numberOfWaves}/>
+
             </View>
 
             <View style={[styles.bottomPanelContainer]}>
@@ -189,6 +159,8 @@ const styles = StyleSheet.create({
         flex: 3,
         alignItems: "stretch",
         justifyContent: "center",
+        margin: 3,
+        //padding: 20,
     },
 });
 

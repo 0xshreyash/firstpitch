@@ -23,7 +23,6 @@ export default class LevelButton extends Component {
              shadowRadius: 2,
              elevation: 8,
             backgroundColor: "#eeeeee",
-
             borderRadius: 5,
             borderColor: "blue",
             alignItems: "center",

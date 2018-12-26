@@ -13,7 +13,8 @@ export const MenuEntries = [
                     icon: MusicIcons.treble,
                     instruments: ["piano"],
                     octaves: [3],
-                    notes: ["c", "g"]
+                    notes: ["c", "g"],
+                    onPress: () => this.props.navigation.navigate("GamePage")
                 },
                 {
                     level: 2,

@@ -1,29 +1,41 @@
 import React, {Component} from 'react';
-
 import {
-    StyleSheet,
-    Text,
     View,
-    TouchableOpacity,
-    TouchableWithoutFeedback,
-    TouchableHighlight,
 } from 'react-native';
+import PianoKey from '../PianoKey/PianoKey';
 
-import StraightPianoKey from '../PianoKey/PianoKey';
-
-export default class Piano extends Component{
+export default class Piano extends Component {
     constructor(props) {
-      super(props);
-      this.state = {
-        note: "",
-      };
+        super(props);
+        this.state = {
+            keyMap: {
+                'A': ['W', 6],
+                'B': ['W', 7],
+                'C': ['W', 1],
+                'D': ['W', 2],
+                'E': ['W', 3],
+                'F': ['W', 4],
+                'G': ['W', 5],
+                'A#': ['B', 6],
+                'C#': ['B', 1],
+                'D#': ['B', 2],
+                'F#': ['B', 4],
+                'G#': ['B', 5],
+            },
+            keys: ['C', 'D', 'E', 'F', 'G', 'A', 'B', 'C#', 'D#', 'F#', 'G#', 'A#'],
+            keyProps: {
+                keyMargin: 0,
+                blackWidth: 40,
+                whiteWidth: 40,
+                whiteHeight: 250,
+                blackHeight: 150,
+                borderColor: "black",
+            },
+        };
+        this.generatePianoStyle = this.generatePianoStyle.bind(this);
     }
 
-    setNote = (note)=>{
-        this.setState({ note:note })
-    }
-
-    generatePianoStyle = function() {
+    generatePianoStyle = function () {
         return {
             height: this.props.height,
             alignItems: "center",
@@ -32,37 +44,23 @@ export default class Piano extends Component{
         }
     };
 
-    render(){
-        keyProps = {
-            setNote: this.setNote,
-        };
-        keyProps = {...this.props, ...keyProps};
-
+    render() {
         return (
-
-            <View style = {[this.generatePianoStyle()]}>
-                <Text style = {[styles.noteText]}>{this.state.note}</Text>
-                <StraightPianoKey keyNum = "1" keyColor = 'W' keyName = "C" {...keyProps} disabled={false}></StraightPianoKey>
-                <StraightPianoKey keyNum = "2" keyColor = 'W' keyName = "D" {...keyProps} disabled={false}></StraightPianoKey>
-                <StraightPianoKey keyNum = "3" keyColor = 'W' keyName = "E" {...keyProps} disabled={false}></StraightPianoKey>
-                <StraightPianoKey keyNum = "4" keyColor = 'W' keyName = "F" {...keyProps} disabled={false}></StraightPianoKey>
-                <StraightPianoKey keyNum = "5" keyColor = 'W' keyName = "G" {...keyProps} disabled={false}></StraightPianoKey>
-                <StraightPianoKey keyNum = "6" keyColor = 'W' keyName = "A" {...keyProps} disabled={false}></StraightPianoKey>
-                <StraightPianoKey keyNum = "7" keyColor = 'W' keyName = "B" {...keyProps} disabled={false}></StraightPianoKey>
-                <StraightPianoKey keyNum = "6" keyColor = 'B' keyName = "A#" {...keyProps} disabled={false}></StraightPianoKey>
-                <StraightPianoKey keyNum = "5" keyColor = 'B' keyName = "G#" {...keyProps} disabled={false}></StraightPianoKey>
-                <StraightPianoKey keyNum = "4" keyColor = 'B' keyName = "F#" {...keyProps} disabled={false}></StraightPianoKey>
-                <StraightPianoKey keyNum = "2" keyColor = 'B' keyName = "D#" {...keyProps} disabled={false}></StraightPianoKey>
-                <StraightPianoKey keyNum = "1" keyColor = 'B' keyName = "C#" {...keyProps} disabled={false}></StraightPianoKey>
+            <View style={[this.generatePianoStyle()]}>
+                {
+                    (this.state.keys).map(
+                        (name) => {
+                            return (
+                                <PianoKey keyNum={this.state.keyMap[name][1]} keyColor={this.state.keyMap[name][0]}
+                                          keyName={name} {...this.state.keyProps} {...this.props}
+                                          disabled={this.props.disabled || !this.props.options.has(name)}
+                                          onPress={(event) => this.props.onChooseAnswer(event, name)}/>
+                            );
+                        }
+                    )
+                }
             </View>
         )
     }
 }
 
-const styles = StyleSheet.create({
-    noteText:{
-        position: "absolute",
-        left: 10,
-        top: -30,
-    },
-});

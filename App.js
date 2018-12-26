@@ -1,36 +1,35 @@
 import React, {Component} from 'react';
-import MainMenu from './src/components/MainMenu/MainMenu'
+import GamePage from './src/components/GamePage/GamePage';
+import MainMenu from './src/components/MainMenu/MainMenu';
+import WelcomePage from './src/components/WelcomPage/WelcomPage';
+import {createStackNavigator, createAppContainer} from 'react-navigation';
+
+
+
+const AppNavigator = createStackNavigator({
+    WelcomePage: {
+        screen: WelcomePage
+    },
+    Game: {
+        screen: GamePage
+    },
+    Menu: {
+        screen: MainMenu
+    },
+});
+
+const AppContainer = createAppContainer(AppNavigator);
+
 
 export default class App extends Component {
-
-    constructor(props) {
-        super(props);
-    }
-
-    static getAudioFiles() {
-        let instruments = ['piano'];
-        let notes = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'A#', 'C#', 'D#', 'F#', 'G#'];
-        let octaves = ['2', '3'];
-        let suffix = '.mp3';
-        let prefix = '../../../assets/audio/';
-        let files = [];
-        for(let i = 0; i < instruments.length; i++) {
-            let instrument = instruments[i];
-            for(let j = 0; j < notes.length; j++) {
-                let note = notes[j];
-                for(let k = 0; k < octaves.length; k++) {
-                    files.push(prefix + instrument + '/' + note + octaves[k] + suffix)
-                }
-            }
-        }
-        return files
-    }
-
-    static getNotes() {
-        return ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'A#', 'C#', 'D#', 'F#', 'G#'];
-    }
-
     render() {
-        return <MainMenu/>;
+
+        return <AppContainer />
     }
 }
+
+
+
+
+
+

@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import { View, Text, Image, TouchableOpacity, Dimensions } from 'react-native';
+import { View, Text, Image, TouchableOpacity, Dimensions, Platform } from 'react-native';
 import PropTypes from 'prop-types';
 import styles from '../../styles/MenuEntryStyle';
 import LevelButton from "./LevelButton";
 import Wave from '../Wave/Wave';
+
 
 const { width: viewportWidth, height: viewportHeight } = Dimensions.get('window');
 
@@ -28,7 +29,7 @@ export default class MenuEntry extends Component {
         widthPercentage: 95,
         heightPercentage: 50,
         buttonMargin: 5,
-    }
+    };
 
     generateButtons(){
         const { data: { levels }} = this.props;
@@ -63,10 +64,12 @@ export default class MenuEntry extends Component {
             <View style = {styles.slideInnerContainer}>
                 <View style = {styles.topColour}>
                 <Wave startAnimation={true} stopAnimation={false}
-                        waveColor={'#ffffff'}
-                        numberOfWaves={ waveCount }
-                        primaryWaveLineWidth={100}
-                        height={200}/>
+                        waveColor={'#000000'}
+                        backgroundColor={'#ffffff'}
+                        numberOfWaves={2}
+                        primaryWaveLineWidth={Platform.OS === 'ios' ? 0.25 : 100}
+                        amplitude={0.25}
+                        height={100}/>
                 </View>
                 <View style = {this.levelButtonsStyling()}>
                     { this.generateButtons() }

@@ -2,9 +2,16 @@ import { StyleSheet, Dimensions, Platform } from 'react-native';
 const { width: viewportWidth, height: viewportHeight } = Dimensions.get('window');
 
 export default StyleSheet.create({
-    exampleContainer: {
+    menu: {
         paddingVertical: 0,
-        backgroundColor: "#b4dafe",
+        backgroundColor: "#ffffff",
+        flex: 9,
+    },
+    header: {
+        flex: 1,
+        maxHeight: 50,
+    },
+    menuContainer: {
         flex: 1,
     },
     slider: {

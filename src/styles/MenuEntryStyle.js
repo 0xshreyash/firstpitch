@@ -27,13 +27,13 @@ export default StyleSheet.create({
     titleText:{
         fontSize: 30,
         letterSpacing: 3,
-        color: "white",
+        color: "black",
         fontWeight: "bold",
     },
     subtitleText:{
         fontSize: 20,
         letterSpacing: 3,
-        color: "white",
+        color: "black",
     },
     topColour:{
         position: "absolute",

@@ -35,10 +35,36 @@
 		2D16E6881FA4F8E400B85C8A /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D16E6891FA4F8E400B85C8A /* libReact.a */; };
 		2DCD954D1E0B4F2C00145EB5 /* firstpitchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* firstpitchTests.m */; };
 		2DF0FFEE2056DD460020B375 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3EA31DF850E9000B6D8A /* libReact.a */; };
+		49237146A2B743AAB52C028F /* libRNSoundPlayer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C232A0CC755400C9623771E /* libRNSoundPlayer.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
 		D55DD88E792D471A8110E87B /* libRNSiriWaveView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 269BBBF0404546199924BF20 /* libRNSiriWaveView.a */; };
-		49237146A2B743AAB52C028F /* libRNSoundPlayer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C232A0CC755400C9623771E /* libRNSoundPlayer.a */; };
+		ED515C9121CD8D8D0029CF6B /* piano_gs3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ED515C7821CD8D8A0029CF6B /* piano_gs3.mp3 */; };
+		ED515C9221CD8D8D0029CF6B /* piano_f2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ED515C7921CD8D8A0029CF6B /* piano_f2.mp3 */; };
+		ED515C9321CD8D8D0029CF6B /* piano_d3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ED515C7A21CD8D8A0029CF6B /* piano_d3.mp3 */; };
+		ED515C9421CD8D8D0029CF6B /* piano_ds2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ED515C7B21CD8D8A0029CF6B /* piano_ds2.mp3 */; };
+		ED515C9521CD8D8D0029CF6B /* piano_f3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ED515C7C21CD8D8A0029CF6B /* piano_f3.mp3 */; };
+		ED515C9621CD8D8D0029CF6B /* piano_b2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ED515C7D21CD8D8A0029CF6B /* piano_b2.mp3 */; };
+		ED515C9721CD8D8D0029CF6B /* piano_a2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ED515C7E21CD8D8B0029CF6B /* piano_a2.mp3 */; };
+		ED515C9821CD8D8D0029CF6B /* piano_ds3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ED515C7F21CD8D8B0029CF6B /* piano_ds3.mp3 */; };
+		ED515C9921CD8D8D0029CF6B /* piano_c4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ED515C8021CD8D8B0029CF6B /* piano_c4.mp3 */; };
+		ED515C9A21CD8D8D0029CF6B /* piano_e3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ED515C8121CD8D8B0029CF6B /* piano_e3.mp3 */; };
+		ED515C9B21CD8D8D0029CF6B /* piano_b3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ED515C8221CD8D8B0029CF6B /* piano_b3.mp3 */; };
+		ED515C9C21CD8D8D0029CF6B /* piano_gs2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ED515C8321CD8D8B0029CF6B /* piano_gs2.mp3 */; };
+		ED515C9D21CD8D8D0029CF6B /* piano_fs3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ED515C8421CD8D8B0029CF6B /* piano_fs3.mp3 */; };
+		ED515C9E21CD8D8D0029CF6B /* piano_d2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ED515C8521CD8D8C0029CF6B /* piano_d2.mp3 */; };
+		ED515C9F21CD8D8D0029CF6B /* piano_cs3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ED515C8621CD8D8C0029CF6B /* piano_cs3.mp3 */; };
+		ED515CA021CD8D8D0029CF6B /* piano_as2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ED515C8721CD8D8C0029CF6B /* piano_as2.mp3 */; };
+		ED515CA121CD8D8D0029CF6B /* piano_e2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ED515C8821CD8D8C0029CF6B /* piano_e2.mp3 */; };
+		ED515CA221CD8D8D0029CF6B /* piano_fs2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ED515C8921CD8D8C0029CF6B /* piano_fs2.mp3 */; };
+		ED515CA321CD8D8D0029CF6B /* piano_as3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ED515C8A21CD8D8C0029CF6B /* piano_as3.mp3 */; };
+		ED515CA421CD8D8D0029CF6B /* piano_c3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ED515C8B21CD8D8C0029CF6B /* piano_c3.mp3 */; };
+		ED515CA521CD8D8D0029CF6B /* piano_a3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ED515C8C21CD8D8D0029CF6B /* piano_a3.mp3 */; };
+		ED515CA621CD8D8D0029CF6B /* piano_g3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ED515C8D21CD8D8D0029CF6B /* piano_g3.mp3 */; };
+		ED515CA721CD8D8D0029CF6B /* piano_g2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ED515C8E21CD8D8D0029CF6B /* piano_g2.mp3 */; };
+		ED515CA821CD8D8D0029CF6B /* piano_c2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ED515C8F21CD8D8D0029CF6B /* piano_c2.mp3 */; };
+		ED515CA921CD8D8D0029CF6B /* piano_cs2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ED515C9021CD8D8D0029CF6B /* piano_cs2.mp3 */; };
+		8E74454BD18F4267B4C110D1 /* libRNGestureHandler.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EC53314212E4E6CAD11CEC9 /* libRNGestureHandler.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -315,6 +341,20 @@
 			remoteGlobalIDString = 358F4ED71D1E81A9004DF814;
 			remoteInfo = RCTBlob;
 		};
+		ED3B3C1321CD866700A61A3E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6A5C1E97EBE5451ABFE2C1E4 /* RNSoundPlayer.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = RNSoundPlayer;
+		};
+		EDCC65C121CD10EE00AAE211 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AF8F15589BB7459B90ABDBBF /* RNSiriWaveView.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = RNSiriWaveView;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -337,17 +377,44 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = firstpitch/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = firstpitch/main.m; sourceTree = "<group>"; };
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
+		269BBBF0404546199924BF20 /* libRNSiriWaveView.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNSiriWaveView.a; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* firstpitch-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "firstpitch-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* firstpitch-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "firstpitch-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D16E6891FA4F8E400B85C8A /* libReact.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libReact.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C232A0CC755400C9623771E /* libRNSoundPlayer.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNSoundPlayer.a; sourceTree = "<group>"; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
+		6A5C1E97EBE5451ABFE2C1E4 /* RNSoundPlayer.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNSoundPlayer.xcodeproj; path = "../node_modules/react-native-sound-player/ios/RNSoundPlayer.xcodeproj"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
-		AF8F15589BB7459B90ABDBBF /* RNSiriWaveView.xcodeproj */ = {isa = PBXFileReference; name = "RNSiriWaveView.xcodeproj"; path = "../node_modules/react-native-siri-wave-view/ios/RNSiriWaveView.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
-		269BBBF0404546199924BF20 /* libRNSiriWaveView.a */ = {isa = PBXFileReference; name = "libRNSiriWaveView.a"; path = "libRNSiriWaveView.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
-		6A5C1E97EBE5451ABFE2C1E4 /* RNSoundPlayer.xcodeproj */ = {isa = PBXFileReference; name = "RNSoundPlayer.xcodeproj"; path = "../node_modules/react-native-sound-player/ios/RNSoundPlayer.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
-		4C232A0CC755400C9623771E /* libRNSoundPlayer.a */ = {isa = PBXFileReference; name = "libRNSoundPlayer.a"; path = "libRNSoundPlayer.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		AF8F15589BB7459B90ABDBBF /* RNSiriWaveView.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNSiriWaveView.xcodeproj; path = "../node_modules/react-native-siri-wave-view/ios/RNSiriWaveView.xcodeproj"; sourceTree = "<group>"; };
+		ED515C7821CD8D8A0029CF6B /* piano_gs3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = piano_gs3.mp3; path = ../assets/audio/piano_gs3.mp3; sourceTree = "<group>"; };
+		ED515C7921CD8D8A0029CF6B /* piano_f2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = piano_f2.mp3; path = ../assets/audio/piano_f2.mp3; sourceTree = "<group>"; };
+		ED515C7A21CD8D8A0029CF6B /* piano_d3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = piano_d3.mp3; path = ../assets/audio/piano_d3.mp3; sourceTree = "<group>"; };
+		ED515C7B21CD8D8A0029CF6B /* piano_ds2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = piano_ds2.mp3; path = ../assets/audio/piano_ds2.mp3; sourceTree = "<group>"; };
+		ED515C7C21CD8D8A0029CF6B /* piano_f3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = piano_f3.mp3; path = ../assets/audio/piano_f3.mp3; sourceTree = "<group>"; };
+		ED515C7D21CD8D8A0029CF6B /* piano_b2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = piano_b2.mp3; path = ../assets/audio/piano_b2.mp3; sourceTree = "<group>"; };
+		ED515C7E21CD8D8B0029CF6B /* piano_a2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = piano_a2.mp3; path = ../assets/audio/piano_a2.mp3; sourceTree = "<group>"; };
+		ED515C7F21CD8D8B0029CF6B /* piano_ds3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = piano_ds3.mp3; path = ../assets/audio/piano_ds3.mp3; sourceTree = "<group>"; };
+		ED515C8021CD8D8B0029CF6B /* piano_c4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = piano_c4.mp3; path = ../assets/audio/piano_c4.mp3; sourceTree = "<group>"; };
+		ED515C8121CD8D8B0029CF6B /* piano_e3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = piano_e3.mp3; path = ../assets/audio/piano_e3.mp3; sourceTree = "<group>"; };
+		ED515C8221CD8D8B0029CF6B /* piano_b3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = piano_b3.mp3; path = ../assets/audio/piano_b3.mp3; sourceTree = "<group>"; };
+		ED515C8321CD8D8B0029CF6B /* piano_gs2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = piano_gs2.mp3; path = ../assets/audio/piano_gs2.mp3; sourceTree = "<group>"; };
+		ED515C8421CD8D8B0029CF6B /* piano_fs3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = piano_fs3.mp3; path = ../assets/audio/piano_fs3.mp3; sourceTree = "<group>"; };
+		ED515C8521CD8D8C0029CF6B /* piano_d2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = piano_d2.mp3; path = ../assets/audio/piano_d2.mp3; sourceTree = "<group>"; };
+		ED515C8621CD8D8C0029CF6B /* piano_cs3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = piano_cs3.mp3; path = ../assets/audio/piano_cs3.mp3; sourceTree = "<group>"; };
+		ED515C8721CD8D8C0029CF6B /* piano_as2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = piano_as2.mp3; path = ../assets/audio/piano_as2.mp3; sourceTree = "<group>"; };
+		ED515C8821CD8D8C0029CF6B /* piano_e2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = piano_e2.mp3; path = ../assets/audio/piano_e2.mp3; sourceTree = "<group>"; };
+		ED515C8921CD8D8C0029CF6B /* piano_fs2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = piano_fs2.mp3; path = ../assets/audio/piano_fs2.mp3; sourceTree = "<group>"; };
+		ED515C8A21CD8D8C0029CF6B /* piano_as3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = piano_as3.mp3; path = ../assets/audio/piano_as3.mp3; sourceTree = "<group>"; };
+		ED515C8B21CD8D8C0029CF6B /* piano_c3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = piano_c3.mp3; path = ../assets/audio/piano_c3.mp3; sourceTree = "<group>"; };
+		ED515C8C21CD8D8D0029CF6B /* piano_a3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = piano_a3.mp3; path = ../assets/audio/piano_a3.mp3; sourceTree = "<group>"; };
+		ED515C8D21CD8D8D0029CF6B /* piano_g3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = piano_g3.mp3; path = ../assets/audio/piano_g3.mp3; sourceTree = "<group>"; };
+		ED515C8E21CD8D8D0029CF6B /* piano_g2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = piano_g2.mp3; path = ../assets/audio/piano_g2.mp3; sourceTree = "<group>"; };
+		ED515C8F21CD8D8D0029CF6B /* piano_c2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = piano_c2.mp3; path = ../assets/audio/piano_c2.mp3; sourceTree = "<group>"; };
+		ED515C9021CD8D8D0029CF6B /* piano_cs2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = piano_cs2.mp3; path = ../assets/audio/piano_cs2.mp3; sourceTree = "<group>"; };
+		997B5D9D156F4863811DD297 /* RNGestureHandler.xcodeproj */ = {isa = PBXFileReference; name = "RNGestureHandler.xcodeproj"; path = "../node_modules/react-native-gesture-handler/ios/RNGestureHandler.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		5EC53314212E4E6CAD11CEC9 /* libRNGestureHandler.a */ = {isa = PBXFileReference; name = "libRNGestureHandler.a"; path = "libRNGestureHandler.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -377,6 +444,7 @@
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
 				D55DD88E792D471A8110E87B /* libRNSiriWaveView.a in Frameworks */,
 				49237146A2B743AAB52C028F /* libRNSoundPlayer.a in Frameworks */,
+				8E74454BD18F4267B4C110D1 /* libRNGestureHandler.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -565,6 +633,7 @@
 				139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */,
 				AF8F15589BB7459B90ABDBBF /* RNSiriWaveView.xcodeproj */,
 				6A5C1E97EBE5451ABFE2C1E4 /* RNSoundPlayer.xcodeproj */,
+				997B5D9D156F4863811DD297 /* RNGestureHandler.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -581,11 +650,37 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				ED515C7E21CD8D8B0029CF6B /* piano_a2.mp3 */,
+				ED515C8C21CD8D8D0029CF6B /* piano_a3.mp3 */,
+				ED515C8721CD8D8C0029CF6B /* piano_as2.mp3 */,
+				ED515C8A21CD8D8C0029CF6B /* piano_as3.mp3 */,
+				ED515C7D21CD8D8A0029CF6B /* piano_b2.mp3 */,
+				ED515C8221CD8D8B0029CF6B /* piano_b3.mp3 */,
+				ED515C8F21CD8D8D0029CF6B /* piano_c2.mp3 */,
+				ED515C8B21CD8D8C0029CF6B /* piano_c3.mp3 */,
+				ED515C8021CD8D8B0029CF6B /* piano_c4.mp3 */,
+				ED515C9021CD8D8D0029CF6B /* piano_cs2.mp3 */,
+				ED515C8621CD8D8C0029CF6B /* piano_cs3.mp3 */,
+				ED515C8521CD8D8C0029CF6B /* piano_d2.mp3 */,
+				ED515C7A21CD8D8A0029CF6B /* piano_d3.mp3 */,
+				ED515C7B21CD8D8A0029CF6B /* piano_ds2.mp3 */,
+				ED515C7F21CD8D8B0029CF6B /* piano_ds3.mp3 */,
+				ED515C8821CD8D8C0029CF6B /* piano_e2.mp3 */,
+				ED515C8121CD8D8B0029CF6B /* piano_e3.mp3 */,
+				ED515C7921CD8D8A0029CF6B /* piano_f2.mp3 */,
+				ED515C7C21CD8D8A0029CF6B /* piano_f3.mp3 */,
+				ED515C8921CD8D8C0029CF6B /* piano_fs2.mp3 */,
+				ED515C8421CD8D8B0029CF6B /* piano_fs3.mp3 */,
+				ED515C8E21CD8D8D0029CF6B /* piano_g2.mp3 */,
+				ED515C8D21CD8D8D0029CF6B /* piano_g3.mp3 */,
+				ED515C8321CD8D8B0029CF6B /* piano_gs2.mp3 */,
+				ED515C7821CD8D8A0029CF6B /* piano_gs3.mp3 */,
 				13B07FAE1A68108700A75B9A /* firstpitch */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* firstpitchTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
+				EDCC659521CD10EA00AAE211 /* Recovered References */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -608,6 +703,31 @@
 			children = (
 				ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */,
 				2D16E6721FA4F8DC00B85C8A /* libRCTBlob-tvOS.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ED3B3BEA21CD866700A61A3E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ED3B3C1421CD866700A61A3E /* libRNSoundPlayer.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EDCC659521CD10EA00AAE211 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				269BBBF0404546199924BF20 /* libRNSiriWaveView.a */,
+				4C232A0CC755400C9623771E /* libRNSoundPlayer.a */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		EDCC65BC21CD10ED00AAE211 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EDCC65C221CD10EE00AAE211 /* libRNSiriWaveView.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -770,6 +890,14 @@
 				{
 					ProductGroup = 146834001AC3E56700842450 /* Products */;
 					ProjectRef = 146833FF1AC3E56700842450 /* React.xcodeproj */;
+				},
+				{
+					ProductGroup = EDCC65BC21CD10ED00AAE211 /* Products */;
+					ProjectRef = AF8F15589BB7459B90ABDBBF /* RNSiriWaveView.xcodeproj */;
+				},
+				{
+					ProductGroup = ED3B3BEA21CD866700A61A3E /* Products */;
+					ProjectRef = 6A5C1E97EBE5451ABFE2C1E4 /* RNSoundPlayer.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -1042,6 +1170,20 @@
 			remoteRef = ADBDB9261DFEBF0700ED6528 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		ED3B3C1421CD866700A61A3E /* libRNSoundPlayer.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNSoundPlayer.a;
+			remoteRef = ED3B3C1321CD866700A61A3E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		EDCC65C221CD10EE00AAE211 /* libRNSiriWaveView.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNSiriWaveView.a;
+			remoteRef = EDCC65C121CD10EE00AAE211 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -1056,6 +1198,31 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED515C9121CD8D8D0029CF6B /* piano_gs3.mp3 in Resources */,
+				ED515C9221CD8D8D0029CF6B /* piano_f2.mp3 in Resources */,
+				ED515C9321CD8D8D0029CF6B /* piano_d3.mp3 in Resources */,
+				ED515C9421CD8D8D0029CF6B /* piano_ds2.mp3 in Resources */,
+				ED515C9521CD8D8D0029CF6B /* piano_f3.mp3 in Resources */,
+				ED515C9621CD8D8D0029CF6B /* piano_b2.mp3 in Resources */,
+				ED515C9721CD8D8D0029CF6B /* piano_a2.mp3 in Resources */,
+				ED515C9821CD8D8D0029CF6B /* piano_ds3.mp3 in Resources */,
+				ED515C9921CD8D8D0029CF6B /* piano_c4.mp3 in Resources */,
+				ED515C9A21CD8D8D0029CF6B /* piano_e3.mp3 in Resources */,
+				ED515C9B21CD8D8D0029CF6B /* piano_b3.mp3 in Resources */,
+				ED515C9C21CD8D8D0029CF6B /* piano_gs2.mp3 in Resources */,
+				ED515C9D21CD8D8D0029CF6B /* piano_fs3.mp3 in Resources */,
+				ED515C9E21CD8D8D0029CF6B /* piano_d2.mp3 in Resources */,
+				ED515C9F21CD8D8D0029CF6B /* piano_cs3.mp3 in Resources */,
+				ED515CA021CD8D8D0029CF6B /* piano_as2.mp3 in Resources */,
+				ED515CA121CD8D8D0029CF6B /* piano_e2.mp3 in Resources */,
+				ED515CA221CD8D8D0029CF6B /* piano_fs2.mp3 in Resources */,
+				ED515CA321CD8D8D0029CF6B /* piano_as3.mp3 in Resources */,
+				ED515CA421CD8D8D0029CF6B /* piano_c3.mp3 in Resources */,
+				ED515CA521CD8D8D0029CF6B /* piano_a3.mp3 in Resources */,
+				ED515CA621CD8D8D0029CF6B /* piano_g3.mp3 in Resources */,
+				ED515CA721CD8D8D0029CF6B /* piano_g2.mp3 in Resources */,
+				ED515CA821CD8D8D0029CF6B /* piano_c2.mp3 in Resources */,
+				ED515CA921CD8D8D0029CF6B /* piano_cs2.mp3 in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 			);
@@ -1180,9 +1347,19 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-siri-wave-view/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-sound-player/ios",
+					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
+				);
 				INFOPLIST_FILE = firstpitchTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
@@ -1190,14 +1367,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/firstpitch.app/firstpitch";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-				);
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/../node_modules/react-native-siri-wave-view/ios/**",
-					"$(SRCROOT)/../node_modules/react-native-sound-player/ios",
-				);
 			};
 			name = Debug;
 		};
@@ -1206,9 +1375,19 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-siri-wave-view/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-sound-player/ios",
+					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
+				);
 				INFOPLIST_FILE = firstpitchTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
@@ -1216,14 +1395,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/firstpitch.app/firstpitch";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-				);
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/../node_modules/react-native-siri-wave-view/ios/**",
-					"$(SRCROOT)/../node_modules/react-native-sound-player/ios",
-				);
 			};
 			name = Release;
 		};
@@ -1233,6 +1404,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-siri-wave-view/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-sound-player/ios",
+					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
+				);
 				INFOPLIST_FILE = firstpitch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -1243,11 +1420,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = firstpitch;
 				VERSIONING_SYSTEM = "apple-generic";
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/../node_modules/react-native-siri-wave-view/ios/**",
-					"$(SRCROOT)/../node_modules/react-native-sound-player/ios",
-				);
 			};
 			name = Debug;
 		};
@@ -1256,6 +1428,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-siri-wave-view/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-sound-player/ios",
+					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
+				);
 				INFOPLIST_FILE = firstpitch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -1266,11 +1444,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = firstpitch;
 				VERSIONING_SYSTEM = "apple-generic";
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/../node_modules/react-native-siri-wave-view/ios/**",
-					"$(SRCROOT)/../node_modules/react-native-sound-player/ios",
-				);
 			};
 			name = Release;
 		};
@@ -1286,8 +1459,18 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-siri-wave-view/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-sound-player/ios",
+					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
+				);
 				INFOPLIST_FILE = "firstpitch-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
@@ -1297,14 +1480,6 @@
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.2;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-				);
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/../node_modules/react-native-siri-wave-view/ios/**",
-					"$(SRCROOT)/../node_modules/react-native-sound-player/ios",
-				);
 			};
 			name = Debug;
 		};
@@ -1320,8 +1495,18 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-siri-wave-view/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-sound-player/ios",
+					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
+				);
 				INFOPLIST_FILE = "firstpitch-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
@@ -1331,14 +1516,6 @@
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.2;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-				);
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/../node_modules/react-native-siri-wave-view/ios/**",
-					"$(SRCROOT)/../node_modules/react-native-sound-player/ios",
-				);
 			};
 			name = Release;
 		};
@@ -1353,8 +1530,18 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-siri-wave-view/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-sound-player/ios",
+					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
+				);
 				INFOPLIST_FILE = "firstpitch-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
@@ -1364,14 +1551,6 @@
 				SDKROOT = appletvos;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/firstpitch-tvOS.app/firstpitch-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-				);
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/../node_modules/react-native-siri-wave-view/ios/**",
-					"$(SRCROOT)/../node_modules/react-native-sound-player/ios",
-				);
 			};
 			name = Debug;
 		};
@@ -1386,8 +1565,18 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-siri-wave-view/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-sound-player/ios",
+					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
+				);
 				INFOPLIST_FILE = "firstpitch-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
@@ -1397,14 +1586,6 @@
 				SDKROOT = appletvos;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/firstpitch-tvOS.app/firstpitch-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-				);
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/../node_modules/react-native-siri-wave-view/ios/**",
-					"$(SRCROOT)/../node_modules/react-native-sound-player/ios",
-				);
 			};
 			name = Release;
 		};

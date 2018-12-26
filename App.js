@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import GamePage from './src/components/GamePage/GamePage';
 import MainMenu from './src/components/MainMenu/MainMenu';
-import WelcomePage from './src/components/WelcomPage/WelcomPage';
+import WelcomePage from './src/components/WelcomePage/WelcomePage';
 import {createStackNavigator, createAppContainer} from 'react-navigation';
 
 

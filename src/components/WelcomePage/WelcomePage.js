@@ -1,6 +1,7 @@
 import {Text, View} from "react-native";
 import React, {Component} from "react"
 import {withMappedNavigationProps} from "react-navigation-props-mapper";
+import WaveView from "../WaveView/WaveView";
 
 class WelcomePage extends Component {
 
@@ -8,13 +9,24 @@ class WelcomePage extends Component {
         setTimeout(() => this.props.navigation.replace("Menu", {
             audioFiles: getAudioFiles(),
             notes: getNotes()
-        }), 1000);
+        }), 1500);
     }
 
     render() {
         return (
             <View style={styles.welcomeTextContainer}>
+                <WaveView
+                    style={styles.waveBall}
+                    H={50}
+                    waveParams={[
+                        {A: 0, T: 100, fill: '#62c2ff'},
+                        {A: 40, T: 100, fill: '#ff5555'},
+                    ]}
+                    animated={false}
+                    speedIncreasePerWave={0}
+                />
                 <Text style={styles.welcomeText}>First Pitch</Text>
+
             </View>
         );
     }
@@ -30,6 +42,18 @@ const styles = {
     welcomeText: {
         fontSize: 50,
         fontColor: 'black',
+    },
+    wave: {
+        width: 100,
+        aspectRatio: 1,
+        overflow: 'hidden',
+        backgroundColor: 'white',
+    },
+    waveBall: {
+        width: 100,
+        aspectRatio: 1,
+        borderRadius: 100,
+        overflow: 'hidden',
     }
 };
 

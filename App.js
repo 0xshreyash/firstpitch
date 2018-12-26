@@ -3,11 +3,15 @@ import GamePage from './src/components/GamePage/GamePage';
 import MainMenu from './src/components/MainMenu/MainMenu';
 import WelcomePage from './src/components/WelcomPage/WelcomPage';
 import ColorTutorial from './src/components/ColorTutorial/ColorTutorial';
+import FreePlaySettings from './src/components/FreePlaySettings/FreePlaySettings';
 import {createStackNavigator, createAppContainer} from 'react-navigation';
 
 const AppNavigator = createStackNavigator({
     WelcomePage: {
         screen: WelcomePage
+    },
+    FreePlaySettings:{
+        screen: FreePlaySettings
     },
     Game: {
         screen: GamePage

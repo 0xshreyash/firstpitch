@@ -30,6 +30,9 @@ class Profile extends Component {
                     <TouchableOpacity onPress={() => navigate("ColorTutorial")}>
                         <Text style={ styles.titleText}>--Color Tutorial--</Text>
                     </TouchableOpacity>
+                    <TouchableOpacity onPress={() => navigate("FreePlaySettings")}>
+                        <Text style={ styles.titleText}>--Free Play--</Text>
+                    </TouchableOpacity>
                 </View>
             </View>
 

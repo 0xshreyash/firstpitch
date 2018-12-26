@@ -18,10 +18,11 @@ export default class ColorEntry extends Component {
         return (
             <View style = {styles.slideInnerContainer}>
                 <Wave startAnimation={true} stopAnimation={false}
-                    waveColor={'#ffffff'}
+                    waveColor={ color }
                     numberOfWaves={ 1 }
                     primaryWaveLineWidth={100}
                     height={200}/>
+                <Text style = {[styles.noteText, {color: color}]}>{ note}</Text>
                 <Text style = {styles.subtitleText}>{ subtitle }</Text>
             </View>
 

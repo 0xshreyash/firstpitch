@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Platform, View, ScrollView, Text, StatusBar, SafeAreaView } from 'react-native';
+import { Platform, View, ScrollView, Text, StatusBar, SafeAreaView, TouchableOpacity } from 'react-native';
 import Carousel, { Pagination } from 'react-native-snap-carousel';
 import { sliderWidth, itemWidth } from './ColorTutorialStyle';
 import ColorEntry from './ColorEntry';
@@ -11,7 +11,7 @@ export default class ColorTutorial extends Component {
     constructor (props) {
         super(props);
         this.state = {
-            slider1ActiveSlide: 0
+            currSlide: 0
         };
     }
 
@@ -20,37 +20,42 @@ export default class ColorTutorial extends Component {
     }
 
     render () {
-        //The pictures are from MenuEntries
-        const { slider1ActiveSlide } = this.state;
+        const { currSlide } = this.state;
+        const {navigate} = this.props.navigation;
+
         return (
-            <View style={styles.exampleContainer}>
+            <View style={styles.container}>
+                <View style = {styles.header}>
+                    <TouchableOpacity onPress={() => navigate("MainMenu")} style = {styles.backButton}>
+                        <Text>Back</Text>
+                    </TouchableOpacity>
+                </View>
                 <Carousel
                   ref={c => this._slider1Ref = c}
                   data={ColorTutorialEntries}
                   renderItem={this._renderItem}
                   sliderWidth={sliderWidth}
                   itemWidth={itemWidth}
-                  firstItem={this.state.slider1ActiveSlide}
+                  firstItem={this.state.currSlide}
                   inactiveSlideScale={0.94}
                   inactiveSlideOpacity={0.7}
-                  containerCustomStyle={styles.slider}
-                  contentContainerCustomStyle={styles.sliderContentContainer}
                   loop={true}
                   loopClonesPerSide={2}
-                  onSnapToItem={(index) => this.setState({ slider1ActiveSlide: index }) }
+                  onSnapToItem={(index) => this.setState({ currSlide: index }) }
                 />
                 <Pagination
                   dotsLength={ColorTutorialEntries.length}
-                  activeDotIndex={slider1ActiveSlide}
+                  activeDotIndex={currSlide}
                   containerStyle={styles.paginationContainer}
-                  dotColor={"white"}
+                  dotColor={"black"}
                   dotStyle={styles.paginationDot}
-                  inactiveDotColor={"white"}
+                  inactiveDotColor={"black"}
                   inactiveDotOpacity={0.4}
                   inactiveDotScale={0.6}
                   carouselRef={this._slider1Ref}
                   tappableDots={!!this._slider1Ref}
                 />
+
             </View>
         );
     }

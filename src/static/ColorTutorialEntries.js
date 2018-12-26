@@ -9,4 +9,9 @@ export const ColorTutorialEntries = [
         color: '#e33421',
         subtitle: 'Gee that is a hot fire. G is a strong tone, just like its a strong red fire',
     },
+    {
+        note: "E",
+        color: '#e0d541',
+        subtitle: 'E is a rich tone, and when you are rich, you have a lot of gold.',
+    },
 ];

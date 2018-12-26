@@ -15,10 +15,8 @@ const itemHorizontalMargin = wp(0);
 export const sliderWidth = viewportWidth;
 export const itemWidth = slideWidth + itemHorizontalMargin * 2;
 
-const entryBorderRadius = 8;
-
-
 export default StyleSheet.create({
+    //Carousel Styles
     slideInnerContainer: {
         width: itemWidth,
         height: slideHeight,
@@ -27,32 +25,40 @@ export default StyleSheet.create({
         alignItems: "center",
         justifyContent: "center",
     },
-    subtitleText:{
-        fontSize: 20,
-        letterSpacing: 3,
-        color: "white",
-    },
-    exampleContainer: {
-        paddingVertical: 0,
-        backgroundColor: "#b4dafe",
-        flex: 1,
-    },
-    slider: {
-        marginTop: 0,
-        overflow: 'visible' // for custom animations
-    },
-    sliderContentContainer: {
-        paddingVertical: 0 // for custom animation
-    },
     paginationContainer: {
-        //if you change this then change slideHeight as well under SliderEntry.style.js
         paddingVertical: 32
     },
     paginationDot: {
         width: 15,
-        //if you change this then change slideHeight as well under SliderEntry.style.js
         height: 15,
         borderRadius: 8,
         marginHorizontal: 12
+    },
+    backButton:{
+        padding: 10,
+        margin: 10,
+        backgroundColor: "#cbe4e2",
+        borderRadius: 8,
+    },
+    header:{
+        position: "absolute",
+        top: 0,
+        left: 0,
+        zIndex: 100,
+    },
+    container:{
+        height: "100%"
+    },
+
+    //ColorEntry Styles
+    subtitleText:{
+        paddingTop: 200,
+        paddingLeft: 30,
+        paddingRight: 30,
+        textAlign: "center",
+        fontSize: 20,
+    },
+    noteText:{
+        fontSize: 50
     }
 });

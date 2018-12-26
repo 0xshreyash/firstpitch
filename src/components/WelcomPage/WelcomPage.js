@@ -5,7 +5,7 @@ import {withMappedNavigationProps} from "react-navigation-props-mapper";
 class WelcomePage extends Component {
 
     componentDidMount() {
-        setTimeout(() => this.props.navigation.replace("Menu", {
+        setTimeout(() => this.props.navigation.replace("MainMenu", {
             audioFiles: getAudioFiles(),
             notes: getNotes()
         }), 1000);

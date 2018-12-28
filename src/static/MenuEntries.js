@@ -1,6 +1,8 @@
 import MusicIcons from "@assets/music";
 
 export const MenuEntries = [
+    //the first one is a placeholder for the Profile Page
+    {},
     {
         title: 'Stage 1',
         subtitle: 'The Basics',

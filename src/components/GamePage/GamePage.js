@@ -13,7 +13,6 @@ import {withMappedNavigationProps} from "react-navigation-props-mapper";
 
 
 class GamesPage extends Component {
-
     constructor(props) {
         super(props);
         this.state = {
@@ -166,4 +165,3 @@ const styles = StyleSheet.create({
         //padding: 20,
     },
 });
-

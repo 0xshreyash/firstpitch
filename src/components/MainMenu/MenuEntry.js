@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { View, Text, Image, TouchableOpacity, Dimensions, Platform } from 'react-native';
 import PropTypes from 'prop-types';
-import styles from '../../styles/MenuEntryStyle';
+import styles from './MenuStyle';
 import LevelButton from "./LevelButton";
 import Wave from '../Wave/Wave';
+import Profile from "./Profile";
 
 
 const { width: viewportWidth, height: viewportHeight } = Dimensions.get('window');
@@ -13,16 +14,6 @@ export default class MenuEntry extends Component {
     static propTypes = {
         data: PropTypes.object.isRequired,
     };
-
-    get image () {
-        const { data: { illustration }} = this.props;
-        return (
-            <Image
-              source={ illustration }
-              style={styles.image}
-            />
-        );
-    }
 
     levelButtonProps = {
         columns: 2,
@@ -59,17 +50,19 @@ export default class MenuEntry extends Component {
 
     render () {
         const { data: { title, subtitle, levels, waveCount }} = this.props;
-
+        if(title === undefined){
+            return (<Profile/>)
+        }
         return (
             <View style = {styles.slideInnerContainer}>
-                <View style = {styles.topColour}>
-                <Wave startAnimation={true} stopAnimation={false}
-                        waveColor={'#000000'}
-                        backgroundColor={'#ffffff'}
-                        numberOfWaves={2}
-                        primaryWaveLineWidth={Platform.OS === 'ios' ? 0.25 : 100}
-                        amplitude={0.25}
-                        height={100}/>
+                <View style = {styles.waveBackground}>
+                    <Wave startAnimation={true} stopAnimation={false}
+                            waveColor={'#000000'}
+                            backgroundColor={'#ffffff'}
+                            numberOfWaves={2}
+                            primaryWaveLineWidth={Platform.OS === 'ios' ? 0.25 : 100}
+                            amplitude={0.25}
+                            height={100}/>
                 </View>
                 <View style = {this.levelButtonsStyling()}>
                     { this.generateButtons() }

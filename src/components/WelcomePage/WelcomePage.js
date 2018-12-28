@@ -6,7 +6,7 @@ import WaveView from "../WaveView/WaveView";
 class WelcomePage extends Component {
 
     componentDidMount() {
-        setTimeout(() => this.props.navigation.replace("Menu", {
+        setTimeout(() => this.props.navigation.replace("FreePlaySettings", {
             audioFiles: getAudioFiles(),
             notes: getNotes()
         }), 1500);

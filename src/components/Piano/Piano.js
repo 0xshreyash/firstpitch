@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {
     View,
 } from 'react-native';
-import PianoKey from '../PianoKey/PianoKey';
+import PianoKey from './PianoKey';
 
 export default class Piano extends Component {
     constructor(props) {
@@ -63,4 +63,3 @@ export default class Piano extends Component {
         )
     }
 }
-

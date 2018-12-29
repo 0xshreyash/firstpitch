@@ -1,15 +1,14 @@
-import {Text, View} from "react-native";
-import React, {Component} from "react"
+import {View} from "react-native";
+import React, {Component} from "react";
 import {withMappedNavigationProps} from "react-navigation-props-mapper";
 import WaveView from "../WaveView/WaveView";
+import SignIn from "../SignIn/SignIn";
+import AppText from '../AppText/AppText';
 
 class WelcomePage extends Component {
 
     componentDidMount() {
-        setTimeout(() => this.props.navigation.replace("FreePlaySettings", {
-            audioFiles: getAudioFiles(),
-            notes: getNotes()
-        }), 1500);
+        setTimeout(() => this.props.navigation.replace("SignIn"), 1500);
     }
 
     render() {
@@ -25,7 +24,7 @@ class WelcomePage extends Component {
                     animated={false}
                     speedIncreasePerWave={0}
                 />
-                <Text style={styles.welcomeText}>First Pitch</Text>
+                <AppText style={styles.welcomeText}>First Pitch</AppText>
 
             </View>
         );
@@ -40,8 +39,9 @@ const styles = {
         flex: 1,
     },
     welcomeText: {
-        fontSize: 50,
-        fontColor: 'black',
+        margin: 5,
+        fontSize: 30,
+        color : 'black',
     },
     wave: {
         width: 100,
@@ -55,28 +55,6 @@ const styles = {
         borderRadius: 100,
         overflow: 'hidden',
     }
-};
-
-const getAudioFiles = function () {
-    let instruments = ['piano'];
-    let notes = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'as', 'cs', 'ds', 'fs', 'ss'];
-    let octaves = ['2', '3'];
-    let suffix = '.mp3';
-    let files = [];
-    for (let i = 0; i < instruments.length; i++) {
-        let instrument = instruments[i];
-        for (let j = 0; j < notes.length; j++) {
-            let note = notes[j];
-            for (let k = 0; k < octaves.length; k++) {
-                files.push(instrument + '_' + note + octaves[k] + suffix)
-            }
-        }
-    }
-    return files
-};
-
-const getNotes = function () {
-    return ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'A#', 'C#', 'D#', 'F#', 'G#'];
 };
 
 export default withMappedNavigationProps()(WelcomePage);

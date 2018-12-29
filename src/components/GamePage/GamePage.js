@@ -41,6 +41,28 @@ class GamesPage extends Component {
         this.playNextTrack = this.playNextTrack.bind(this);
     }
 
+    getAudioFiles = function () {
+        let instruments = ['piano'];
+        let notes = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'as', 'cs', 'ds', 'fs', 'ss'];
+        let octaves = ['2', '3'];
+        let suffix = '.mp3';
+        let files = [];
+        for (let i = 0; i < instruments.length; i++) {
+            let instrument = instruments[i];
+            for (let j = 0; j < notes.length; j++) {
+                let note = notes[j];
+                for (let k = 0; k < octaves.length; k++) {
+                    files.push(instrument + '_' + note + octaves[k] + suffix)
+                }
+            }
+        }
+        return files
+    };
+
+    getNotes = function () {
+        return ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'A#', 'C#', 'D#', 'F#', 'G#'];
+    };
+
     componentDidMount() {
         SoundPlayer.onFinishedPlaying((success: boolean) => { // success is true when the sound is played
           console.log("Finished playing note!", success);

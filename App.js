@@ -5,10 +5,14 @@ import WelcomePage from './src/components/WelcomePage/WelcomePage';
 import ColorTutorial from './src/components/ColorTutorial/ColorTutorial';
 import FreePlaySettings from './src/components/FreePlaySettings/FreePlaySettings';
 import {createStackNavigator, createAppContainer} from 'react-navigation';
+import SignIn from './src/components/SignIn/SignIn';
 
 const AppNavigator = createStackNavigator({
     WelcomePage: {
         screen: WelcomePage
+    },
+    SignIn: {
+        screen: SignIn
     },
     FreePlaySettings:{
         screen: FreePlaySettings

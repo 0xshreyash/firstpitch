@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {View, Text, TouchableOpacity} from 'react-native';
+import {SafeAreaView, View, Text, TouchableOpacity} from 'react-native';
 import Carousel, { Pagination } from 'react-native-snap-carousel';
 import styles, {sliderWidth, itemWidth}  from './FreePlayStyle';
 import AssociationSettings from "./AssociationSettings";
@@ -30,19 +30,19 @@ export default class FreePlaySettings extends Component {
         }
     }
 
-    FreePlayEntries = [{}, {}, {}, {}]
+    FreePlayEntries = [{}, {}, {}, {}];
 
     render() {
         const { currSlide } = this.state;
         const {navigate} = this.props.navigation;
 
         return (
-            <View style={styles.container}>
-                <View style = {styles.header}>
+            <SafeAreaView style={styles.container}>
+                <SafeAreaView style = {styles.header}>
                     <TouchableOpacity onPress={() => navigate("MainMenu")} style = {styles.backButton}>
                         <Text>Back</Text>
                     </TouchableOpacity>
-                </View>
+                </SafeAreaView>
                 <Carousel
                   ref={c => this._slider1Ref = c}
                   data={this.FreePlayEntries}
@@ -68,8 +68,7 @@ export default class FreePlaySettings extends Component {
                   carouselRef={this._slider1Ref}
                   tappableDots={!!this._slider1Ref}
                 />
-
-            </View>
+            </SafeAreaView>
         );
     }
 }

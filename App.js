@@ -8,6 +8,7 @@ import ScoreScreen from './src/components/ScoreScreen/ScoreScreen';
 import {createStackNavigator, createAppContainer} from 'react-navigation';
 import FreePlay from './src/components/FreePlay/FreePlay';
 import SignIn from './src/components/SignIn/SignIn';
+import PauseScreen from "./src/components/PauseScreen/PauseScreen";
 
 const AppNavigator = createStackNavigator({
     WelcomePage: {
@@ -21,6 +22,9 @@ const AppNavigator = createStackNavigator({
     },
     ScoreScreen: {
         screen: ScoreScreen,
+    },
+    PauseScreen: {
+        screen: PauseScreen,
     },
     FreePlay: {
         screen: FreePlay,

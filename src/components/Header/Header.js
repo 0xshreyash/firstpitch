@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import {
     View,
     StyleSheet,
@@ -7,20 +7,32 @@ import {
     Text
 } from 'react-native';
 import Buttons from '@assets/buttons';
+import {withMappedNavigationProps} from "react-navigation-props-mapper";
 
-const Header = ({
-                    onSettingsPress,
-                    score
-                }) => (
-    <View style={styles.container}>
-        <Text style={styles.score}>{score}</Text>
-        <TouchableOpacity style={[styles.settingsButton]} onPress={onSettingsPress}>
-            <Image source={Buttons.settingsButton} style={[styles.settingsButtonImage]}/>
-        </TouchableOpacity>
-    </View>
-);
+class Header extends Component {
 
-export default Header;
+    constructor(props) {
+        super(props);
+        this.pausePress = this.pausePress.bind(this);
+    }
+
+    pausePress() {
+        this.props.navigation.navigate("PauseScreen");
+    }
+
+
+    render() {
+        return (<View style={styles.container}>
+            <Text style={styles.score}>{this.props.score}</Text>
+            <TouchableOpacity style={[styles.pauseButton]} onPress={this.pausePress}>
+                <Image source={Buttons.pauseButton} style={[styles.pauseButtonImage]}/>
+            </TouchableOpacity>
+        </View>);
+    }
+
+}
+
+export default withMappedNavigationProps()(Header);
 
 const styles = StyleSheet.create({
     container: {
@@ -33,12 +45,12 @@ const styles = StyleSheet.create({
         left: 5,
         fontSize: 30
     },
-    settingsButton: {
+    pauseButton: {
         position: 'absolute',
         top: 0,
         right: 0
     },
-    settingsButtonImage: {
+    pauseButtonImage: {
         height: 40,
         width: 40
     }

@@ -16,7 +16,6 @@ export default class BottomPanel extends Component {
         this.state = {
             pianoHeight: 250,
             fillColor: true,
-            flatSymbol: '',
             sharpSymbol: '',
 
         }
@@ -25,13 +24,11 @@ export default class BottomPanel extends Component {
     componentDidMount() {
         if(this.props.flat) {
             this.setState({
-                flatSymbol: '\u266D',
-                sharpSymbol: '',
+                sharpSymbol: '\u266D',
             })
         }
         else {
             this.setState({
-                flatSymbol: '',
                 sharpSymbol: '#',
             })
         }
@@ -49,8 +46,7 @@ export default class BottomPanel extends Component {
             </View> : <Piano height={this.state.pianoHeight} disabled={this.props.disabled}
                              options={this.props.options}
                              solfege={this.props.solfege}
-                             flat={this.state.flatSymbol}
-                             sharp={this.state.sharpSymbol}s
+                             sharp={this.state.sharpSymbol}
                              onChooseAnswer={this.props.onChooseAnswer}
                              fillColor={this.state.fillColor}/>
         );

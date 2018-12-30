@@ -64,13 +64,19 @@ export default class Piano extends Component {
     };
 
     getName(name) {
-        let val = this.props.solfege ? this.state.repMap[name] : name;
-        if(val[val.length - 1] === 's') {
-            val = val.slice(0, val.length - 1) +  this.props.sharp;
+        let val = name;
+        if (val[val.length - 1] === 's') {
+            val = val.slice(0, val.length - 1);
+            if (this.props.sharp !== '#') {
+                val = this.state.keys[(this.state.keys.indexOf(val) + 1) % 7];
+            }
+            val = this.props.solfege ? this.state.repMap[val] + '\n' : val;
+            val += this.props.solfege ? '(' + this.props.sharp + ')' : this.props.sharp;
         }
         else {
-            val += this.props.flat;
+            val = this.props.solfege ? this.state.repMap[val] + '\n' : val;
         }
+
         return val;
     }
 

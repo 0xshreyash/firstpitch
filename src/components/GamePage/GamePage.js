@@ -151,7 +151,7 @@ class GamesPage extends Component {
     render() {
         return <SafeAreaView style={styles.container}>
             <View style={[styles.headerContainer]}>
-                <Header score={this.state.score}/>
+                <Header score={this.state.score} navigation={this.props.navigation}/>
             </View>
 
             <View style={[styles.waveContainer]}>

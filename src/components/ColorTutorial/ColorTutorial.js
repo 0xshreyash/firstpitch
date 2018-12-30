@@ -25,11 +25,11 @@ export default class ColorTutorial extends Component {
 
         return (
             <SafeAreaView style={styles.container}>
-                <View style = {styles.header}>
+                <SafeAreaView style = {styles.header}>
                     <TouchableOpacity onPress={() => navigate("MainMenu")} style = {styles.backButton}>
                         <Text>Back</Text>
                     </TouchableOpacity>
-                </View>
+                </SafeAreaView>
                 <Carousel
                   ref={c => this._slider1Ref = c}
                   data={ColorTutorialEntries}

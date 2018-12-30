@@ -165,7 +165,10 @@ class GamesPage extends Component {
                 <BottomPanel started={this.state.started} options={new Set(this.props.notes)}
                              onPressPlay={this.onPressPlay} onChooseAnswer={this.onChooseAnswer}
                              disabled={this.state.buttonsDisabled}
-                             pianoHeight={this.state.pianoHeight}/>
+                             pianoHeight={this.state.pianoHeight}
+                             solfege={this.props.solfege}
+                             flat={this.props.flat}/>
+
             </View>
         </SafeAreaView>;
     }

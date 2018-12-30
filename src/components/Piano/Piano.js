@@ -1,8 +1,12 @@
 import React, {Component} from 'react';
 import {
+    Dimensions,
     View,
 } from 'react-native';
 import PianoKey from './PianoKey';
+import PropTypes from 'prop-types';
+import Wave from "../Wave/Wave";
+
 
 export default class Piano extends Component {
     constructor(props) {
@@ -22,6 +26,20 @@ export default class Piano extends Component {
                 'Fs': ['B', 4],
                 'Gs': ['B', 5],
             },
+            repMap: {
+                'C': 'Do',
+                'Cs': 'Dos',
+                'D': 'Re',
+                'Ds': 'Res',
+                'E': 'Mi',
+                'F': 'Fa',
+                'Fs': 'Fas',
+                'G': 'Sol',
+                'Gs': 'Sols',
+                'A': 'La',
+                'As': 'Las',
+                'B': 'Ti',
+            },
             keys: ['C', 'D', 'E', 'F', 'G', 'A', 'B', 'Cs', 'Ds', 'Fs', 'Gs', 'As'],
             keyProps: {
                 keyMargin: 0,
@@ -33,6 +51,7 @@ export default class Piano extends Component {
             },
         };
         this.generatePianoStyle = this.generatePianoStyle.bind(this);
+        this.getName = this.getName.bind(this);
     }
 
     generatePianoStyle = function () {
@@ -44,6 +63,17 @@ export default class Piano extends Component {
         }
     };
 
+    getName(name) {
+        let val = this.props.solfege ? this.state.repMap[name] : name;
+        if(val[val.length - 1] === 's') {
+            val = val.slice(0, val.length - 1) +  this.props.sharp;
+        }
+        else {
+            val += this.props.flat;
+        }
+        return val;
+    }
+
     render() {
         return (
             <View style={[this.generatePianoStyle()]}>
@@ -52,7 +82,7 @@ export default class Piano extends Component {
                         (name) => {
                             return (
                                 <PianoKey keyNum={this.state.keyMap[name][1]} keyColor={this.state.keyMap[name][0]}
-                                          keyName={name} {...this.state.keyProps} {...this.props}
+                                          keyName={this.getName(name)} {...this.state.keyProps} {...this.props}
                                           disabled={this.props.disabled || !this.props.options.has(name)}
                                           onPress={(event) => this.props.onChooseAnswer(event, name)}/>
                             );
@@ -63,3 +93,14 @@ export default class Piano extends Component {
         )
     }
 }
+
+Piano.propTypes = {
+    solfege: PropTypes.bool,
+};
+
+Piano.defaultProps = {
+    solfege: false,
+};
+
+
+

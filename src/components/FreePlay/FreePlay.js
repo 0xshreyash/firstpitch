@@ -7,16 +7,13 @@ import {
     Image,
     Dimensions,
     Slider,
-    Text, Switch
+    Text,
+    Picker,
 } from "react-native";
 import React, {Component} from "react"
 import {withMappedNavigationProps} from "react-navigation-props-mapper";
-import Wave from "../Wave/Wave";
 import AppText from "../AppText/AppText";
-import MultiSelect from 'react-native-multiple-select';
 import Buttons from "@assets/buttons";
-
-const viewportHeight = Dimensions.get("window").height;
 
 class FreePlay extends Component {
 
@@ -24,9 +21,41 @@ class FreePlay extends Component {
         super(props);
         this.state = {
             gameLen: 5,
+            representationOptions: [
+                {
+                    id: '#',
+                    name: '#',
+                },
+                {
+                    id: "\u266D",
+                    name: "\u266D",
+                },
+                {
+                    id: 'Solfege(#)',
+                    name: 'Solfege(#)',
+                },
+                {
+                    id: 'Solfege(\u266D)',
+                    name: 'Solfege(\u266D)',
+                },
+            ],
+            rep: '#',
+            flat: false,
+            solfege: false,
         };
         this.onForwardPress = this.onForwardPress.bind(this);
         this.gameLenChange = this.gameLenChange.bind(this);
+        this.repSelected = this.repSelected.bind(this);
+    }
+
+    repSelected(rep) {
+        let solfege = rep.includes("Solfege");
+        let flat = !rep.includes("#");
+        this.setState({
+            rep: rep,
+            flat: flat,
+            solfege: solfege,
+        });
     }
 
     gameLenChange(value) {
@@ -43,6 +72,8 @@ class FreePlay extends Component {
             instruments: ['piano'],
             octaves: [2, 3],
             notes: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'As', 'Cs', 'Ds', 'Fs', 'Gs'],
+            solfege: this.state.solfege,
+            flat: this.state.flat,
         })
     }
 
@@ -50,10 +81,6 @@ class FreePlay extends Component {
     render() {
         return (
             <SafeAreaView style={styles.settingsContainer}>
-                <View style={styles.waveContainer}>
-                    <Wave startAnimation={true} stopAnimation={false}
-                          numberOfWaves={2}/>
-                </View>
                 <View style={styles.setting}>
                     <View style={styles.settingText}>
                         <Text>Game Length: {this.state.gameLen}</Text>
@@ -67,17 +94,40 @@ class FreePlay extends Component {
                         value={this.state.gameLen}
                     />
                 </View>
-                < View style={styles.buttonContainer}>
-                    < TouchableOpacity
-                        style={[styles.forwardButton]}
-                        onPress={this.onForwardPress}
-                        disabled={this.state.disabled}>
-                        < Image
-                            source={this.state.disabled ? Buttons.forwardGray : Buttons.forwardButton}
-                        />
-                    </TouchableOpacity>
+                <View style={styles.dropDownSetting}>
+                    <View style={styles.dropDownSettingText}>
+                        <AppText>Representation: </AppText>
+                    </View>
+                    <View style={styles.dropDown}>
+                        <Picker
+                            mode="dropdown"
+                            selectedValue={this.state.rep}
+                            onValueChange={this.repSelected}
+                            itemStyle={styles.itemStyle}>
+                            {
+                                this.state.representationOptions.map(
+                                    (item) => (
+                                        <Picker.Item label={item.name} value={item.id}/>
+                                    )
+                                )
+                            }
+                        </Picker>
+                    </View>
+                    <View style={styles.buttonContainer}>
+                        <TouchableOpacity
+                            style={styles.forwardButton}
+                            onPress={this.onForwardPress}
+                            disabled={this.state.disabled}>
+                            <Image
+                                source={this.state.disabled ? Buttons.forwardGray : Buttons.forwardButton}
+                            />
+                        </TouchableOpacity>
+                    </View>
                 </View>
-            </SafeAreaView>);
+
+            </SafeAreaView>
+        )
+            ;
     }
 }
 
@@ -86,13 +136,35 @@ const styles = {
         settingsContainer: {
             flex: 1,
         },
+        dropDown: {
+            flex: 0.5,
+        },
+        itemStyle: {
+            fontSize: 15,
+            height: 75,
+            color: 'black',
+            textAlign: 'center',
+            fontWeight: 'bold'
+        },
+        dropDownSetting: {
+            zIndex: 1000,
+            flexDirection: "row",
+        },
+        dropDownSettingText: {
+            margin: 25,
+            flex: 0.5,
+            fontSize: 30,
+        },
         buttonContainer: {
-            margin: 20,
-            alignSelf: "flex-end",
+            marginTop: 100,
+            alignSelf: "center",
         },
         setting: {
-            borderColor: "grey",
             padding: 10,
+            zIndex: 1000,
+        },
+        repSetting: {
+            flexDirection: 'row',
             zIndex: 1000,
         },
         settingText: {
@@ -108,13 +180,6 @@ const styles = {
         },
         menuContainer: {
             margin: 30,
-        },
-        forwardButtonContainer: {
-            marginTop: 50,
-            justifyContent: "right",
-            height: 50,
-            width: 50,
-            alignItems: "flex-end",
         },
         formField: {
             alignSelf: "center",

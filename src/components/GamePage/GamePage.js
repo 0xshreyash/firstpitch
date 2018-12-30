@@ -6,9 +6,9 @@ import {
     SafeAreaView
 } from 'react-native';
 import SoundPlayer from 'react-native-sound-player';
-import Header from '../Header/Header';
+import Header from './Header';
 import Wave from '../Wave/Wave';
-import BottomPanel from '../BottomPanel/BottomPanel';
+import BottomPanel from './BottomPanel';
 import {withMappedNavigationProps} from "react-navigation-props-mapper";
 
 
@@ -123,14 +123,12 @@ class GamesPage extends Component {
 
     updateTrack() {
         let nextPos = this.state.currentPosition === undefined ? 0 : this.state.currentPosition + 1;
-        if(nextPos === this.props.gameLen) {
+        if (nextPos === this.props.gameLen) {
             this.props.navigation.replace("ScoreScreen", {
                 score: this.state.score,
             });
             return;
         }
-        console.warn(this.state.audioFiles);
-
         let nextTrack = this.state.audioFiles[nextPos % this.state.totalFiles];
         let parts = nextTrack.split('/');
         let file = parts[parts.length - 1];

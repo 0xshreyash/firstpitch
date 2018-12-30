@@ -26,7 +26,7 @@ export default class ColorTutorial extends Component {
         return (
             <SafeAreaView style={styles.container}>
                 <SafeAreaView style = {styles.header}>
-                    <TouchableOpacity onPress={() => navigate("MainMenu")} style = {styles.backButton}>
+                    <TouchableOpacity onPress={() => navigate("StageMenu")} style = {styles.backButton}>
                         <Text>Back</Text>
                     </TouchableOpacity>
                 </SafeAreaView>

@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {AsyncStorage, Dimensions, Text, TouchableOpacity, View} from 'react-native';
-import styles from './MenuStyle';
+import styles from './StageStyle';
 import Wave from '../Wave/Wave';
 import {withNavigation} from 'react-navigation';
 

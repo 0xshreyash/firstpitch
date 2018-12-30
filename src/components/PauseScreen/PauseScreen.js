@@ -13,7 +13,7 @@ class PauseScreen extends Component {
         this.state = {
             options: [{
                 name: 'Main Menu',
-                goto: 'MainMenu',
+                goto: 'StageMenu',
             },
                 {
                     name: 'Restart',

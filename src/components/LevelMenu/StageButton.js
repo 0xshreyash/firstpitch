@@ -4,7 +4,7 @@ import {View, Text, Image, TouchableOpacity, StyleSheet, Dimensions} from 'react
 const {width: viewportWidth, height: viewportHeight} = Dimensions.get('window');
 
 
-export default class LevelButton extends Component {
+export default class StageButton extends Component {
 
     buttonStyle() {
         let columns = this.props.columns;

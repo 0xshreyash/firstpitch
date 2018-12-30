@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import GamePage from './src/components/GamePage/GamePage';
-import MainMenu from './src/components/MainMenu/MainMenu';
+import StageMenu from './src/components/LevelMenu/StageMenu';
 import WelcomePage from './src/components/WelcomePage/WelcomePage';
 import ColorTutorial from './src/components/ColorTutorial/ColorTutorial';
 import FreePlaySettings from './src/components/FreePlaySettings/FreePlaySettings';
@@ -32,8 +32,8 @@ const AppNavigator = createStackNavigator({
     Game: {
         screen: GamePage
     },
-    MainMenu: {
-        screen: MainMenu
+    StageMenu: {
+        screen: StageMenu
     },
     ColorTutorial:{
         screen: ColorTutorial

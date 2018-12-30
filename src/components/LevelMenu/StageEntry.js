@@ -1,15 +1,14 @@
 import React, { Component } from 'react';
 import { View, Text, Image, TouchableOpacity, Dimensions, Platform } from 'react-native';
 import PropTypes from 'prop-types';
-import styles from './MenuStyle';
-import LevelButton from "./LevelButton";
+import styles from './StageStyle';
+import StageButton from "./StageButton";
 import Wave from '../Wave/Wave';
-import Profile from "./Profile";
 
 
 const { width: viewportWidth, height: viewportHeight } = Dimensions.get('window');
 
-export default class MenuEntry extends Component {
+export default class StageEntry extends Component {
 
     static propTypes = {
         data: PropTypes.object.isRequired,
@@ -22,13 +21,14 @@ export default class MenuEntry extends Component {
         buttonMargin: 5,
     };
 
-    generateButtons(){
+    generateButtons() {
+
         const { data: { levels }} = this.props;
         return (levels.map(
             (level) => {
                 combinedProps = {...this.levelButtonProps, ...level};
                 return [
-                      <LevelButton {...combinedProps}/>
+                      <StageButton {...combinedProps}/>
                 ]
             }
         ))
@@ -47,16 +47,12 @@ export default class MenuEntry extends Component {
         }
     }
 
-
     render () {
-        const { data: { title, subtitle, levels, waveCount }} = this.props;
-        if(title === undefined){
-            return (<Profile/>)
-        }
+        const { data: { title, subtitle,}} = this.props;
         return (
             <View style = {styles.slideInnerContainer}>
                 <View style = {styles.waveBackground}>
-                    <Wave startAnimation={true} stopAnimation={false}
+                    <Wave startAnimation={false} stopAnimation={false}
                             waveColor={'#000000'}
                             backgroundColor={'#ffffff'}
                             numberOfWaves={2}

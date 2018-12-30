@@ -88,7 +88,7 @@ class SignIn extends Component {
         if (this.state.index === this.state.numPages - 1) {
             if (this.state.firstName !== '' && this.state.lastName !== '') {
                 this.setNames();
-                this.props.navigation.replace("MainMenu");
+                this.props.navigation.replace("StageMenu");
             }
             if (this.state.firstName === '') {
 

@@ -1,9 +1,8 @@
-import React, { Component } from 'react';
-import { View, Text, AsyncStorage, TouchableOpacity, Dimensions, Platform } from 'react-native';
-import PropTypes from 'prop-types';
+import React, {Component} from 'react';
+import {AsyncStorage, Dimensions, Text, TouchableOpacity, View} from 'react-native';
 import styles from './MenuStyle';
 import Wave from '../Wave/Wave';
-import { withNavigation } from 'react-navigation';
+import {withNavigation} from 'react-navigation';
 
 
 const { width: viewportWidth, height: viewportHeight } = Dimensions.get('window');
@@ -15,20 +14,19 @@ class Profile extends Component {
         this.state = {
             name: ''
         };
-        this.getFirstName = this.getFirstName.bind(this)
+        Profile.getFirstName = Profile.getFirstName.bind(this)
     }
 
     async componentDidMount() {
-        let name = await this.getFirstName();
+        let name = await Profile.getFirstName();
         this.setState({
             name: name
         });
     }
 
-    async getFirstName() {
+    static async getFirstName() {
         try {
-            const name = await AsyncStorage.getItem("firstName");
-            return name;
+            return await AsyncStorage.getItem("firstName");
         }
         catch(error) {
             console.warn("Could not get name from user");
@@ -53,7 +51,7 @@ class Profile extends Component {
                     <TouchableOpacity onPress={() => navigate("ColorTutorial")}>
                         <Text style={styles.titleText}>--Color Tutorial--</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity onPress={() => navigate("FreePlaySettings")}>
+                    <TouchableOpacity onPress={() => navigate("FreePlay")}>
                         <Text style={ styles.titleText}>--Free Play--</Text>
                     </TouchableOpacity>
                 </View>

@@ -15,6 +15,12 @@ import {withMappedNavigationProps} from "react-navigation-props-mapper";
 class GamesPage extends Component {
     constructor(props) {
         super(props);
+        this.getAudioFiles = this.getAudioFiles.bind(this);
+        this.onPressPlay = this.onPressPlay.bind(this);
+        this.updateTrack = this.updateTrack.bind(this);
+        this.onChooseAnswer = this.onChooseAnswer.bind(this);
+        this.playSound = this.playSound.bind(this);
+        this.playNextTrack = this.playNextTrack.bind(this);
         this.state = {
             // wave
             startAnimation: true,
@@ -22,7 +28,8 @@ class GamesPage extends Component {
             waveAmplitude: Platform.OS === 'ios' ? 1 : 100,
             waveWidth: Platform.OS === 'ios' ? 3 : 250,
             // file to choose from
-            totalFiles: this.props.audioFiles.length,
+            audioFiles: [],
+            totalFiles: 0,
             // stats
             numWrong: 0,
             started: false,
@@ -34,43 +41,42 @@ class GamesPage extends Component {
             waveColor: '#000000',
             numberOfWaves: 5,
         };
-        this.onPressPlay = this.onPressPlay.bind(this);
-        this.updateTrack = this.updateTrack.bind(this);
-        this.onChooseAnswer = this.onChooseAnswer.bind(this);
-        this.playSound = this.playSound.bind(this);
-        this.playNextTrack = this.playNextTrack.bind(this);
     }
 
-    getAudioFiles = function () {
-        let instruments = ['piano'];
-        let notes = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'as', 'cs', 'ds', 'fs', 'ss'];
-        let octaves = ['2', '3'];
-        let suffix = '.mp3';
-        let files = [];
-        for (let i = 0; i < instruments.length; i++) {
-            let instrument = instruments[i];
-            for (let j = 0; j < notes.length; j++) {
-                let note = notes[j];
-                for (let k = 0; k < octaves.length; k++) {
-                    files.push(instrument + '_' + note + octaves[k] + suffix)
-                }
-            }
-        }
-        return files
-    };
-
-    getNotes = function () {
-        return ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'A#', 'C#', 'D#', 'F#', 'G#'];
-    };
 
     componentDidMount() {
         SoundPlayer.onFinishedPlaying((success: boolean) => { // success is true when the sound is played
           console.log("Finished playing note!", success);
         });
+        let files = this.getAudioFiles();
+        let numFiles = files.length;
+        this.setState({
+            audioFiles: files,
+            totalFiles: numFiles,
+        })
     }
     componentWillUnmount() {
         SoundPlayer.unmount()
     }
+
+    getAudioFiles() {
+        let instruments = this.props.instruments;
+        let notes = this.props.notes;
+        let octaves = this.props.octaves;
+        let suffix = '.mp3';
+        let files = [];
+        for (let i = 0; i < instruments.length; i++) {
+            let instrument = instruments[i];
+            for (let j = 0; j < notes.length; j++) {
+                let note = notes[j].toLowerCase();
+                for (let k = 0; k < octaves.length; k++) {
+                    files.push(instrument + '_' + note + octaves[k] + suffix)
+                }
+            }
+        }
+        console.warn(files);
+        return files;
+    };
 
     onPressPlay() {
         this.setState({
@@ -80,21 +86,17 @@ class GamesPage extends Component {
     }
 
     onChooseAnswer(event, buttonID) {
-        //console.warn(buttonID);
-        //console.warn(this.state.correctAnswer, buttonID);
         if (!(this.state.correctAnswer === buttonID)) {
             this.setState(prevState => ({
-                numWrong: prevState.numWrong + 1
-            }));
+                numWrong: prevState.numWrong + 1,
+                buttonDisabled: true,
+            }), this.updateTrack);
         } else {
             this.setState(prevState => ({
-                score: prevState.score + 1
-            }));
+                score: prevState.score + 1,
+                buttonDisabled: true
+            }), this.updateTrack);
         }
-        this.setState({
-            buttonsDisabled: true
-        });
-        this.updateTrack();
     }
 
     playNextTrack() {
@@ -121,8 +123,15 @@ class GamesPage extends Component {
 
     updateTrack() {
         let nextPos = this.state.currentPosition === undefined ? 0 : this.state.currentPosition + 1;
-        let nextTrack = this.props.audioFiles[nextPos % this.state.totalFiles];
-        //console.warn(nextTrack);
+        if(nextPos === this.props.gameLen) {
+            this.props.navigation.replace("ScoreScreen", {
+                score: this.state.score,
+            });
+            return;
+        }
+        console.warn(this.state.audioFiles);
+
+        let nextTrack = this.state.audioFiles[nextPos % this.state.totalFiles];
         let parts = nextTrack.split('/');
         let file = parts[parts.length - 1];
         let name = (file.split('.'))[0];
@@ -150,7 +159,6 @@ class GamesPage extends Component {
                       waveAmplitude={this.state.waveAmplitude} waveWidth={this.state.waveWidth}
                       waveColor={this.state.waveColor}
                       numberOfWaves={this.state.numberOfWaves}/>
-
             </View>
 
             <View style={[styles.bottomPanelContainer]}>

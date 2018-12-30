@@ -114,6 +114,7 @@ class SignIn extends Component {
         try {
             await AsyncStorage.setItem('firstName', this.state.firstName);
             await AsyncStorage.setItem('lastName', this.state.lastName);
+            await AsyncStorage.setItem('bestScore', "0");
         } catch (error) {
             // Error saving data
             console.warn("Error saving name.");

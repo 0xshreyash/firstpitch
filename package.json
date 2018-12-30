@@ -8,16 +8,17 @@
     "android-dev": "adb -s ce061716b0ee48900d reverse tcp:8081 tcp:8081 && react-native run-android"
   },
   "dependencies": {
-    "formik": "^1.4.1",
     "react": "16.6.3",
     "react-native": "0.57.8",
     "react-native-button": "^2.3.0",
     "react-native-gesture-handler": "^1.0.12",
     "react-native-linear-gradient": "^2.5.3",
+    "react-native-multiple-select": "^0.4.4",
     "react-native-siri-wave-view": "0.0.9",
     "react-native-snap-carousel": "^3.7.5",
     "react-native-sound-player": "^0.5.3",
     "react-native-svg": "^8.0.10",
+    "react-native-vector-icons": "^6.1.0",
     "react-native-waveview": "^1.1.0",
     "react-navigation": "^3.0.9",
     "react-navigation-props-mapper": "^0.3.0"

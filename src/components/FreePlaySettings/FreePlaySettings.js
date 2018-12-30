@@ -57,16 +57,16 @@ export default class FreePlaySettings extends Component {
                   onSnapToItem={(index) => this.setState({ currSlide: index }) }
                 />
                 <Pagination
-                  dotsLength={this.FreePlayEntries.length}
-                  activeDotIndex={currSlide}
-                  containerStyle={styles.paginationContainer}
-                  dotColor={"black"}
-                  dotStyle={styles.paginationDot}
-                  inactiveDotColor={"black"}
-                  inactiveDotOpacity={0.4}
-                  inactiveDotScale={0.6}
-                  carouselRef={this._slider1Ref}
-                  tappableDots={!!this._slider1Ref}
+                    dotsLength={this.FreePlayEntries.length}
+                    activeDotIndex={currSlide}
+                    containerStyle={styles.paginationContainer}
+                    dotColor={"black"}
+                    dotStyle={styles.paginationDot}
+                    inactiveDotColor={"black"}
+                    inactiveDotOpacity={0.4}
+                    inactiveDotScale={0.6}
+                    carouselRef={this._slider1Ref}
+                    tappableDots={!!this._slider1Ref}
                 />
             </SafeAreaView>
         );

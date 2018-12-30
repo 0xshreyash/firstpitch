@@ -30,12 +30,11 @@ export default StyleSheet.create({
         borderRadius: 8,
         marginHorizontal: 12
     },
-
     //LevelPage
     titles:{
         position: "absolute",
         left:viewportWidth*0.05,
-        top: viewportHeight*0.2,
+        top: viewportHeight*0.3,
     },
     titleText:{
         fontSize: 30,
@@ -50,10 +49,10 @@ export default StyleSheet.create({
     },
     waveBackground:{
         position: "absolute",
-        top: viewportHeight * 0.2,
+        top: viewportHeight * 0.1,
         left: 0,
         width: viewportWidth,
-        height: viewportHeight * 0.5,
+        height: viewportHeight * 0.1,
     },
     slideInnerContainer: {
         width: itemWidth,

@@ -16,13 +16,13 @@ export default class FreePlaySettings extends Component {
     }
 
     _renderItem ({item, index}) {
-        if(index == 1){
+        if(index === 1){
             return <AssociationSettings data={item}/>;
         }
-        if(index == 2){
+        if(index === 2){
             return <VisualSettings data={item}/>;
         }
-        if(index == 3){
+        if(index === 3){
             return <RangeSettings data={item}/>;
         }
         else{

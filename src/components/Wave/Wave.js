@@ -11,13 +11,9 @@ import RNSiriWaveView from "react-native-siri-wave-view";
 
 const ios = Platform.OS === 'ios';
 
-let width = {
-    width: Dimensions.get("window").width,
-}
-
 const Wave = (props) => (
     <View style={styles.container}>
-        <RNSiriWaveView {...props} {...width}/>
+        <RNSiriWaveView {...props}/>
     </View>
 );
 
@@ -27,12 +23,14 @@ Wave.propTypes = {
     primaryWaveLineWidth: PropTypes.number,
     secondaryWaveLineWidth: PropTypes.number,
     frequency: PropTypes.number,
+    width: PropTypes.number
 };
 
 Wave.defaultProps = {
     primaryWaveLineWidth: ios ? 2 : 100,
     secondaryWaveLineWidth: ios  ? 1 : 250,
     frequency: ios ? 1.5 : 1,
+    width: Dimensions.get("window").width,
 };
 
 const styles = StyleSheet.create({

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Platform, View, ScrollView, Text, StatusBar, SafeAreaView, TouchableOpacity } from 'react-native';
+import { SafeAreaView, View, Text, TouchableOpacity } from 'react-native';
 import Carousel, { Pagination } from 'react-native-snap-carousel';
 import { sliderWidth, itemWidth } from './ColorTutorialStyle';
 import ColorEntry from './ColorEntry';
@@ -24,7 +24,7 @@ export default class ColorTutorial extends Component {
         const {navigate} = this.props.navigation;
 
         return (
-            <View style={styles.container}>
+            <SafeAreaView style={styles.container}>
                 <View style = {styles.header}>
                     <TouchableOpacity onPress={() => navigate("MainMenu")} style = {styles.backButton}>
                         <Text>Back</Text>
@@ -56,7 +56,7 @@ export default class ColorTutorial extends Component {
                   tappableDots={!!this._slider1Ref}
                 />
 
-            </View>
+            </SafeAreaView>
         );
     }
 }

@@ -1,9 +1,11 @@
-import {TextInput, AsyncStorage, View, SafeAreaView, TouchableOpacity, Image} from "react-native";
+import {TextInput, AsyncStorage, View, SafeAreaView, TouchableOpacity, Image, Dimensions} from "react-native";
 import React, {Component} from "react"
 import {withMappedNavigationProps} from "react-navigation-props-mapper";
 import Wave from "../Wave/Wave";
 import AppText from "../AppText/AppText";
 import Buttons from "@assets/buttons";
+
+const viewportHeight = Dimensions.get("window").height;
 
 class SignIn extends Component {
 
@@ -44,6 +46,13 @@ class SignIn extends Component {
                 }
             )
         }
+        else {
+            this.setState({
+                    disabled: true,
+                }
+            )
+        }
+
     }
 
     renderMid() {
@@ -146,6 +155,8 @@ const styles = {
             flex: 1,
         },
         waveContainer: {
+            position: "absolute",
+            top: viewportHeight * 0.2,
             marginBottom: 50,
         },
         middleContainer: {

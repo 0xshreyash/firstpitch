@@ -28,7 +28,6 @@ class Profile extends Component {
     async getFirstName() {
         try {
             const name = await AsyncStorage.getItem("firstName");
-            console.warn(name);
             return name;
         }
         catch(error) {
@@ -45,7 +44,6 @@ class Profile extends Component {
                             waveColor={'#000000'}
                             backgroundColor={'#ffffff'}
                             numberOfWaves={2}
-                            primaryWaveLineWidth={Platform.OS === 'ios' ? 0.25 : 100}
                             amplitude={0.25}
                             height={100}/>
                 </View>
@@ -53,7 +51,7 @@ class Profile extends Component {
                     <Text style = {styles.titleText}>First Pitch</Text>
                     <Text style = {styles.subtitleText}>Welcome {this.state.name}!</Text>
                     <TouchableOpacity onPress={() => navigate("ColorTutorial")}>
-                        <Text style={ styles.titleText}>--Color Tutorial--</Text>
+                        <Text style={styles.titleText}>--Color Tutorial--</Text>
                     </TouchableOpacity>
                     <TouchableOpacity onPress={() => navigate("FreePlaySettings")}>
                         <Text style={ styles.titleText}>--Free Play--</Text>

@@ -1,14 +1,35 @@
-import {View} from "react-native";
+import {View, AsyncStorage} from "react-native";
 import React, {Component} from "react";
 import {withMappedNavigationProps} from "react-navigation-props-mapper";
 import WaveView from "../WaveView/WaveView";
-import SignIn from "../SignIn/SignIn";
 import AppText from '../AppText/AppText';
 
 class WelcomePage extends Component {
 
+    constructor(props) {
+        super(props);
+        this.handleMove = this.handleMove.bind(this);
+    }
+
     componentDidMount() {
-        setTimeout(() => this.props.navigation.replace("SignIn"), 1500);
+        setTimeout(async () => await this.handleMove(), 1500);
+    }
+
+    async handleMove() {
+        try {
+            let name = await AsyncStorage.getItem("firstName");
+            if(name != null) {
+                console.warn("The name you are signed in with is: ", name);
+                this.props.navigation.replace("MainMenu");
+            }
+            else {
+                this.props.navigation.replace("SignIn");
+            }
+        }
+        catch(error) {
+            console.warn("Could not get name");
+        }
+
     }
 
     render() {

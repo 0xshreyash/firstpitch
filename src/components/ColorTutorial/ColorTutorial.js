@@ -5,6 +5,7 @@ import { sliderWidth, itemWidth } from './ColorTutorialStyle';
 import ColorEntry from './ColorEntry';
 import styles from './ColorTutorialStyle';
 import { ColorTutorialEntries } from '../../static/ColorTutorialEntries';
+import {NavigationActions} from "react-navigation";
 
 export default class ColorTutorial extends Component {
 
@@ -21,12 +22,12 @@ export default class ColorTutorial extends Component {
 
     render () {
         const { currSlide } = this.state;
-        const {navigate} = this.props.navigation;
+        const {navigation} = this.props.navigation;
 
         return (
             <SafeAreaView style={styles.container}>
                 <SafeAreaView style = {styles.header}>
-                    <TouchableOpacity onPress={() => navigate("StageMenu")} style = {styles.backButton}>
+                    <TouchableOpacity onPress={() => this.props.navigation.dispatch(NavigationActions.back())} style = {styles.backButton}>
                         <Text>Back</Text>
                     </TouchableOpacity>
                 </SafeAreaView>

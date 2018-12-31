@@ -1,24 +1,33 @@
 import React, {Component} from 'react';
-import {AsyncStorage, Dimensions, Text, TouchableOpacity, View} from 'react-native';
-import styles from './LevelStyle';
+import {AsyncStorage, Dimensions, Text, TouchableOpacity, View, SafeAreaView} from 'react-native';
 import Wave from '../Wave/Wave';
 import {withNavigation} from 'react-navigation';
+import AppText from "../AppText/AppText";
 
-
-const { width: viewportWidth, height: viewportHeight } = Dimensions.get('window');
+const {width: viewportWidth, height: viewportHeight} = Dimensions.get('window');
 
 class MainMenu extends Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            name: ''
+            name: '',
+            options: [{
+                name: 'Color Tutorial',
+                goto: 'ColorTutorial',
+            }, {
+                name: 'Free Play',
+                goto: 'FreePlay',
+            }, {
+                name: 'Stages Menu',
+                goto: 'StageMenu',
+            }]
         };
-        Profile.getFirstName = Profile.getFirstName.bind(this)
+        MainMenu.getFirstName = MainMenu.getFirstName.bind(this)
     }
 
     async componentDidMount() {
-        let name = await Profile.getFirstName();
+        let name = await MainMenu.getFirstName();
         this.setState({
             name: name
         });
@@ -27,38 +36,73 @@ class MainMenu extends Component {
     static async getFirstName() {
         try {
             return await AsyncStorage.getItem("firstName");
-        }
-        catch(error) {
+        } catch (error) {
             console.warn("Could not get name from user");
         }
     }
 
-    render () {
+    render() {
         const {navigate} = this.props.navigation;
         return (
-            <View style = {styles.slideInnerContainer}>
-                <View style = {styles.waveBackground}>
-                    <Wave startAnimation={true} stopAnimation={false}
+            <SafeAreaView style={styles.container}>
+                <View style={styles.waveBackground}>
+                    <Wave startAnimation={false} stopAnimation={false}
                           waveColor={'#000000'}
                           backgroundColor={'#ffffff'}
                           numberOfWaves={2}
                           amplitude={0.25}
                           height={100}/>
                 </View>
-                <View style = {styles.titles}>
-                    <Text style = {styles.titleText}>First Pitch</Text>
-                    <Text style = {styles.subtitleText}>Welcome {this.state.name}!</Text>
-                    <TouchableOpacity onPress={() => navigate("ColorTutorial")}>
-                        <Text style={styles.titleText}>--Color Tutorial--</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity onPress={() => navigate("FreePlay")}>
-                        <Text style={ styles.titleText}>--Free Play--</Text>
-                    </TouchableOpacity>
+                <View styles={styles.content}>
+                    <View style={styles.welcomeText}>
+                        <AppText style={styles.titleText}>
+                            First Pitch
+                        </AppText>
+                        <AppText style={styles.subtitleText}>
+                            Hello {this.state.name}!
+                        </AppText>
+                    </View>
+                    <View style={styles.options}>
+                        {
+                            this.state.options.map((item) => (
+                                <TouchableOpacity style={styles.optionButton}
+                                                  onPress={() => this.props.navigation.navigate(item.goto)}>
+                                    <AppText style={styles.optionText}>--{item.name}--</AppText>
+                                </TouchableOpacity>))
+                        }
+                    </View>
                 </View>
-            </View>
-
+            </SafeAreaView>
         );
     }
 }
+
+const styles = {
+    container: {
+        flex: 1,
+        flexDirection: 'column',
+    },
+    content: {
+        alignItems: 'center',
+    },
+    welcomeText: {
+        alignItems: 'center',
+    },
+    titleText: {
+        fontSize: 50,
+        fontWeight: 'bold',
+    },
+    subtitleText: {
+        fontSize: 30,
+        fontWeight: 'bold',
+    },
+    options: {
+        marginTop: 50,
+        alignItems: 'center',
+    },
+    optionText: {
+        fontSize: 30,
+    }
+};
 
 export default withNavigation(MainMenu);

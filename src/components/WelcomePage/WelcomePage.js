@@ -20,7 +20,7 @@ class WelcomePage extends Component {
             let name = await AsyncStorage.getItem("firstName");
             if(name != null) {
                 console.warn("The name you are signed in with is: ", name);
-                this.props.navigation.replace("StageMenu");
+                this.props.navigation.replace("MainMenu");
             }
             else {
                 this.props.navigation.replace("SignIn");

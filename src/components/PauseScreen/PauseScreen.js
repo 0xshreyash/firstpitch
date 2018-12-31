@@ -24,8 +24,6 @@ class PauseScreen extends Component {
     }
 
     goBack() {
-        console.warn("Go back called");
-        console.warn(this.props.navigation);
         this.props.navigation.dispatch(NavigationActions.back())
     }
 

@@ -42,11 +42,10 @@ class MainMenu extends Component {
     }
 
     render() {
-        const {navigate} = this.props.navigation;
         return (
             <SafeAreaView style={styles.container}>
                 <View style={styles.waveBackground}>
-                    <Wave startAnimation={false} stopAnimation={false}
+                    <Wave startAnimation={true} stopAnimation={false}
                           waveColor={'#000000'}
                           backgroundColor={'#ffffff'}
                           numberOfWaves={2}

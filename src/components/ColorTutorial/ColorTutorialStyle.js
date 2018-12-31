@@ -35,10 +35,6 @@ export default StyleSheet.create({
         marginHorizontal: 12
     },
     backButton:{
-        padding: 10,
-        margin: 10,
-        backgroundColor: "#cbe4e2",
-        borderRadius: 8,
     },
     header:{
         position: "absolute",

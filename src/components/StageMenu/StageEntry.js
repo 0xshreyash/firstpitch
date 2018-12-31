@@ -1,14 +1,20 @@
 import React, { Component } from 'react';
-import { View, Text, Image, TouchableOpacity, Dimensions, Platform } from 'react-native';
+import {SafeAreaView, View, Text, Image, TouchableOpacity, Dimensions, Platform } from 'react-native';
 import PropTypes from 'prop-types';
 import styles from './StageStyle';
 import StageButton from "./StageButton";
 import Wave from '../Wave/Wave';
+import Buttons from '@assets/buttons';
+import {NavigationActions} from 'react-navigation';
 
 
 const { width: viewportWidth, height: viewportHeight } = Dimensions.get('window');
 
 export default class StageEntry extends Component {
+
+    constructor(props) {
+        super(props);
+    }
 
     static propTypes = {
         data: PropTypes.object.isRequired,
@@ -50,16 +56,7 @@ export default class StageEntry extends Component {
     render () {
         const { data: { title, subtitle,}} = this.props;
         return (
-            <View style = {styles.slideInnerContainer}>
-                <View style = {styles.waveBackground}>
-                    <Wave startAnimation={false} stopAnimation={false}
-                            waveColor={'#000000'}
-                            backgroundColor={'#ffffff'}
-                            numberOfWaves={2}
-                            primaryWaveLineWidth={Platform.OS === 'ios' ? 0.25 : 100}
-                            amplitude={0.25}
-                            height={100}/>
-                </View>
+            <SafeAreaView style = {styles.slideInnerContainer}>
                 <View style = {this.levelButtonsStyling()}>
                     { this.generateButtons() }
                 </View>
@@ -67,7 +64,7 @@ export default class StageEntry extends Component {
                     <Text style = {styles.titleText}>{ title.toUpperCase() }</Text>
                     <Text style = {styles.subtitleText}>{ subtitle.toLowerCase() }</Text>
                 </View>
-            </View>
+            </SafeAreaView>
 
         );
     }

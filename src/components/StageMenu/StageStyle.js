@@ -19,7 +19,7 @@ export default StyleSheet.create({
     //carousel
     carouselContainer: {
         paddingVertical: 0,
-        flex: 1,
+        flex: 4,
     },
     paginationContainer: {
         paddingVertical: 32
@@ -48,11 +48,14 @@ export default StyleSheet.create({
         color: "black",
     },
     waveBackground:{
+        flex: 1,
         position: "absolute",
-        top: viewportHeight * 0.1,
+        top: 0,
         left: 0,
-        width: viewportWidth,
-        height: viewportHeight * 0.1,
+        zIndex: 1000,
+    },
+    stageMenuContainer: {
+        flex: 5,
     },
     slideInnerContainer: {
         width: itemWidth,

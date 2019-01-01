@@ -1,12 +1,12 @@
 import { StyleSheet, Dimensions, Platform } from 'react-native';
 
 export default StyleSheet.create({
-    notesContainer:{
+    buttonContainer:{
         margin: 25,
         flexDirection: "row",
         flexWrap: "wrap"
     },
-    noteButton:{
+    settingButton:{
         margin: 10,
         padding: 10,
         justifyContent: "center",
@@ -15,11 +15,11 @@ export default StyleSheet.create({
         width: 70,
         borderWidth: 2,
     },
-    noteOn:{
+    buttonOn:{
         opacity: 1,
         backgroundColor: "green"
     },
-    noteOff:{
+    buttonOff:{
         backgroundColor: "white",
         opacity: 0.5,
     },
@@ -44,10 +44,6 @@ export default StyleSheet.create({
         margin: 25,
         flex: 0.5,
         fontSize: 30,
-    },
-    buttonContainer: {
-        marginTop: 100,
-        alignSelf: "center",
     },
     setting: {
         padding: 10,

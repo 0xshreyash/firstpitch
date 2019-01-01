@@ -43,12 +43,13 @@ class FreePlay extends Component {
             rep: '#',
             flat: false,
             solfege: false,
-            notes: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'As', 'Cs', 'Ds', 'Fs', 'Gs']
+            notes: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'As', 'Cs', 'Ds', 'Fs', 'Gs'],
+            octaves: [2, 3]
         };
         this.onForwardPress = this.onForwardPress.bind(this);
         this.gameLenChange = this.gameLenChange.bind(this);
         this.repSelected = this.repSelected.bind(this);
-        this.noteToggle = this.noteToggle.bind(this);
+        this.toggleList = this.toggleList.bind(this);
     }
 
     repSelected(rep) {
@@ -73,22 +74,26 @@ class FreePlay extends Component {
         this.props.navigation.replace("Game", {
             gameLen: this.state.gameLen,
             instruments: ['piano'],
-            octaves: [2, 3],
+            octaves: this.state.octaves,
             notes: this.state.notes,
             solfege: this.state.solfege,
             flat: this.state.flat,
         })
     }
 
-    noteToggle(noteName){
-        notes = this.state.notes;
-        if(notes.includes(noteName)){
-            notes.splice(notes.indexOf(noteName), 1 );
+    toggleList(listName, element){
+        list = this.state[listName];
+        //cannot have less than one option. eg must have one note and one octave
+        if(list.length <= 1){
+            return;
+        }
+        if(list.includes(element)){
+            list.splice(list.indexOf(element), 1);
         }else{
-            notes.push(noteName);
+            list.push(element);
         }
         this.setState({
-            notes: notes
+            [listName]: list
         })
     }
 
@@ -128,18 +133,31 @@ class FreePlay extends Component {
                         </Picker>
                     </View>
                 </View>
-                <View style = {styles.notesContainer}>
+                <View style = {styles.buttonContainer}>
                     {
                         (['A', 'B', 'C', 'D', 'E', 'F', 'G', 'As', 'Cs', 'Ds', 'Fs', 'Gs']).map(
                             (noteName) => {
                                 return (
-                                    <TouchableOpacity onPress = {()=>this.noteToggle(noteName)} style = {[styles.noteButton, this.state.notes.includes(noteName) ? styles.noteOn : styles.noteOff]}>
+                                    <TouchableOpacity onPress = {()=>this.toggleList("notes", noteName)} style = {[styles.settingButton, this.state.notes.includes(noteName) ? styles.buttonOn : styles.buttonOff]}>
                                         <Text style = {styles.settingText }>{ noteName.replace("s", "#") }</Text>
                                     </TouchableOpacity>
                                 );
                             }
                         )
                     }
+                </View>
+                <View style = {styles.buttonContainer}>
+                {
+                    ([2, 3]).map(
+                        (octaveNumber) => {
+                            return (
+                                <TouchableOpacity onPress = {()=>this.toggleList("octaves", octaveNumber)} style = {[styles.settingButton, this.state.octaves.includes(octaveNumber) ? styles.buttonOn : styles.buttonOff]}>
+                                    <Text style = {styles.settingText }>{ octaveNumber }</Text>
+                                </TouchableOpacity>
+                            );
+                        }
+                    )
+                }
                 </View>
                 <View style={styles.buttonContainer}>
                     <TouchableOpacity

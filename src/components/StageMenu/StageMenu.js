@@ -7,8 +7,10 @@ import {MenuEntries} from '../../static/MenuEntries';
 import {NavigationActions} from 'react-navigation';
 import Wave from "../Wave/Wave";
 import Buttons from "@assets/buttons";
+import {withMappedNavigationProps} from "react-navigation-props-mapper";
 
-export default class StageMenu extends Component {
+
+class StageMenu extends Component {
 
     constructor(props) {
         super(props);
@@ -73,3 +75,5 @@ export default class StageMenu extends Component {
         );
     }
 }
+
+export default withMappedNavigationProps()(StageMenu);

@@ -149,7 +149,7 @@ class FreePlay extends Component {
                     );})}
                 </View>
                 <View style = {styles.buttonContainer}>
-                    {([2, 3]).map((octaveNumber) => {return (
+                    {([0, 1, 2, 3, 4]).map((octaveNumber) => {return (
                         <TouchableOpacity onPress = {()=>this.toggleList("octaves", octaveNumber)} style = {[styles.settingButton, this.state.octaves.includes(octaveNumber) ? styles.buttonOn : styles.buttonOff]}>
                             <Text style = {styles.settingText }>{ octaveNumber }</Text>
                         </TouchableOpacity>

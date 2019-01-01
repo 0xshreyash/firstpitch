@@ -1,10 +1,12 @@
 import React, {Component} from 'react';
 import {View, Text, Image, TouchableOpacity, StyleSheet, Dimensions} from 'react-native';
+import {withMappedNavigationProps} from "react-navigation-props-mapper";
+import {withNavigation} from 'react-navigation';
 
 const {width: viewportWidth, height: viewportHeight} = Dimensions.get('window');
 
 
-export default class StageButton extends Component {
+class StageButton extends Component {
 
     buttonStyle() {
         let columns = this.props.columns;
@@ -35,7 +37,13 @@ export default class StageButton extends Component {
 
     render() {
         return (
-            <TouchableOpacity style={[this.buttonStyle()]} onPress={this.props.onPress}>
+            <TouchableOpacity style={[this.buttonStyle()]} onPress={()=>this.props.navigation.navigate("Game", {
+                instruments: this.props.instruments,
+                octaves: this.props.octaves,
+                notes: this.props.notes,
+                waveColorProbability: this.props.waveColorProbability,
+                gameLen: this.props.gameLen
+            })}>
                 <Text style={[styles.levelTitle]}>{this.props.level}</Text>
             </TouchableOpacity>
         );
@@ -61,3 +69,5 @@ const styles = StyleSheet.create({
         fontSize: 13,
     }
 })
+
+export default withNavigation(StageButton);

@@ -6,11 +6,12 @@ import StageButton from "./StageButton";
 import Wave from '../Wave/Wave';
 import Buttons from '@assets/buttons';
 import {NavigationActions} from 'react-navigation';
+import {withMappedNavigationProps} from "react-navigation-props-mapper";
 
 
 const { width: viewportWidth, height: viewportHeight } = Dimensions.get('window');
 
-export default class StageEntry extends Component {
+class StageEntry extends Component {
 
     constructor(props) {
         super(props);
@@ -69,3 +70,5 @@ export default class StageEntry extends Component {
         );
     }
 }
+
+export default withMappedNavigationProps()(StageEntry);

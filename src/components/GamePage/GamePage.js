@@ -81,7 +81,6 @@ class GamesPage extends Component {
                 this.setState({
                     waveColor: entry["color"]
                 });
-                console.warn("DONE", entry["color"]);
                 return;
             }
         }

@@ -14,8 +14,9 @@ export const MenuEntries = [
                     icon: MusicIcons.treble,
                     instruments: ["piano"],
                     octaves: [3],
-                    notes: ["c", "g"],
-                    onPress: () => this.props.navigation.navigate("GamePage")
+                    notes: ["C", "G"],
+                    waveColorProbability: 1,
+                    gameLen: 5
                 },
                 {
                     level: 2,
@@ -23,7 +24,9 @@ export const MenuEntries = [
                     icon: MusicIcons.bass,
                     instruments: ["piano"],
                     octaves: [3],
-                    notes: ["c", "e", "g"]
+                    notes: ["C", "E", "G"],
+                    waveColorProbability: 1,
+                    gameLen: 5
                 },
                 {
                     level: 3,
@@ -31,7 +34,9 @@ export const MenuEntries = [
                     icon: MusicIcons.equaliser,
                     instruments: ["piano"],
                     octaves: [3],
-                    notes: ["c", "e", "d", "a", "g"]
+                    notes: ["C", "E", "D", "A", "G"],
+                    waveColorProbability: 1,
+                    gameLen: 5
                 },
                 {
                     level: 4,
@@ -39,7 +44,9 @@ export const MenuEntries = [
                     icon: MusicIcons.violin,
                     instruments: ["piano"],
                     octaves: [3],
-                    notes: ["c", "e", "d", "f", "g", "a", "b"]
+                    notes: ["C", "E", "D", "F", "G", "A", "B"],
+                    waveColorProbability: 1,
+                    gameLen: 5
                 }
         ],
     },
@@ -53,25 +60,31 @@ export const MenuEntries = [
                     level: 1,
                     text: "Introducing the Synth",
                     icon: MusicIcons.quaver,
-                    instruments: ["saw"],
+                    instruments: ["synth"],
                     octaves: [3],
-                    notes: ["c", "e", "g", "a", "b"]
+                    notes: ["C", "E", "D", "F", "G", "A", "B"],
+                    waveColorProbability: 1,
+                    gameLen: 5
                 },
                 {
                     level: 2,
                     text: "Whites Keys on the Synth",
                     icon: MusicIcons.ipod,
-                    instruments: ["saw"],
+                    instruments: ["synth"],
                     octaves: [3],
-                    notes: ["a", "b", "c", "d", "e", "f", "g"]
+                    notes: ["C", "E", "D", "F", "G", "A", "B"],
+                    waveColorProbability: 1,
+                    gameLen: 5
                 },
                 {
                     level: 3,
                     text: "Lower Voices",
                     icon: MusicIcons.tuba,
-                    instruments: ["saw"],
+                    instruments: ["synth"],
                     octaves: [2],
-                    notes: ["a", "b", "c", "d", "e", "f", "g"]
+                    notes: ["C", "E", "D", "F", "G", "A", "B"],
+                    waveColorProbability: 1,
+                    gameLen: 5
                 },
         ],
     },
@@ -83,19 +96,23 @@ export const MenuEntries = [
         levels:[
                 {
                     level: 1,
-                    text: "Introducing the Synth",
+                    text: "Mixture",
                     icon: MusicIcons.quaver,
-                    instruments: ["saw"],
-                    octaves: [3],
-                    notes: ["c", "e", "g", "a", "b"]
+                    instruments: ["synth", "piano"],
+                    octaves: [2, 3],
+                    notes: ["C", "E", "D", "F", "G", "A", "B"],
+                    waveColorProbability: 0.8,
+                    gameLen: 5
                 },
                 {
                     level: 2,
                     text: "Whites Keys on the Synth",
                     icon: MusicIcons.ipod,
-                    instruments: ["saw"],
-                    octaves: [3],
-                    notes: ["a", "b", "c", "d", "e", "f", "g"]
+                    instruments: ["synth", "piano"],
+                    octaves: [3, 4],
+                    notes: ["C", "E", "D", "F", "G", "A", "B"],
+                    waveColorProbability: 0.7,
+                    gameLen: 5
                 },
         ],
     },

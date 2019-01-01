@@ -68,6 +68,13 @@ class GamesPage extends Component {
     }
 
     setWaveColour(name){
+        //reset it
+        this.setState({
+            waveColor: "black"
+        })
+        if(Math.random() > this.props.waveColorProbability){
+            return;
+        }
         for(var i = 0; i < ColorTutorialEntries.length; i++){
             entry = ColorTutorialEntries[i];
             if(this.extractNoteFromAudiofile(name) == entry["note"].toUpperCase()){

@@ -6,6 +6,7 @@ import {
     TouchableOpacity,
     Image,
     Dimensions,
+    ScrollView,
     Slider,
     Text,
     Picker,
@@ -44,10 +45,11 @@ class FreePlay extends Component {
             flat: false,
             solfege: false,
             notes: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'As', 'Cs', 'Ds', 'Fs', 'Gs'],
-            octaves: [2, 3]
+            octaves: [2, 3],
+            instruments: ["piano", "epiano", "sqwave", "strings", "synth", "synthtrumpet"],
+            waveColorProbability: 1,
         };
         this.onForwardPress = this.onForwardPress.bind(this);
-        this.gameLenChange = this.gameLenChange.bind(this);
         this.repSelected = this.repSelected.bind(this);
         this.toggleList = this.toggleList.bind(this);
     }
@@ -62,22 +64,15 @@ class FreePlay extends Component {
         });
     }
 
-    gameLenChange(value) {
-        this.setState(
-            {
-                gameLen: value,
-            }
-        );
-    }
-
     onForwardPress() {
         this.props.navigation.replace("Game", {
             gameLen: this.state.gameLen,
-            instruments: ['piano'],
+            instruments: this.state.instruments,
             octaves: this.state.octaves,
             notes: this.state.notes,
             solfege: this.state.solfege,
             flat: this.state.flat,
+            waveColorProbability: this.state.waveColorProbability
         })
     }
 
@@ -99,7 +94,20 @@ class FreePlay extends Component {
 
     render() {
         return (
-            <SafeAreaView style={styles.settingsContainer}>
+            <ScrollView style={styles.settingsContainer}>
+                <View style={styles.setting}>
+                    <View style={styles.settingText}>
+                        <Text>Color Help Probability: {this.state.waveColorProbability}</Text>
+                    </View>
+                    <Slider
+                        style={styles.settingInput}
+                        step={0.1}
+                        minimumValue={0}
+                        maximumValue={1}
+                        onValueChange={(value)=>this.setState({waveColorProbability:value})}
+                        value={this.state.waveColorProbability}
+                    />
+                </View>
                 <View style={styles.setting}>
                     <View style={styles.settingText}>
                         <Text>Game Length: {this.state.gameLen}</Text>
@@ -109,7 +117,7 @@ class FreePlay extends Component {
                         step={1}
                         minimumValue={1}
                         maximumValue={100}
-                        onValueChange={this.gameLenChange}
+                        onValueChange={(value)=>this.setState({gameLen:value})}
                         value={this.state.gameLen}
                     />
                 </View>
@@ -134,30 +142,25 @@ class FreePlay extends Component {
                     </View>
                 </View>
                 <View style = {styles.buttonContainer}>
-                    {
-                        (['A', 'B', 'C', 'D', 'E', 'F', 'G', 'As', 'Cs', 'Ds', 'Fs', 'Gs']).map(
-                            (noteName) => {
-                                return (
-                                    <TouchableOpacity onPress = {()=>this.toggleList("notes", noteName)} style = {[styles.settingButton, this.state.notes.includes(noteName) ? styles.buttonOn : styles.buttonOff]}>
-                                        <Text style = {styles.settingText }>{ noteName.replace("s", "#") }</Text>
-                                    </TouchableOpacity>
-                                );
-                            }
-                        )
-                    }
+                    {(['A', 'B', 'C', 'D', 'E', 'F', 'G', 'As', 'Cs', 'Ds', 'Fs', 'Gs']).map((noteName) => {return (
+                        <TouchableOpacity onPress = {()=>this.toggleList("notes", noteName)} style = {[styles.settingButton, this.state.notes.includes(noteName) ? styles.buttonOn : styles.buttonOff]}>
+                            <Text style = {styles.settingText }>{ noteName.replace("s", "#") }</Text>
+                        </TouchableOpacity>
+                    );})}
                 </View>
                 <View style = {styles.buttonContainer}>
-                {
-                    ([2, 3]).map(
-                        (octaveNumber) => {
-                            return (
-                                <TouchableOpacity onPress = {()=>this.toggleList("octaves", octaveNumber)} style = {[styles.settingButton, this.state.octaves.includes(octaveNumber) ? styles.buttonOn : styles.buttonOff]}>
-                                    <Text style = {styles.settingText }>{ octaveNumber }</Text>
-                                </TouchableOpacity>
-                            );
-                        }
-                    )
-                }
+                    {([2, 3]).map((octaveNumber) => {return (
+                        <TouchableOpacity onPress = {()=>this.toggleList("octaves", octaveNumber)} style = {[styles.settingButton, this.state.octaves.includes(octaveNumber) ? styles.buttonOn : styles.buttonOff]}>
+                            <Text style = {styles.settingText }>{ octaveNumber }</Text>
+                        </TouchableOpacity>
+                    );})}
+                </View>
+                <View style = {styles.buttonContainer}>
+                    {(["piano", "epiano", "sqwave", "strings", "synth", "synthtrumpet"]).map((instrument) => {return (
+                        <TouchableOpacity onPress = {()=>this.toggleList("instruments", instrument)} style = {[styles.settingButton, {width: 150, textAlign: "center"}, this.state.instruments.includes(instrument) ? styles.buttonOn : styles.buttonOff]}>
+                            <Text style = {styles.settingText }>{ instrument }</Text>
+                        </TouchableOpacity>
+                    );})}
                 </View>
                 <View style={styles.buttonContainer}>
                     <TouchableOpacity
@@ -169,7 +172,7 @@ class FreePlay extends Component {
                         />
                     </TouchableOpacity>
                 </View>
-            </SafeAreaView>
+            </ScrollView>
         )
             ;
     }

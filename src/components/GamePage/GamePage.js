@@ -10,7 +10,7 @@ import Header from './Header';
 import Wave from '../Wave/Wave';
 import BottomPanel from './BottomPanel';
 import {withMappedNavigationProps} from "react-navigation-props-mapper";
-
+import {ColorTutorialEntries} from "../../static/ColorTutorialEntries"
 
 class GamesPage extends Component {
     constructor(props) {
@@ -59,6 +59,28 @@ class GamesPage extends Component {
         SoundPlayer.unmount()
     }
 
+    extractNoteFromAudiofile(filename){
+        //remove the instrument
+        parts = filename.split("_");
+        note = parts.pop().toUpperCase();
+        //remove the number at the end
+        return note.slice(0, note.length-1);
+    }
+
+    setWaveColour(name){
+        for(var i = 0; i < ColorTutorialEntries.length; i++){
+            entry = ColorTutorialEntries[i];
+            if(this.extractNoteFromAudiofile(name) == entry["note"].toUpperCase()){
+                this.setState({
+                    waveColor: entry["color"]
+                });
+                console.warn("DONE", entry["color"]);
+                return;
+            }
+        }
+    }
+
+
     getAudioFiles() {
         let instruments = this.props.instruments;
         let notes = this.props.notes;
@@ -105,6 +127,8 @@ class GamesPage extends Component {
         }, this.playSound);
     }
 
+
+
     playSound() {
         //Sound.setCategory('Playback');
         this.setState({
@@ -114,6 +138,7 @@ class GamesPage extends Component {
         let name = this.state.currentTrack.slice(0, index);
         let ext = this.state.currentTrack.slice(index + 1, this.state.currentTrack.length);
         console.warn(name, ext);
+        this.setWaveColour(name);
         try {
             SoundPlayer.playSoundFile(name, ext);
         } catch (e) {

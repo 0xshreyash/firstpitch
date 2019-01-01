@@ -14,4 +14,40 @@ export const ColorTutorialEntries = [
         color: '#e0d541',
         subtitle: 'E is a rich tone, and when you are rich, you have a lot of gold.',
     },
+    {
+        note: "Cs",
+        color: "black"
+    },
+    {
+        note: "D",
+        color: "red"
+    },
+    {
+        note: "Ds",
+        color: "yellow"
+    },
+    {
+        note: "A",
+        color: "grey"
+    },
+    {
+        note: "F",
+        color: "#6c993f"
+    },
+    {
+        note: "Fs",
+        color: "purple"
+    },
+    {
+        note: "Gs",
+        color: "green"
+    },
+    {
+        note: "As",
+        color: "blue"
+    },
+    {
+        note: "B",
+        color: "#18c7d9"
+    }
 ];

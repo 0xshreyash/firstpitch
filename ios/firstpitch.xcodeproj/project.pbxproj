@@ -85,6 +85,347 @@
 		ED515CA721CD8D8D0029CF6B /* piano_g2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ED515C8E21CD8D8D0029CF6B /* piano_g2.mp3 */; };
 		ED515CA821CD8D8D0029CF6B /* piano_c2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ED515C8F21CD8D8D0029CF6B /* piano_c2.mp3 */; };
 		ED515CA921CD8D8D0029CF6B /* piano_cs2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ED515C9021CD8D8D0029CF6B /* piano_cs2.mp3 */; };
+		EDCA460221DB812F00778478 /* synth_d3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA446821DB80D900778478 /* synth_d3.mp3 */; };
+		EDCA460321DB812F00778478 /* piano_fs0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA449521DB80D900778478 /* piano_fs0.mp3 */; };
+		EDCA460421DB812F00778478 /* epiano_fs0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA449621DB80DA00778478 /* epiano_fs0.mp3 */; };
+		EDCA460521DB812F00778478 /* strings_fs2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA449721DB80DA00778478 /* strings_fs2.mp3 */; };
+		EDCA460621DB812F00778478 /* piano_a0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA449821DB80DA00778478 /* piano_a0.mp3 */; };
+		EDCA460721DB812F00778478 /* sqwave_gs1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA449921DB80DB00778478 /* sqwave_gs1.mp3 */; };
+		EDCA460821DB812F00778478 /* synthtrumpet_a0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA449A21DB80DB00778478 /* synthtrumpet_a0.mp3 */; };
+		EDCA460921DB812F00778478 /* synthtrumpet_b1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA449B21DB80DB00778478 /* synthtrumpet_b1.mp3 */; };
+		EDCA460A21DB812F00778478 /* synth_e4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA449C21DB80DB00778478 /* synth_e4.mp3 */; };
+		EDCA460B21DB812F00778478 /* synthtrumpet_e0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA449D21DB80DB00778478 /* synthtrumpet_e0.mp3 */; };
+		EDCA460C21DB812F00778478 /* piano-60.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA449E21DB80DC00778478 /* piano-60.mp3 */; };
+		EDCA460D21DB812F00778478 /* strings_gs1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA449F21DB80DC00778478 /* strings_gs1.mp3 */; };
+		EDCA460E21DB812F00778478 /* synth_ds4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA44A021DB80DC00778478 /* synth_ds4.mp3 */; };
+		EDCA460F21DB812F00778478 /* synthtrumpet_f3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA44A121DB80DC00778478 /* synthtrumpet_f3.mp3 */; };
+		EDCA461021DB812F00778478 /* synthtrumpet_ds0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA44A221DB80DD00778478 /* synthtrumpet_ds0.mp3 */; };
+		EDCA461121DB812F00778478 /* strings_f4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA44A321DB80DD00778478 /* strings_f4.mp3 */; };
+		EDCA461221DB812F00778478 /* sqwave_g1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA44A421DB80DD00778478 /* sqwave_g1.mp3 */; };
+		EDCA461321DB812F00778478 /* strings_f1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA44A521DB80DD00778478 /* strings_f1.mp3 */; };
+		EDCA461421DB812F00778478 /* synth_c3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA44A621DB80DE00778478 /* synth_c3.mp3 */; };
+		EDCA461521DB812F00778478 /* synth_g3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA44A721DB80DE00778478 /* synth_g3.mp3 */; };
+		EDCA461621DB812F00778478 /* synthtrumpet_cs1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA44A821DB80DE00778478 /* synthtrumpet_cs1.mp3 */; };
+		EDCA461721DB812F00778478 /* synthtrumpet_d0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA44A921DB80DF00778478 /* synthtrumpet_d0.mp3 */; };
+		EDCA461821DB812F00778478 /* epiano_b0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA44AA21DB80DF00778478 /* epiano_b0.mp3 */; };
+		EDCA461921DB812F00778478 /* sqwave_c0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA44AB21DB80DF00778478 /* sqwave_c0.mp3 */; };
+		EDCA461A21DB812F00778478 /* epiano_as3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA44AC21DB80E000778478 /* epiano_as3.mp3 */; };
+		EDCA461B21DB812F00778478 /* piano_gs0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA44AD21DB80E000778478 /* piano_gs0.mp3 */; };
+		EDCA461C21DB812F00778478 /* strings_e0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA44AE21DB80E000778478 /* strings_e0.mp3 */; };
+		EDCA461D21DB812F00778478 /* synth_fs1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA44AF21DB80E100778478 /* synth_fs1.mp3 */; };
+		EDCA461E21DB812F00778478 /* sqwave_b4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA44B021DB80E100778478 /* sqwave_b4.mp3 */; };
+		EDCA461F21DB812F00778478 /* synthtrumpet_cs4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA44B121DB80E100778478 /* synthtrumpet_cs4.mp3 */; };
+		EDCA462021DB812F00778478 /* strings_gs0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA44B221DB80E100778478 /* strings_gs0.mp3 */; };
+		EDCA462121DB812F00778478 /* epiano_a1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA44B321DB80E200778478 /* epiano_a1.mp3 */; };
+		EDCA462221DB812F00778478 /* piano_cs0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA44B421DB80E200778478 /* piano_cs0.mp3 */; };
+		EDCA462321DB812F00778478 /* strings_a0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA44B521DB80E200778478 /* strings_a0.mp3 */; };
+		EDCA462421DB812F00778478 /* strings_g1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA44B621DB80E200778478 /* strings_g1.mp3 */; };
+		EDCA462521DB812F00778478 /* synthtrumpet_gs2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA44B821DB80E300778478 /* synthtrumpet_gs2.mp3 */; };
+		EDCA462621DB812F00778478 /* sqwave_as1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA44B921DB80E300778478 /* sqwave_as1.mp3 */; };
+		EDCA462721DB812F00778478 /* sqwave_fs0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA44BA21DB80E300778478 /* sqwave_fs0.mp3 */; };
+		EDCA462821DB812F00778478 /* sqwave_fs1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA44BB21DB80E400778478 /* sqwave_fs1.mp3 */; };
+		EDCA462921DB812F00778478 /* strings_fs4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA44BC21DB80E400778478 /* strings_fs4.mp3 */; };
+		EDCA462A21DB812F00778478 /* strings_g0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA44BE21DB80E400778478 /* strings_g0.mp3 */; };
+		EDCA462B21DB812F00778478 /* synth_gs1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA44BF21DB80E500778478 /* synth_gs1.mp3 */; };
+		EDCA462C21DB812F00778478 /* synth_a3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA44C021DB80E500778478 /* synth_a3.mp3 */; };
+		EDCA462D21DB812F00778478 /* synth_ds0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA44C121DB80E500778478 /* synth_ds0.mp3 */; };
+		EDCA462E21DB812F00778478 /* synth_e3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA44C221DB80E600778478 /* synth_e3.mp3 */; };
+		EDCA462F21DB812F00778478 /* synth_g2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA44C421DB80E600778478 /* synth_g2.mp3 */; };
+		EDCA463021DB812F00778478 /* epiano_a4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA44C521DB80E600778478 /* epiano_a4.mp3 */; };
+		EDCA463121DB812F00778478 /* strings_as3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA44C621DB80E700778478 /* strings_as3.mp3 */; };
+		EDCA463221DB812F00778478 /* strings_c4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA44C721DB80E700778478 /* strings_c4.mp3 */; };
+		EDCA463321DB812F00778478 /* strings_d4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA44C821DB80E700778478 /* strings_d4.mp3 */; };
+		EDCA463421DB812F00778478 /* epiano_f3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA44C921DB80E700778478 /* epiano_f3.mp3 */; };
+		EDCA463521DB812F00778478 /* piano_b0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA44CA21DB80E700778478 /* piano_b0.mp3 */; };
+		EDCA463621DB812F00778478 /* sqwave_c1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA44CB21DB80E800778478 /* sqwave_c1.mp3 */; };
+		EDCA463721DB812F00778478 /* sqwave_g2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA44CC21DB80E800778478 /* sqwave_g2.mp3 */; };
+		EDCA463821DB812F00778478 /* synthtrumpet_gs3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA44CD21DB80E800778478 /* synthtrumpet_gs3.mp3 */; };
+		EDCA463921DB812F00778478 /* sqwave_gs2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA44CE21DB80E800778478 /* sqwave_gs2.mp3 */; };
+		EDCA463A21DB812F00778478 /* epiano_d3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA44CF21DB80E900778478 /* epiano_d3.mp3 */; };
+		EDCA463B21DB812F00778478 /* epiano_cs2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA44D021DB80E900778478 /* epiano_cs2.mp3 */; };
+		EDCA463C21DB812F00778478 /* strings_b3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA44D121DB80E900778478 /* strings_b3.mp3 */; };
+		EDCA463D21DB812F00778478 /* strings_ds2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA44D221DB80E900778478 /* strings_ds2.mp3 */; };
+		EDCA463E21DB812F00778478 /* sqwave_f2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA44D321DB80EA00778478 /* sqwave_f2.mp3 */; };
+		EDCA463F21DB812F00778478 /* synth_as4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA44D421DB80EA00778478 /* synth_as4.mp3 */; };
+		EDCA464021DB812F00778478 /* synth_cs0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA44D521DB80EA00778478 /* synth_cs0.mp3 */; };
+		EDCA464121DB812F00778478 /* synthtrumpet_gs4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA44D621DB80EA00778478 /* synthtrumpet_gs4.mp3 */; };
+		EDCA464221DB812F00778478 /* piano_gs4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA44D721DB80EA00778478 /* piano_gs4.mp3 */; };
+		EDCA464321DB812F00778478 /* synthtrumpet_cs2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA44D821DB80EB00778478 /* synthtrumpet_cs2.mp3 */; };
+		EDCA464421DB812F00778478 /* piano_d0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA44D921DB80EB00778478 /* piano_d0.mp3 */; };
+		EDCA464521DB812F00778478 /* piano_c1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA44DA21DB80EB00778478 /* piano_c1.mp3 */; };
+		EDCA464621DB812F00778478 /* synth_fs0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA44DB21DB80EB00778478 /* synth_fs0.mp3 */; };
+		EDCA464721DB812F00778478 /* sqwave_cs0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA44DC21DB80EB00778478 /* sqwave_cs0.mp3 */; };
+		EDCA464821DB812F00778478 /* synth_gs3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA44DD21DB80EC00778478 /* synth_gs3.mp3 */; };
+		EDCA464921DB812F00778478 /* synthtrumpet-60.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA44DE21DB80EC00778478 /* synthtrumpet-60.mp3 */; };
+		EDCA464A21DB812F00778478 /* piano_g1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA44DF21DB80EC00778478 /* piano_g1.mp3 */; };
+		EDCA464B21DB812F00778478 /* piano_e4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA44E121DB80EC00778478 /* piano_e4.mp3 */; };
+		EDCA464C21DB812F00778478 /* synth_b1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA44E221DB80ED00778478 /* synth_b1.mp3 */; };
+		EDCA464D21DB812F00778478 /* sqwave_c3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA44E321DB80ED00778478 /* sqwave_c3.mp3 */; };
+		EDCA464E21DB812F00778478 /* sqwave_f1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA44E421DB80ED00778478 /* sqwave_f1.mp3 */; };
+		EDCA464F21DB812F00778478 /* synthtrumpet_fs2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA44E521DB80ED00778478 /* synthtrumpet_fs2.mp3 */; };
+		EDCA465021DB812F00778478 /* epiano_a2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA44E621DB80ED00778478 /* epiano_a2.mp3 */; };
+		EDCA465121DB812F00778478 /* synth_ds1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA44E821DB80EE00778478 /* synth_ds1.mp3 */; };
+		EDCA465221DB812F00778478 /* synth_c1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA44E921DB80EE00778478 /* synth_c1.mp3 */; };
+		EDCA465321DB812F00778478 /* epiano_c1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA44EA21DB80EE00778478 /* epiano_c1.mp3 */; };
+		EDCA465421DB812F00778478 /* strings_ds1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA44EB21DB80EE00778478 /* strings_ds1.mp3 */; };
+		EDCA465521DB812F00778478 /* synthtrumpet_as3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA44EC21DB80EE00778478 /* synthtrumpet_as3.mp3 */; };
+		EDCA465621DB812F00778478 /* synthtrumpet_gs0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA44ED21DB80EF00778478 /* synthtrumpet_gs0.mp3 */; };
+		EDCA465721DB812F00778478 /* strings_gs3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA44EE21DB80EF00778478 /* strings_gs3.mp3 */; };
+		EDCA465821DB812F00778478 /* sqwave_as3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA44EF21DB80EF00778478 /* sqwave_as3.mp3 */; };
+		EDCA465921DB812F00778478 /* synth_fs2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA44F021DB80EF00778478 /* synth_fs2.mp3 */; };
+		EDCA465A21DB812F00778478 /* synthtrumpet_gs1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA44F121DB80EF00778478 /* synthtrumpet_gs1.mp3 */; };
+		EDCA465B21DB812F00778478 /* epiano_ds3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA44F221DB80EF00778478 /* epiano_ds3.mp3 */; };
+		EDCA465C21DB812F00778478 /* epiano_c3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA44F321DB80F000778478 /* epiano_c3.mp3 */; };
+		EDCA465D21DB812F00778478 /* synthtrumpet_g2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA44F421DB80F000778478 /* synthtrumpet_g2.mp3 */; };
+		EDCA465E21DB812F00778478 /* strings_e3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA44F521DB80F000778478 /* strings_e3.mp3 */; };
+		EDCA465F21DB812F00778478 /* piano_fs4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA44F621DB80F000778478 /* piano_fs4.mp3 */; };
+		EDCA466021DB812F00778478 /* piano_a4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA44F721DB80F000778478 /* piano_a4.mp3 */; };
+		EDCA466121DB812F00778478 /* epiano_fs2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA44F821DB80F100778478 /* epiano_fs2.mp3 */; };
+		EDCA466221DB812F00778478 /* synth_fs4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA44F921DB80F100778478 /* synth_fs4.mp3 */; };
+		EDCA466321DB812F00778478 /* epiano_a3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA44FA21DB80F100778478 /* epiano_a3.mp3 */; };
+		EDCA466421DB812F00778478 /* epiano_d4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA44FB21DB80F100778478 /* epiano_d4.mp3 */; };
+		EDCA466521DB812F00778478 /* piano_f4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA44FC21DB80F100778478 /* piano_f4.mp3 */; };
+		EDCA466621DB812F00778478 /* sqwave_cs4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA44FD21DB80F100778478 /* sqwave_cs4.mp3 */; };
+		EDCA466721DB812F00778478 /* sqwave_gs4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA44FE21DB80F200778478 /* sqwave_gs4.mp3 */; };
+		EDCA466821DB812F00778478 /* synthtrumpet_a4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA44FF21DB80F200778478 /* synthtrumpet_a4.mp3 */; };
+		EDCA466921DB812F00778478 /* synth_cs2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA450021DB80F200778478 /* synth_cs2.mp3 */; };
+		EDCA466A21DB812F00778478 /* sqwave_e1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA450121DB80F200778478 /* sqwave_e1.mp3 */; };
+		EDCA466B21DB812F00778478 /* synthtrumpet_as1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA450221DB80F200778478 /* synthtrumpet_as1.mp3 */; };
+		EDCA466C21DB812F00778478 /* epiano_gs3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA450321DB80F300778478 /* epiano_gs3.mp3 */; };
+		EDCA466D21DB812F00778478 /* piano_ds0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA450421DB80F300778478 /* piano_ds0.mp3 */; };
+		EDCA466E21DB812F00778478 /* sqwave_c2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA450521DB80F300778478 /* sqwave_c2.mp3 */; };
+		EDCA466F21DB812F00778478 /* piano_cs1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA450621DB80F300778478 /* piano_cs1.mp3 */; };
+		EDCA467021DB812F00778478 /* sqwave_ds3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA450821DB80F400778478 /* sqwave_ds3.mp3 */; };
+		EDCA467121DB812F00778478 /* epiano_as4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA450921DB80F400778478 /* epiano_as4.mp3 */; };
+		EDCA467221DB812F00778478 /* stings_c0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA450A21DB80F400778478 /* stings_c0.mp3 */; };
+		EDCA467321DB812F00778478 /* epiano_ds2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA450B21DB80F400778478 /* epiano_ds2.mp3 */; };
+		EDCA467421DB812F00778478 /* strings_d1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA450D21DB80F500778478 /* strings_d1.mp3 */; };
+		EDCA467521DB812F00778478 /* synth_as0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA450E21DB80F500778478 /* synth_as0.mp3 */; };
+		EDCA467621DB812F00778478 /* synth_a0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA450F21DB80F500778478 /* synth_a0.mp3 */; };
+		EDCA467721DB812F00778478 /* epiano_g1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA451021DB80F500778478 /* epiano_g1.mp3 */; };
+		EDCA467821DB812F00778478 /* epiano_b4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA451121DB80F500778478 /* epiano_b4.mp3 */; };
+		EDCA467921DB812F00778478 /* synthtrumpet_f2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA451321DB80F600778478 /* synthtrumpet_f2.mp3 */; };
+		EDCA467A21DB812F00778478 /* sqwave_cs3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA451421DB80F600778478 /* sqwave_cs3.mp3 */; };
+		EDCA467B21DB812F00778478 /* sqwave_d3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA451521DB80F600778478 /* sqwave_d3.mp3 */; };
+		EDCA467C21DB812F00778478 /* sqwave_f4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA451621DB80F600778478 /* sqwave_f4.mp3 */; };
+		EDCA467D21DB812F00778478 /* synthtrumpet_as4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA451721DB80F600778478 /* synthtrumpet_as4.mp3 */; };
+		EDCA467E21DB812F00778478 /* sqwave_a2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA451821DB80F700778478 /* sqwave_a2.mp3 */; };
+		EDCA467F21DB812F00778478 /* synthtrumpet_g0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA451921DB80F700778478 /* synthtrumpet_g0.mp3 */; };
+		EDCA468021DB812F00778478 /* epiano_b1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA451B21DB80F700778478 /* epiano_b1.mp3 */; };
+		EDCA468121DB812F00778478 /* epiano_fs3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA451C21DB80F700778478 /* epiano_fs3.mp3 */; };
+		EDCA468221DB812F00778478 /* strings_fs1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA451D21DB80F800778478 /* strings_fs1.mp3 */; };
+		EDCA468321DB812F00778478 /* strings_e4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA451E21DB80F800778478 /* strings_e4.mp3 */; };
+		EDCA468421DB812F00778478 /* strings_f2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA451F21DB80F800778478 /* strings_f2.mp3 */; };
+		EDCA468521DB812F00778478 /* synthtrumpet_a1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA452021DB80F800778478 /* synthtrumpet_a1.mp3 */; };
+		EDCA468621DB812F00778478 /* synthtrumpet_as2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA452121DB80F800778478 /* synthtrumpet_as2.mp3 */; };
+		EDCA468721DB812F00778478 /* sqwave_as2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA452221DB80F900778478 /* sqwave_as2.mp3 */; };
+		EDCA468821DB812F00778478 /* strings_f0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA452321DB80F900778478 /* strings_f0.mp3 */; };
+		EDCA468921DB812F00778478 /* synth_e1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA452521DB80F900778478 /* synth_e1.mp3 */; };
+		EDCA468A21DB812F00778478 /* synthtrumpet_d1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA452621DB80F900778478 /* synthtrumpet_d1.mp3 */; };
+		EDCA468B21DB812F00778478 /* sqwave_fs3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA452721DB80FA00778478 /* sqwave_fs3.mp3 */; };
+		EDCA468C21DB812F00778478 /* epiano_cs3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA452821DB80FA00778478 /* epiano_cs3.mp3 */; };
+		EDCA468D21DB812F00778478 /* sqwave_b2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA452921DB80FA00778478 /* sqwave_b2.mp3 */; };
+		EDCA468E21DB812F00778478 /* sqwave_g0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA452A21DB80FA00778478 /* sqwave_g0.mp3 */; };
+		EDCA468F21DB812F00778478 /* synthtrumpet_c1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA452B21DB80FA00778478 /* synthtrumpet_c1.mp3 */; };
+		EDCA469021DB812F00778478 /* sqwave_e3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA452C21DB80FB00778478 /* sqwave_e3.mp3 */; };
+		EDCA469121DB812F00778478 /* strings_cs0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA452D21DB80FB00778478 /* strings_cs0.mp3 */; };
+		EDCA469221DB812F00778478 /* epiano_e2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA452E21DB80FB00778478 /* epiano_e2.mp3 */; };
+		EDCA469321DB812F00778478 /* synthtrumpet_d3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA452F21DB80FB00778478 /* synthtrumpet_d3.mp3 */; };
+		EDCA469421DB812F00778478 /* synth_c2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA453021DB80FB00778478 /* synth_c2.mp3 */; };
+		EDCA469521DB812F00778478 /* sqwave_d4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA453121DB80FC00778478 /* sqwave_d4.mp3 */; };
+		EDCA469621DB812F00778478 /* strings_cs4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA453221DB80FC00778478 /* strings_cs4.mp3 */; };
+		EDCA469721DB812F00778478 /* strings_g3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA453321DB80FC00778478 /* strings_g3.mp3 */; };
+		EDCA469821DB812F00778478 /* epiano_e4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA453521DB80FC00778478 /* epiano_e4.mp3 */; };
+		EDCA469921DB812F00778478 /* sqwave_as0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA453621DB80FC00778478 /* sqwave_as0.mp3 */; };
+		EDCA469A21DB812F00778478 /* synthtrumpet_c3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA453721DB80FD00778478 /* synthtrumpet_c3.mp3 */; };
+		EDCA469B21DB812F00778478 /* synthtrumpet_c4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA453821DB80FD00778478 /* synthtrumpet_c4.mp3 */; };
+		EDCA469C21DB812F00778478 /* synthtrumpet_d2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA453921DB80FD00778478 /* synthtrumpet_d2.mp3 */; };
+		EDCA469D21DB812F00778478 /* sqwave_f3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA453A21DB80FD00778478 /* sqwave_f3.mp3 */; };
+		EDCA469E21DB812F00778478 /* synth_gs0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA453B21DB80FD00778478 /* synth_gs0.mp3 */; };
+		EDCA469F21DB812F00778478 /* piano_c0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA453C21DB80FE00778478 /* piano_c0.mp3 */; };
+		EDCA46A021DB812F00778478 /* sqwave_d0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA453D21DB80FE00778478 /* sqwave_d0.mp3 */; };
+		EDCA46A121DB812F00778478 /* epiano_e3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA453E21DB80FE00778478 /* epiano_e3.mp3 */; };
+		EDCA46A221DB812F00778478 /* synth_b4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA454021DB80FE00778478 /* synth_b4.mp3 */; };
+		EDCA46A321DB812F00778478 /* synthtrumpet_f4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA454121DB80FF00778478 /* synthtrumpet_f4.mp3 */; };
+		EDCA46A421DB812F00778478 /* strings_cs1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA454221DB80FF00778478 /* strings_cs1.mp3 */; };
+		EDCA46A521DB812F00778478 /* synth_ds3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA454321DB80FF00778478 /* synth_ds3.mp3 */; };
+		EDCA46A621DB812F00778478 /* epiano_d2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA454421DB80FF00778478 /* epiano_d2.mp3 */; };
+		EDCA46A721DB812F00778478 /* synth_b2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA454521DB80FF00778478 /* synth_b2.mp3 */; };
+		EDCA46A821DB812F00778478 /* strings_fs3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA454621DB810000778478 /* strings_fs3.mp3 */; };
+		EDCA46A921DB812F00778478 /* strings_a2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA454721DB810000778478 /* strings_a2.mp3 */; };
+		EDCA46AA21DB812F00778478 /* strings_as2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA454821DB810000778478 /* strings_as2.mp3 */; };
+		EDCA46AB21DB812F00778478 /* synth_g0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA454921DB810000778478 /* synth_g0.mp3 */; };
+		EDCA46AC21DB812F00778478 /* sqwave_e2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA454A21DB810000778478 /* sqwave_e2.mp3 */; };
+		EDCA46AD21DB812F00778478 /* piano_d4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA454B21DB810100778478 /* piano_d4.mp3 */; };
+		EDCA46AE21DB812F00778478 /* piano_b4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA454C21DB810100778478 /* piano_b4.mp3 */; };
+		EDCA46AF21DB812F00778478 /* sqwave_gs3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA454D21DB810100778478 /* sqwave_gs3.mp3 */; };
+		EDCA46B021DB812F00778478 /* synthtrumpet_a3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA454E21DB810100778478 /* synthtrumpet_a3.mp3 */; };
+		EDCA46B121DB812F00778478 /* sqwave_as4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA454F21DB810100778478 /* sqwave_as4.mp3 */; };
+		EDCA46B221DB812F00778478 /* epiano_e0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA455121DB810200778478 /* epiano_e0.mp3 */; };
+		EDCA46B321DB812F00778478 /* epiano_f0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA455221DB810200778478 /* epiano_f0.mp3 */; };
+		EDCA46B421DB812F00778478 /* sqwave_f0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA455321DB810200778478 /* sqwave_f0.mp3 */; };
+		EDCA46B521DB812F00778478 /* sqwave_a0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA455421DB810200778478 /* sqwave_a0.mp3 */; };
+		EDCA46B621DB812F00778478 /* piano_ds4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA455521DB810300778478 /* piano_ds4.mp3 */; };
+		EDCA46B721DB812F00778478 /* piano_fs1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA455621DB810300778478 /* piano_fs1.mp3 */; };
+		EDCA46B821DB812F00778478 /* sqwave_g4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA455721DB810300778478 /* sqwave_g4.mp3 */; };
+		EDCA46B921DB812F00778478 /* strings_b0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA455821DB810300778478 /* strings_b0.mp3 */; };
+		EDCA46BA21DB812F00778478 /* epiano_ds1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA455921DB810300778478 /* epiano_ds1.mp3 */; };
+		EDCA46BB21DB812F00778478 /* epiano_gs0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA455A21DB810400778478 /* epiano_gs0.mp3 */; };
+		EDCA46BC21DB812F00778478 /* strings_b1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA455B21DB810400778478 /* strings_b1.mp3 */; };
+		EDCA46BD21DB812F00778478 /* strings_e2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA455C21DB810400778478 /* strings_e2.mp3 */; };
+		EDCA46BE21DB812F00778478 /* epiano_fs1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA455D21DB810400778478 /* epiano_fs1.mp3 */; };
+		EDCA46BF21DB812F00778478 /* synth_f1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA455E21DB810400778478 /* synth_f1.mp3 */; };
+		EDCA46C021DB812F00778478 /* strings_ds3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA455F21DB810500778478 /* strings_ds3.mp3 */; };
+		EDCA46C121DB812F00778478 /* synthtrumpet_f0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA456021DB810500778478 /* synthtrumpet_f0.mp3 */; };
+		EDCA46C221DB812F00778478 /* synthtrumpet_fs3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA456121DB810500778478 /* synthtrumpet_fs3.mp3 */; };
+		EDCA46C321DB812F00778478 /* synthtrumpet_g3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA456221DB810500778478 /* synthtrumpet_g3.mp3 */; };
+		EDCA46C421DB812F00778478 /* synthtrumpet_fs0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA456321DB810500778478 /* synthtrumpet_fs0.mp3 */; };
+		EDCA46C521DB812F00778478 /* synth_cs3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA456421DB810600778478 /* synth_cs3.mp3 */; };
+		EDCA46C621DB812F00778478 /* epiano_a0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA456521DB810600778478 /* epiano_a0.mp3 */; };
+		EDCA46C721DB812F00778478 /* strings_g4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA456621DB810600778478 /* strings_g4.mp3 */; };
+		EDCA46C821DB812F00778478 /* synthtrumpet_b3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA456721DB810600778478 /* synthtrumpet_b3.mp3 */; };
+		EDCA46C921DB812F00778478 /* piano_gs1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA456821DB810600778478 /* piano_gs1.mp3 */; };
+		EDCA46CA21DB812F00778478 /* strings_a4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA456921DB810700778478 /* strings_a4.mp3 */; };
+		EDCA46CB21DB812F00778478 /* epiano_b2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA456A21DB810700778478 /* epiano_b2.mp3 */; };
+		EDCA46CC21DB812F00778478 /* strings_as0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA456B21DB810700778478 /* strings_as0.mp3 */; };
+		EDCA46CD21DB812F00778478 /* epiano_as1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA456C21DB810700778478 /* epiano_as1.mp3 */; };
+		EDCA46CE21DB812F00778478 /* sqwave_d1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA456D21DB810700778478 /* sqwave_d1.mp3 */; };
+		EDCA46CF21DB812F00778478 /* synth_fs3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA456E21DB810800778478 /* synth_fs3.mp3 */; };
+		EDCA46D021DB812F00778478 /* synth_f0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA456F21DB810800778478 /* synth_f0.mp3 */; };
+		EDCA46D121DB812F00778478 /* strings_d3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA457021DB810800778478 /* strings_d3.mp3 */; };
+		EDCA46D221DB812F00778478 /* sqwave_d2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA457121DB810800778478 /* sqwave_d2.mp3 */; };
+		EDCA46D321DB812F00778478 /* sqwave_a3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA457221DB810800778478 /* sqwave_a3.mp3 */; };
+		EDCA46D421DB812F00778478 /* sqwave_b0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA457421DB810900778478 /* sqwave_b0.mp3 */; };
+		EDCA46D521DB812F00778478 /* sqwave_cs1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA457521DB810900778478 /* sqwave_cs1.mp3 */; };
+		EDCA46D621DB812F00778478 /* strings_d0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA457621DB810900778478 /* strings_d0.mp3 */; };
+		EDCA46D721DB812F00778478 /* sqwave_c4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA457721DB810900778478 /* sqwave_c4.mp3 */; };
+		EDCA46D821DB812F00778478 /* synth_g4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA457821DB810A00778478 /* synth_g4.mp3 */; };
+		EDCA46D921DB812F00778478 /* synth_a4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA457921DB810A00778478 /* synth_a4.mp3 */; };
+		EDCA46DA21DB812F00778478 /* piano_f1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA457A21DB810A00778478 /* piano_f1.mp3 */; };
+		EDCA46DB21DB812F00778478 /* synthtrumpet_ds3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA457B21DB810A00778478 /* synthtrumpet_ds3.mp3 */; };
+		EDCA46DC21DB812F00778478 /* strings_gs2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA457C21DB810A00778478 /* strings_gs2.mp3 */; };
+		EDCA46DD21DB812F00778478 /* synthtrumpet_fs1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA457D21DB810B00778478 /* synthtrumpet_fs1.mp3 */; };
+		EDCA46DE21DB812F00778478 /* epiano_ds4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA457E21DB810B00778478 /* epiano_ds4.mp3 */; };
+		EDCA46DF21DB812F00778478 /* epiano_ds0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA457F21DB810B00778478 /* epiano_ds0.mp3 */; };
+		EDCA46E021DB812F00778478 /* synth_f2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA458021DB810B00778478 /* synth_f2.mp3 */; };
+		EDCA46E121DB812F00778478 /* epiano-60.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA458121DB810B00778478 /* epiano-60.mp3 */; };
+		EDCA46E221DB812F00778478 /* synth_d2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA458321DB810C00778478 /* synth_d2.mp3 */; };
+		EDCA46E321DB812F00778478 /* strings_e1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA458421DB810C00778478 /* strings_e1.mp3 */; };
+		EDCA46E421DB812F00778478 /* synthtrumpet_c0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA458521DB810C00778478 /* synthtrumpet_c0.mp3 */; };
+		EDCA46E521DB812F00778478 /* epiano_c2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA458621DB810C00778478 /* epiano_c2.mp3 */; };
+		EDCA46E621DB812F00778478 /* synthtrumpet_g1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA458721DB810D00778478 /* synthtrumpet_g1.mp3 */; };
+		EDCA46E721DB812F00778478 /* strings_c1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA458821DB810D00778478 /* strings_c1.mp3 */; };
+		EDCA46E821DB812F00778478 /* strings_ds0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA458921DB810D00778478 /* strings_ds0.mp3 */; };
+		EDCA46E921DB812F00778478 /* synth_b3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA458A21DB810D00778478 /* synth_b3.mp3 */; };
+		EDCA46EA21DB812F00778478 /* strings_b4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA458B21DB810D00778478 /* strings_b4.mp3 */; };
+		EDCA46EB21DB812F00778478 /* epiano_cs0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA458C21DB810E00778478 /* epiano_cs0.mp3 */; };
+		EDCA46EC21DB812F00778478 /* piano_a1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA458D21DB810E00778478 /* piano_a1.mp3 */; };
+		EDCA46ED21DB812F00778478 /* piano_as0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA458E21DB810E00778478 /* piano_as0.mp3 */; };
+		EDCA46EE21DB812F00778478 /* sqwave_a1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA458F21DB810E00778478 /* sqwave_a1.mp3 */; };
+		EDCA46EF21DB812F00778478 /* strings_cs2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA459121DB810F00778478 /* strings_cs2.mp3 */; };
+		EDCA46F021DB812F00778478 /* synthtrumpet_b2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA459221DB810F00778478 /* synthtrumpet_b2.mp3 */; };
+		EDCA46F121DB812F00778478 /* synth_gs2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA459321DB810F00778478 /* synth_gs2.mp3 */; };
+		EDCA46F221DB812F00778478 /* strings_f3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA459521DB810F00778478 /* strings_f3.mp3 */; };
+		EDCA46F321DB812F00778478 /* piano_cs4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA459621DB811000778478 /* piano_cs4.mp3 */; };
+		EDCA46F421DB812F00778478 /* epiano_c4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA459721DB811000778478 /* epiano_c4.mp3 */; };
+		EDCA46F521DB812F00778478 /* piano_d1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA459921DB811000778478 /* piano_d1.mp3 */; };
+		EDCA46F621DB812F00778478 /* strings_cs3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA459B21DB811100778478 /* strings_cs3.mp3 */; };
+		EDCA46F721DB812F00778478 /* synth_d4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA459C21DB811100778478 /* synth_d4.mp3 */; };
+		EDCA46F821DB812F00778478 /* synth_e2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA459D21DB811100778478 /* synth_e2.mp3 */; };
+		EDCA46F921DB812F00778478 /* epiano_cs1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA459E21DB811200778478 /* epiano_cs1.mp3 */; };
+		EDCA46FA21DB812F00778478 /* epiano_b3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA459F21DB811200778478 /* epiano_b3.mp3 */; };
+		EDCA46FB21DB812F00778478 /* synthtrumpet_b4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA45A021DB811200778478 /* synthtrumpet_b4.mp3 */; };
+		EDCA46FC21DB812F00778478 /* piano_as1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA45A121DB811200778478 /* piano_as1.mp3 */; };
+		EDCA46FD21DB812F00778478 /* synth_b0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA45A321DB811300778478 /* synth_b0.mp3 */; };
+		EDCA46FE21DB812F00778478 /* piano_g0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA45A421DB811300778478 /* piano_g0.mp3 */; };
+		EDCA46FF21DB812F00778478 /* epiano_gs1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA45A521DB811400778478 /* epiano_gs1.mp3 */; };
+		EDCA470021DB812F00778478 /* strings_as4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA45A621DB811400778478 /* strings_as4.mp3 */; };
+		EDCA470121DB812F00778478 /* sqwave-60.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA45A721DB811400778478 /* sqwave-60.mp3 */; };
+		EDCA470221DB812F00778478 /* strings-60.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA45A821DB811400778478 /* strings-60.mp3 */; };
+		EDCA470321DB812F00778478 /* synthtrumpet_ds2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA45A921DB811500778478 /* synthtrumpet_ds2.mp3 */; };
+		EDCA470421DB813000778478 /* strings_ds4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA45AA21DB811500778478 /* strings_ds4.mp3 */; };
+		EDCA470521DB813000778478 /* synthtrumpet_e1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA45AB21DB811500778478 /* synthtrumpet_e1.mp3 */; };
+		EDCA470621DB813000778478 /* epiano_e1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA45AC21DB811600778478 /* epiano_e1.mp3 */; };
+		EDCA470721DB813000778478 /* sqwave_ds4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA45AD21DB811600778478 /* sqwave_ds4.mp3 */; };
+		EDCA470821DB813000778478 /* synthtrumpet_g4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA45AE21DB811600778478 /* synthtrumpet_g4.mp3 */; };
+		EDCA470921DB813000778478 /* synth_as2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA45AF21DB811600778478 /* synth_as2.mp3 */; };
+		EDCA470A21DB813000778478 /* synth_as3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA45B021DB811700778478 /* synth_as3.mp3 */; };
+		EDCA470B21DB813000778478 /* synth_c0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA45B121DB811700778478 /* synth_c0.mp3 */; };
+		EDCA470C21DB813000778478 /* synthtrumpet_as0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA45B321DB811800778478 /* synthtrumpet_as0.mp3 */; };
+		EDCA470D21DB813000778478 /* synth_a1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA45B421DB811800778478 /* synth_a1.mp3 */; };
+		EDCA470E21DB813000778478 /* sqwave_cs2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA45B521DB811800778478 /* sqwave_cs2.mp3 */; };
+		EDCA470F21DB813000778478 /* strings_gs4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA45B621DB811800778478 /* strings_gs4.mp3 */; };
+		EDCA471021DB813000778478 /* synthtrumpet_cs3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA45B721DB811900778478 /* synthtrumpet_cs3.mp3 */; };
+		EDCA471121DB813000778478 /* synthtrumpet_b0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA45B821DB811900778478 /* synthtrumpet_b0.mp3 */; };
+		EDCA471221DB813000778478 /* piano_ds1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA45B921DB811900778478 /* piano_ds1.mp3 */; };
+		EDCA471321DB813000778478 /* sqwave_ds2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA45BA21DB811A00778478 /* sqwave_ds2.mp3 */; };
+		EDCA471421DB813000778478 /* epiano_d0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA45BB21DB811A00778478 /* epiano_d0.mp3 */; };
+		EDCA471521DB813000778478 /* synth_d1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA45BC21DB811A00778478 /* synth_d1.mp3 */; };
+		EDCA471621DB813000778478 /* epiano_c0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA45BE21DB811B00778478 /* epiano_c0.mp3 */; };
+		EDCA471721DB813000778478 /* sqwave_fs4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA45BF21DB811B00778478 /* sqwave_fs4.mp3 */; };
+		EDCA471821DB813000778478 /* sqwave_e4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA45C021DB811C00778478 /* sqwave_e4.mp3 */; };
+		EDCA471921DB813000778478 /* strings_a1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA45C121DB811C00778478 /* strings_a1.mp3 */; };
+		EDCA471A21DB813000778478 /* epiano_f2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA45C321DB811C00778478 /* epiano_f2.mp3 */; };
+		EDCA471B21DB813000778478 /* synthtrumpet_e2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA45C421DB811D00778478 /* synthtrumpet_e2.mp3 */; };
+		EDCA471C21DB813000778478 /* epiano_cs4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA45C521DB811D00778478 /* epiano_cs4.mp3 */; };
+		EDCA471D21DB813000778478 /* epiano_gs2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA45C621DB811D00778478 /* epiano_gs2.mp3 */; };
+		EDCA471E21DB813000778478 /* sqwave_g3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA45C721DB811E00778478 /* sqwave_g3.mp3 */; };
+		EDCA471F21DB813000778478 /* strings_a3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA45C821DB811E00778478 /* strings_a3.mp3 */; };
+		EDCA472021DB813000778478 /* strings_as1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA45C921DB811E00778478 /* strings_as1.mp3 */; };
+		EDCA472121DB813000778478 /* synth_cs1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA45CA21DB811E00778478 /* synth_cs1.mp3 */; };
+		EDCA472221DB813000778478 /* sqwave_ds1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA45CC21DB811F00778478 /* sqwave_ds1.mp3 */; };
+		EDCA472321DB813000778478 /* synth_ds2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA45CD21DB811F00778478 /* synth_ds2.mp3 */; };
+		EDCA472421DB813000778478 /* synthtrumpet_fs4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA45CE21DB812000778478 /* synthtrumpet_fs4.mp3 */; };
+		EDCA472521DB813000778478 /* strings_g2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA45CF21DB812000778478 /* strings_g2.mp3 */; };
+		EDCA472621DB813000778478 /* synth_gs4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA45D021DB812000778478 /* synth_gs4.mp3 */; };
+		EDCA472721DB813000778478 /* epiano_as2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA45D121DB812100778478 /* epiano_as2.mp3 */; };
+		EDCA472821DB813000778478 /* strings_c3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA45D221DB812100778478 /* strings_c3.mp3 */; };
+		EDCA472921DB813000778478 /* synth_f3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA45D321DB812100778478 /* synth_f3.mp3 */; };
+		EDCA472A21DB813000778478 /* synthtrumpet_c2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA45D421DB812100778478 /* synthtrumpet_c2.mp3 */; };
+		EDCA472B21DB813000778478 /* synthtrumpet_cs0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA45D521DB812100778478 /* synthtrumpet_cs0.mp3 */; };
+		EDCA472C21DB813000778478 /* epiano_f1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA45D621DB812200778478 /* epiano_f1.mp3 */; };
+		EDCA472D21DB813000778478 /* epiano_gs4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA45D721DB812200778478 /* epiano_gs4.mp3 */; };
+		EDCA472E21DB813000778478 /* piano_e0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA45D821DB812200778478 /* piano_e0.mp3 */; };
+		EDCA472F21DB813000778478 /* sqwave_e0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA45D921DB812200778478 /* sqwave_e0.mp3 */; };
+		EDCA473021DB813000778478 /* epiano_f4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA45DA21DB812300778478 /* epiano_f4.mp3 */; };
+		EDCA473121DB813000778478 /* piano_as4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA45DB21DB812300778478 /* piano_as4.mp3 */; };
+		EDCA473221DB813000778478 /* strings_b2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA45DC21DB812300778478 /* strings_b2.mp3 */; };
+		EDCA473321DB813000778478 /* strings_d2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA45DD21DB812400778478 /* strings_d2.mp3 */; };
+		EDCA473421DB813000778478 /* synthtrumpet_a2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA45DE21DB812400778478 /* synthtrumpet_a2.mp3 */; };
+		EDCA473521DB813000778478 /* epiano_g3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA45DF21DB812400778478 /* epiano_g3.mp3 */; };
+		EDCA473621DB813000778478 /* synth_a2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA45E021DB812500778478 /* synth_a2.mp3 */; };
+		EDCA473721DB813000778478 /* piano_f0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA45E121DB812500778478 /* piano_f0.mp3 */; };
+		EDCA473821DB813000778478 /* piano_g4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA45E221DB812500778478 /* piano_g4.mp3 */; };
+		EDCA473921DB813000778478 /* sqwave_gs0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA45E321DB812600778478 /* sqwave_gs0.mp3 */; };
+		EDCA473A21DB813000778478 /* piano_e1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA45E421DB812600778478 /* piano_e1.mp3 */; };
+		EDCA473B21DB813000778478 /* epiano_g2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA45E521DB812600778478 /* epiano_g2.mp3 */; };
+		EDCA473C21DB813000778478 /* synthtrumpet_ds1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA45E621DB812600778478 /* synthtrumpet_ds1.mp3 */; };
+		EDCA473D21DB813000778478 /* epiano_g0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA45E821DB812700778478 /* epiano_g0.mp3 */; };
+		EDCA473E21DB813000778478 /* synth-60.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA45E921DB812700778478 /* synth-60.mp3 */; };
+		EDCA473F21DB813000778478 /* synth_c4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA45EA21DB812800778478 /* synth_c4.mp3 */; };
+		EDCA474021DB813000778478 /* synth_e0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA45EB21DB812800778478 /* synth_e0.mp3 */; };
+		EDCA474121DB813000778478 /* synthtrumpet_d4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA45EC21DB812800778478 /* synthtrumpet_d4.mp3 */; };
+		EDCA474221DB813000778478 /* sqwave_a4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA45ED21DB812900778478 /* sqwave_a4.mp3 */; };
+		EDCA474321DB813000778478 /* strings_fs0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA45EE21DB812900778478 /* strings_fs0.mp3 */; };
+		EDCA474421DB813000778478 /* epiano_g4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA45EF21DB812900778478 /* epiano_g4.mp3 */; };
+		EDCA474521DB813000778478 /* sqwave_ds0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA45F021DB812A00778478 /* sqwave_ds0.mp3 */; };
+		EDCA474621DB813000778478 /* strings_c2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA45F121DB812A00778478 /* strings_c2.mp3 */; };
+		EDCA474721DB813000778478 /* synth_cs4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA45F221DB812A00778478 /* synth_cs4.mp3 */; };
+		EDCA474821DB813000778478 /* synth_f4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA45F321DB812A00778478 /* synth_f4.mp3 */; };
+		EDCA474921DB813000778478 /* epiano_fs4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA45F421DB812B00778478 /* epiano_fs4.mp3 */; };
+		EDCA474A21DB813000778478 /* sqwave_fs2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA45F521DB812B00778478 /* sqwave_fs2.mp3 */; };
+		EDCA474B21DB813000778478 /* sqwave_b3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA45F621DB812B00778478 /* sqwave_b3.mp3 */; };
+		EDCA474C21DB813000778478 /* synthtrumpet_ds4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA45F721DB812B00778478 /* synthtrumpet_ds4.mp3 */; };
+		EDCA474D21DB813000778478 /* epiano_as0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA45F821DB812C00778478 /* epiano_as0.mp3 */; };
+		EDCA474E21DB813000778478 /* synth_as1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA45F921DB812C00778478 /* synth_as1.mp3 */; };
+		EDCA474F21DB813000778478 /* synthtrumpet_e4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA45FA21DB812C00778478 /* synthtrumpet_e4.mp3 */; };
+		EDCA475021DB813000778478 /* synthtrumpet_e3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA45FB21DB812D00778478 /* synthtrumpet_e3.mp3 */; };
+		EDCA475121DB813000778478 /* sqwave_b1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA45FC21DB812D00778478 /* sqwave_b1.mp3 */; };
+		EDCA475221DB813000778478 /* epiano_d1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA45FD21DB812D00778478 /* epiano_d1.mp3 */; };
+		EDCA475321DB813000778478 /* piano_b1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA45FE21DB812D00778478 /* piano_b1.mp3 */; };
+		EDCA475421DB813000778478 /* synth_d0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA45FF21DB812E00778478 /* synth_d0.mp3 */; };
+		EDCA475521DB813000778478 /* synth_g1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA460021DB812E00778478 /* synth_g1.mp3 */; };
+		EDCA475621DB813000778478 /* synthtrumpet_f1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDCA460121DB812E00778478 /* synthtrumpet_f1.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -488,6 +829,372 @@
 		ED515C8E21CD8D8D0029CF6B /* piano_g2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = piano_g2.mp3; path = ../assets/audio/piano_g2.mp3; sourceTree = "<group>"; };
 		ED515C8F21CD8D8D0029CF6B /* piano_c2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = piano_c2.mp3; path = ../assets/audio/piano_c2.mp3; sourceTree = "<group>"; };
 		ED515C9021CD8D8D0029CF6B /* piano_cs2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = piano_cs2.mp3; path = ../assets/audio/piano_cs2.mp3; sourceTree = "<group>"; };
+		EDCA446821DB80D900778478 /* synth_d3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synth_d3.mp3; path = ../assets/audio/synth_d3.mp3; sourceTree = "<group>"; };
+		EDCA449521DB80D900778478 /* piano_fs0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = piano_fs0.mp3; path = ../assets/audio/piano_fs0.mp3; sourceTree = "<group>"; };
+		EDCA449621DB80DA00778478 /* epiano_fs0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = epiano_fs0.mp3; path = ../assets/audio/epiano_fs0.mp3; sourceTree = "<group>"; };
+		EDCA449721DB80DA00778478 /* strings_fs2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = strings_fs2.mp3; path = ../assets/audio/strings_fs2.mp3; sourceTree = "<group>"; };
+		EDCA449821DB80DA00778478 /* piano_a0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = piano_a0.mp3; path = ../assets/audio/piano_a0.mp3; sourceTree = "<group>"; };
+		EDCA449921DB80DB00778478 /* sqwave_gs1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = sqwave_gs1.mp3; path = ../assets/audio/sqwave_gs1.mp3; sourceTree = "<group>"; };
+		EDCA449A21DB80DB00778478 /* synthtrumpet_a0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synthtrumpet_a0.mp3; path = ../assets/audio/synthtrumpet_a0.mp3; sourceTree = "<group>"; };
+		EDCA449B21DB80DB00778478 /* synthtrumpet_b1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synthtrumpet_b1.mp3; path = ../assets/audio/synthtrumpet_b1.mp3; sourceTree = "<group>"; };
+		EDCA449C21DB80DB00778478 /* synth_e4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synth_e4.mp3; path = ../assets/audio/synth_e4.mp3; sourceTree = "<group>"; };
+		EDCA449D21DB80DB00778478 /* synthtrumpet_e0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synthtrumpet_e0.mp3; path = ../assets/audio/synthtrumpet_e0.mp3; sourceTree = "<group>"; };
+		EDCA449E21DB80DC00778478 /* piano-60.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "piano-60.mp3"; path = "../assets/audio/piano-60.mp3"; sourceTree = "<group>"; };
+		EDCA449F21DB80DC00778478 /* strings_gs1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = strings_gs1.mp3; path = ../assets/audio/strings_gs1.mp3; sourceTree = "<group>"; };
+		EDCA44A021DB80DC00778478 /* synth_ds4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synth_ds4.mp3; path = ../assets/audio/synth_ds4.mp3; sourceTree = "<group>"; };
+		EDCA44A121DB80DC00778478 /* synthtrumpet_f3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synthtrumpet_f3.mp3; path = ../assets/audio/synthtrumpet_f3.mp3; sourceTree = "<group>"; };
+		EDCA44A221DB80DD00778478 /* synthtrumpet_ds0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synthtrumpet_ds0.mp3; path = ../assets/audio/synthtrumpet_ds0.mp3; sourceTree = "<group>"; };
+		EDCA44A321DB80DD00778478 /* strings_f4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = strings_f4.mp3; path = ../assets/audio/strings_f4.mp3; sourceTree = "<group>"; };
+		EDCA44A421DB80DD00778478 /* sqwave_g1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = sqwave_g1.mp3; path = ../assets/audio/sqwave_g1.mp3; sourceTree = "<group>"; };
+		EDCA44A521DB80DD00778478 /* strings_f1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = strings_f1.mp3; path = ../assets/audio/strings_f1.mp3; sourceTree = "<group>"; };
+		EDCA44A621DB80DE00778478 /* synth_c3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synth_c3.mp3; path = ../assets/audio/synth_c3.mp3; sourceTree = "<group>"; };
+		EDCA44A721DB80DE00778478 /* synth_g3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synth_g3.mp3; path = ../assets/audio/synth_g3.mp3; sourceTree = "<group>"; };
+		EDCA44A821DB80DE00778478 /* synthtrumpet_cs1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synthtrumpet_cs1.mp3; path = ../assets/audio/synthtrumpet_cs1.mp3; sourceTree = "<group>"; };
+		EDCA44A921DB80DF00778478 /* synthtrumpet_d0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synthtrumpet_d0.mp3; path = ../assets/audio/synthtrumpet_d0.mp3; sourceTree = "<group>"; };
+		EDCA44AA21DB80DF00778478 /* epiano_b0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = epiano_b0.mp3; path = ../assets/audio/epiano_b0.mp3; sourceTree = "<group>"; };
+		EDCA44AB21DB80DF00778478 /* sqwave_c0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = sqwave_c0.mp3; path = ../assets/audio/sqwave_c0.mp3; sourceTree = "<group>"; };
+		EDCA44AC21DB80E000778478 /* epiano_as3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = epiano_as3.mp3; path = ../assets/audio/epiano_as3.mp3; sourceTree = "<group>"; };
+		EDCA44AD21DB80E000778478 /* piano_gs0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = piano_gs0.mp3; path = ../assets/audio/piano_gs0.mp3; sourceTree = "<group>"; };
+		EDCA44AE21DB80E000778478 /* strings_e0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = strings_e0.mp3; path = ../assets/audio/strings_e0.mp3; sourceTree = "<group>"; };
+		EDCA44AF21DB80E100778478 /* synth_fs1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synth_fs1.mp3; path = ../assets/audio/synth_fs1.mp3; sourceTree = "<group>"; };
+		EDCA44B021DB80E100778478 /* sqwave_b4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = sqwave_b4.mp3; path = ../assets/audio/sqwave_b4.mp3; sourceTree = "<group>"; };
+		EDCA44B121DB80E100778478 /* synthtrumpet_cs4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synthtrumpet_cs4.mp3; path = ../assets/audio/synthtrumpet_cs4.mp3; sourceTree = "<group>"; };
+		EDCA44B221DB80E100778478 /* strings_gs0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = strings_gs0.mp3; path = ../assets/audio/strings_gs0.mp3; sourceTree = "<group>"; };
+		EDCA44B321DB80E200778478 /* epiano_a1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = epiano_a1.mp3; path = ../assets/audio/epiano_a1.mp3; sourceTree = "<group>"; };
+		EDCA44B421DB80E200778478 /* piano_cs0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = piano_cs0.mp3; path = ../assets/audio/piano_cs0.mp3; sourceTree = "<group>"; };
+		EDCA44B521DB80E200778478 /* strings_a0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = strings_a0.mp3; path = ../assets/audio/strings_a0.mp3; sourceTree = "<group>"; };
+		EDCA44B621DB80E200778478 /* strings_g1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = strings_g1.mp3; path = ../assets/audio/strings_g1.mp3; sourceTree = "<group>"; };
+		EDCA44B721DB80E300778478 /* piano_cs2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = piano_cs2.mp3; path = ../assets/audio/piano_cs2.mp3; sourceTree = "<group>"; };
+		EDCA44B821DB80E300778478 /* synthtrumpet_gs2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synthtrumpet_gs2.mp3; path = ../assets/audio/synthtrumpet_gs2.mp3; sourceTree = "<group>"; };
+		EDCA44B921DB80E300778478 /* sqwave_as1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = sqwave_as1.mp3; path = ../assets/audio/sqwave_as1.mp3; sourceTree = "<group>"; };
+		EDCA44BA21DB80E300778478 /* sqwave_fs0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = sqwave_fs0.mp3; path = ../assets/audio/sqwave_fs0.mp3; sourceTree = "<group>"; };
+		EDCA44BB21DB80E400778478 /* sqwave_fs1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = sqwave_fs1.mp3; path = ../assets/audio/sqwave_fs1.mp3; sourceTree = "<group>"; };
+		EDCA44BC21DB80E400778478 /* strings_fs4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = strings_fs4.mp3; path = ../assets/audio/strings_fs4.mp3; sourceTree = "<group>"; };
+		EDCA44BD21DB80E400778478 /* piano_d3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = piano_d3.mp3; path = ../assets/audio/piano_d3.mp3; sourceTree = "<group>"; };
+		EDCA44BE21DB80E400778478 /* strings_g0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = strings_g0.mp3; path = ../assets/audio/strings_g0.mp3; sourceTree = "<group>"; };
+		EDCA44BF21DB80E500778478 /* synth_gs1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synth_gs1.mp3; path = ../assets/audio/synth_gs1.mp3; sourceTree = "<group>"; };
+		EDCA44C021DB80E500778478 /* synth_a3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synth_a3.mp3; path = ../assets/audio/synth_a3.mp3; sourceTree = "<group>"; };
+		EDCA44C121DB80E500778478 /* synth_ds0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synth_ds0.mp3; path = ../assets/audio/synth_ds0.mp3; sourceTree = "<group>"; };
+		EDCA44C221DB80E600778478 /* synth_e3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synth_e3.mp3; path = ../assets/audio/synth_e3.mp3; sourceTree = "<group>"; };
+		EDCA44C321DB80E600778478 /* piano_b2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = piano_b2.mp3; path = ../assets/audio/piano_b2.mp3; sourceTree = "<group>"; };
+		EDCA44C421DB80E600778478 /* synth_g2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synth_g2.mp3; path = ../assets/audio/synth_g2.mp3; sourceTree = "<group>"; };
+		EDCA44C521DB80E600778478 /* epiano_a4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = epiano_a4.mp3; path = ../assets/audio/epiano_a4.mp3; sourceTree = "<group>"; };
+		EDCA44C621DB80E700778478 /* strings_as3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = strings_as3.mp3; path = ../assets/audio/strings_as3.mp3; sourceTree = "<group>"; };
+		EDCA44C721DB80E700778478 /* strings_c4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = strings_c4.mp3; path = ../assets/audio/strings_c4.mp3; sourceTree = "<group>"; };
+		EDCA44C821DB80E700778478 /* strings_d4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = strings_d4.mp3; path = ../assets/audio/strings_d4.mp3; sourceTree = "<group>"; };
+		EDCA44C921DB80E700778478 /* epiano_f3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = epiano_f3.mp3; path = ../assets/audio/epiano_f3.mp3; sourceTree = "<group>"; };
+		EDCA44CA21DB80E700778478 /* piano_b0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = piano_b0.mp3; path = ../assets/audio/piano_b0.mp3; sourceTree = "<group>"; };
+		EDCA44CB21DB80E800778478 /* sqwave_c1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = sqwave_c1.mp3; path = ../assets/audio/sqwave_c1.mp3; sourceTree = "<group>"; };
+		EDCA44CC21DB80E800778478 /* sqwave_g2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = sqwave_g2.mp3; path = ../assets/audio/sqwave_g2.mp3; sourceTree = "<group>"; };
+		EDCA44CD21DB80E800778478 /* synthtrumpet_gs3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synthtrumpet_gs3.mp3; path = ../assets/audio/synthtrumpet_gs3.mp3; sourceTree = "<group>"; };
+		EDCA44CE21DB80E800778478 /* sqwave_gs2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = sqwave_gs2.mp3; path = ../assets/audio/sqwave_gs2.mp3; sourceTree = "<group>"; };
+		EDCA44CF21DB80E900778478 /* epiano_d3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = epiano_d3.mp3; path = ../assets/audio/epiano_d3.mp3; sourceTree = "<group>"; };
+		EDCA44D021DB80E900778478 /* epiano_cs2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = epiano_cs2.mp3; path = ../assets/audio/epiano_cs2.mp3; sourceTree = "<group>"; };
+		EDCA44D121DB80E900778478 /* strings_b3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = strings_b3.mp3; path = ../assets/audio/strings_b3.mp3; sourceTree = "<group>"; };
+		EDCA44D221DB80E900778478 /* strings_ds2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = strings_ds2.mp3; path = ../assets/audio/strings_ds2.mp3; sourceTree = "<group>"; };
+		EDCA44D321DB80EA00778478 /* sqwave_f2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = sqwave_f2.mp3; path = ../assets/audio/sqwave_f2.mp3; sourceTree = "<group>"; };
+		EDCA44D421DB80EA00778478 /* synth_as4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synth_as4.mp3; path = ../assets/audio/synth_as4.mp3; sourceTree = "<group>"; };
+		EDCA44D521DB80EA00778478 /* synth_cs0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synth_cs0.mp3; path = ../assets/audio/synth_cs0.mp3; sourceTree = "<group>"; };
+		EDCA44D621DB80EA00778478 /* synthtrumpet_gs4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synthtrumpet_gs4.mp3; path = ../assets/audio/synthtrumpet_gs4.mp3; sourceTree = "<group>"; };
+		EDCA44D721DB80EA00778478 /* piano_gs4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = piano_gs4.mp3; path = ../assets/audio/piano_gs4.mp3; sourceTree = "<group>"; };
+		EDCA44D821DB80EB00778478 /* synthtrumpet_cs2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synthtrumpet_cs2.mp3; path = ../assets/audio/synthtrumpet_cs2.mp3; sourceTree = "<group>"; };
+		EDCA44D921DB80EB00778478 /* piano_d0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = piano_d0.mp3; path = ../assets/audio/piano_d0.mp3; sourceTree = "<group>"; };
+		EDCA44DA21DB80EB00778478 /* piano_c1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = piano_c1.mp3; path = ../assets/audio/piano_c1.mp3; sourceTree = "<group>"; };
+		EDCA44DB21DB80EB00778478 /* synth_fs0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synth_fs0.mp3; path = ../assets/audio/synth_fs0.mp3; sourceTree = "<group>"; };
+		EDCA44DC21DB80EB00778478 /* sqwave_cs0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = sqwave_cs0.mp3; path = ../assets/audio/sqwave_cs0.mp3; sourceTree = "<group>"; };
+		EDCA44DD21DB80EC00778478 /* synth_gs3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synth_gs3.mp3; path = ../assets/audio/synth_gs3.mp3; sourceTree = "<group>"; };
+		EDCA44DE21DB80EC00778478 /* synthtrumpet-60.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "synthtrumpet-60.mp3"; path = "../assets/audio/synthtrumpet-60.mp3"; sourceTree = "<group>"; };
+		EDCA44DF21DB80EC00778478 /* piano_g1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = piano_g1.mp3; path = ../assets/audio/piano_g1.mp3; sourceTree = "<group>"; };
+		EDCA44E021DB80EC00778478 /* piano_c3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = piano_c3.mp3; path = ../assets/audio/piano_c3.mp3; sourceTree = "<group>"; };
+		EDCA44E121DB80EC00778478 /* piano_e4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = piano_e4.mp3; path = ../assets/audio/piano_e4.mp3; sourceTree = "<group>"; };
+		EDCA44E221DB80ED00778478 /* synth_b1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synth_b1.mp3; path = ../assets/audio/synth_b1.mp3; sourceTree = "<group>"; };
+		EDCA44E321DB80ED00778478 /* sqwave_c3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = sqwave_c3.mp3; path = ../assets/audio/sqwave_c3.mp3; sourceTree = "<group>"; };
+		EDCA44E421DB80ED00778478 /* sqwave_f1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = sqwave_f1.mp3; path = ../assets/audio/sqwave_f1.mp3; sourceTree = "<group>"; };
+		EDCA44E521DB80ED00778478 /* synthtrumpet_fs2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synthtrumpet_fs2.mp3; path = ../assets/audio/synthtrumpet_fs2.mp3; sourceTree = "<group>"; };
+		EDCA44E621DB80ED00778478 /* epiano_a2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = epiano_a2.mp3; path = ../assets/audio/epiano_a2.mp3; sourceTree = "<group>"; };
+		EDCA44E721DB80ED00778478 /* piano_c2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = piano_c2.mp3; path = ../assets/audio/piano_c2.mp3; sourceTree = "<group>"; };
+		EDCA44E821DB80EE00778478 /* synth_ds1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synth_ds1.mp3; path = ../assets/audio/synth_ds1.mp3; sourceTree = "<group>"; };
+		EDCA44E921DB80EE00778478 /* synth_c1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synth_c1.mp3; path = ../assets/audio/synth_c1.mp3; sourceTree = "<group>"; };
+		EDCA44EA21DB80EE00778478 /* epiano_c1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = epiano_c1.mp3; path = ../assets/audio/epiano_c1.mp3; sourceTree = "<group>"; };
+		EDCA44EB21DB80EE00778478 /* strings_ds1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = strings_ds1.mp3; path = ../assets/audio/strings_ds1.mp3; sourceTree = "<group>"; };
+		EDCA44EC21DB80EE00778478 /* synthtrumpet_as3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synthtrumpet_as3.mp3; path = ../assets/audio/synthtrumpet_as3.mp3; sourceTree = "<group>"; };
+		EDCA44ED21DB80EF00778478 /* synthtrumpet_gs0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synthtrumpet_gs0.mp3; path = ../assets/audio/synthtrumpet_gs0.mp3; sourceTree = "<group>"; };
+		EDCA44EE21DB80EF00778478 /* strings_gs3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = strings_gs3.mp3; path = ../assets/audio/strings_gs3.mp3; sourceTree = "<group>"; };
+		EDCA44EF21DB80EF00778478 /* sqwave_as3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = sqwave_as3.mp3; path = ../assets/audio/sqwave_as3.mp3; sourceTree = "<group>"; };
+		EDCA44F021DB80EF00778478 /* synth_fs2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synth_fs2.mp3; path = ../assets/audio/synth_fs2.mp3; sourceTree = "<group>"; };
+		EDCA44F121DB80EF00778478 /* synthtrumpet_gs1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synthtrumpet_gs1.mp3; path = ../assets/audio/synthtrumpet_gs1.mp3; sourceTree = "<group>"; };
+		EDCA44F221DB80EF00778478 /* epiano_ds3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = epiano_ds3.mp3; path = ../assets/audio/epiano_ds3.mp3; sourceTree = "<group>"; };
+		EDCA44F321DB80F000778478 /* epiano_c3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = epiano_c3.mp3; path = ../assets/audio/epiano_c3.mp3; sourceTree = "<group>"; };
+		EDCA44F421DB80F000778478 /* synthtrumpet_g2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synthtrumpet_g2.mp3; path = ../assets/audio/synthtrumpet_g2.mp3; sourceTree = "<group>"; };
+		EDCA44F521DB80F000778478 /* strings_e3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = strings_e3.mp3; path = ../assets/audio/strings_e3.mp3; sourceTree = "<group>"; };
+		EDCA44F621DB80F000778478 /* piano_fs4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = piano_fs4.mp3; path = ../assets/audio/piano_fs4.mp3; sourceTree = "<group>"; };
+		EDCA44F721DB80F000778478 /* piano_a4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = piano_a4.mp3; path = ../assets/audio/piano_a4.mp3; sourceTree = "<group>"; };
+		EDCA44F821DB80F100778478 /* epiano_fs2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = epiano_fs2.mp3; path = ../assets/audio/epiano_fs2.mp3; sourceTree = "<group>"; };
+		EDCA44F921DB80F100778478 /* synth_fs4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synth_fs4.mp3; path = ../assets/audio/synth_fs4.mp3; sourceTree = "<group>"; };
+		EDCA44FA21DB80F100778478 /* epiano_a3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = epiano_a3.mp3; path = ../assets/audio/epiano_a3.mp3; sourceTree = "<group>"; };
+		EDCA44FB21DB80F100778478 /* epiano_d4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = epiano_d4.mp3; path = ../assets/audio/epiano_d4.mp3; sourceTree = "<group>"; };
+		EDCA44FC21DB80F100778478 /* piano_f4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = piano_f4.mp3; path = ../assets/audio/piano_f4.mp3; sourceTree = "<group>"; };
+		EDCA44FD21DB80F100778478 /* sqwave_cs4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = sqwave_cs4.mp3; path = ../assets/audio/sqwave_cs4.mp3; sourceTree = "<group>"; };
+		EDCA44FE21DB80F200778478 /* sqwave_gs4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = sqwave_gs4.mp3; path = ../assets/audio/sqwave_gs4.mp3; sourceTree = "<group>"; };
+		EDCA44FF21DB80F200778478 /* synthtrumpet_a4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synthtrumpet_a4.mp3; path = ../assets/audio/synthtrumpet_a4.mp3; sourceTree = "<group>"; };
+		EDCA450021DB80F200778478 /* synth_cs2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synth_cs2.mp3; path = ../assets/audio/synth_cs2.mp3; sourceTree = "<group>"; };
+		EDCA450121DB80F200778478 /* sqwave_e1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = sqwave_e1.mp3; path = ../assets/audio/sqwave_e1.mp3; sourceTree = "<group>"; };
+		EDCA450221DB80F200778478 /* synthtrumpet_as1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synthtrumpet_as1.mp3; path = ../assets/audio/synthtrumpet_as1.mp3; sourceTree = "<group>"; };
+		EDCA450321DB80F300778478 /* epiano_gs3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = epiano_gs3.mp3; path = ../assets/audio/epiano_gs3.mp3; sourceTree = "<group>"; };
+		EDCA450421DB80F300778478 /* piano_ds0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = piano_ds0.mp3; path = ../assets/audio/piano_ds0.mp3; sourceTree = "<group>"; };
+		EDCA450521DB80F300778478 /* sqwave_c2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = sqwave_c2.mp3; path = ../assets/audio/sqwave_c2.mp3; sourceTree = "<group>"; };
+		EDCA450621DB80F300778478 /* piano_cs1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = piano_cs1.mp3; path = ../assets/audio/piano_cs1.mp3; sourceTree = "<group>"; };
+		EDCA450721DB80F300778478 /* piano_d2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = piano_d2.mp3; path = ../assets/audio/piano_d2.mp3; sourceTree = "<group>"; };
+		EDCA450821DB80F400778478 /* sqwave_ds3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = sqwave_ds3.mp3; path = ../assets/audio/sqwave_ds3.mp3; sourceTree = "<group>"; };
+		EDCA450921DB80F400778478 /* epiano_as4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = epiano_as4.mp3; path = ../assets/audio/epiano_as4.mp3; sourceTree = "<group>"; };
+		EDCA450A21DB80F400778478 /* stings_c0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = stings_c0.mp3; path = ../assets/audio/stings_c0.mp3; sourceTree = "<group>"; };
+		EDCA450B21DB80F400778478 /* epiano_ds2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = epiano_ds2.mp3; path = ../assets/audio/epiano_ds2.mp3; sourceTree = "<group>"; };
+		EDCA450C21DB80F400778478 /* piano_e2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = piano_e2.mp3; path = ../assets/audio/piano_e2.mp3; sourceTree = "<group>"; };
+		EDCA450D21DB80F500778478 /* strings_d1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = strings_d1.mp3; path = ../assets/audio/strings_d1.mp3; sourceTree = "<group>"; };
+		EDCA450E21DB80F500778478 /* synth_as0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synth_as0.mp3; path = ../assets/audio/synth_as0.mp3; sourceTree = "<group>"; };
+		EDCA450F21DB80F500778478 /* synth_a0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synth_a0.mp3; path = ../assets/audio/synth_a0.mp3; sourceTree = "<group>"; };
+		EDCA451021DB80F500778478 /* epiano_g1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = epiano_g1.mp3; path = ../assets/audio/epiano_g1.mp3; sourceTree = "<group>"; };
+		EDCA451121DB80F500778478 /* epiano_b4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = epiano_b4.mp3; path = ../assets/audio/epiano_b4.mp3; sourceTree = "<group>"; };
+		EDCA451221DB80F600778478 /* piano_g3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = piano_g3.mp3; path = ../assets/audio/piano_g3.mp3; sourceTree = "<group>"; };
+		EDCA451321DB80F600778478 /* synthtrumpet_f2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synthtrumpet_f2.mp3; path = ../assets/audio/synthtrumpet_f2.mp3; sourceTree = "<group>"; };
+		EDCA451421DB80F600778478 /* sqwave_cs3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = sqwave_cs3.mp3; path = ../assets/audio/sqwave_cs3.mp3; sourceTree = "<group>"; };
+		EDCA451521DB80F600778478 /* sqwave_d3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = sqwave_d3.mp3; path = ../assets/audio/sqwave_d3.mp3; sourceTree = "<group>"; };
+		EDCA451621DB80F600778478 /* sqwave_f4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = sqwave_f4.mp3; path = ../assets/audio/sqwave_f4.mp3; sourceTree = "<group>"; };
+		EDCA451721DB80F600778478 /* synthtrumpet_as4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synthtrumpet_as4.mp3; path = ../assets/audio/synthtrumpet_as4.mp3; sourceTree = "<group>"; };
+		EDCA451821DB80F700778478 /* sqwave_a2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = sqwave_a2.mp3; path = ../assets/audio/sqwave_a2.mp3; sourceTree = "<group>"; };
+		EDCA451921DB80F700778478 /* synthtrumpet_g0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synthtrumpet_g0.mp3; path = ../assets/audio/synthtrumpet_g0.mp3; sourceTree = "<group>"; };
+		EDCA451A21DB80F700778478 /* piano_ds2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = piano_ds2.mp3; path = ../assets/audio/piano_ds2.mp3; sourceTree = "<group>"; };
+		EDCA451B21DB80F700778478 /* epiano_b1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = epiano_b1.mp3; path = ../assets/audio/epiano_b1.mp3; sourceTree = "<group>"; };
+		EDCA451C21DB80F700778478 /* epiano_fs3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = epiano_fs3.mp3; path = ../assets/audio/epiano_fs3.mp3; sourceTree = "<group>"; };
+		EDCA451D21DB80F800778478 /* strings_fs1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = strings_fs1.mp3; path = ../assets/audio/strings_fs1.mp3; sourceTree = "<group>"; };
+		EDCA451E21DB80F800778478 /* strings_e4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = strings_e4.mp3; path = ../assets/audio/strings_e4.mp3; sourceTree = "<group>"; };
+		EDCA451F21DB80F800778478 /* strings_f2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = strings_f2.mp3; path = ../assets/audio/strings_f2.mp3; sourceTree = "<group>"; };
+		EDCA452021DB80F800778478 /* synthtrumpet_a1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synthtrumpet_a1.mp3; path = ../assets/audio/synthtrumpet_a1.mp3; sourceTree = "<group>"; };
+		EDCA452121DB80F800778478 /* synthtrumpet_as2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synthtrumpet_as2.mp3; path = ../assets/audio/synthtrumpet_as2.mp3; sourceTree = "<group>"; };
+		EDCA452221DB80F900778478 /* sqwave_as2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = sqwave_as2.mp3; path = ../assets/audio/sqwave_as2.mp3; sourceTree = "<group>"; };
+		EDCA452321DB80F900778478 /* strings_f0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = strings_f0.mp3; path = ../assets/audio/strings_f0.mp3; sourceTree = "<group>"; };
+		EDCA452421DB80F900778478 /* piano_ds3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = piano_ds3.mp3; path = ../assets/audio/piano_ds3.mp3; sourceTree = "<group>"; };
+		EDCA452521DB80F900778478 /* synth_e1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synth_e1.mp3; path = ../assets/audio/synth_e1.mp3; sourceTree = "<group>"; };
+		EDCA452621DB80F900778478 /* synthtrumpet_d1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synthtrumpet_d1.mp3; path = ../assets/audio/synthtrumpet_d1.mp3; sourceTree = "<group>"; };
+		EDCA452721DB80FA00778478 /* sqwave_fs3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = sqwave_fs3.mp3; path = ../assets/audio/sqwave_fs3.mp3; sourceTree = "<group>"; };
+		EDCA452821DB80FA00778478 /* epiano_cs3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = epiano_cs3.mp3; path = ../assets/audio/epiano_cs3.mp3; sourceTree = "<group>"; };
+		EDCA452921DB80FA00778478 /* sqwave_b2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = sqwave_b2.mp3; path = ../assets/audio/sqwave_b2.mp3; sourceTree = "<group>"; };
+		EDCA452A21DB80FA00778478 /* sqwave_g0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = sqwave_g0.mp3; path = ../assets/audio/sqwave_g0.mp3; sourceTree = "<group>"; };
+		EDCA452B21DB80FA00778478 /* synthtrumpet_c1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synthtrumpet_c1.mp3; path = ../assets/audio/synthtrumpet_c1.mp3; sourceTree = "<group>"; };
+		EDCA452C21DB80FB00778478 /* sqwave_e3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = sqwave_e3.mp3; path = ../assets/audio/sqwave_e3.mp3; sourceTree = "<group>"; };
+		EDCA452D21DB80FB00778478 /* strings_cs0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = strings_cs0.mp3; path = ../assets/audio/strings_cs0.mp3; sourceTree = "<group>"; };
+		EDCA452E21DB80FB00778478 /* epiano_e2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = epiano_e2.mp3; path = ../assets/audio/epiano_e2.mp3; sourceTree = "<group>"; };
+		EDCA452F21DB80FB00778478 /* synthtrumpet_d3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synthtrumpet_d3.mp3; path = ../assets/audio/synthtrumpet_d3.mp3; sourceTree = "<group>"; };
+		EDCA453021DB80FB00778478 /* synth_c2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synth_c2.mp3; path = ../assets/audio/synth_c2.mp3; sourceTree = "<group>"; };
+		EDCA453121DB80FC00778478 /* sqwave_d4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = sqwave_d4.mp3; path = ../assets/audio/sqwave_d4.mp3; sourceTree = "<group>"; };
+		EDCA453221DB80FC00778478 /* strings_cs4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = strings_cs4.mp3; path = ../assets/audio/strings_cs4.mp3; sourceTree = "<group>"; };
+		EDCA453321DB80FC00778478 /* strings_g3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = strings_g3.mp3; path = ../assets/audio/strings_g3.mp3; sourceTree = "<group>"; };
+		EDCA453421DB80FC00778478 /* piano_cs3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = piano_cs3.mp3; path = ../assets/audio/piano_cs3.mp3; sourceTree = "<group>"; };
+		EDCA453521DB80FC00778478 /* epiano_e4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = epiano_e4.mp3; path = ../assets/audio/epiano_e4.mp3; sourceTree = "<group>"; };
+		EDCA453621DB80FC00778478 /* sqwave_as0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = sqwave_as0.mp3; path = ../assets/audio/sqwave_as0.mp3; sourceTree = "<group>"; };
+		EDCA453721DB80FD00778478 /* synthtrumpet_c3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synthtrumpet_c3.mp3; path = ../assets/audio/synthtrumpet_c3.mp3; sourceTree = "<group>"; };
+		EDCA453821DB80FD00778478 /* synthtrumpet_c4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synthtrumpet_c4.mp3; path = ../assets/audio/synthtrumpet_c4.mp3; sourceTree = "<group>"; };
+		EDCA453921DB80FD00778478 /* synthtrumpet_d2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synthtrumpet_d2.mp3; path = ../assets/audio/synthtrumpet_d2.mp3; sourceTree = "<group>"; };
+		EDCA453A21DB80FD00778478 /* sqwave_f3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = sqwave_f3.mp3; path = ../assets/audio/sqwave_f3.mp3; sourceTree = "<group>"; };
+		EDCA453B21DB80FD00778478 /* synth_gs0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synth_gs0.mp3; path = ../assets/audio/synth_gs0.mp3; sourceTree = "<group>"; };
+		EDCA453C21DB80FE00778478 /* piano_c0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = piano_c0.mp3; path = ../assets/audio/piano_c0.mp3; sourceTree = "<group>"; };
+		EDCA453D21DB80FE00778478 /* sqwave_d0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = sqwave_d0.mp3; path = ../assets/audio/sqwave_d0.mp3; sourceTree = "<group>"; };
+		EDCA453E21DB80FE00778478 /* epiano_e3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = epiano_e3.mp3; path = ../assets/audio/epiano_e3.mp3; sourceTree = "<group>"; };
+		EDCA453F21DB80FE00778478 /* piano_gs3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = piano_gs3.mp3; path = ../assets/audio/piano_gs3.mp3; sourceTree = "<group>"; };
+		EDCA454021DB80FE00778478 /* synth_b4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synth_b4.mp3; path = ../assets/audio/synth_b4.mp3; sourceTree = "<group>"; };
+		EDCA454121DB80FF00778478 /* synthtrumpet_f4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synthtrumpet_f4.mp3; path = ../assets/audio/synthtrumpet_f4.mp3; sourceTree = "<group>"; };
+		EDCA454221DB80FF00778478 /* strings_cs1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = strings_cs1.mp3; path = ../assets/audio/strings_cs1.mp3; sourceTree = "<group>"; };
+		EDCA454321DB80FF00778478 /* synth_ds3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synth_ds3.mp3; path = ../assets/audio/synth_ds3.mp3; sourceTree = "<group>"; };
+		EDCA454421DB80FF00778478 /* epiano_d2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = epiano_d2.mp3; path = ../assets/audio/epiano_d2.mp3; sourceTree = "<group>"; };
+		EDCA454521DB80FF00778478 /* synth_b2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synth_b2.mp3; path = ../assets/audio/synth_b2.mp3; sourceTree = "<group>"; };
+		EDCA454621DB810000778478 /* strings_fs3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = strings_fs3.mp3; path = ../assets/audio/strings_fs3.mp3; sourceTree = "<group>"; };
+		EDCA454721DB810000778478 /* strings_a2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = strings_a2.mp3; path = ../assets/audio/strings_a2.mp3; sourceTree = "<group>"; };
+		EDCA454821DB810000778478 /* strings_as2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = strings_as2.mp3; path = ../assets/audio/strings_as2.mp3; sourceTree = "<group>"; };
+		EDCA454921DB810000778478 /* synth_g0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synth_g0.mp3; path = ../assets/audio/synth_g0.mp3; sourceTree = "<group>"; };
+		EDCA454A21DB810000778478 /* sqwave_e2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = sqwave_e2.mp3; path = ../assets/audio/sqwave_e2.mp3; sourceTree = "<group>"; };
+		EDCA454B21DB810100778478 /* piano_d4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = piano_d4.mp3; path = ../assets/audio/piano_d4.mp3; sourceTree = "<group>"; };
+		EDCA454C21DB810100778478 /* piano_b4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = piano_b4.mp3; path = ../assets/audio/piano_b4.mp3; sourceTree = "<group>"; };
+		EDCA454D21DB810100778478 /* sqwave_gs3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = sqwave_gs3.mp3; path = ../assets/audio/sqwave_gs3.mp3; sourceTree = "<group>"; };
+		EDCA454E21DB810100778478 /* synthtrumpet_a3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synthtrumpet_a3.mp3; path = ../assets/audio/synthtrumpet_a3.mp3; sourceTree = "<group>"; };
+		EDCA454F21DB810100778478 /* sqwave_as4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = sqwave_as4.mp3; path = ../assets/audio/sqwave_as4.mp3; sourceTree = "<group>"; };
+		EDCA455021DB810200778478 /* piano_e3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = piano_e3.mp3; path = ../assets/audio/piano_e3.mp3; sourceTree = "<group>"; };
+		EDCA455121DB810200778478 /* epiano_e0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = epiano_e0.mp3; path = ../assets/audio/epiano_e0.mp3; sourceTree = "<group>"; };
+		EDCA455221DB810200778478 /* epiano_f0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = epiano_f0.mp3; path = ../assets/audio/epiano_f0.mp3; sourceTree = "<group>"; };
+		EDCA455321DB810200778478 /* sqwave_f0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = sqwave_f0.mp3; path = ../assets/audio/sqwave_f0.mp3; sourceTree = "<group>"; };
+		EDCA455421DB810200778478 /* sqwave_a0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = sqwave_a0.mp3; path = ../assets/audio/sqwave_a0.mp3; sourceTree = "<group>"; };
+		EDCA455521DB810300778478 /* piano_ds4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = piano_ds4.mp3; path = ../assets/audio/piano_ds4.mp3; sourceTree = "<group>"; };
+		EDCA455621DB810300778478 /* piano_fs1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = piano_fs1.mp3; path = ../assets/audio/piano_fs1.mp3; sourceTree = "<group>"; };
+		EDCA455721DB810300778478 /* sqwave_g4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = sqwave_g4.mp3; path = ../assets/audio/sqwave_g4.mp3; sourceTree = "<group>"; };
+		EDCA455821DB810300778478 /* strings_b0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = strings_b0.mp3; path = ../assets/audio/strings_b0.mp3; sourceTree = "<group>"; };
+		EDCA455921DB810300778478 /* epiano_ds1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = epiano_ds1.mp3; path = ../assets/audio/epiano_ds1.mp3; sourceTree = "<group>"; };
+		EDCA455A21DB810400778478 /* epiano_gs0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = epiano_gs0.mp3; path = ../assets/audio/epiano_gs0.mp3; sourceTree = "<group>"; };
+		EDCA455B21DB810400778478 /* strings_b1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = strings_b1.mp3; path = ../assets/audio/strings_b1.mp3; sourceTree = "<group>"; };
+		EDCA455C21DB810400778478 /* strings_e2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = strings_e2.mp3; path = ../assets/audio/strings_e2.mp3; sourceTree = "<group>"; };
+		EDCA455D21DB810400778478 /* epiano_fs1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = epiano_fs1.mp3; path = ../assets/audio/epiano_fs1.mp3; sourceTree = "<group>"; };
+		EDCA455E21DB810400778478 /* synth_f1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synth_f1.mp3; path = ../assets/audio/synth_f1.mp3; sourceTree = "<group>"; };
+		EDCA455F21DB810500778478 /* strings_ds3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = strings_ds3.mp3; path = ../assets/audio/strings_ds3.mp3; sourceTree = "<group>"; };
+		EDCA456021DB810500778478 /* synthtrumpet_f0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synthtrumpet_f0.mp3; path = ../assets/audio/synthtrumpet_f0.mp3; sourceTree = "<group>"; };
+		EDCA456121DB810500778478 /* synthtrumpet_fs3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synthtrumpet_fs3.mp3; path = ../assets/audio/synthtrumpet_fs3.mp3; sourceTree = "<group>"; };
+		EDCA456221DB810500778478 /* synthtrumpet_g3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synthtrumpet_g3.mp3; path = ../assets/audio/synthtrumpet_g3.mp3; sourceTree = "<group>"; };
+		EDCA456321DB810500778478 /* synthtrumpet_fs0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synthtrumpet_fs0.mp3; path = ../assets/audio/synthtrumpet_fs0.mp3; sourceTree = "<group>"; };
+		EDCA456421DB810600778478 /* synth_cs3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synth_cs3.mp3; path = ../assets/audio/synth_cs3.mp3; sourceTree = "<group>"; };
+		EDCA456521DB810600778478 /* epiano_a0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = epiano_a0.mp3; path = ../assets/audio/epiano_a0.mp3; sourceTree = "<group>"; };
+		EDCA456621DB810600778478 /* strings_g4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = strings_g4.mp3; path = ../assets/audio/strings_g4.mp3; sourceTree = "<group>"; };
+		EDCA456721DB810600778478 /* synthtrumpet_b3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synthtrumpet_b3.mp3; path = ../assets/audio/synthtrumpet_b3.mp3; sourceTree = "<group>"; };
+		EDCA456821DB810600778478 /* piano_gs1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = piano_gs1.mp3; path = ../assets/audio/piano_gs1.mp3; sourceTree = "<group>"; };
+		EDCA456921DB810700778478 /* strings_a4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = strings_a4.mp3; path = ../assets/audio/strings_a4.mp3; sourceTree = "<group>"; };
+		EDCA456A21DB810700778478 /* epiano_b2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = epiano_b2.mp3; path = ../assets/audio/epiano_b2.mp3; sourceTree = "<group>"; };
+		EDCA456B21DB810700778478 /* strings_as0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = strings_as0.mp3; path = ../assets/audio/strings_as0.mp3; sourceTree = "<group>"; };
+		EDCA456C21DB810700778478 /* epiano_as1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = epiano_as1.mp3; path = ../assets/audio/epiano_as1.mp3; sourceTree = "<group>"; };
+		EDCA456D21DB810700778478 /* sqwave_d1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = sqwave_d1.mp3; path = ../assets/audio/sqwave_d1.mp3; sourceTree = "<group>"; };
+		EDCA456E21DB810800778478 /* synth_fs3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synth_fs3.mp3; path = ../assets/audio/synth_fs3.mp3; sourceTree = "<group>"; };
+		EDCA456F21DB810800778478 /* synth_f0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synth_f0.mp3; path = ../assets/audio/synth_f0.mp3; sourceTree = "<group>"; };
+		EDCA457021DB810800778478 /* strings_d3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = strings_d3.mp3; path = ../assets/audio/strings_d3.mp3; sourceTree = "<group>"; };
+		EDCA457121DB810800778478 /* sqwave_d2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = sqwave_d2.mp3; path = ../assets/audio/sqwave_d2.mp3; sourceTree = "<group>"; };
+		EDCA457221DB810800778478 /* sqwave_a3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = sqwave_a3.mp3; path = ../assets/audio/sqwave_a3.mp3; sourceTree = "<group>"; };
+		EDCA457321DB810900778478 /* piano_f3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = piano_f3.mp3; path = ../assets/audio/piano_f3.mp3; sourceTree = "<group>"; };
+		EDCA457421DB810900778478 /* sqwave_b0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = sqwave_b0.mp3; path = ../assets/audio/sqwave_b0.mp3; sourceTree = "<group>"; };
+		EDCA457521DB810900778478 /* sqwave_cs1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = sqwave_cs1.mp3; path = ../assets/audio/sqwave_cs1.mp3; sourceTree = "<group>"; };
+		EDCA457621DB810900778478 /* strings_d0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = strings_d0.mp3; path = ../assets/audio/strings_d0.mp3; sourceTree = "<group>"; };
+		EDCA457721DB810900778478 /* sqwave_c4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = sqwave_c4.mp3; path = ../assets/audio/sqwave_c4.mp3; sourceTree = "<group>"; };
+		EDCA457821DB810A00778478 /* synth_g4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synth_g4.mp3; path = ../assets/audio/synth_g4.mp3; sourceTree = "<group>"; };
+		EDCA457921DB810A00778478 /* synth_a4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synth_a4.mp3; path = ../assets/audio/synth_a4.mp3; sourceTree = "<group>"; };
+		EDCA457A21DB810A00778478 /* piano_f1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = piano_f1.mp3; path = ../assets/audio/piano_f1.mp3; sourceTree = "<group>"; };
+		EDCA457B21DB810A00778478 /* synthtrumpet_ds3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synthtrumpet_ds3.mp3; path = ../assets/audio/synthtrumpet_ds3.mp3; sourceTree = "<group>"; };
+		EDCA457C21DB810A00778478 /* strings_gs2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = strings_gs2.mp3; path = ../assets/audio/strings_gs2.mp3; sourceTree = "<group>"; };
+		EDCA457D21DB810B00778478 /* synthtrumpet_fs1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synthtrumpet_fs1.mp3; path = ../assets/audio/synthtrumpet_fs1.mp3; sourceTree = "<group>"; };
+		EDCA457E21DB810B00778478 /* epiano_ds4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = epiano_ds4.mp3; path = ../assets/audio/epiano_ds4.mp3; sourceTree = "<group>"; };
+		EDCA457F21DB810B00778478 /* epiano_ds0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = epiano_ds0.mp3; path = ../assets/audio/epiano_ds0.mp3; sourceTree = "<group>"; };
+		EDCA458021DB810B00778478 /* synth_f2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synth_f2.mp3; path = ../assets/audio/synth_f2.mp3; sourceTree = "<group>"; };
+		EDCA458121DB810B00778478 /* epiano-60.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "epiano-60.mp3"; path = "../assets/audio/epiano-60.mp3"; sourceTree = "<group>"; };
+		EDCA458221DB810C00778478 /* piano_b3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = piano_b3.mp3; path = ../assets/audio/piano_b3.mp3; sourceTree = "<group>"; };
+		EDCA458321DB810C00778478 /* synth_d2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synth_d2.mp3; path = ../assets/audio/synth_d2.mp3; sourceTree = "<group>"; };
+		EDCA458421DB810C00778478 /* strings_e1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = strings_e1.mp3; path = ../assets/audio/strings_e1.mp3; sourceTree = "<group>"; };
+		EDCA458521DB810C00778478 /* synthtrumpet_c0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synthtrumpet_c0.mp3; path = ../assets/audio/synthtrumpet_c0.mp3; sourceTree = "<group>"; };
+		EDCA458621DB810C00778478 /* epiano_c2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = epiano_c2.mp3; path = ../assets/audio/epiano_c2.mp3; sourceTree = "<group>"; };
+		EDCA458721DB810D00778478 /* synthtrumpet_g1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synthtrumpet_g1.mp3; path = ../assets/audio/synthtrumpet_g1.mp3; sourceTree = "<group>"; };
+		EDCA458821DB810D00778478 /* strings_c1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = strings_c1.mp3; path = ../assets/audio/strings_c1.mp3; sourceTree = "<group>"; };
+		EDCA458921DB810D00778478 /* strings_ds0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = strings_ds0.mp3; path = ../assets/audio/strings_ds0.mp3; sourceTree = "<group>"; };
+		EDCA458A21DB810D00778478 /* synth_b3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synth_b3.mp3; path = ../assets/audio/synth_b3.mp3; sourceTree = "<group>"; };
+		EDCA458B21DB810D00778478 /* strings_b4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = strings_b4.mp3; path = ../assets/audio/strings_b4.mp3; sourceTree = "<group>"; };
+		EDCA458C21DB810E00778478 /* epiano_cs0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = epiano_cs0.mp3; path = ../assets/audio/epiano_cs0.mp3; sourceTree = "<group>"; };
+		EDCA458D21DB810E00778478 /* piano_a1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = piano_a1.mp3; path = ../assets/audio/piano_a1.mp3; sourceTree = "<group>"; };
+		EDCA458E21DB810E00778478 /* piano_as0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = piano_as0.mp3; path = ../assets/audio/piano_as0.mp3; sourceTree = "<group>"; };
+		EDCA458F21DB810E00778478 /* sqwave_a1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = sqwave_a1.mp3; path = ../assets/audio/sqwave_a1.mp3; sourceTree = "<group>"; };
+		EDCA459021DB810E00778478 /* piano_as2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = piano_as2.mp3; path = ../assets/audio/piano_as2.mp3; sourceTree = "<group>"; };
+		EDCA459121DB810F00778478 /* strings_cs2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = strings_cs2.mp3; path = ../assets/audio/strings_cs2.mp3; sourceTree = "<group>"; };
+		EDCA459221DB810F00778478 /* synthtrumpet_b2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synthtrumpet_b2.mp3; path = ../assets/audio/synthtrumpet_b2.mp3; sourceTree = "<group>"; };
+		EDCA459321DB810F00778478 /* synth_gs2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synth_gs2.mp3; path = ../assets/audio/synth_gs2.mp3; sourceTree = "<group>"; };
+		EDCA459421DB810F00778478 /* piano_as3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = piano_as3.mp3; path = ../assets/audio/piano_as3.mp3; sourceTree = "<group>"; };
+		EDCA459521DB810F00778478 /* strings_f3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = strings_f3.mp3; path = ../assets/audio/strings_f3.mp3; sourceTree = "<group>"; };
+		EDCA459621DB811000778478 /* piano_cs4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = piano_cs4.mp3; path = ../assets/audio/piano_cs4.mp3; sourceTree = "<group>"; };
+		EDCA459721DB811000778478 /* epiano_c4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = epiano_c4.mp3; path = ../assets/audio/epiano_c4.mp3; sourceTree = "<group>"; };
+		EDCA459821DB811000778478 /* piano_a3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = piano_a3.mp3; path = ../assets/audio/piano_a3.mp3; sourceTree = "<group>"; };
+		EDCA459921DB811000778478 /* piano_d1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = piano_d1.mp3; path = ../assets/audio/piano_d1.mp3; sourceTree = "<group>"; };
+		EDCA459A21DB811100778478 /* piano_g2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = piano_g2.mp3; path = ../assets/audio/piano_g2.mp3; sourceTree = "<group>"; };
+		EDCA459B21DB811100778478 /* strings_cs3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = strings_cs3.mp3; path = ../assets/audio/strings_cs3.mp3; sourceTree = "<group>"; };
+		EDCA459C21DB811100778478 /* synth_d4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synth_d4.mp3; path = ../assets/audio/synth_d4.mp3; sourceTree = "<group>"; };
+		EDCA459D21DB811100778478 /* synth_e2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synth_e2.mp3; path = ../assets/audio/synth_e2.mp3; sourceTree = "<group>"; };
+		EDCA459E21DB811200778478 /* epiano_cs1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = epiano_cs1.mp3; path = ../assets/audio/epiano_cs1.mp3; sourceTree = "<group>"; };
+		EDCA459F21DB811200778478 /* epiano_b3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = epiano_b3.mp3; path = ../assets/audio/epiano_b3.mp3; sourceTree = "<group>"; };
+		EDCA45A021DB811200778478 /* synthtrumpet_b4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synthtrumpet_b4.mp3; path = ../assets/audio/synthtrumpet_b4.mp3; sourceTree = "<group>"; };
+		EDCA45A121DB811200778478 /* piano_as1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = piano_as1.mp3; path = ../assets/audio/piano_as1.mp3; sourceTree = "<group>"; };
+		EDCA45A221DB811300778478 /* piano_f2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = piano_f2.mp3; path = ../assets/audio/piano_f2.mp3; sourceTree = "<group>"; };
+		EDCA45A321DB811300778478 /* synth_b0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synth_b0.mp3; path = ../assets/audio/synth_b0.mp3; sourceTree = "<group>"; };
+		EDCA45A421DB811300778478 /* piano_g0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = piano_g0.mp3; path = ../assets/audio/piano_g0.mp3; sourceTree = "<group>"; };
+		EDCA45A521DB811400778478 /* epiano_gs1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = epiano_gs1.mp3; path = ../assets/audio/epiano_gs1.mp3; sourceTree = "<group>"; };
+		EDCA45A621DB811400778478 /* strings_as4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = strings_as4.mp3; path = ../assets/audio/strings_as4.mp3; sourceTree = "<group>"; };
+		EDCA45A721DB811400778478 /* sqwave-60.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "sqwave-60.mp3"; path = "../assets/audio/sqwave-60.mp3"; sourceTree = "<group>"; };
+		EDCA45A821DB811400778478 /* strings-60.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "strings-60.mp3"; path = "../assets/audio/strings-60.mp3"; sourceTree = "<group>"; };
+		EDCA45A921DB811500778478 /* synthtrumpet_ds2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synthtrumpet_ds2.mp3; path = ../assets/audio/synthtrumpet_ds2.mp3; sourceTree = "<group>"; };
+		EDCA45AA21DB811500778478 /* strings_ds4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = strings_ds4.mp3; path = ../assets/audio/strings_ds4.mp3; sourceTree = "<group>"; };
+		EDCA45AB21DB811500778478 /* synthtrumpet_e1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synthtrumpet_e1.mp3; path = ../assets/audio/synthtrumpet_e1.mp3; sourceTree = "<group>"; };
+		EDCA45AC21DB811600778478 /* epiano_e1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = epiano_e1.mp3; path = ../assets/audio/epiano_e1.mp3; sourceTree = "<group>"; };
+		EDCA45AD21DB811600778478 /* sqwave_ds4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = sqwave_ds4.mp3; path = ../assets/audio/sqwave_ds4.mp3; sourceTree = "<group>"; };
+		EDCA45AE21DB811600778478 /* synthtrumpet_g4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synthtrumpet_g4.mp3; path = ../assets/audio/synthtrumpet_g4.mp3; sourceTree = "<group>"; };
+		EDCA45AF21DB811600778478 /* synth_as2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synth_as2.mp3; path = ../assets/audio/synth_as2.mp3; sourceTree = "<group>"; };
+		EDCA45B021DB811700778478 /* synth_as3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synth_as3.mp3; path = ../assets/audio/synth_as3.mp3; sourceTree = "<group>"; };
+		EDCA45B121DB811700778478 /* synth_c0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synth_c0.mp3; path = ../assets/audio/synth_c0.mp3; sourceTree = "<group>"; };
+		EDCA45B221DB811700778478 /* piano_a2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = piano_a2.mp3; path = ../assets/audio/piano_a2.mp3; sourceTree = "<group>"; };
+		EDCA45B321DB811800778478 /* synthtrumpet_as0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synthtrumpet_as0.mp3; path = ../assets/audio/synthtrumpet_as0.mp3; sourceTree = "<group>"; };
+		EDCA45B421DB811800778478 /* synth_a1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synth_a1.mp3; path = ../assets/audio/synth_a1.mp3; sourceTree = "<group>"; };
+		EDCA45B521DB811800778478 /* sqwave_cs2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = sqwave_cs2.mp3; path = ../assets/audio/sqwave_cs2.mp3; sourceTree = "<group>"; };
+		EDCA45B621DB811800778478 /* strings_gs4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = strings_gs4.mp3; path = ../assets/audio/strings_gs4.mp3; sourceTree = "<group>"; };
+		EDCA45B721DB811900778478 /* synthtrumpet_cs3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synthtrumpet_cs3.mp3; path = ../assets/audio/synthtrumpet_cs3.mp3; sourceTree = "<group>"; };
+		EDCA45B821DB811900778478 /* synthtrumpet_b0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synthtrumpet_b0.mp3; path = ../assets/audio/synthtrumpet_b0.mp3; sourceTree = "<group>"; };
+		EDCA45B921DB811900778478 /* piano_ds1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = piano_ds1.mp3; path = ../assets/audio/piano_ds1.mp3; sourceTree = "<group>"; };
+		EDCA45BA21DB811A00778478 /* sqwave_ds2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = sqwave_ds2.mp3; path = ../assets/audio/sqwave_ds2.mp3; sourceTree = "<group>"; };
+		EDCA45BB21DB811A00778478 /* epiano_d0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = epiano_d0.mp3; path = ../assets/audio/epiano_d0.mp3; sourceTree = "<group>"; };
+		EDCA45BC21DB811A00778478 /* synth_d1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synth_d1.mp3; path = ../assets/audio/synth_d1.mp3; sourceTree = "<group>"; };
+		EDCA45BD21DB811B00778478 /* piano_gs2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = piano_gs2.mp3; path = ../assets/audio/piano_gs2.mp3; sourceTree = "<group>"; };
+		EDCA45BE21DB811B00778478 /* epiano_c0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = epiano_c0.mp3; path = ../assets/audio/epiano_c0.mp3; sourceTree = "<group>"; };
+		EDCA45BF21DB811B00778478 /* sqwave_fs4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = sqwave_fs4.mp3; path = ../assets/audio/sqwave_fs4.mp3; sourceTree = "<group>"; };
+		EDCA45C021DB811C00778478 /* sqwave_e4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = sqwave_e4.mp3; path = ../assets/audio/sqwave_e4.mp3; sourceTree = "<group>"; };
+		EDCA45C121DB811C00778478 /* strings_a1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = strings_a1.mp3; path = ../assets/audio/strings_a1.mp3; sourceTree = "<group>"; };
+		EDCA45C221DB811C00778478 /* piano_fs3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = piano_fs3.mp3; path = ../assets/audio/piano_fs3.mp3; sourceTree = "<group>"; };
+		EDCA45C321DB811C00778478 /* epiano_f2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = epiano_f2.mp3; path = ../assets/audio/epiano_f2.mp3; sourceTree = "<group>"; };
+		EDCA45C421DB811D00778478 /* synthtrumpet_e2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synthtrumpet_e2.mp3; path = ../assets/audio/synthtrumpet_e2.mp3; sourceTree = "<group>"; };
+		EDCA45C521DB811D00778478 /* epiano_cs4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = epiano_cs4.mp3; path = ../assets/audio/epiano_cs4.mp3; sourceTree = "<group>"; };
+		EDCA45C621DB811D00778478 /* epiano_gs2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = epiano_gs2.mp3; path = ../assets/audio/epiano_gs2.mp3; sourceTree = "<group>"; };
+		EDCA45C721DB811E00778478 /* sqwave_g3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = sqwave_g3.mp3; path = ../assets/audio/sqwave_g3.mp3; sourceTree = "<group>"; };
+		EDCA45C821DB811E00778478 /* strings_a3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = strings_a3.mp3; path = ../assets/audio/strings_a3.mp3; sourceTree = "<group>"; };
+		EDCA45C921DB811E00778478 /* strings_as1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = strings_as1.mp3; path = ../assets/audio/strings_as1.mp3; sourceTree = "<group>"; };
+		EDCA45CA21DB811E00778478 /* synth_cs1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synth_cs1.mp3; path = ../assets/audio/synth_cs1.mp3; sourceTree = "<group>"; };
+		EDCA45CB21DB811F00778478 /* piano_fs2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = piano_fs2.mp3; path = ../assets/audio/piano_fs2.mp3; sourceTree = "<group>"; };
+		EDCA45CC21DB811F00778478 /* sqwave_ds1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = sqwave_ds1.mp3; path = ../assets/audio/sqwave_ds1.mp3; sourceTree = "<group>"; };
+		EDCA45CD21DB811F00778478 /* synth_ds2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synth_ds2.mp3; path = ../assets/audio/synth_ds2.mp3; sourceTree = "<group>"; };
+		EDCA45CE21DB812000778478 /* synthtrumpet_fs4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synthtrumpet_fs4.mp3; path = ../assets/audio/synthtrumpet_fs4.mp3; sourceTree = "<group>"; };
+		EDCA45CF21DB812000778478 /* strings_g2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = strings_g2.mp3; path = ../assets/audio/strings_g2.mp3; sourceTree = "<group>"; };
+		EDCA45D021DB812000778478 /* synth_gs4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synth_gs4.mp3; path = ../assets/audio/synth_gs4.mp3; sourceTree = "<group>"; };
+		EDCA45D121DB812100778478 /* epiano_as2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = epiano_as2.mp3; path = ../assets/audio/epiano_as2.mp3; sourceTree = "<group>"; };
+		EDCA45D221DB812100778478 /* strings_c3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = strings_c3.mp3; path = ../assets/audio/strings_c3.mp3; sourceTree = "<group>"; };
+		EDCA45D321DB812100778478 /* synth_f3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synth_f3.mp3; path = ../assets/audio/synth_f3.mp3; sourceTree = "<group>"; };
+		EDCA45D421DB812100778478 /* synthtrumpet_c2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synthtrumpet_c2.mp3; path = ../assets/audio/synthtrumpet_c2.mp3; sourceTree = "<group>"; };
+		EDCA45D521DB812100778478 /* synthtrumpet_cs0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synthtrumpet_cs0.mp3; path = ../assets/audio/synthtrumpet_cs0.mp3; sourceTree = "<group>"; };
+		EDCA45D621DB812200778478 /* epiano_f1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = epiano_f1.mp3; path = ../assets/audio/epiano_f1.mp3; sourceTree = "<group>"; };
+		EDCA45D721DB812200778478 /* epiano_gs4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = epiano_gs4.mp3; path = ../assets/audio/epiano_gs4.mp3; sourceTree = "<group>"; };
+		EDCA45D821DB812200778478 /* piano_e0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = piano_e0.mp3; path = ../assets/audio/piano_e0.mp3; sourceTree = "<group>"; };
+		EDCA45D921DB812200778478 /* sqwave_e0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = sqwave_e0.mp3; path = ../assets/audio/sqwave_e0.mp3; sourceTree = "<group>"; };
+		EDCA45DA21DB812300778478 /* epiano_f4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = epiano_f4.mp3; path = ../assets/audio/epiano_f4.mp3; sourceTree = "<group>"; };
+		EDCA45DB21DB812300778478 /* piano_as4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = piano_as4.mp3; path = ../assets/audio/piano_as4.mp3; sourceTree = "<group>"; };
+		EDCA45DC21DB812300778478 /* strings_b2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = strings_b2.mp3; path = ../assets/audio/strings_b2.mp3; sourceTree = "<group>"; };
+		EDCA45DD21DB812400778478 /* strings_d2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = strings_d2.mp3; path = ../assets/audio/strings_d2.mp3; sourceTree = "<group>"; };
+		EDCA45DE21DB812400778478 /* synthtrumpet_a2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synthtrumpet_a2.mp3; path = ../assets/audio/synthtrumpet_a2.mp3; sourceTree = "<group>"; };
+		EDCA45DF21DB812400778478 /* epiano_g3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = epiano_g3.mp3; path = ../assets/audio/epiano_g3.mp3; sourceTree = "<group>"; };
+		EDCA45E021DB812500778478 /* synth_a2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synth_a2.mp3; path = ../assets/audio/synth_a2.mp3; sourceTree = "<group>"; };
+		EDCA45E121DB812500778478 /* piano_f0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = piano_f0.mp3; path = ../assets/audio/piano_f0.mp3; sourceTree = "<group>"; };
+		EDCA45E221DB812500778478 /* piano_g4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = piano_g4.mp3; path = ../assets/audio/piano_g4.mp3; sourceTree = "<group>"; };
+		EDCA45E321DB812600778478 /* sqwave_gs0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = sqwave_gs0.mp3; path = ../assets/audio/sqwave_gs0.mp3; sourceTree = "<group>"; };
+		EDCA45E421DB812600778478 /* piano_e1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = piano_e1.mp3; path = ../assets/audio/piano_e1.mp3; sourceTree = "<group>"; };
+		EDCA45E521DB812600778478 /* epiano_g2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = epiano_g2.mp3; path = ../assets/audio/epiano_g2.mp3; sourceTree = "<group>"; };
+		EDCA45E621DB812600778478 /* synthtrumpet_ds1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synthtrumpet_ds1.mp3; path = ../assets/audio/synthtrumpet_ds1.mp3; sourceTree = "<group>"; };
+		EDCA45E721DB812700778478 /* piano_c4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = piano_c4.mp3; path = ../assets/audio/piano_c4.mp3; sourceTree = "<group>"; };
+		EDCA45E821DB812700778478 /* epiano_g0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = epiano_g0.mp3; path = ../assets/audio/epiano_g0.mp3; sourceTree = "<group>"; };
+		EDCA45E921DB812700778478 /* synth-60.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "synth-60.mp3"; path = "../assets/audio/synth-60.mp3"; sourceTree = "<group>"; };
+		EDCA45EA21DB812800778478 /* synth_c4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synth_c4.mp3; path = ../assets/audio/synth_c4.mp3; sourceTree = "<group>"; };
+		EDCA45EB21DB812800778478 /* synth_e0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synth_e0.mp3; path = ../assets/audio/synth_e0.mp3; sourceTree = "<group>"; };
+		EDCA45EC21DB812800778478 /* synthtrumpet_d4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synthtrumpet_d4.mp3; path = ../assets/audio/synthtrumpet_d4.mp3; sourceTree = "<group>"; };
+		EDCA45ED21DB812900778478 /* sqwave_a4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = sqwave_a4.mp3; path = ../assets/audio/sqwave_a4.mp3; sourceTree = "<group>"; };
+		EDCA45EE21DB812900778478 /* strings_fs0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = strings_fs0.mp3; path = ../assets/audio/strings_fs0.mp3; sourceTree = "<group>"; };
+		EDCA45EF21DB812900778478 /* epiano_g4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = epiano_g4.mp3; path = ../assets/audio/epiano_g4.mp3; sourceTree = "<group>"; };
+		EDCA45F021DB812A00778478 /* sqwave_ds0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = sqwave_ds0.mp3; path = ../assets/audio/sqwave_ds0.mp3; sourceTree = "<group>"; };
+		EDCA45F121DB812A00778478 /* strings_c2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = strings_c2.mp3; path = ../assets/audio/strings_c2.mp3; sourceTree = "<group>"; };
+		EDCA45F221DB812A00778478 /* synth_cs4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synth_cs4.mp3; path = ../assets/audio/synth_cs4.mp3; sourceTree = "<group>"; };
+		EDCA45F321DB812A00778478 /* synth_f4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synth_f4.mp3; path = ../assets/audio/synth_f4.mp3; sourceTree = "<group>"; };
+		EDCA45F421DB812B00778478 /* epiano_fs4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = epiano_fs4.mp3; path = ../assets/audio/epiano_fs4.mp3; sourceTree = "<group>"; };
+		EDCA45F521DB812B00778478 /* sqwave_fs2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = sqwave_fs2.mp3; path = ../assets/audio/sqwave_fs2.mp3; sourceTree = "<group>"; };
+		EDCA45F621DB812B00778478 /* sqwave_b3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = sqwave_b3.mp3; path = ../assets/audio/sqwave_b3.mp3; sourceTree = "<group>"; };
+		EDCA45F721DB812B00778478 /* synthtrumpet_ds4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synthtrumpet_ds4.mp3; path = ../assets/audio/synthtrumpet_ds4.mp3; sourceTree = "<group>"; };
+		EDCA45F821DB812C00778478 /* epiano_as0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = epiano_as0.mp3; path = ../assets/audio/epiano_as0.mp3; sourceTree = "<group>"; };
+		EDCA45F921DB812C00778478 /* synth_as1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synth_as1.mp3; path = ../assets/audio/synth_as1.mp3; sourceTree = "<group>"; };
+		EDCA45FA21DB812C00778478 /* synthtrumpet_e4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synthtrumpet_e4.mp3; path = ../assets/audio/synthtrumpet_e4.mp3; sourceTree = "<group>"; };
+		EDCA45FB21DB812D00778478 /* synthtrumpet_e3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synthtrumpet_e3.mp3; path = ../assets/audio/synthtrumpet_e3.mp3; sourceTree = "<group>"; };
+		EDCA45FC21DB812D00778478 /* sqwave_b1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = sqwave_b1.mp3; path = ../assets/audio/sqwave_b1.mp3; sourceTree = "<group>"; };
+		EDCA45FD21DB812D00778478 /* epiano_d1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = epiano_d1.mp3; path = ../assets/audio/epiano_d1.mp3; sourceTree = "<group>"; };
+		EDCA45FE21DB812D00778478 /* piano_b1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = piano_b1.mp3; path = ../assets/audio/piano_b1.mp3; sourceTree = "<group>"; };
+		EDCA45FF21DB812E00778478 /* synth_d0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synth_d0.mp3; path = ../assets/audio/synth_d0.mp3; sourceTree = "<group>"; };
+		EDCA460021DB812E00778478 /* synth_g1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synth_g1.mp3; path = ../assets/audio/synth_g1.mp3; sourceTree = "<group>"; };
+		EDCA460121DB812E00778478 /* synthtrumpet_f1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = synthtrumpet_f1.mp3; path = ../assets/audio/synthtrumpet_f1.mp3; sourceTree = "<group>"; };
 		F0668834A20147EEB47F9C7B /* Zocial.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Zocial.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; };
 		F26F8DF950764DFCBB451231 /* FontAwesome.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
 		FE9946F81E804703A5ECD374 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SimpleLineIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; };
@@ -733,30 +1440,396 @@
 			isa = PBXGroup;
 			children = (
 				ED515C7E21CD8D8B0029CF6B /* piano_a2.mp3 */,
+				EDCA45B221DB811700778478 /* piano_a2.mp3 */,
 				ED515C8C21CD8D8D0029CF6B /* piano_a3.mp3 */,
+				EDCA45A121DB811200778478 /* piano_as1.mp3 */,
 				ED515C8721CD8D8C0029CF6B /* piano_as2.mp3 */,
 				ED515C8A21CD8D8C0029CF6B /* piano_as3.mp3 */,
+				EDCA458D21DB810E00778478 /* piano_a1.mp3 */,
+				EDCA459821DB811000778478 /* piano_a3.mp3 */,
+				EDCA44F721DB80F000778478 /* piano_a4.mp3 */,
+				EDCA458E21DB810E00778478 /* piano_as0.mp3 */,
+				EDCA459021DB810E00778478 /* piano_as2.mp3 */,
+				EDCA459421DB810F00778478 /* piano_as3.mp3 */,
+				EDCA45DB21DB812300778478 /* piano_as4.mp3 */,
+				EDCA44CA21DB80E700778478 /* piano_b0.mp3 */,
+				EDCA45FE21DB812D00778478 /* piano_b1.mp3 */,
 				ED515C7D21CD8D8A0029CF6B /* piano_b2.mp3 */,
 				ED515C8221CD8D8B0029CF6B /* piano_b3.mp3 */,
 				ED515C8F21CD8D8D0029CF6B /* piano_c2.mp3 */,
+				EDCA44E721DB80ED00778478 /* piano_c2.mp3 */,
 				ED515C8B21CD8D8C0029CF6B /* piano_c3.mp3 */,
 				ED515C8021CD8D8B0029CF6B /* piano_c4.mp3 */,
+				EDCA450621DB80F300778478 /* piano_cs1.mp3 */,
 				ED515C9021CD8D8D0029CF6B /* piano_cs2.mp3 */,
 				ED515C8621CD8D8C0029CF6B /* piano_cs3.mp3 */,
+				EDCA459921DB811000778478 /* piano_d1.mp3 */,
 				ED515C8521CD8D8C0029CF6B /* piano_d2.mp3 */,
+				EDCA453421DB80FC00778478 /* piano_cs3.mp3 */,
+				EDCA459621DB811000778478 /* piano_cs4.mp3 */,
+				EDCA44D921DB80EB00778478 /* piano_d0.mp3 */,
+				EDCA450721DB80F300778478 /* piano_d2.mp3 */,
 				ED515C7A21CD8D8A0029CF6B /* piano_d3.mp3 */,
+				EDCA45B921DB811900778478 /* piano_ds1.mp3 */,
 				ED515C7B21CD8D8A0029CF6B /* piano_ds2.mp3 */,
 				ED515C7F21CD8D8B0029CF6B /* piano_ds3.mp3 */,
+				EDCA451A21DB80F700778478 /* piano_ds2.mp3 */,
+				EDCA452421DB80F900778478 /* piano_ds3.mp3 */,
+				EDCA455521DB810300778478 /* piano_ds4.mp3 */,
+				EDCA45D821DB812200778478 /* piano_e0.mp3 */,
+				EDCA45E421DB812600778478 /* piano_e1.mp3 */,
 				ED515C8821CD8D8C0029CF6B /* piano_e2.mp3 */,
 				ED515C8121CD8D8B0029CF6B /* piano_e3.mp3 */,
 				ED515C7921CD8D8A0029CF6B /* piano_f2.mp3 */,
+				EDCA45E121DB812500778478 /* piano_f0.mp3 */,
+				EDCA457A21DB810A00778478 /* piano_f1.mp3 */,
+				EDCA45A221DB811300778478 /* piano_f2.mp3 */,
 				ED515C7C21CD8D8A0029CF6B /* piano_f3.mp3 */,
 				ED515C8921CD8D8C0029CF6B /* piano_fs2.mp3 */,
+				EDCA45CB21DB811F00778478 /* piano_fs2.mp3 */,
 				ED515C8421CD8D8B0029CF6B /* piano_fs3.mp3 */,
 				ED515C8E21CD8D8D0029CF6B /* piano_g2.mp3 */,
+				EDCA459A21DB811100778478 /* piano_g2.mp3 */,
 				ED515C8D21CD8D8D0029CF6B /* piano_g3.mp3 */,
 				ED515C8321CD8D8B0029CF6B /* piano_gs2.mp3 */,
+				EDCA456821DB810600778478 /* piano_gs1.mp3 */,
+				EDCA45BD21DB811B00778478 /* piano_gs2.mp3 */,
 				ED515C7821CD8D8A0029CF6B /* piano_gs3.mp3 */,
+				EDCA456521DB810600778478 /* epiano_a0.mp3 */,
+				EDCA44B321DB80E200778478 /* epiano_a1.mp3 */,
+				EDCA44E621DB80ED00778478 /* epiano_a2.mp3 */,
+				EDCA44FA21DB80F100778478 /* epiano_a3.mp3 */,
+				EDCA44C521DB80E600778478 /* epiano_a4.mp3 */,
+				EDCA45F821DB812C00778478 /* epiano_as0.mp3 */,
+				EDCA456C21DB810700778478 /* epiano_as1.mp3 */,
+				EDCA45D121DB812100778478 /* epiano_as2.mp3 */,
+				EDCA44AC21DB80E000778478 /* epiano_as3.mp3 */,
+				EDCA450921DB80F400778478 /* epiano_as4.mp3 */,
+				EDCA44AA21DB80DF00778478 /* epiano_b0.mp3 */,
+				EDCA451B21DB80F700778478 /* epiano_b1.mp3 */,
+				EDCA456A21DB810700778478 /* epiano_b2.mp3 */,
+				EDCA459F21DB811200778478 /* epiano_b3.mp3 */,
+				EDCA451121DB80F500778478 /* epiano_b4.mp3 */,
+				EDCA45BE21DB811B00778478 /* epiano_c0.mp3 */,
+				EDCA44EA21DB80EE00778478 /* epiano_c1.mp3 */,
+				EDCA458621DB810C00778478 /* epiano_c2.mp3 */,
+				EDCA44F321DB80F000778478 /* epiano_c3.mp3 */,
+				EDCA459721DB811000778478 /* epiano_c4.mp3 */,
+				EDCA458C21DB810E00778478 /* epiano_cs0.mp3 */,
+				EDCA459E21DB811200778478 /* epiano_cs1.mp3 */,
+				EDCA44D021DB80E900778478 /* epiano_cs2.mp3 */,
+				EDCA452821DB80FA00778478 /* epiano_cs3.mp3 */,
+				EDCA45C521DB811D00778478 /* epiano_cs4.mp3 */,
+				EDCA45BB21DB811A00778478 /* epiano_d0.mp3 */,
+				EDCA45FD21DB812D00778478 /* epiano_d1.mp3 */,
+				EDCA454421DB80FF00778478 /* epiano_d2.mp3 */,
+				EDCA44CF21DB80E900778478 /* epiano_d3.mp3 */,
+				EDCA44FB21DB80F100778478 /* epiano_d4.mp3 */,
+				EDCA457F21DB810B00778478 /* epiano_ds0.mp3 */,
+				EDCA455921DB810300778478 /* epiano_ds1.mp3 */,
+				EDCA450B21DB80F400778478 /* epiano_ds2.mp3 */,
+				EDCA44F221DB80EF00778478 /* epiano_ds3.mp3 */,
+				EDCA457E21DB810B00778478 /* epiano_ds4.mp3 */,
+				EDCA455121DB810200778478 /* epiano_e0.mp3 */,
+				EDCA45AC21DB811600778478 /* epiano_e1.mp3 */,
+				EDCA452E21DB80FB00778478 /* epiano_e2.mp3 */,
+				EDCA453E21DB80FE00778478 /* epiano_e3.mp3 */,
+				EDCA453521DB80FC00778478 /* epiano_e4.mp3 */,
+				EDCA455221DB810200778478 /* epiano_f0.mp3 */,
+				EDCA45D621DB812200778478 /* epiano_f1.mp3 */,
+				EDCA45C321DB811C00778478 /* epiano_f2.mp3 */,
+				EDCA44C921DB80E700778478 /* epiano_f3.mp3 */,
+				EDCA45DA21DB812300778478 /* epiano_f4.mp3 */,
+				EDCA449621DB80DA00778478 /* epiano_fs0.mp3 */,
+				EDCA455D21DB810400778478 /* epiano_fs1.mp3 */,
+				EDCA44F821DB80F100778478 /* epiano_fs2.mp3 */,
+				EDCA451C21DB80F700778478 /* epiano_fs3.mp3 */,
+				EDCA45F421DB812B00778478 /* epiano_fs4.mp3 */,
+				EDCA45E821DB812700778478 /* epiano_g0.mp3 */,
+				EDCA451021DB80F500778478 /* epiano_g1.mp3 */,
+				EDCA45E521DB812600778478 /* epiano_g2.mp3 */,
+				EDCA45DF21DB812400778478 /* epiano_g3.mp3 */,
+				EDCA45EF21DB812900778478 /* epiano_g4.mp3 */,
+				EDCA455A21DB810400778478 /* epiano_gs0.mp3 */,
+				EDCA45A521DB811400778478 /* epiano_gs1.mp3 */,
+				EDCA45C621DB811D00778478 /* epiano_gs2.mp3 */,
+				EDCA450321DB80F300778478 /* epiano_gs3.mp3 */,
+				EDCA45D721DB812200778478 /* epiano_gs4.mp3 */,
+				EDCA458121DB810B00778478 /* epiano-60.mp3 */,
+				EDCA449821DB80DA00778478 /* piano_a0.mp3 */,
+				EDCA44C321DB80E600778478 /* piano_b2.mp3 */,
+				EDCA458221DB810C00778478 /* piano_b3.mp3 */,
+				EDCA454C21DB810100778478 /* piano_b4.mp3 */,
+				EDCA453C21DB80FE00778478 /* piano_c0.mp3 */,
+				EDCA44DA21DB80EB00778478 /* piano_c1.mp3 */,
+				EDCA44E021DB80EC00778478 /* piano_c3.mp3 */,
+				EDCA45E721DB812700778478 /* piano_c4.mp3 */,
+				EDCA44B421DB80E200778478 /* piano_cs0.mp3 */,
+				EDCA44B721DB80E300778478 /* piano_cs2.mp3 */,
+				EDCA44BD21DB80E400778478 /* piano_d3.mp3 */,
+				EDCA454B21DB810100778478 /* piano_d4.mp3 */,
+				EDCA450421DB80F300778478 /* piano_ds0.mp3 */,
+				EDCA450C21DB80F400778478 /* piano_e2.mp3 */,
+				EDCA455021DB810200778478 /* piano_e3.mp3 */,
+				EDCA44E121DB80EC00778478 /* piano_e4.mp3 */,
+				EDCA457321DB810900778478 /* piano_f3.mp3 */,
+				EDCA44FC21DB80F100778478 /* piano_f4.mp3 */,
+				EDCA449521DB80D900778478 /* piano_fs0.mp3 */,
+				EDCA455621DB810300778478 /* piano_fs1.mp3 */,
+				EDCA45C221DB811C00778478 /* piano_fs3.mp3 */,
+				EDCA44F621DB80F000778478 /* piano_fs4.mp3 */,
+				EDCA45A421DB811300778478 /* piano_g0.mp3 */,
+				EDCA44DF21DB80EC00778478 /* piano_g1.mp3 */,
+				EDCA451221DB80F600778478 /* piano_g3.mp3 */,
+				EDCA45E221DB812500778478 /* piano_g4.mp3 */,
+				EDCA44AD21DB80E000778478 /* piano_gs0.mp3 */,
+				EDCA453F21DB80FE00778478 /* piano_gs3.mp3 */,
+				EDCA44D721DB80EA00778478 /* piano_gs4.mp3 */,
+				EDCA449E21DB80DC00778478 /* piano-60.mp3 */,
+				EDCA455421DB810200778478 /* sqwave_a0.mp3 */,
+				EDCA458F21DB810E00778478 /* sqwave_a1.mp3 */,
+				EDCA451821DB80F700778478 /* sqwave_a2.mp3 */,
+				EDCA457221DB810800778478 /* sqwave_a3.mp3 */,
+				EDCA45ED21DB812900778478 /* sqwave_a4.mp3 */,
+				EDCA453621DB80FC00778478 /* sqwave_as0.mp3 */,
+				EDCA44B921DB80E300778478 /* sqwave_as1.mp3 */,
+				EDCA452221DB80F900778478 /* sqwave_as2.mp3 */,
+				EDCA44EF21DB80EF00778478 /* sqwave_as3.mp3 */,
+				EDCA454F21DB810100778478 /* sqwave_as4.mp3 */,
+				EDCA457421DB810900778478 /* sqwave_b0.mp3 */,
+				EDCA45FC21DB812D00778478 /* sqwave_b1.mp3 */,
+				EDCA452921DB80FA00778478 /* sqwave_b2.mp3 */,
+				EDCA45F621DB812B00778478 /* sqwave_b3.mp3 */,
+				EDCA44B021DB80E100778478 /* sqwave_b4.mp3 */,
+				EDCA44AB21DB80DF00778478 /* sqwave_c0.mp3 */,
+				EDCA44CB21DB80E800778478 /* sqwave_c1.mp3 */,
+				EDCA450521DB80F300778478 /* sqwave_c2.mp3 */,
+				EDCA44E321DB80ED00778478 /* sqwave_c3.mp3 */,
+				EDCA457721DB810900778478 /* sqwave_c4.mp3 */,
+				EDCA44DC21DB80EB00778478 /* sqwave_cs0.mp3 */,
+				EDCA457521DB810900778478 /* sqwave_cs1.mp3 */,
+				EDCA45B521DB811800778478 /* sqwave_cs2.mp3 */,
+				EDCA451421DB80F600778478 /* sqwave_cs3.mp3 */,
+				EDCA44FD21DB80F100778478 /* sqwave_cs4.mp3 */,
+				EDCA453D21DB80FE00778478 /* sqwave_d0.mp3 */,
+				EDCA456D21DB810700778478 /* sqwave_d1.mp3 */,
+				EDCA457121DB810800778478 /* sqwave_d2.mp3 */,
+				EDCA451521DB80F600778478 /* sqwave_d3.mp3 */,
+				EDCA453121DB80FC00778478 /* sqwave_d4.mp3 */,
+				EDCA45F021DB812A00778478 /* sqwave_ds0.mp3 */,
+				EDCA45CC21DB811F00778478 /* sqwave_ds1.mp3 */,
+				EDCA45BA21DB811A00778478 /* sqwave_ds2.mp3 */,
+				EDCA450821DB80F400778478 /* sqwave_ds3.mp3 */,
+				EDCA45AD21DB811600778478 /* sqwave_ds4.mp3 */,
+				EDCA45D921DB812200778478 /* sqwave_e0.mp3 */,
+				EDCA450121DB80F200778478 /* sqwave_e1.mp3 */,
+				EDCA454A21DB810000778478 /* sqwave_e2.mp3 */,
+				EDCA452C21DB80FB00778478 /* sqwave_e3.mp3 */,
+				EDCA45C021DB811C00778478 /* sqwave_e4.mp3 */,
+				EDCA455321DB810200778478 /* sqwave_f0.mp3 */,
+				EDCA44E421DB80ED00778478 /* sqwave_f1.mp3 */,
+				EDCA44D321DB80EA00778478 /* sqwave_f2.mp3 */,
+				EDCA453A21DB80FD00778478 /* sqwave_f3.mp3 */,
+				EDCA451621DB80F600778478 /* sqwave_f4.mp3 */,
+				EDCA44BA21DB80E300778478 /* sqwave_fs0.mp3 */,
+				EDCA44BB21DB80E400778478 /* sqwave_fs1.mp3 */,
+				EDCA45F521DB812B00778478 /* sqwave_fs2.mp3 */,
+				EDCA452721DB80FA00778478 /* sqwave_fs3.mp3 */,
+				EDCA45BF21DB811B00778478 /* sqwave_fs4.mp3 */,
+				EDCA452A21DB80FA00778478 /* sqwave_g0.mp3 */,
+				EDCA44A421DB80DD00778478 /* sqwave_g1.mp3 */,
+				EDCA44CC21DB80E800778478 /* sqwave_g2.mp3 */,
+				EDCA45C721DB811E00778478 /* sqwave_g3.mp3 */,
+				EDCA455721DB810300778478 /* sqwave_g4.mp3 */,
+				EDCA45E321DB812600778478 /* sqwave_gs0.mp3 */,
+				EDCA449921DB80DB00778478 /* sqwave_gs1.mp3 */,
+				EDCA44CE21DB80E800778478 /* sqwave_gs2.mp3 */,
+				EDCA454D21DB810100778478 /* sqwave_gs3.mp3 */,
+				EDCA44FE21DB80F200778478 /* sqwave_gs4.mp3 */,
+				EDCA45A721DB811400778478 /* sqwave-60.mp3 */,
+				EDCA450A21DB80F400778478 /* stings_c0.mp3 */,
+				EDCA44B521DB80E200778478 /* strings_a0.mp3 */,
+				EDCA45C121DB811C00778478 /* strings_a1.mp3 */,
+				EDCA454721DB810000778478 /* strings_a2.mp3 */,
+				EDCA45C821DB811E00778478 /* strings_a3.mp3 */,
+				EDCA456921DB810700778478 /* strings_a4.mp3 */,
+				EDCA456B21DB810700778478 /* strings_as0.mp3 */,
+				EDCA45C921DB811E00778478 /* strings_as1.mp3 */,
+				EDCA454821DB810000778478 /* strings_as2.mp3 */,
+				EDCA44C621DB80E700778478 /* strings_as3.mp3 */,
+				EDCA45A621DB811400778478 /* strings_as4.mp3 */,
+				EDCA455821DB810300778478 /* strings_b0.mp3 */,
+				EDCA455B21DB810400778478 /* strings_b1.mp3 */,
+				EDCA45DC21DB812300778478 /* strings_b2.mp3 */,
+				EDCA44D121DB80E900778478 /* strings_b3.mp3 */,
+				EDCA458B21DB810D00778478 /* strings_b4.mp3 */,
+				EDCA458821DB810D00778478 /* strings_c1.mp3 */,
+				EDCA45F121DB812A00778478 /* strings_c2.mp3 */,
+				EDCA45D221DB812100778478 /* strings_c3.mp3 */,
+				EDCA44C721DB80E700778478 /* strings_c4.mp3 */,
+				EDCA452D21DB80FB00778478 /* strings_cs0.mp3 */,
+				EDCA454221DB80FF00778478 /* strings_cs1.mp3 */,
+				EDCA459121DB810F00778478 /* strings_cs2.mp3 */,
+				EDCA459B21DB811100778478 /* strings_cs3.mp3 */,
+				EDCA453221DB80FC00778478 /* strings_cs4.mp3 */,
+				EDCA457621DB810900778478 /* strings_d0.mp3 */,
+				EDCA450D21DB80F500778478 /* strings_d1.mp3 */,
+				EDCA45DD21DB812400778478 /* strings_d2.mp3 */,
+				EDCA457021DB810800778478 /* strings_d3.mp3 */,
+				EDCA44C821DB80E700778478 /* strings_d4.mp3 */,
+				EDCA458921DB810D00778478 /* strings_ds0.mp3 */,
+				EDCA44EB21DB80EE00778478 /* strings_ds1.mp3 */,
+				EDCA44D221DB80E900778478 /* strings_ds2.mp3 */,
+				EDCA455F21DB810500778478 /* strings_ds3.mp3 */,
+				EDCA45AA21DB811500778478 /* strings_ds4.mp3 */,
+				EDCA44AE21DB80E000778478 /* strings_e0.mp3 */,
+				EDCA458421DB810C00778478 /* strings_e1.mp3 */,
+				EDCA455C21DB810400778478 /* strings_e2.mp3 */,
+				EDCA44F521DB80F000778478 /* strings_e3.mp3 */,
+				EDCA451E21DB80F800778478 /* strings_e4.mp3 */,
+				EDCA452321DB80F900778478 /* strings_f0.mp3 */,
+				EDCA44A521DB80DD00778478 /* strings_f1.mp3 */,
+				EDCA451F21DB80F800778478 /* strings_f2.mp3 */,
+				EDCA459521DB810F00778478 /* strings_f3.mp3 */,
+				EDCA44A321DB80DD00778478 /* strings_f4.mp3 */,
+				EDCA45EE21DB812900778478 /* strings_fs0.mp3 */,
+				EDCA451D21DB80F800778478 /* strings_fs1.mp3 */,
+				EDCA449721DB80DA00778478 /* strings_fs2.mp3 */,
+				EDCA454621DB810000778478 /* strings_fs3.mp3 */,
+				EDCA44BC21DB80E400778478 /* strings_fs4.mp3 */,
+				EDCA44BE21DB80E400778478 /* strings_g0.mp3 */,
+				EDCA44B621DB80E200778478 /* strings_g1.mp3 */,
+				EDCA45CF21DB812000778478 /* strings_g2.mp3 */,
+				EDCA453321DB80FC00778478 /* strings_g3.mp3 */,
+				EDCA456621DB810600778478 /* strings_g4.mp3 */,
+				EDCA44B221DB80E100778478 /* strings_gs0.mp3 */,
+				EDCA449F21DB80DC00778478 /* strings_gs1.mp3 */,
+				EDCA457C21DB810A00778478 /* strings_gs2.mp3 */,
+				EDCA44EE21DB80EF00778478 /* strings_gs3.mp3 */,
+				EDCA45B621DB811800778478 /* strings_gs4.mp3 */,
+				EDCA45A821DB811400778478 /* strings-60.mp3 */,
+				EDCA450F21DB80F500778478 /* synth_a0.mp3 */,
+				EDCA45B421DB811800778478 /* synth_a1.mp3 */,
+				EDCA45E021DB812500778478 /* synth_a2.mp3 */,
+				EDCA44C021DB80E500778478 /* synth_a3.mp3 */,
+				EDCA457921DB810A00778478 /* synth_a4.mp3 */,
+				EDCA450E21DB80F500778478 /* synth_as0.mp3 */,
+				EDCA45F921DB812C00778478 /* synth_as1.mp3 */,
+				EDCA45AF21DB811600778478 /* synth_as2.mp3 */,
+				EDCA45B021DB811700778478 /* synth_as3.mp3 */,
+				EDCA44D421DB80EA00778478 /* synth_as4.mp3 */,
+				EDCA45A321DB811300778478 /* synth_b0.mp3 */,
+				EDCA44E221DB80ED00778478 /* synth_b1.mp3 */,
+				EDCA454521DB80FF00778478 /* synth_b2.mp3 */,
+				EDCA458A21DB810D00778478 /* synth_b3.mp3 */,
+				EDCA454021DB80FE00778478 /* synth_b4.mp3 */,
+				EDCA45B121DB811700778478 /* synth_c0.mp3 */,
+				EDCA44E921DB80EE00778478 /* synth_c1.mp3 */,
+				EDCA453021DB80FB00778478 /* synth_c2.mp3 */,
+				EDCA44A621DB80DE00778478 /* synth_c3.mp3 */,
+				EDCA45EA21DB812800778478 /* synth_c4.mp3 */,
+				EDCA44D521DB80EA00778478 /* synth_cs0.mp3 */,
+				EDCA45CA21DB811E00778478 /* synth_cs1.mp3 */,
+				EDCA450021DB80F200778478 /* synth_cs2.mp3 */,
+				EDCA456421DB810600778478 /* synth_cs3.mp3 */,
+				EDCA45F221DB812A00778478 /* synth_cs4.mp3 */,
+				EDCA45FF21DB812E00778478 /* synth_d0.mp3 */,
+				EDCA45BC21DB811A00778478 /* synth_d1.mp3 */,
+				EDCA458321DB810C00778478 /* synth_d2.mp3 */,
+				EDCA446821DB80D900778478 /* synth_d3.mp3 */,
+				EDCA459C21DB811100778478 /* synth_d4.mp3 */,
+				EDCA44C121DB80E500778478 /* synth_ds0.mp3 */,
+				EDCA44E821DB80EE00778478 /* synth_ds1.mp3 */,
+				EDCA45CD21DB811F00778478 /* synth_ds2.mp3 */,
+				EDCA454321DB80FF00778478 /* synth_ds3.mp3 */,
+				EDCA44A021DB80DC00778478 /* synth_ds4.mp3 */,
+				EDCA45EB21DB812800778478 /* synth_e0.mp3 */,
+				EDCA452521DB80F900778478 /* synth_e1.mp3 */,
+				EDCA459D21DB811100778478 /* synth_e2.mp3 */,
+				EDCA44C221DB80E600778478 /* synth_e3.mp3 */,
+				EDCA449C21DB80DB00778478 /* synth_e4.mp3 */,
+				EDCA456F21DB810800778478 /* synth_f0.mp3 */,
+				EDCA455E21DB810400778478 /* synth_f1.mp3 */,
+				EDCA458021DB810B00778478 /* synth_f2.mp3 */,
+				EDCA45D321DB812100778478 /* synth_f3.mp3 */,
+				EDCA45F321DB812A00778478 /* synth_f4.mp3 */,
+				EDCA44DB21DB80EB00778478 /* synth_fs0.mp3 */,
+				EDCA44AF21DB80E100778478 /* synth_fs1.mp3 */,
+				EDCA44F021DB80EF00778478 /* synth_fs2.mp3 */,
+				EDCA456E21DB810800778478 /* synth_fs3.mp3 */,
+				EDCA44F921DB80F100778478 /* synth_fs4.mp3 */,
+				EDCA454921DB810000778478 /* synth_g0.mp3 */,
+				EDCA460021DB812E00778478 /* synth_g1.mp3 */,
+				EDCA44C421DB80E600778478 /* synth_g2.mp3 */,
+				EDCA44A721DB80DE00778478 /* synth_g3.mp3 */,
+				EDCA457821DB810A00778478 /* synth_g4.mp3 */,
+				EDCA453B21DB80FD00778478 /* synth_gs0.mp3 */,
+				EDCA44BF21DB80E500778478 /* synth_gs1.mp3 */,
+				EDCA459321DB810F00778478 /* synth_gs2.mp3 */,
+				EDCA44DD21DB80EC00778478 /* synth_gs3.mp3 */,
+				EDCA45D021DB812000778478 /* synth_gs4.mp3 */,
+				EDCA45E921DB812700778478 /* synth-60.mp3 */,
+				EDCA449A21DB80DB00778478 /* synthtrumpet_a0.mp3 */,
+				EDCA452021DB80F800778478 /* synthtrumpet_a1.mp3 */,
+				EDCA45DE21DB812400778478 /* synthtrumpet_a2.mp3 */,
+				EDCA454E21DB810100778478 /* synthtrumpet_a3.mp3 */,
+				EDCA44FF21DB80F200778478 /* synthtrumpet_a4.mp3 */,
+				EDCA45B321DB811800778478 /* synthtrumpet_as0.mp3 */,
+				EDCA450221DB80F200778478 /* synthtrumpet_as1.mp3 */,
+				EDCA452121DB80F800778478 /* synthtrumpet_as2.mp3 */,
+				EDCA44EC21DB80EE00778478 /* synthtrumpet_as3.mp3 */,
+				EDCA451721DB80F600778478 /* synthtrumpet_as4.mp3 */,
+				EDCA45B821DB811900778478 /* synthtrumpet_b0.mp3 */,
+				EDCA449B21DB80DB00778478 /* synthtrumpet_b1.mp3 */,
+				EDCA459221DB810F00778478 /* synthtrumpet_b2.mp3 */,
+				EDCA456721DB810600778478 /* synthtrumpet_b3.mp3 */,
+				EDCA45A021DB811200778478 /* synthtrumpet_b4.mp3 */,
+				EDCA458521DB810C00778478 /* synthtrumpet_c0.mp3 */,
+				EDCA452B21DB80FA00778478 /* synthtrumpet_c1.mp3 */,
+				EDCA45D421DB812100778478 /* synthtrumpet_c2.mp3 */,
+				EDCA453721DB80FD00778478 /* synthtrumpet_c3.mp3 */,
+				EDCA453821DB80FD00778478 /* synthtrumpet_c4.mp3 */,
+				EDCA45D521DB812100778478 /* synthtrumpet_cs0.mp3 */,
+				EDCA44A821DB80DE00778478 /* synthtrumpet_cs1.mp3 */,
+				EDCA44D821DB80EB00778478 /* synthtrumpet_cs2.mp3 */,
+				EDCA45B721DB811900778478 /* synthtrumpet_cs3.mp3 */,
+				EDCA44B121DB80E100778478 /* synthtrumpet_cs4.mp3 */,
+				EDCA44A921DB80DF00778478 /* synthtrumpet_d0.mp3 */,
+				EDCA452621DB80F900778478 /* synthtrumpet_d1.mp3 */,
+				EDCA453921DB80FD00778478 /* synthtrumpet_d2.mp3 */,
+				EDCA452F21DB80FB00778478 /* synthtrumpet_d3.mp3 */,
+				EDCA45EC21DB812800778478 /* synthtrumpet_d4.mp3 */,
+				EDCA44A221DB80DD00778478 /* synthtrumpet_ds0.mp3 */,
+				EDCA45E621DB812600778478 /* synthtrumpet_ds1.mp3 */,
+				EDCA45A921DB811500778478 /* synthtrumpet_ds2.mp3 */,
+				EDCA457B21DB810A00778478 /* synthtrumpet_ds3.mp3 */,
+				EDCA45F721DB812B00778478 /* synthtrumpet_ds4.mp3 */,
+				EDCA449D21DB80DB00778478 /* synthtrumpet_e0.mp3 */,
+				EDCA45AB21DB811500778478 /* synthtrumpet_e1.mp3 */,
+				EDCA45C421DB811D00778478 /* synthtrumpet_e2.mp3 */,
+				EDCA45FB21DB812D00778478 /* synthtrumpet_e3.mp3 */,
+				EDCA45FA21DB812C00778478 /* synthtrumpet_e4.mp3 */,
+				EDCA456021DB810500778478 /* synthtrumpet_f0.mp3 */,
+				EDCA460121DB812E00778478 /* synthtrumpet_f1.mp3 */,
+				EDCA451321DB80F600778478 /* synthtrumpet_f2.mp3 */,
+				EDCA44A121DB80DC00778478 /* synthtrumpet_f3.mp3 */,
+				EDCA454121DB80FF00778478 /* synthtrumpet_f4.mp3 */,
+				EDCA456321DB810500778478 /* synthtrumpet_fs0.mp3 */,
+				EDCA457D21DB810B00778478 /* synthtrumpet_fs1.mp3 */,
+				EDCA44E521DB80ED00778478 /* synthtrumpet_fs2.mp3 */,
+				EDCA456121DB810500778478 /* synthtrumpet_fs3.mp3 */,
+				EDCA45CE21DB812000778478 /* synthtrumpet_fs4.mp3 */,
+				EDCA451921DB80F700778478 /* synthtrumpet_g0.mp3 */,
+				EDCA458721DB810D00778478 /* synthtrumpet_g1.mp3 */,
+				EDCA44F421DB80F000778478 /* synthtrumpet_g2.mp3 */,
+				EDCA456221DB810500778478 /* synthtrumpet_g3.mp3 */,
+				EDCA45AE21DB811600778478 /* synthtrumpet_g4.mp3 */,
+				EDCA44ED21DB80EF00778478 /* synthtrumpet_gs0.mp3 */,
+				EDCA44F121DB80EF00778478 /* synthtrumpet_gs1.mp3 */,
+				EDCA44B821DB80E300778478 /* synthtrumpet_gs2.mp3 */,
+				EDCA44CD21DB80E800778478 /* synthtrumpet_gs3.mp3 */,
+				EDCA44D621DB80EA00778478 /* synthtrumpet_gs4.mp3 */,
+				EDCA44DE21DB80EC00778478 /* synthtrumpet-60.mp3 */,
 				13B07FAE1A68108700A75B9A /* firstpitch */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* firstpitchTests */,
@@ -1381,31 +2454,372 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ED515C9121CD8D8D0029CF6B /* piano_gs3.mp3 in Resources */,
-				ED515C9221CD8D8D0029CF6B /* piano_f2.mp3 in Resources */,
-				ED515C9321CD8D8D0029CF6B /* piano_d3.mp3 in Resources */,
-				ED515C9421CD8D8D0029CF6B /* piano_ds2.mp3 in Resources */,
-				ED515C9521CD8D8D0029CF6B /* piano_f3.mp3 in Resources */,
-				ED515C9621CD8D8D0029CF6B /* piano_b2.mp3 in Resources */,
-				ED515C9721CD8D8D0029CF6B /* piano_a2.mp3 in Resources */,
-				ED515C9821CD8D8D0029CF6B /* piano_ds3.mp3 in Resources */,
-				ED515C9921CD8D8D0029CF6B /* piano_c4.mp3 in Resources */,
-				ED515C9A21CD8D8D0029CF6B /* piano_e3.mp3 in Resources */,
-				ED515C9B21CD8D8D0029CF6B /* piano_b3.mp3 in Resources */,
-				ED515C9C21CD8D8D0029CF6B /* piano_gs2.mp3 in Resources */,
-				ED515C9D21CD8D8D0029CF6B /* piano_fs3.mp3 in Resources */,
-				ED515C9E21CD8D8D0029CF6B /* piano_d2.mp3 in Resources */,
-				ED515C9F21CD8D8D0029CF6B /* piano_cs3.mp3 in Resources */,
-				ED515CA021CD8D8D0029CF6B /* piano_as2.mp3 in Resources */,
-				ED515CA121CD8D8D0029CF6B /* piano_e2.mp3 in Resources */,
-				ED515CA221CD8D8D0029CF6B /* piano_fs2.mp3 in Resources */,
-				ED515CA321CD8D8D0029CF6B /* piano_as3.mp3 in Resources */,
-				ED515CA421CD8D8D0029CF6B /* piano_c3.mp3 in Resources */,
-				ED515CA521CD8D8D0029CF6B /* piano_a3.mp3 in Resources */,
-				ED515CA621CD8D8D0029CF6B /* piano_g3.mp3 in Resources */,
-				ED515CA721CD8D8D0029CF6B /* piano_g2.mp3 in Resources */,
-				ED515CA821CD8D8D0029CF6B /* piano_c2.mp3 in Resources */,
+				EDCA460221DB812F00778478 /* synth_d3.mp3 in Resources */,
+				EDCA460321DB812F00778478 /* piano_fs0.mp3 in Resources */,
+				EDCA460421DB812F00778478 /* epiano_fs0.mp3 in Resources */,
+				EDCA460521DB812F00778478 /* strings_fs2.mp3 in Resources */,
+				EDCA460621DB812F00778478 /* piano_a0.mp3 in Resources */,
+				EDCA460721DB812F00778478 /* sqwave_gs1.mp3 in Resources */,
+				EDCA460821DB812F00778478 /* synthtrumpet_a0.mp3 in Resources */,
+				EDCA460921DB812F00778478 /* synthtrumpet_b1.mp3 in Resources */,
+				EDCA460A21DB812F00778478 /* synth_e4.mp3 in Resources */,
+				EDCA460B21DB812F00778478 /* synthtrumpet_e0.mp3 in Resources */,
+				EDCA460C21DB812F00778478 /* piano-60.mp3 in Resources */,
+				EDCA460D21DB812F00778478 /* strings_gs1.mp3 in Resources */,
+				EDCA460E21DB812F00778478 /* synth_ds4.mp3 in Resources */,
+				EDCA460F21DB812F00778478 /* synthtrumpet_f3.mp3 in Resources */,
+				EDCA461021DB812F00778478 /* synthtrumpet_ds0.mp3 in Resources */,
+				EDCA461121DB812F00778478 /* strings_f4.mp3 in Resources */,
+				EDCA461221DB812F00778478 /* sqwave_g1.mp3 in Resources */,
+				EDCA461321DB812F00778478 /* strings_f1.mp3 in Resources */,
+				EDCA461421DB812F00778478 /* synth_c3.mp3 in Resources */,
+				EDCA461521DB812F00778478 /* synth_g3.mp3 in Resources */,
+				EDCA461621DB812F00778478 /* synthtrumpet_cs1.mp3 in Resources */,
+				EDCA461721DB812F00778478 /* synthtrumpet_d0.mp3 in Resources */,
+				EDCA461821DB812F00778478 /* epiano_b0.mp3 in Resources */,
+				EDCA461921DB812F00778478 /* sqwave_c0.mp3 in Resources */,
+				EDCA461A21DB812F00778478 /* epiano_as3.mp3 in Resources */,
+				EDCA461B21DB812F00778478 /* piano_gs0.mp3 in Resources */,
+				EDCA461C21DB812F00778478 /* strings_e0.mp3 in Resources */,
+				EDCA461D21DB812F00778478 /* synth_fs1.mp3 in Resources */,
+				EDCA461E21DB812F00778478 /* sqwave_b4.mp3 in Resources */,
+				EDCA461F21DB812F00778478 /* synthtrumpet_cs4.mp3 in Resources */,
+				EDCA462021DB812F00778478 /* strings_gs0.mp3 in Resources */,
+				EDCA462121DB812F00778478 /* epiano_a1.mp3 in Resources */,
+				EDCA462221DB812F00778478 /* piano_cs0.mp3 in Resources */,
+				EDCA462321DB812F00778478 /* strings_a0.mp3 in Resources */,
+				EDCA462421DB812F00778478 /* strings_g1.mp3 in Resources */,
 				ED515CA921CD8D8D0029CF6B /* piano_cs2.mp3 in Resources */,
+				EDCA462521DB812F00778478 /* synthtrumpet_gs2.mp3 in Resources */,
+				EDCA462621DB812F00778478 /* sqwave_as1.mp3 in Resources */,
+				EDCA462721DB812F00778478 /* sqwave_fs0.mp3 in Resources */,
+				EDCA462821DB812F00778478 /* sqwave_fs1.mp3 in Resources */,
+				EDCA462921DB812F00778478 /* strings_fs4.mp3 in Resources */,
+				ED515C9321CD8D8D0029CF6B /* piano_d3.mp3 in Resources */,
+				EDCA462A21DB812F00778478 /* strings_g0.mp3 in Resources */,
+				EDCA462B21DB812F00778478 /* synth_gs1.mp3 in Resources */,
+				EDCA462C21DB812F00778478 /* synth_a3.mp3 in Resources */,
+				EDCA462D21DB812F00778478 /* synth_ds0.mp3 in Resources */,
+				EDCA462E21DB812F00778478 /* synth_e3.mp3 in Resources */,
+				ED515C9621CD8D8D0029CF6B /* piano_b2.mp3 in Resources */,
+				EDCA462F21DB812F00778478 /* synth_g2.mp3 in Resources */,
+				EDCA463021DB812F00778478 /* epiano_a4.mp3 in Resources */,
+				EDCA463121DB812F00778478 /* strings_as3.mp3 in Resources */,
+				EDCA463221DB812F00778478 /* strings_c4.mp3 in Resources */,
+				EDCA463321DB812F00778478 /* strings_d4.mp3 in Resources */,
+				EDCA463421DB812F00778478 /* epiano_f3.mp3 in Resources */,
+				EDCA463521DB812F00778478 /* piano_b0.mp3 in Resources */,
+				EDCA463621DB812F00778478 /* sqwave_c1.mp3 in Resources */,
+				EDCA463721DB812F00778478 /* sqwave_g2.mp3 in Resources */,
+				EDCA463821DB812F00778478 /* synthtrumpet_gs3.mp3 in Resources */,
+				EDCA463921DB812F00778478 /* sqwave_gs2.mp3 in Resources */,
+				EDCA463A21DB812F00778478 /* epiano_d3.mp3 in Resources */,
+				EDCA463B21DB812F00778478 /* epiano_cs2.mp3 in Resources */,
+				EDCA463C21DB812F00778478 /* strings_b3.mp3 in Resources */,
+				EDCA463D21DB812F00778478 /* strings_ds2.mp3 in Resources */,
+				EDCA463E21DB812F00778478 /* sqwave_f2.mp3 in Resources */,
+				EDCA463F21DB812F00778478 /* synth_as4.mp3 in Resources */,
+				EDCA464021DB812F00778478 /* synth_cs0.mp3 in Resources */,
+				EDCA464121DB812F00778478 /* synthtrumpet_gs4.mp3 in Resources */,
+				EDCA464221DB812F00778478 /* piano_gs4.mp3 in Resources */,
+				EDCA464321DB812F00778478 /* synthtrumpet_cs2.mp3 in Resources */,
+				EDCA464421DB812F00778478 /* piano_d0.mp3 in Resources */,
+				EDCA464521DB812F00778478 /* piano_c1.mp3 in Resources */,
+				EDCA464621DB812F00778478 /* synth_fs0.mp3 in Resources */,
+				EDCA464721DB812F00778478 /* sqwave_cs0.mp3 in Resources */,
+				EDCA464821DB812F00778478 /* synth_gs3.mp3 in Resources */,
+				EDCA464921DB812F00778478 /* synthtrumpet-60.mp3 in Resources */,
+				EDCA464A21DB812F00778478 /* piano_g1.mp3 in Resources */,
+				ED515CA421CD8D8D0029CF6B /* piano_c3.mp3 in Resources */,
+				EDCA464B21DB812F00778478 /* piano_e4.mp3 in Resources */,
+				EDCA464C21DB812F00778478 /* synth_b1.mp3 in Resources */,
+				EDCA464D21DB812F00778478 /* sqwave_c3.mp3 in Resources */,
+				EDCA464E21DB812F00778478 /* sqwave_f1.mp3 in Resources */,
+				EDCA464F21DB812F00778478 /* synthtrumpet_fs2.mp3 in Resources */,
+				EDCA465021DB812F00778478 /* epiano_a2.mp3 in Resources */,
+				ED515CA821CD8D8D0029CF6B /* piano_c2.mp3 in Resources */,
+				EDCA465121DB812F00778478 /* synth_ds1.mp3 in Resources */,
+				EDCA465221DB812F00778478 /* synth_c1.mp3 in Resources */,
+				EDCA465321DB812F00778478 /* epiano_c1.mp3 in Resources */,
+				EDCA465421DB812F00778478 /* strings_ds1.mp3 in Resources */,
+				EDCA465521DB812F00778478 /* synthtrumpet_as3.mp3 in Resources */,
+				EDCA465621DB812F00778478 /* synthtrumpet_gs0.mp3 in Resources */,
+				EDCA465721DB812F00778478 /* strings_gs3.mp3 in Resources */,
+				EDCA465821DB812F00778478 /* sqwave_as3.mp3 in Resources */,
+				EDCA465921DB812F00778478 /* synth_fs2.mp3 in Resources */,
+				EDCA465A21DB812F00778478 /* synthtrumpet_gs1.mp3 in Resources */,
+				EDCA465B21DB812F00778478 /* epiano_ds3.mp3 in Resources */,
+				EDCA465C21DB812F00778478 /* epiano_c3.mp3 in Resources */,
+				EDCA465D21DB812F00778478 /* synthtrumpet_g2.mp3 in Resources */,
+				EDCA465E21DB812F00778478 /* strings_e3.mp3 in Resources */,
+				EDCA465F21DB812F00778478 /* piano_fs4.mp3 in Resources */,
+				EDCA466021DB812F00778478 /* piano_a4.mp3 in Resources */,
+				EDCA466121DB812F00778478 /* epiano_fs2.mp3 in Resources */,
+				EDCA466221DB812F00778478 /* synth_fs4.mp3 in Resources */,
+				EDCA466321DB812F00778478 /* epiano_a3.mp3 in Resources */,
+				EDCA466421DB812F00778478 /* epiano_d4.mp3 in Resources */,
+				EDCA466521DB812F00778478 /* piano_f4.mp3 in Resources */,
+				EDCA466621DB812F00778478 /* sqwave_cs4.mp3 in Resources */,
+				EDCA466721DB812F00778478 /* sqwave_gs4.mp3 in Resources */,
+				EDCA466821DB812F00778478 /* synthtrumpet_a4.mp3 in Resources */,
+				EDCA466921DB812F00778478 /* synth_cs2.mp3 in Resources */,
+				EDCA466A21DB812F00778478 /* sqwave_e1.mp3 in Resources */,
+				EDCA466B21DB812F00778478 /* synthtrumpet_as1.mp3 in Resources */,
+				EDCA466C21DB812F00778478 /* epiano_gs3.mp3 in Resources */,
+				EDCA466D21DB812F00778478 /* piano_ds0.mp3 in Resources */,
+				EDCA466E21DB812F00778478 /* sqwave_c2.mp3 in Resources */,
+				EDCA466F21DB812F00778478 /* piano_cs1.mp3 in Resources */,
+				ED515C9E21CD8D8D0029CF6B /* piano_d2.mp3 in Resources */,
+				EDCA467021DB812F00778478 /* sqwave_ds3.mp3 in Resources */,
+				EDCA467121DB812F00778478 /* epiano_as4.mp3 in Resources */,
+				EDCA467221DB812F00778478 /* stings_c0.mp3 in Resources */,
+				EDCA467321DB812F00778478 /* epiano_ds2.mp3 in Resources */,
+				ED515CA121CD8D8D0029CF6B /* piano_e2.mp3 in Resources */,
+				EDCA467421DB812F00778478 /* strings_d1.mp3 in Resources */,
+				EDCA467521DB812F00778478 /* synth_as0.mp3 in Resources */,
+				EDCA467621DB812F00778478 /* synth_a0.mp3 in Resources */,
+				EDCA467721DB812F00778478 /* epiano_g1.mp3 in Resources */,
+				EDCA467821DB812F00778478 /* epiano_b4.mp3 in Resources */,
+				ED515CA621CD8D8D0029CF6B /* piano_g3.mp3 in Resources */,
+				EDCA467921DB812F00778478 /* synthtrumpet_f2.mp3 in Resources */,
+				EDCA467A21DB812F00778478 /* sqwave_cs3.mp3 in Resources */,
+				EDCA467B21DB812F00778478 /* sqwave_d3.mp3 in Resources */,
+				EDCA467C21DB812F00778478 /* sqwave_f4.mp3 in Resources */,
+				EDCA467D21DB812F00778478 /* synthtrumpet_as4.mp3 in Resources */,
+				EDCA467E21DB812F00778478 /* sqwave_a2.mp3 in Resources */,
+				EDCA467F21DB812F00778478 /* synthtrumpet_g0.mp3 in Resources */,
+				ED515C9421CD8D8D0029CF6B /* piano_ds2.mp3 in Resources */,
+				EDCA468021DB812F00778478 /* epiano_b1.mp3 in Resources */,
+				EDCA468121DB812F00778478 /* epiano_fs3.mp3 in Resources */,
+				EDCA468221DB812F00778478 /* strings_fs1.mp3 in Resources */,
+				EDCA468321DB812F00778478 /* strings_e4.mp3 in Resources */,
+				EDCA468421DB812F00778478 /* strings_f2.mp3 in Resources */,
+				EDCA468521DB812F00778478 /* synthtrumpet_a1.mp3 in Resources */,
+				EDCA468621DB812F00778478 /* synthtrumpet_as2.mp3 in Resources */,
+				EDCA468721DB812F00778478 /* sqwave_as2.mp3 in Resources */,
+				EDCA468821DB812F00778478 /* strings_f0.mp3 in Resources */,
+				ED515C9821CD8D8D0029CF6B /* piano_ds3.mp3 in Resources */,
+				EDCA468921DB812F00778478 /* synth_e1.mp3 in Resources */,
+				EDCA468A21DB812F00778478 /* synthtrumpet_d1.mp3 in Resources */,
+				EDCA468B21DB812F00778478 /* sqwave_fs3.mp3 in Resources */,
+				EDCA468C21DB812F00778478 /* epiano_cs3.mp3 in Resources */,
+				EDCA468D21DB812F00778478 /* sqwave_b2.mp3 in Resources */,
+				EDCA468E21DB812F00778478 /* sqwave_g0.mp3 in Resources */,
+				EDCA468F21DB812F00778478 /* synthtrumpet_c1.mp3 in Resources */,
+				EDCA469021DB812F00778478 /* sqwave_e3.mp3 in Resources */,
+				EDCA469121DB812F00778478 /* strings_cs0.mp3 in Resources */,
+				EDCA469221DB812F00778478 /* epiano_e2.mp3 in Resources */,
+				EDCA469321DB812F00778478 /* synthtrumpet_d3.mp3 in Resources */,
+				EDCA469421DB812F00778478 /* synth_c2.mp3 in Resources */,
+				EDCA469521DB812F00778478 /* sqwave_d4.mp3 in Resources */,
+				EDCA469621DB812F00778478 /* strings_cs4.mp3 in Resources */,
+				EDCA469721DB812F00778478 /* strings_g3.mp3 in Resources */,
+				ED515C9F21CD8D8D0029CF6B /* piano_cs3.mp3 in Resources */,
+				EDCA469821DB812F00778478 /* epiano_e4.mp3 in Resources */,
+				EDCA469921DB812F00778478 /* sqwave_as0.mp3 in Resources */,
+				EDCA469A21DB812F00778478 /* synthtrumpet_c3.mp3 in Resources */,
+				EDCA469B21DB812F00778478 /* synthtrumpet_c4.mp3 in Resources */,
+				EDCA469C21DB812F00778478 /* synthtrumpet_d2.mp3 in Resources */,
+				EDCA469D21DB812F00778478 /* sqwave_f3.mp3 in Resources */,
+				EDCA469E21DB812F00778478 /* synth_gs0.mp3 in Resources */,
+				EDCA469F21DB812F00778478 /* piano_c0.mp3 in Resources */,
+				EDCA46A021DB812F00778478 /* sqwave_d0.mp3 in Resources */,
+				EDCA46A121DB812F00778478 /* epiano_e3.mp3 in Resources */,
+				ED515C9121CD8D8D0029CF6B /* piano_gs3.mp3 in Resources */,
+				EDCA46A221DB812F00778478 /* synth_b4.mp3 in Resources */,
+				EDCA46A321DB812F00778478 /* synthtrumpet_f4.mp3 in Resources */,
+				EDCA46A421DB812F00778478 /* strings_cs1.mp3 in Resources */,
+				EDCA46A521DB812F00778478 /* synth_ds3.mp3 in Resources */,
+				EDCA46A621DB812F00778478 /* epiano_d2.mp3 in Resources */,
+				EDCA46A721DB812F00778478 /* synth_b2.mp3 in Resources */,
+				EDCA46A821DB812F00778478 /* strings_fs3.mp3 in Resources */,
+				EDCA46A921DB812F00778478 /* strings_a2.mp3 in Resources */,
+				EDCA46AA21DB812F00778478 /* strings_as2.mp3 in Resources */,
+				EDCA46AB21DB812F00778478 /* synth_g0.mp3 in Resources */,
+				EDCA46AC21DB812F00778478 /* sqwave_e2.mp3 in Resources */,
+				EDCA46AD21DB812F00778478 /* piano_d4.mp3 in Resources */,
+				EDCA46AE21DB812F00778478 /* piano_b4.mp3 in Resources */,
+				EDCA46AF21DB812F00778478 /* sqwave_gs3.mp3 in Resources */,
+				EDCA46B021DB812F00778478 /* synthtrumpet_a3.mp3 in Resources */,
+				EDCA46B121DB812F00778478 /* sqwave_as4.mp3 in Resources */,
+				ED515C9A21CD8D8D0029CF6B /* piano_e3.mp3 in Resources */,
+				EDCA46B221DB812F00778478 /* epiano_e0.mp3 in Resources */,
+				EDCA46B321DB812F00778478 /* epiano_f0.mp3 in Resources */,
+				EDCA46B421DB812F00778478 /* sqwave_f0.mp3 in Resources */,
+				EDCA46B521DB812F00778478 /* sqwave_a0.mp3 in Resources */,
+				EDCA46B621DB812F00778478 /* piano_ds4.mp3 in Resources */,
+				EDCA46B721DB812F00778478 /* piano_fs1.mp3 in Resources */,
+				EDCA46B821DB812F00778478 /* sqwave_g4.mp3 in Resources */,
+				EDCA46B921DB812F00778478 /* strings_b0.mp3 in Resources */,
+				EDCA46BA21DB812F00778478 /* epiano_ds1.mp3 in Resources */,
+				EDCA46BB21DB812F00778478 /* epiano_gs0.mp3 in Resources */,
+				EDCA46BC21DB812F00778478 /* strings_b1.mp3 in Resources */,
+				EDCA46BD21DB812F00778478 /* strings_e2.mp3 in Resources */,
+				EDCA46BE21DB812F00778478 /* epiano_fs1.mp3 in Resources */,
+				EDCA46BF21DB812F00778478 /* synth_f1.mp3 in Resources */,
+				EDCA46C021DB812F00778478 /* strings_ds3.mp3 in Resources */,
+				EDCA46C121DB812F00778478 /* synthtrumpet_f0.mp3 in Resources */,
+				EDCA46C221DB812F00778478 /* synthtrumpet_fs3.mp3 in Resources */,
+				EDCA46C321DB812F00778478 /* synthtrumpet_g3.mp3 in Resources */,
+				EDCA46C421DB812F00778478 /* synthtrumpet_fs0.mp3 in Resources */,
+				EDCA46C521DB812F00778478 /* synth_cs3.mp3 in Resources */,
+				EDCA46C621DB812F00778478 /* epiano_a0.mp3 in Resources */,
+				EDCA46C721DB812F00778478 /* strings_g4.mp3 in Resources */,
+				EDCA46C821DB812F00778478 /* synthtrumpet_b3.mp3 in Resources */,
+				EDCA46C921DB812F00778478 /* piano_gs1.mp3 in Resources */,
+				EDCA46CA21DB812F00778478 /* strings_a4.mp3 in Resources */,
+				EDCA46CB21DB812F00778478 /* epiano_b2.mp3 in Resources */,
+				EDCA46CC21DB812F00778478 /* strings_as0.mp3 in Resources */,
+				EDCA46CD21DB812F00778478 /* epiano_as1.mp3 in Resources */,
+				EDCA46CE21DB812F00778478 /* sqwave_d1.mp3 in Resources */,
+				EDCA46CF21DB812F00778478 /* synth_fs3.mp3 in Resources */,
+				EDCA46D021DB812F00778478 /* synth_f0.mp3 in Resources */,
+				EDCA46D121DB812F00778478 /* strings_d3.mp3 in Resources */,
+				EDCA46D221DB812F00778478 /* sqwave_d2.mp3 in Resources */,
+				EDCA46D321DB812F00778478 /* sqwave_a3.mp3 in Resources */,
+				ED515C9521CD8D8D0029CF6B /* piano_f3.mp3 in Resources */,
+				EDCA46D421DB812F00778478 /* sqwave_b0.mp3 in Resources */,
+				EDCA46D521DB812F00778478 /* sqwave_cs1.mp3 in Resources */,
+				EDCA46D621DB812F00778478 /* strings_d0.mp3 in Resources */,
+				EDCA46D721DB812F00778478 /* sqwave_c4.mp3 in Resources */,
+				EDCA46D821DB812F00778478 /* synth_g4.mp3 in Resources */,
+				EDCA46D921DB812F00778478 /* synth_a4.mp3 in Resources */,
+				EDCA46DA21DB812F00778478 /* piano_f1.mp3 in Resources */,
+				EDCA46DB21DB812F00778478 /* synthtrumpet_ds3.mp3 in Resources */,
+				EDCA46DC21DB812F00778478 /* strings_gs2.mp3 in Resources */,
+				EDCA46DD21DB812F00778478 /* synthtrumpet_fs1.mp3 in Resources */,
+				EDCA46DE21DB812F00778478 /* epiano_ds4.mp3 in Resources */,
+				EDCA46DF21DB812F00778478 /* epiano_ds0.mp3 in Resources */,
+				EDCA46E021DB812F00778478 /* synth_f2.mp3 in Resources */,
+				EDCA46E121DB812F00778478 /* epiano-60.mp3 in Resources */,
+				ED515C9B21CD8D8D0029CF6B /* piano_b3.mp3 in Resources */,
+				EDCA46E221DB812F00778478 /* synth_d2.mp3 in Resources */,
+				EDCA46E321DB812F00778478 /* strings_e1.mp3 in Resources */,
+				EDCA46E421DB812F00778478 /* synthtrumpet_c0.mp3 in Resources */,
+				EDCA46E521DB812F00778478 /* epiano_c2.mp3 in Resources */,
+				EDCA46E621DB812F00778478 /* synthtrumpet_g1.mp3 in Resources */,
+				EDCA46E721DB812F00778478 /* strings_c1.mp3 in Resources */,
+				EDCA46E821DB812F00778478 /* strings_ds0.mp3 in Resources */,
+				EDCA46E921DB812F00778478 /* synth_b3.mp3 in Resources */,
+				EDCA46EA21DB812F00778478 /* strings_b4.mp3 in Resources */,
+				EDCA46EB21DB812F00778478 /* epiano_cs0.mp3 in Resources */,
+				EDCA46EC21DB812F00778478 /* piano_a1.mp3 in Resources */,
+				EDCA46ED21DB812F00778478 /* piano_as0.mp3 in Resources */,
+				EDCA46EE21DB812F00778478 /* sqwave_a1.mp3 in Resources */,
+				ED515CA021CD8D8D0029CF6B /* piano_as2.mp3 in Resources */,
+				EDCA46EF21DB812F00778478 /* strings_cs2.mp3 in Resources */,
+				EDCA46F021DB812F00778478 /* synthtrumpet_b2.mp3 in Resources */,
+				EDCA46F121DB812F00778478 /* synth_gs2.mp3 in Resources */,
+				ED515CA321CD8D8D0029CF6B /* piano_as3.mp3 in Resources */,
+				EDCA46F221DB812F00778478 /* strings_f3.mp3 in Resources */,
+				EDCA46F321DB812F00778478 /* piano_cs4.mp3 in Resources */,
+				EDCA46F421DB812F00778478 /* epiano_c4.mp3 in Resources */,
+				ED515CA521CD8D8D0029CF6B /* piano_a3.mp3 in Resources */,
+				EDCA46F521DB812F00778478 /* piano_d1.mp3 in Resources */,
+				ED515CA721CD8D8D0029CF6B /* piano_g2.mp3 in Resources */,
+				EDCA46F621DB812F00778478 /* strings_cs3.mp3 in Resources */,
+				EDCA46F721DB812F00778478 /* synth_d4.mp3 in Resources */,
+				EDCA46F821DB812F00778478 /* synth_e2.mp3 in Resources */,
+				EDCA46F921DB812F00778478 /* epiano_cs1.mp3 in Resources */,
+				EDCA46FA21DB812F00778478 /* epiano_b3.mp3 in Resources */,
+				EDCA46FB21DB812F00778478 /* synthtrumpet_b4.mp3 in Resources */,
+				EDCA46FC21DB812F00778478 /* piano_as1.mp3 in Resources */,
+				ED515C9221CD8D8D0029CF6B /* piano_f2.mp3 in Resources */,
+				EDCA46FD21DB812F00778478 /* synth_b0.mp3 in Resources */,
+				EDCA46FE21DB812F00778478 /* piano_g0.mp3 in Resources */,
+				EDCA46FF21DB812F00778478 /* epiano_gs1.mp3 in Resources */,
+				EDCA470021DB812F00778478 /* strings_as4.mp3 in Resources */,
+				EDCA470121DB812F00778478 /* sqwave-60.mp3 in Resources */,
+				EDCA470221DB812F00778478 /* strings-60.mp3 in Resources */,
+				EDCA470321DB812F00778478 /* synthtrumpet_ds2.mp3 in Resources */,
+				EDCA470421DB813000778478 /* strings_ds4.mp3 in Resources */,
+				EDCA470521DB813000778478 /* synthtrumpet_e1.mp3 in Resources */,
+				EDCA470621DB813000778478 /* epiano_e1.mp3 in Resources */,
+				EDCA470721DB813000778478 /* sqwave_ds4.mp3 in Resources */,
+				EDCA470821DB813000778478 /* synthtrumpet_g4.mp3 in Resources */,
+				EDCA470921DB813000778478 /* synth_as2.mp3 in Resources */,
+				EDCA470A21DB813000778478 /* synth_as3.mp3 in Resources */,
+				EDCA470B21DB813000778478 /* synth_c0.mp3 in Resources */,
+				ED515C9721CD8D8D0029CF6B /* piano_a2.mp3 in Resources */,
+				EDCA470C21DB813000778478 /* synthtrumpet_as0.mp3 in Resources */,
+				EDCA470D21DB813000778478 /* synth_a1.mp3 in Resources */,
+				EDCA470E21DB813000778478 /* sqwave_cs2.mp3 in Resources */,
+				EDCA470F21DB813000778478 /* strings_gs4.mp3 in Resources */,
+				EDCA471021DB813000778478 /* synthtrumpet_cs3.mp3 in Resources */,
+				EDCA471121DB813000778478 /* synthtrumpet_b0.mp3 in Resources */,
+				EDCA471221DB813000778478 /* piano_ds1.mp3 in Resources */,
+				EDCA471321DB813000778478 /* sqwave_ds2.mp3 in Resources */,
+				EDCA471421DB813000778478 /* epiano_d0.mp3 in Resources */,
+				EDCA471521DB813000778478 /* synth_d1.mp3 in Resources */,
+				ED515C9C21CD8D8D0029CF6B /* piano_gs2.mp3 in Resources */,
+				EDCA471621DB813000778478 /* epiano_c0.mp3 in Resources */,
+				EDCA471721DB813000778478 /* sqwave_fs4.mp3 in Resources */,
+				EDCA471821DB813000778478 /* sqwave_e4.mp3 in Resources */,
+				EDCA471921DB813000778478 /* strings_a1.mp3 in Resources */,
+				ED515C9D21CD8D8D0029CF6B /* piano_fs3.mp3 in Resources */,
+				EDCA471A21DB813000778478 /* epiano_f2.mp3 in Resources */,
+				EDCA471B21DB813000778478 /* synthtrumpet_e2.mp3 in Resources */,
+				EDCA471C21DB813000778478 /* epiano_cs4.mp3 in Resources */,
+				EDCA471D21DB813000778478 /* epiano_gs2.mp3 in Resources */,
+				EDCA471E21DB813000778478 /* sqwave_g3.mp3 in Resources */,
+				EDCA471F21DB813000778478 /* strings_a3.mp3 in Resources */,
+				EDCA472021DB813000778478 /* strings_as1.mp3 in Resources */,
+				EDCA472121DB813000778478 /* synth_cs1.mp3 in Resources */,
+				ED515CA221CD8D8D0029CF6B /* piano_fs2.mp3 in Resources */,
+				EDCA472221DB813000778478 /* sqwave_ds1.mp3 in Resources */,
+				EDCA472321DB813000778478 /* synth_ds2.mp3 in Resources */,
+				EDCA472421DB813000778478 /* synthtrumpet_fs4.mp3 in Resources */,
+				EDCA472521DB813000778478 /* strings_g2.mp3 in Resources */,
+				EDCA472621DB813000778478 /* synth_gs4.mp3 in Resources */,
+				EDCA472721DB813000778478 /* epiano_as2.mp3 in Resources */,
+				EDCA472821DB813000778478 /* strings_c3.mp3 in Resources */,
+				EDCA472921DB813000778478 /* synth_f3.mp3 in Resources */,
+				EDCA472A21DB813000778478 /* synthtrumpet_c2.mp3 in Resources */,
+				EDCA472B21DB813000778478 /* synthtrumpet_cs0.mp3 in Resources */,
+				EDCA472C21DB813000778478 /* epiano_f1.mp3 in Resources */,
+				EDCA472D21DB813000778478 /* epiano_gs4.mp3 in Resources */,
+				EDCA472E21DB813000778478 /* piano_e0.mp3 in Resources */,
+				EDCA472F21DB813000778478 /* sqwave_e0.mp3 in Resources */,
+				EDCA473021DB813000778478 /* epiano_f4.mp3 in Resources */,
+				EDCA473121DB813000778478 /* piano_as4.mp3 in Resources */,
+				EDCA473221DB813000778478 /* strings_b2.mp3 in Resources */,
+				EDCA473321DB813000778478 /* strings_d2.mp3 in Resources */,
+				EDCA473421DB813000778478 /* synthtrumpet_a2.mp3 in Resources */,
+				EDCA473521DB813000778478 /* epiano_g3.mp3 in Resources */,
+				EDCA473621DB813000778478 /* synth_a2.mp3 in Resources */,
+				EDCA473721DB813000778478 /* piano_f0.mp3 in Resources */,
+				EDCA473821DB813000778478 /* piano_g4.mp3 in Resources */,
+				EDCA473921DB813000778478 /* sqwave_gs0.mp3 in Resources */,
+				EDCA473A21DB813000778478 /* piano_e1.mp3 in Resources */,
+				EDCA473B21DB813000778478 /* epiano_g2.mp3 in Resources */,
+				EDCA473C21DB813000778478 /* synthtrumpet_ds1.mp3 in Resources */,
+				ED515C9921CD8D8D0029CF6B /* piano_c4.mp3 in Resources */,
+				EDCA473D21DB813000778478 /* epiano_g0.mp3 in Resources */,
+				EDCA473E21DB813000778478 /* synth-60.mp3 in Resources */,
+				EDCA473F21DB813000778478 /* synth_c4.mp3 in Resources */,
+				EDCA474021DB813000778478 /* synth_e0.mp3 in Resources */,
+				EDCA474121DB813000778478 /* synthtrumpet_d4.mp3 in Resources */,
+				EDCA474221DB813000778478 /* sqwave_a4.mp3 in Resources */,
+				EDCA474321DB813000778478 /* strings_fs0.mp3 in Resources */,
+				EDCA474421DB813000778478 /* epiano_g4.mp3 in Resources */,
+				EDCA474521DB813000778478 /* sqwave_ds0.mp3 in Resources */,
+				EDCA474621DB813000778478 /* strings_c2.mp3 in Resources */,
+				EDCA474721DB813000778478 /* synth_cs4.mp3 in Resources */,
+				EDCA474821DB813000778478 /* synth_f4.mp3 in Resources */,
+				EDCA474921DB813000778478 /* epiano_fs4.mp3 in Resources */,
+				EDCA474A21DB813000778478 /* sqwave_fs2.mp3 in Resources */,
+				EDCA474B21DB813000778478 /* sqwave_b3.mp3 in Resources */,
+				EDCA474C21DB813000778478 /* synthtrumpet_ds4.mp3 in Resources */,
+				EDCA474D21DB813000778478 /* epiano_as0.mp3 in Resources */,
+				EDCA474E21DB813000778478 /* synth_as1.mp3 in Resources */,
+				EDCA474F21DB813000778478 /* synthtrumpet_e4.mp3 in Resources */,
+				EDCA475021DB813000778478 /* synthtrumpet_e3.mp3 in Resources */,
+				EDCA475121DB813000778478 /* sqwave_b1.mp3 in Resources */,
+				EDCA475221DB813000778478 /* epiano_d1.mp3 in Resources */,
+				EDCA475321DB813000778478 /* piano_b1.mp3 in Resources */,
+				EDCA475421DB813000778478 /* synth_d0.mp3 in Resources */,
+				EDCA475521DB813000778478 /* synth_g1.mp3 in Resources */,
+				EDCA475621DB813000778478 /* synthtrumpet_f1.mp3 in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 				A6EA29FBFAB2454F83E26BDB /* AntDesign.ttf in Resources */,

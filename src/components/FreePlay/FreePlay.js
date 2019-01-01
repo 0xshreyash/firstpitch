@@ -14,6 +14,7 @@ import React, {Component} from "react"
 import {withMappedNavigationProps} from "react-navigation-props-mapper";
 import AppText from "../AppText/AppText";
 import Buttons from "@assets/buttons";
+import styles from "./FreePlayStyles";
 
 class FreePlay extends Component {
 
@@ -42,10 +43,12 @@ class FreePlay extends Component {
             rep: '#',
             flat: false,
             solfege: false,
+            notes: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'As', 'Cs', 'Ds', 'Fs', 'Gs']
         };
         this.onForwardPress = this.onForwardPress.bind(this);
         this.gameLenChange = this.gameLenChange.bind(this);
         this.repSelected = this.repSelected.bind(this);
+        this.noteToggle = this.noteToggle.bind(this);
     }
 
     repSelected(rep) {
@@ -71,12 +74,23 @@ class FreePlay extends Component {
             gameLen: this.state.gameLen,
             instruments: ['piano'],
             octaves: [2, 3],
-            notes: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'As', 'Cs', 'Ds', 'Fs', 'Gs'],
+            notes: this.state.notes,
             solfege: this.state.solfege,
             flat: this.state.flat,
         })
     }
 
+    noteToggle(noteName){
+        notes = this.state.notes;
+        if(notes.includes(noteName)){
+            notes.splice(notes.indexOf(noteName), 1 );
+        }else{
+            notes.push(noteName);
+        }
+        this.setState({
+            notes: notes
+        })
+    }
 
     render() {
         return (
@@ -113,92 +127,33 @@ class FreePlay extends Component {
                             }
                         </Picker>
                     </View>
-                    <View style={styles.buttonContainer}>
-                        <TouchableOpacity
-                            style={styles.forwardButton}
-                            onPress={this.onForwardPress}
-                            disabled={this.state.disabled}>
-                            <Image
-                                source={this.state.disabled ? Buttons.forwardGray : Buttons.forwardButton}
-                            />
-                        </TouchableOpacity>
-                    </View>
                 </View>
-
+                <View style = {styles.notesContainer}>
+                    {
+                        (['A', 'B', 'C', 'D', 'E', 'F', 'G', 'As', 'Cs', 'Ds', 'Fs', 'Gs']).map(
+                            (noteName) => {
+                                return (
+                                    <TouchableOpacity onPress = {()=>this.noteToggle(noteName)} style = {[styles.noteButton, this.state.notes.includes(noteName) ? styles.noteOn : styles.noteOff]}>
+                                        <Text style = {styles.settingText }>{ noteName.replace("s", "#") }</Text>
+                                    </TouchableOpacity>
+                                );
+                            }
+                        )
+                    }
+                </View>
+                <View style={styles.buttonContainer}>
+                    <TouchableOpacity
+                        style={styles.forwardButton}
+                        onPress={this.onForwardPress}
+                        disabled={this.state.disabled}>
+                        <Image
+                            source={this.state.disabled ? Buttons.forwardGray : Buttons.forwardButton}
+                        />
+                    </TouchableOpacity>
+                </View>
             </SafeAreaView>
         )
             ;
     }
 }
-
-
-const styles = {
-        settingsContainer: {
-            flex: 1,
-        },
-        dropDown: {
-            flex: 0.5,
-        },
-        itemStyle: {
-            fontSize: 15,
-            height: 75,
-            color: 'black',
-            textAlign: 'center',
-            fontWeight: 'bold'
-        },
-        dropDownSetting: {
-            zIndex: 1000,
-            flexDirection: "row",
-        },
-        dropDownSettingText: {
-            margin: 25,
-            flex: 0.5,
-            fontSize: 30,
-        },
-        buttonContainer: {
-            marginTop: 100,
-            alignSelf: "center",
-        },
-        setting: {
-            padding: 10,
-            zIndex: 1000,
-        },
-        repSetting: {
-            flexDirection: 'row',
-            zIndex: 1000,
-        },
-        settingText: {
-            padding: 10,
-            flexDirection: "row",
-            justifyContent: "space-between"
-        },
-        settingInput: {
-            zIndex: 1000,
-        },
-        waveContainer: {
-            marginBottom: 50,
-        },
-        menuContainer: {
-            margin: 30,
-        },
-        formField: {
-            alignSelf: "center",
-            textAlign: "center",
-            height: 40,
-            borderBottomColor: 'black',
-            borderBottomWidth: 1,
-            width: 250,
-            padding: 8,
-            fontSize: 18,
-            marginBottom: 10,
-        },
-        text: {
-            fontSize: 20,
-            margin: 20,
-            alignSelf: 'center',
-            color: 'black',
-        },
-    }
-;
-
 export default withMappedNavigationProps()(FreePlay);

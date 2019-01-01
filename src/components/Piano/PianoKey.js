@@ -38,8 +38,8 @@ export default class PianoKey extends Component {
     generateKeyStyle() {
         let keyNum = this.props.keyNum;
         let keyColor = this.props.keyColor;
-        let borderColor = !this.props.disabled ? 'black' : 'gray';
-        let blackColor = !this.props.disabled ? 'black' : 'gray';
+        let borderColor = !this.props.disabled ? 'black' : '#ecf0f1';
+        let blackColor = !this.props.disabled ? 'black' :  '#ecf0f1';
         let style = {
             height: this.props.whiteHeight,
             flex: 1,
@@ -86,7 +86,7 @@ export default class PianoKey extends Component {
 
         return (
             <TouchableOpacity style = {this.generateKeyStyle()}  onPress={()=>this.props.onPress()} disabled={this.props.disabled}>
-                <Text style ={this.generateTextStyle()}>{this.props.keyName}</Text>
+                <Text style ={this.generateTextStyle()}>{this.props.disabled ? "" : this.props.keyName}</Text>
             </TouchableOpacity>
         )
 

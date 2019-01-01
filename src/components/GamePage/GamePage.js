@@ -108,7 +108,9 @@ class GamesPage extends Component {
     }
 
     onChooseAnswer(event, buttonID) {
-        if (!(this.state.correctAnswer === buttonID)) {
+        console.warn(this.state.correctAnswer, buttonID);
+        if (!(this.state.correctAnswer.toLowerCase() === buttonID.toLowerCase())) {
+
             this.setState(prevState => ({
                 numWrong: prevState.numWrong + 1,
                 buttonDisabled: true,

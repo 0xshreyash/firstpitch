@@ -5,7 +5,7 @@ import {
     View,
     Platform,
     SafeAreaView,
-    AsyncStorage
+    AsyncStorage,
 } from 'react-native';
 import SoundPlayer from 'react-native-sound-player';
 import Header from './Header';
@@ -57,6 +57,7 @@ class GamesPage extends Component {
             totalFiles: numFiles,
         })
     }
+
     componentWillUnmount() {
         SoundPlayer.unmount()
     }
@@ -203,6 +204,7 @@ class GamesPage extends Component {
             correctAnswer: nextAns.toUpperCase(),
         }, () => (setTimeout(this.playSound, 0)));
     }
+
     render() {
         return <SafeAreaView style={styles.container}>
             <View style={[styles.headerContainer]}>
@@ -228,7 +230,7 @@ class GamesPage extends Component {
         </SafeAreaView>;
     }
 }
-export default withMappedNavigationProps()(GamesPage)
+export default withMappedNavigationProps()(GamesPage);
 
 
 GamesPage.defaultProps = {

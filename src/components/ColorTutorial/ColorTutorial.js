@@ -22,8 +22,8 @@ class ColorTutorial extends Component {
             // wave
             startAnimation: true,
             stopAnimation: false,
-            waveAmplitude: Platform.OS === 'ios' ? 1 : 100,
-            waveWidth: Platform.OS === 'ios' ? 3 : 250,
+            waveAmplitude: Platform.OS === 'ios' ? 1 : 250,
+            waveWidth: Platform.OS === 'ios' ? 3 : 450,
             waveColor: 'white',
             numberOfWaves: 5,
         };

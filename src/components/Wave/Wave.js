@@ -29,7 +29,7 @@ Wave.propTypes = {
 Wave.defaultProps = {
     primaryWaveLineWidth: ios ? 2 : 100,
     secondaryWaveLineWidth: ios  ? 1 : 250,
-    frequency: ios ? 1.5 : 1,
+    frequency: ios ? 1.5 : 1.1,
     width: Dimensions.get("window").width,
 };
 

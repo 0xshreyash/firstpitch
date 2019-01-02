@@ -3,7 +3,6 @@ import GamePage from './src/components/GamePage/GamePage';
 import StageMenu from './src/components/StageMenu/StageMenu';
 import WelcomePage from './src/components/WelcomePage/WelcomePage';
 import ColorTutorial from './src/components/ColorTutorial/ColorTutorial';
-import FreePlaySettings from './src/components/FreePlaySettings/FreePlaySettings';
 import ScoreScreen from './src/components/ScoreScreen/ScoreScreen';
 import MainMenu from './src/components/MainMenu/MainMenu';
 import {createStackNavigator, createAppContainer} from 'react-navigation';
@@ -20,9 +19,6 @@ const AppNavigator = createStackNavigator({
     },
     SignIn: {
         screen: SignIn
-    },
-    FreePlaySettings:{
-        screen: FreePlaySettings,
     },
     ScoreScreen: {
         screen: ScoreScreen,

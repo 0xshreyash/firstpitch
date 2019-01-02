@@ -211,7 +211,7 @@ class GamesPage extends Component {
                 <Header score={this.state.score} numWrong = {this.state.numWrong} wrongsAllowed = {this.props.wrongsAllowed} navigation={this.props.navigation}/>
             </View>
 
-            <View style={[styles.waveContainer]}>
+            <View style={[styles.waveContainer]}>   
                 <Wave startAnimation={this.state.startAnimation} stopAnimation={this.state.stopAnimation}
                       waveAmplitude={this.state.waveAmplitude} waveWidth={this.state.waveWidth}
                       waveColor={this.state.waveColor}
@@ -258,10 +258,9 @@ const styles = StyleSheet.create({
         alignItems: "stretch",
     },
     bottomPanelContainer: {
-        flex: 3,
         alignItems: "stretch",
         justifyContent: "center",
-        margin: 3,
+        margin: 1,
         //padding: 20,
     },
 });

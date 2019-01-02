@@ -1,13 +1,37 @@
+// C - Blue
+//
+// C#  - Olive
+//
+// D - Brown
+//
+// D# - Hot Pink
+//
+// E - Yellow
+//
+// F -  Lime
+//
+// F# - Orange
+//
+// G - Red
+//
+// G# - Purple
+//
+// A - Light blue
+//
+// A# - Grey
+//
+// B - Green
+
 export const ColorTutorialEntries = [
     {
         note: "C",
         color: '#24a0c8',
-        subtitle: 'C is blue because the see is blue. Imagine yourself on the C relaxing with a cool drink',
+        subtitle: '',
     },
     {
         note: "G",
-        color: '#e33421',
-        subtitle: 'Gee that is a hot fire. G is a strong tone, just like its a strong red fire',
+        color: '#f12d18',
+        subtitle: '',
     },
     {
         note: "E",
@@ -16,38 +40,38 @@ export const ColorTutorialEntries = [
     },
     {
         note: "Cs",
-        color: "black"
+        color: "#6e811b"
     },
     {
         note: "D",
-        color: "red"
+        color: "#775914"
     },
     {
         note: "Ds",
-        color: "yellow"
+        color: "#e82ea4"
     },
     {
         note: "A",
-        color: "grey"
+        color: "#45e3ff"
     },
     {
         note: "F",
-        color: "#6c993f"
+        color: "#4bfb4c"
     },
     {
         note: "Fs",
-        color: "purple"
+        color: "#ee9913"
     },
     {
         note: "Gs",
-        color: "green"
+        color: "#582062"
     },
     {
         note: "As",
-        color: "blue"
+        color: "#a6a6a6"
     },
     {
         note: "B",
-        color: "#18c7d9"
+        color: "#0d9a54"
     }
 ];

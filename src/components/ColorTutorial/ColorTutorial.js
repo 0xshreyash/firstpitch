@@ -1,70 +1,88 @@
 import React, {Component} from 'react';
-import {SafeAreaView, View, Text, TouchableOpacity, Image} from 'react-native';
-import Carousel, {Pagination} from 'react-native-snap-carousel';
+import {SafeAreaView, View, Text, TouchableOpacity, Image, Platform} from 'react-native';
 import {sliderWidth, itemWidth} from './ColorTutorialStyle';
-import ColorEntry from './ColorEntry';
 import styles from './ColorTutorialStyle';
 import {ColorTutorialEntries} from '../../static/ColorTutorialEntries';
 import {NavigationActions, withNavigation} from "react-navigation";
 import Buttons from '@assets/buttons';
 import {withMappedNavigationProps} from "react-navigation-props-mapper";
+import Piano from "../Piano/Piano";
+import Wave from '../Wave/Wave';
+import SoundPlayer from 'react-native-sound-player';
+
 
 class ColorTutorial extends Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            currSlide: 0
+            backgroundColor: "white",
+            subtitle: "",
+            note: "",
+            // wave
+            startAnimation: true,
+            stopAnimation: false,
+            waveAmplitude: Platform.OS === 'ios' ? 1 : 100,
+            waveWidth: Platform.OS === 'ios' ? 3 : 250,
+            waveColor: 'white',
+            numberOfWaves: 5,
         };
         this.goBack = this.goBack.bind(this);
+        this.onChooseAnswer = this.onChooseAnswer.bind(this);
     }
 
-    _renderItem({item, index}) {
-        return <ColorEntry data={item}/>;
+    componentDidMount() {
+        SoundPlayer.onFinishedPlaying((success: boolean) => { // success is true when the sound is played
+          console.log("Finished playing note!", success);
+        });
+    }
+    componentWillUnmount() {
+        SoundPlayer.unmount()
     }
 
     goBack() {
         this.props.navigation.dispatch(NavigationActions.back())
     }
 
+    onChooseAnswer(event, noteName){
+        SoundPlayer.stop();
+        filename = "piano_" + noteName.toLowerCase() + "3";
+        SoundPlayer.playSoundFile(filename, "mp3")
+        for(let i = 0; i < ColorTutorialEntries.length; i++){
+            obj = ColorTutorialEntries[i]
+            if(obj["note"] == noteName){
+                this.setState({
+                    backgroundColor: obj["color"],
+                    note: obj["note"],
+                    subtitle: obj["subtitle"]
+                })
+                return;
+            }
+        }
+    }
 
     render() {
         const {currSlide} = this.state;
         const {navigation} = this.props.navigation;
 
         return (
-            <SafeAreaView style={styles.container}>
+            <SafeAreaView style={[styles.container, {backgroundColor: this.state.backgroundColor}]}>
                 <SafeAreaView style={styles.header}>
                     <TouchableOpacity style={styles.backButton} onPress={this.goBack}>
                         <Image source={Buttons.backButton} styles={styles.backButtonImage}/>
                     </TouchableOpacity>
                 </SafeAreaView>
-                <Carousel
-                    ref={c => this._slider1Ref = c}
-                    data={ColorTutorialEntries}
-                    renderItem={this._renderItem}
-                    sliderWidth={sliderWidth}
-                    itemWidth={itemWidth}
-                    firstItem={this.state.currSlide}
-                    inactiveSlideScale={0.94}
-                    inactiveSlideOpacity={0.7}
-                    loop={true}
-                    loopClonesPerSide={2}
-                    onSnapToItem={(index) => this.setState({currSlide: index})}
-                />
-                <Pagination
-                    dotsLength={ColorTutorialEntries.length}
-                    activeDotIndex={currSlide}
-                    containerStyle={styles.paginationContainer}
-                    dotColor={"black"}
-                    dotStyle={styles.paginationDot}
-                    inactiveDotColor={"black"}
-                    inactiveDotOpacity={0.4}
-                    inactiveDotScale={0.6}
-                    carouselRef={this._slider1Ref}
-                    tappableDots={!!this._slider1Ref}
-                />
-
+                <View style = {{flex:3}}>
+                    <Wave startAnimation={this.state.startAnimation} stopAnimation={this.state.stopAnimation}
+                          waveAmplitude={this.state.waveAmplitude} waveWidth={this.state.waveWidth}
+                          waveColor={this.state.waveColor}
+                          numberOfWaves={this.state.numberOfWaves}/>
+                    <Text>Note: {this.state.note}</Text>
+                    <Text>Explanation: {this.state.subtitle}</Text>
+                </View>
+                <View style = {{flex:3}}>
+                    <Piano onChooseAnswer = {this.onChooseAnswer}/>
+                </View>
             </SafeAreaView>
         );
     }

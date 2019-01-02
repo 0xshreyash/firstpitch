@@ -37,13 +37,12 @@ export default StyleSheet.create({
     backButton:{
     },
     header:{
-        position: "absolute",
-        top: 0,
-        left: 0,
         zIndex: 100,
+        flex: 1,
     },
     container:{
-        height: "100%"
+        height: "100%",
+        flexDirection: "column"
     },
 
     //ColorEntry Styles

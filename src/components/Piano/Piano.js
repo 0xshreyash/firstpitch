@@ -106,7 +106,7 @@ Piano.propTypes = {
 
 Piano.defaultProps = {
     solfege: false,
+    sharp: "#",
+    fillColor: true,
+    options: new Set(['C', 'D', 'E', 'F', 'G', 'A', 'B', 'Cs', 'Ds', 'Fs', 'Gs', 'As'])
 };
-
-
-

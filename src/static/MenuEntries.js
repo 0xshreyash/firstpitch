@@ -1,5 +1,3 @@
-import MusicIcons from "@assets/music";
-
 export const MenuEntries = [
     //the first one is a placeholder for the Profile Page
     {
@@ -11,7 +9,6 @@ export const MenuEntries = [
                 {
                     levelNum: 1,
                     levelName: "Starting with C and G",
-                    icon: MusicIcons.treble,
                     instruments: ["piano"],
                     octaves: [3],
                     notes: ["C", "G"],
@@ -22,7 +19,6 @@ export const MenuEntries = [
                 {
                     levelNum: 2,
                     levelName: "E (z)",
-                    icon: MusicIcons.bass,
                     instruments: ["piano"],
                     octaves: [3],
                     notes: ["C", "E", "G"],
@@ -33,7 +29,6 @@ export const MenuEntries = [
                 {
                     levelNum: 3,
                     levelName: "Meet D and A",
-                    icon: MusicIcons.equaliser,
                     instruments: ["piano"],
                     octaves: [3],
                     notes: ["C", "E", "D", "A", "G"],
@@ -44,7 +39,6 @@ export const MenuEntries = [
                 {
                     levelNum: 4,
                     levelName: "The White Notes",
-                    icon: MusicIcons.violin,
                     instruments: ["piano"],
                     octaves: [3],
                     notes: ["C", "E", "D", "F", "G", "A", "B"],
@@ -63,7 +57,6 @@ export const MenuEntries = [
                 {
                     levelNum: 5,
                     levelName: "Introducing the Synth",
-                    icon: MusicIcons.quaver,
                     instruments: ["synth"],
                     octaves: [3],
                     notes: ["C", "E", "D", "F", "G", "A", "B"],
@@ -73,7 +66,6 @@ export const MenuEntries = [
                 {
                     levelNum: 6,
                     levelName: "Whites Keys on the Synth",
-                    icon: MusicIcons.ipod,
                     instruments: ["synth"],
                     octaves: [3],
                     notes: ["C", "E", "D", "F", "G", "A", "B"],
@@ -83,7 +75,6 @@ export const MenuEntries = [
                 {
                     levelNum: 7,
                     levelName: "Lower Voices",
-                    icon: MusicIcons.tuba,
                     instruments: ["synth"],
                     octaves: [2],
                     notes: ["C", "E", "D", "F", "G", "A", "B"],
@@ -101,7 +92,6 @@ export const MenuEntries = [
                 {
                     levelNum: 8,
                     levelName: "Mixture",
-                    icon: MusicIcons.quaver,
                     instruments: ["synth", "piano"],
                     octaves: [2, 3],
                     notes: ["C", "E", "D", "F", "G", "A", "B"],
@@ -110,12 +100,73 @@ export const MenuEntries = [
                 },
                 {
                     levelNum: 9,
-                    levelName: "Whites Keys on the Synth",
-                    icon: MusicIcons.ipod,
+                    levelName: "Next octave up",
                     instruments: ["synth", "piano"],
                     octaves: [3, 4],
                     notes: ["C", "E", "D", "F", "G", "A", "B"],
-                    waveColorProbability: 0.7,
+                    waveColorProbability: 0.8,
+                    gameLen: 5
+                },
+                {
+                    levelNum: 10,
+                    levelName: "Low medium and high",
+                    instruments: ["synth", "piano"],
+                    octaves: [2, 3, 4],
+                    notes: ["C", "E", "D", "F", "G", "A", "B"],
+                    waveColorProbability: 0.8,
+                    gameLen: 5
+                },
+                {
+                    levelNum: 11,
+                    levelName: "Even more octaves",
+                    instruments: ["synth", "piano"],
+                    octaves: [2, 3, 4, 5],
+                    notes: ["C", "E", "D", "F", "G", "A", "B"],
+                    waveColorProbability: 0.8,
+                    gameLen: 5
+                },
+        ],
+    },
+    {
+        title: 'Stage 4',
+        subtitle: 'The Black Keys',
+        illustration: require("@assets/icons/pattern.png"),
+        waveCount: 4,
+        levels:[
+                {
+                    levelNum: 12,
+                    levelName: "C#",
+                    instruments: ["piano"],
+                    octaves: [2, 3],
+                    notes: ["C", "E", "F","A", "Cs"],
+                    waveColorProbability: 0.8,
+                    gameLen: 5
+                },
+                {
+                    levelNum: 13,
+                    levelName: "Ease in",
+                    instruments: ["piano"],
+                    octaves: [2, 3],
+                    notes: ["C", "D", "G", "A", "B", "Cs"],
+                    waveColorProbability: 0.8,
+                    gameLen: 5
+                },
+                {
+                    levelNum: 14,
+                    levelName: "White keys + 1",
+                    instruments: ["piano"],
+                    octaves: [2, 3],
+                    notes: ["C", "E", "D", "F", "G", "A", "B", "Cs"],
+                    waveColorProbability: 0.8,
+                    gameLen: 5
+                },
+                {
+                    levelNum: 15,
+                    levelName: "The next octave",
+                    instruments: ["piano"],
+                    octaves: [3, 4],
+                    notes: ["C", "E", "D", "F", "G", "A", "B", "Cs"],
+                    waveColorProbability: 0.8,
                     gameLen: 5
                 },
         ],

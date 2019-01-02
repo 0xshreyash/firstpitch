@@ -46,7 +46,6 @@ class StageMenu extends Component {
         }else{
             this.setState({"unlockedLevels":JSON.parse(value)});
         }
-
     }
 
 

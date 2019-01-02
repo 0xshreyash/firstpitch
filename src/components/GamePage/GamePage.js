@@ -4,7 +4,8 @@ import {
     StyleSheet,
     View,
     Platform,
-    SafeAreaView
+    SafeAreaView,
+    AsyncStorage
 } from 'react-native';
 import SoundPlayer from 'react-native-sound-player';
 import Header from './Header';
@@ -103,7 +104,7 @@ class GamesPage extends Component {
                 }
             }
         }
-        console.warn(files);
+        // console.warn(files);
         return files;
     };
 
@@ -115,7 +116,7 @@ class GamesPage extends Component {
     }
 
     onChooseAnswer(event, buttonID) {
-        console.warn(this.state.correctAnswer, buttonID);
+        // console.warn(this.state.correctAnswer, buttonID);
         if (!(this.state.correctAnswer.toLowerCase() === buttonID.toLowerCase())) {
 
             this.setState(prevState => ({
@@ -146,7 +147,7 @@ class GamesPage extends Component {
         let index = this.state.currentTrack.lastIndexOf('.');
         let name = this.state.currentTrack.slice(0, index);
         let ext = this.state.currentTrack.slice(index + 1, this.state.currentTrack.length);
-        console.warn(name, ext);
+        // console.warn(name, ext);
         this.setWaveColour(name);
         try {
             SoundPlayer.playSoundFile(name, ext);
@@ -155,18 +156,34 @@ class GamesPage extends Component {
         }
     }
 
+    gameLost(){
+        this.props.navigation.navigate("ScoreScreen", {
+            score: this.state.score,
+        });
+    }
+
+    gameWon = async()=>{
+        console.warn("GAME WON", this.props.levelNum);
+        if(this.props.levelNum){
+            await AsyncStorage.setItem("unlockedLevels", JSON.stringify(this.props.levelNum+1));
+        }
+        this.props.navigation.navigate("ScoreScreen", {
+            score: this.state.score,
+        });
+    }
+
     updateTrack() {
         let nextPos = this.state.currentPosition === undefined ? 0 : this.state.currentPosition + 1;
+
+        //lost the game
         if(this.state.numWrong >= this.props.wrongsAllowed){
-            this.props.navigation.navigate("ScoreScreen", {
-                score: this.state.score,
-            });
+            this.gameLost();
             return;
         }
+
+        //won the game
         if (this.state.score >= this.props.gameLen) {
-            this.props.navigation.navigate("ScoreScreen", {
-                score: this.state.score,
-            });
+            this.gameWon();
             return;
         }
         let nextTrack = this.state.audioFiles[nextPos % this.state.totalFiles];

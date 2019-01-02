@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Image, Platform, SafeAreaView, TouchableOpacity, View} from 'react-native';
+import {Image, Platform, SafeAreaView, TouchableOpacity, View, AsyncStorage} from 'react-native';
 import Carousel, {Pagination} from 'react-native-snap-carousel';
 import StageEntry from './StageEntry';
 import styles, {sliderWidth, itemWidth} from './StageStyle';
@@ -18,15 +18,37 @@ class StageMenu extends Component {
             slider1ActiveSlide: 0
         };
         this.goBack = this.goBack.bind(this);
+        this.getUnlockedLevels();
+        this._renderItem=this._renderItem.bind(this);
+        this.prevLevels = 0;
     }
 
     goBack() {
         this.props.navigation.dispatch(NavigationActions.back())
     }
 
-    _renderItem({item,}) {
-        return <StageEntry data={item}/>;
+    _renderItem({item, }){
+        return <StageEntry data={item} unlockedLevels={this.state.unlockedLevels}/>;
     }
+
+    storeUnlockedLevels = async (value) => {
+        try {
+            await AsyncStorage.setItem("unlockedLevels", JSON.stringify(value));
+        }catch(error){
+            console.warn("error with storing unlockedLevels");
+        }
+    }
+
+    getUnlockedLevels = async ()=>{
+        value = await AsyncStorage.getItem('unlockedLevels');
+        if(!value){
+            this.setState({"unlockedLevels":1});
+        }else{
+            this.setState({"unlockedLevels":JSON.parse(value)});
+        }
+
+    }
+
 
     render() {
         const {slider1ActiveSlide} = this.state;

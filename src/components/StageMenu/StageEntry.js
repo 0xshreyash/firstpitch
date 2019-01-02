@@ -28,18 +28,19 @@ class StageEntry extends Component {
         buttonMargin: 5,
     };
 
-    generateButtons() {
-
-        const { data: { levels }} = this.props;
+    generateButtons(){
+        const { data: { levels}} = this.props;
         return (levels.map(
-            (level) => {
-                combinedProps = {...this.levelButtonProps, ...level};
+            (level, index) => {
+                combinedProps = {...this.levelButtonProps, ...level, unlockedLevels: this.props.unlockedLevels, index:index};
                 return [
                       <StageButton {...combinedProps}/>
                 ]
             }
         ))
     }
+
+
 
 
     levelButtonsStyling(){

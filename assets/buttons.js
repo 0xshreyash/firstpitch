@@ -5,6 +5,7 @@ const buttons = {
     forwardGray: require('./icons/forward-gray.png'),
     pauseButton: require('./icons/pause-button.png'),
     backButton: require('./icons/back-arrow.png'),
+    lock: require('./icons/lock.png'),
 };
 
 export default buttons;

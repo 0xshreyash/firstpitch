@@ -9,8 +9,8 @@ export const MenuEntries = [
         waveCount: 1,
         levels:[
                 {
-                    level: 1,
-                    text: "Starting with C and G",
+                    levelNum: 1,
+                    levelName: "Starting with C and G",
                     icon: MusicIcons.treble,
                     instruments: ["piano"],
                     octaves: [3],
@@ -20,8 +20,8 @@ export const MenuEntries = [
                     wrongsAllowed: 1
                 },
                 {
-                    level: 2,
-                    text: "E (z)",
+                    levelNum: 2,
+                    levelName: "E (z)",
                     icon: MusicIcons.bass,
                     instruments: ["piano"],
                     octaves: [3],
@@ -31,8 +31,8 @@ export const MenuEntries = [
                     wrongsAllowed: 5
                 },
                 {
-                    level: 3,
-                    text: "Meet D and A",
+                    levelNum: 3,
+                    levelName: "Meet D and A",
                     icon: MusicIcons.equaliser,
                     instruments: ["piano"],
                     octaves: [3],
@@ -42,8 +42,8 @@ export const MenuEntries = [
                     wrongsAllowed: 5
                 },
                 {
-                    level: 4,
-                    text: "The White Notes",
+                    levelNum: 4,
+                    levelName: "The White Notes",
                     icon: MusicIcons.violin,
                     instruments: ["piano"],
                     octaves: [3],
@@ -61,8 +61,8 @@ export const MenuEntries = [
         waveCount: 2,
         levels:[
                 {
-                    level: 1,
-                    text: "Introducing the Synth",
+                    levelNum: 5,
+                    levelName: "Introducing the Synth",
                     icon: MusicIcons.quaver,
                     instruments: ["synth"],
                     octaves: [3],
@@ -71,8 +71,8 @@ export const MenuEntries = [
                     gameLen: 5
                 },
                 {
-                    level: 2,
-                    text: "Whites Keys on the Synth",
+                    levelNum: 6,
+                    levelName: "Whites Keys on the Synth",
                     icon: MusicIcons.ipod,
                     instruments: ["synth"],
                     octaves: [3],
@@ -81,8 +81,8 @@ export const MenuEntries = [
                     gameLen: 5
                 },
                 {
-                    level: 3,
-                    text: "Lower Voices",
+                    levelNum: 7,
+                    levelName: "Lower Voices",
                     icon: MusicIcons.tuba,
                     instruments: ["synth"],
                     octaves: [2],
@@ -99,8 +99,8 @@ export const MenuEntries = [
         waveCount: 3,
         levels:[
                 {
-                    level: 1,
-                    text: "Mixture",
+                    levelNum: 8,
+                    levelName: "Mixture",
                     icon: MusicIcons.quaver,
                     instruments: ["synth", "piano"],
                     octaves: [2, 3],
@@ -109,8 +109,8 @@ export const MenuEntries = [
                     gameLen: 5
                 },
                 {
-                    level: 2,
-                    text: "Whites Keys on the Synth",
+                    levelNum: 9,
+                    levelName: "Whites Keys on the Synth",
                     icon: MusicIcons.ipod,
                     instruments: ["synth", "piano"],
                     octaves: [3, 4],

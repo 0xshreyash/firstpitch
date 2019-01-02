@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {View, Text, Image, TouchableOpacity, StyleSheet, Dimensions} from 'react-native';
 import {withMappedNavigationProps} from "react-navigation-props-mapper";
 import {withNavigation} from 'react-navigation';
+import Buttons from '@assets/buttons';
 
 const {width: viewportWidth, height: viewportHeight} = Dimensions.get('window');
 
@@ -36,13 +37,25 @@ class StageButton extends Component {
     }
 
     render() {
-        return (
-            <TouchableOpacity style={[this.buttonStyle()]} onPress={()=>this.props.navigation.navigate("Game", {...this.props})}>
-                <Text style={[styles.levelTitle]}>{this.props.level}</Text>
-            </TouchableOpacity>
-        );
+        if(this.props.levelNum <= this.props.unlockedLevels){
+            return (
+                <TouchableOpacity style={[this.buttonStyle()]} onPress={()=>this.props.navigation.navigate("Game", {...this.props})}>
+                    <Text style={[styles.levelTitle]}>{this.props.index+1 }</Text>
+                </TouchableOpacity>
+            );
+        }
+        else{
+            return (
+                <TouchableOpacity disabled = {true} style={[this.buttonStyle(), styles.disabledButton]}>
+                    <Image style={[styles.lockImage]} resizeMode='contain' source={Buttons.lock} />
+                </TouchableOpacity>
+            );
+        }
+
     }
 }
+
+
 
 const styles = StyleSheet.create({
     levelImage: {
@@ -50,6 +63,14 @@ const styles = StyleSheet.create({
         resizeMode: 'contain',
         width: "100%",
         margin: 40,
+    },
+    lockImage:{
+        position: "absolute",
+        height: 60,
+        width: 60
+    },
+    disabledButton:{
+        opacity: 0.3
     },
     levelTitle: {
         // flex: 1,
@@ -65,3 +86,7 @@ const styles = StyleSheet.create({
 })
 
 export default withNavigation(StageButton);
+
+StageButton.defaultProps = {
+    unlockedLevels: 1,
+};

@@ -22,6 +22,7 @@ class GamesPage extends Component {
         this.updateTrack = this.updateTrack.bind(this);
         this.onChooseAnswer = this.onChooseAnswer.bind(this);
         this.playSound = this.playSound.bind(this);
+        this.gameWon = this.gameWon.bind(this);
         this.playNextTrack = this.playNextTrack.bind(this);
         this.state = {
             // wave
@@ -61,10 +62,10 @@ class GamesPage extends Component {
         SoundPlayer.unmount()
     }
 
-    extractNoteFromAudiofile(filename){
+    extractNoteFromAudiofile(filename) {
         //remove the instrument
-        parts = filename.split("_");
-        note = parts.pop().toUpperCase();
+        let parts = filename.split("_");
+        let note = parts.pop().toUpperCase();
         //remove the number at the end
         return note.slice(0, note.length-1);
     }
@@ -73,13 +74,15 @@ class GamesPage extends Component {
         //reset it
         this.setState({
             waveColor: "black"
-        })
+        });
+
         if(Math.random() > this.props.waveColorProbability){
             return;
         }
-        for(var i = 0; i < ColorTutorialEntries.length; i++){
-            entry = ColorTutorialEntries[i];
-            if(this.extractNoteFromAudiofile(name) == entry["note"].toUpperCase()){
+
+        for(let i = 0; i < ColorTutorialEntries.length; i++){
+            let entry = ColorTutorialEntries[i];
+            if(this.extractNoteFromAudiofile(name) === entry["note"].toUpperCase()){
                 this.setState({
                     waveColor: entry["color"]
                 });
@@ -157,17 +160,17 @@ class GamesPage extends Component {
     }
 
     gameLost(){
-        this.props.navigation.navigate("ScoreScreen", {
+        this.props.navigation.replace("ScoreScreen", {
             score: this.state.score,
         });
     }
 
-    gameWon = async()=>{
+    async gameWon() {
         console.warn("GAME WON", this.props.levelNum);
         if(this.props.levelNum){
             await AsyncStorage.setItem("unlockedLevels", JSON.stringify(this.props.levelNum+1));
         }
-        this.props.navigation.navigate("ScoreScreen", {
+        this.props.navigation.replace("ScoreScreen", {
             score: this.state.score,
         });
     }
@@ -228,8 +231,8 @@ class GamesPage extends Component {
         </SafeAreaView>;
     }
 }
-export default withMappedNavigationProps()(GamesPage)
 
+export default withMappedNavigationProps()(GamesPage)
 
 GamesPage.defaultProps = {
     wrongsAllowed: 3,

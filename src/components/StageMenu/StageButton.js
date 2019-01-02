@@ -37,13 +37,7 @@ class StageButton extends Component {
 
     render() {
         return (
-            <TouchableOpacity style={[this.buttonStyle()]} onPress={()=>this.props.navigation.navigate("Game", {
-                instruments: this.props.instruments,
-                octaves: this.props.octaves,
-                notes: this.props.notes,
-                waveColorProbability: this.props.waveColorProbability,
-                gameLen: this.props.gameLen
-            })}>
+            <TouchableOpacity style={[this.buttonStyle()]} onPress={()=>this.props.navigation.navigate("Game", {...this.props})}>
                 <Text style={[styles.levelTitle]}>{this.props.level}</Text>
             </TouchableOpacity>
         );

@@ -23,7 +23,8 @@ class Header extends Component {
 
     render() {
         return (<View style={styles.container}>
-            <Text style={styles.score}>{this.props.score}</Text>
+            <Text style={styles.score}>Score: {this.props.score}</Text>
+            <Text style={[styles.score, {left:150}]}>Wrongs: {this.props.numWrong} / {this.props.wrongsAllowed}</Text>
             <TouchableOpacity style={[styles.pauseButton]} onPress={this.pausePress}>
                 <Image source={Buttons.pauseButton} style={[styles.pauseButtonImage]}/>
             </TouchableOpacity>

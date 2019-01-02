@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import {
     StyleSheet,
     View,
@@ -156,8 +157,14 @@ class GamesPage extends Component {
 
     updateTrack() {
         let nextPos = this.state.currentPosition === undefined ? 0 : this.state.currentPosition + 1;
-        if (nextPos === this.props.gameLen) {
-            this.props.navigation.replace("ScoreScreen", {
+        if(this.state.numWrong >= this.props.wrongsAllowed){
+            this.props.navigation.navigate("ScoreScreen", {
+                score: this.state.score,
+            });
+            return;
+        }
+        if (this.state.score >= this.props.gameLen) {
+            this.props.navigation.navigate("ScoreScreen", {
                 score: this.state.score,
             });
             return;
@@ -182,7 +189,7 @@ class GamesPage extends Component {
     render() {
         return <SafeAreaView style={styles.container}>
             <View style={[styles.headerContainer]}>
-                <Header score={this.state.score} navigation={this.props.navigation}/>
+                <Header score={this.state.score} numWrong = {this.state.numWrong} wrongsAllowed = {this.props.wrongsAllowed} navigation={this.props.navigation}/>
             </View>
 
             <View style={[styles.waveContainer]}>
@@ -205,6 +212,16 @@ class GamesPage extends Component {
     }
 }
 export default withMappedNavigationProps()(GamesPage)
+
+
+GamesPage.defaultProps = {
+    wrongsAllowed: 3,
+    notes: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'As', 'Cs', 'Ds', 'Fs', 'Gs'],
+    waveColorProbability: 1,
+    gameLen: 20,
+    instruments: ["piano"],
+    octaves: [3]
+};
 
 const styles = StyleSheet.create({
     container: {

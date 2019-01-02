@@ -16,7 +16,8 @@ export const MenuEntries = [
                     octaves: [3],
                     notes: ["C", "G"],
                     waveColorProbability: 1,
-                    gameLen: 5
+                    gameLen: 5,
+                    wrongsAllowed: 1
                 },
                 {
                     level: 2,
@@ -26,7 +27,8 @@ export const MenuEntries = [
                     octaves: [3],
                     notes: ["C", "E", "G"],
                     waveColorProbability: 1,
-                    gameLen: 5
+                    gameLen: 10,
+                    wrongsAllowed: 5
                 },
                 {
                     level: 3,
@@ -36,7 +38,8 @@ export const MenuEntries = [
                     octaves: [3],
                     notes: ["C", "E", "D", "A", "G"],
                     waveColorProbability: 1,
-                    gameLen: 5
+                    gameLen: 5,
+                    wrongsAllowed: 5
                 },
                 {
                     level: 4,
@@ -46,7 +49,8 @@ export const MenuEntries = [
                     octaves: [3],
                     notes: ["C", "E", "D", "F", "G", "A", "B"],
                     waveColorProbability: 1,
-                    gameLen: 5
+                    gameLen: 5,
+                    wrongsAllowed: 5
                 }
         ],
     },

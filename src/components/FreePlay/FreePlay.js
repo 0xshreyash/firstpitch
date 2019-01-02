@@ -48,6 +48,7 @@ class FreePlay extends Component {
             octaves: [2, 3],
             instruments: ["piano", "epiano", "sqwave", "strings", "synth", "synthtrumpet"],
             waveColorProbability: 1,
+            wrongsAllowed: 3,
         };
         this.onForwardPress = this.onForwardPress.bind(this);
         this.repSelected = this.repSelected.bind(this);
@@ -72,7 +73,8 @@ class FreePlay extends Component {
             notes: this.state.notes,
             solfege: this.state.solfege,
             flat: this.state.flat,
-            waveColorProbability: this.state.waveColorProbability
+            waveColorProbability: this.state.waveColorProbability,
+            wrongsAllowed: this.state.wrongsAllowed
         })
     }
 
@@ -106,6 +108,19 @@ class FreePlay extends Component {
                         maximumValue={1}
                         onValueChange={(value)=>this.setState({waveColorProbability:value})}
                         value={this.state.waveColorProbability}
+                    />
+                </View>
+                <View style={styles.setting}>
+                    <View style={styles.settingText}>
+                        <Text>Wrongs Allowed: {this.state.wrongsAllowed}</Text>
+                    </View>
+                    <Slider
+                        style={styles.settingInput}
+                        step={1}
+                        minimumValue={1}
+                        maximumValue={10}
+                        onValueChange={(value)=>this.setState({wrongsAllowed:value})}
+                        value={this.state.wrongsAllowed}
                     />
                 </View>
                 <View style={styles.setting}>

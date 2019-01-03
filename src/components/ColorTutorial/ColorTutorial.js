@@ -69,7 +69,7 @@ class ColorTutorial extends Component {
             <SafeAreaView style={[styles.container, {backgroundColor: this.state.backgroundColor}]}>
                 <SafeAreaView style={styles.header}>
                     <TouchableOpacity style={styles.backButton} onPress={this.goBack}>
-                        <Image source={Buttons.backButton} styles={styles.backButtonImage}/>
+                        <Image source={Buttons.backButton} style={styles.backButtonImage}/>
                     </TouchableOpacity>
                 </SafeAreaView>
                 <View style = {{flex:3}}>

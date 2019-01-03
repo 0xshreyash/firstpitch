@@ -26,25 +26,6 @@ export default StyleSheet.create({
     settingsContainer: {
         flex: 1,
     },
-    dropDown: {
-        flex: 0.5,
-    },
-    itemStyle: {
-        fontSize: 15,
-        height: 75,
-        color: 'black',
-        textAlign: 'center',
-        fontWeight: 'bold'
-    },
-    dropDownSetting: {
-        zIndex: 1000,
-        flexDirection: "row",
-    },
-    dropDownSettingText: {
-        margin: 25,
-        flex: 0.5,
-        fontSize: 30,
-    },
     setting: {
         padding: 10,
         zIndex: 1000,

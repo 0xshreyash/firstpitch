@@ -6,6 +6,7 @@ const buttons = {
     pauseButton: require('./icons/pause-button.png'),
     backButton: require('./icons/back-arrow.png'),
     lock: require('./icons/lock.png'),
+    replay: require('./icons/replay.png')
 };
 
 export default buttons;

@@ -6,6 +6,8 @@ import {
     Platform,
     SafeAreaView,
     AsyncStorage,
+    TouchableOpacity,
+    Image
 } from 'react-native';
 import SoundPlayer from 'react-native-sound-player';
 import Header from './Header';
@@ -13,6 +15,8 @@ import Wave from '../Wave/Wave';
 import BottomPanel from './BottomPanel';
 import {withMappedNavigationProps} from "react-navigation-props-mapper";
 import {ColorTutorialEntries} from "../../static/ColorTutorialEntries"
+import Buttons from '@assets/buttons';
+
 
 class GamesPage extends Component {
     constructor(props) {
@@ -164,9 +168,11 @@ class GamesPage extends Component {
     }
 
     gameWon = async()=>{
-        console.warn("GAME WON", this.props.levelNum);
         if(this.props.levelNum){
-            await AsyncStorage.setItem("unlockedLevels", JSON.stringify(this.props.levelNum+1));
+            currUnlocked = await AsyncStorage.getItem("unlockedLevels");
+            currUnlocked = JSON.parse(currUnlocked)
+            nextLevel = Math.max(currUnlocked, this.props.levelNum+1)
+            await AsyncStorage.setItem("unlockedLevels", JSON.stringify(nextLevel));
         }
         this.props.navigation.navigate("ScoreScreen", {
             score: this.state.score,
@@ -206,16 +212,24 @@ class GamesPage extends Component {
     }
 
     render() {
+        //replay is only available when the game is started.
+        let replay;
+        if(this.state.started){
+            replay = (<TouchableOpacity onPress = {this.playSound} style = {{height:50, width: 50, borderWidth: 2, borderRadius: 8}}>
+                            <Image source = {Buttons.replay} style={{ width: "100%", height: "100%" }} resizeMode={'contain'}/>
+                        </TouchableOpacity>);
+        }
         return <SafeAreaView style={styles.container}>
             <View style={[styles.headerContainer]}>
                 <Header score={this.state.score} numWrong = {this.state.numWrong} wrongsAllowed = {this.props.wrongsAllowed} navigation={this.props.navigation}/>
             </View>
 
-            <View style={[styles.waveContainer]}>   
+            <View style={[styles.waveContainer]}>
                 <Wave startAnimation={this.state.startAnimation} stopAnimation={this.state.stopAnimation}
                       waveAmplitude={this.state.waveAmplitude} waveWidth={this.state.waveWidth}
                       waveColor={this.state.waveColor}
                       numberOfWaves={this.state.numberOfWaves}/>
+                {replay}
             </View>
 
             <View style={[styles.bottomPanelContainer]}>

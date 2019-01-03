@@ -1,8 +1,10 @@
 import React, {Component} from 'react';
-import {AsyncStorage, Dimensions, Text, TouchableOpacity, View, SafeAreaView} from 'react-native';
+import {AsyncStorage, Dimensions, Text, TouchableOpacity, View, SafeAreaView, Image} from 'react-native';
 import Wave from '../Wave/Wave';
-import {withNavigation} from 'react-navigation';
+import {withNavigation, NavigationActions, StackActions} from 'react-navigation';
 import AppText from "../AppText/AppText";
+import Buttons from '@assets/buttons';
+
 
 const {width: viewportWidth, height: viewportHeight} = Dimensions.get('window');
 
@@ -33,6 +35,7 @@ class MainMenu extends Component {
         });
     }
 
+
     static async getFirstName() {
         try {
             return await AsyncStorage.getItem("firstName");
@@ -44,6 +47,11 @@ class MainMenu extends Component {
     render() {
         return (
             <SafeAreaView style={styles.container}>
+                <View>
+                    <TouchableOpacity onPress = {()=>this.props.navigation.navigate("GlobalSettings")} style = {{height:50, width: 50, borderWidth: 2, borderRadius: 8}}>
+                        <Image source = {Buttons.settingsButton} style={{ width: "100%", height: "100%" }} resizeMode={'contain'}/>
+                    </TouchableOpacity>
+                </View>
                 <View style={styles.waveBackground}>
                     <Wave startAnimation={true} stopAnimation={false}
                           waveColor={'#000000'}
@@ -63,8 +71,8 @@ class MainMenu extends Component {
                     </View>
                     <View style={styles.options}>
                         {
-                            this.state.options.map((item) => (
-                                <TouchableOpacity style={styles.optionButton}
+                            this.state.options.map((item, index) => (
+                                <TouchableOpacity key = {index} style={styles.optionButton}
                                                   onPress={() => this.props.navigation.navigate(item.goto)}>
                                     <AppText style={styles.optionText}>--{item.name}--</AppText>
                                 </TouchableOpacity>))

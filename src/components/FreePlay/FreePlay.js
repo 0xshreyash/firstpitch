@@ -23,27 +23,6 @@ class FreePlay extends Component {
         super(props);
         this.state = {
             gameLen: 5,
-            representationOptions: [
-                {
-                    id: '#',
-                    name: '#',
-                },
-                {
-                    id: "\u266D",
-                    name: "\u266D",
-                },
-                {
-                    id: 'Solfege(#)',
-                    name: 'Solfege(#)',
-                },
-                {
-                    id: 'Solfege(\u266D)',
-                    name: 'Solfege(\u266D)',
-                },
-            ],
-            rep: '#',
-            flat: false,
-            solfege: false,
             notes: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'As', 'Cs', 'Ds', 'Fs', 'Gs'],
             octaves: [2, 3],
             instruments: ["piano", "epiano", "sqwave", "strings", "synth", "synthtrumpet"],
@@ -51,19 +30,9 @@ class FreePlay extends Component {
             wrongsAllowed: 3,
         };
         this.onForwardPress = this.onForwardPress.bind(this);
-        this.repSelected = this.repSelected.bind(this);
         this.toggleList = this.toggleList.bind(this);
     }
 
-    repSelected(rep) {
-        let solfege = rep.includes("Solfege");
-        let flat = !rep.includes("#");
-        this.setState({
-            rep: rep,
-            flat: flat,
-            solfege: solfege,
-        });
-    }
 
     onForwardPress() {
         this.props.navigation.replace("Game", {
@@ -71,8 +40,6 @@ class FreePlay extends Component {
             instruments: this.state.instruments,
             octaves: this.state.octaves,
             notes: this.state.notes,
-            solfege: this.state.solfege,
-            flat: this.state.flat,
             waveColorProbability: this.state.waveColorProbability,
             wrongsAllowed: this.state.wrongsAllowed
         })
@@ -136,43 +103,24 @@ class FreePlay extends Component {
                         value={this.state.gameLen}
                     />
                 </View>
-                <View style={styles.dropDownSetting}>
-                    <View style={styles.dropDownSettingText}>
-                        <AppText>Representation: </AppText>
-                    </View>
-                    <View style={styles.dropDown}>
-                        <Picker
-                            mode="dropdown"
-                            selectedValue={this.state.rep}
-                            onValueChange={this.repSelected}
-                            itemStyle={styles.itemStyle}>
-                            {
-                                this.state.representationOptions.map(
-                                    (item) => (
-                                        <Picker.Item label={item.name} value={item.id}/>
-                                    )
-                                )
-                            }
-                        </Picker>
-                    </View>
-                </View>
+
                 <View style = {styles.buttonContainer}>
                     {(['A', 'B', 'C', 'D', 'E', 'F', 'G', 'As', 'Cs', 'Ds', 'Fs', 'Gs']).map((noteName) => {return (
-                        <TouchableOpacity onPress = {()=>this.toggleList("notes", noteName)} style = {[styles.settingButton, this.state.notes.includes(noteName) ? styles.buttonOn : styles.buttonOff]}>
+                        <TouchableOpacity key = {noteName} onPress = {()=>this.toggleList("notes", noteName)} style = {[styles.settingButton, this.state.notes.includes(noteName) ? styles.buttonOn : styles.buttonOff]}>
                             <Text style = {styles.settingText }>{ noteName.replace("s", "#") }</Text>
                         </TouchableOpacity>
                     );})}
                 </View>
                 <View style = {styles.buttonContainer}>
                     {([0, 1, 2, 3, 4]).map((octaveNumber) => {return (
-                        <TouchableOpacity onPress = {()=>this.toggleList("octaves", octaveNumber)} style = {[styles.settingButton, this.state.octaves.includes(octaveNumber) ? styles.buttonOn : styles.buttonOff]}>
+                        <TouchableOpacity key = {octaveNumber} onPress = {()=>this.toggleList("octaves", octaveNumber)} style = {[styles.settingButton, this.state.octaves.includes(octaveNumber) ? styles.buttonOn : styles.buttonOff]}>
                             <Text style = {styles.settingText }>{ octaveNumber }</Text>
                         </TouchableOpacity>
                     );})}
                 </View>
                 <View style = {styles.buttonContainer}>
                     {(["piano", "epiano", "sqwave", "strings", "synth", "synthtrumpet"]).map((instrument) => {return (
-                        <TouchableOpacity onPress = {()=>this.toggleList("instruments", instrument)} style = {[styles.settingButton, {width: 150, textAlign: "center"}, this.state.instruments.includes(instrument) ? styles.buttonOn : styles.buttonOff]}>
+                        <TouchableOpacity key = {instrument} onPress = {()=>this.toggleList("instruments", instrument)} style = {[styles.settingButton, {width: 150, textAlign: "center"}, this.state.instruments.includes(instrument) ? styles.buttonOn : styles.buttonOff]}>
                             <Text style = {styles.settingText }>{ instrument }</Text>
                         </TouchableOpacity>
                     );})}

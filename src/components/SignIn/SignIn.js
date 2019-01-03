@@ -4,6 +4,7 @@ import {withMappedNavigationProps} from "react-navigation-props-mapper";
 import Wave from "../Wave/Wave";
 import AppText from "../AppText/AppText";
 import Buttons from "@assets/buttons";
+import SoundPlayer from 'react-native-sound-player';
 
 const viewportHeight = Dimensions.get("window").height;
 
@@ -13,47 +14,34 @@ class SignIn extends Component {
         super(props);
         this.state = {
             index: 0,
-            numPages: 2,
+            numPages: 8,
             firstName: '',
             lastName: '',
-            disabled: false,
         };
         this.onForwardPress = this.onForwardPress.bind(this);
         this.renderMid = this.renderMid.bind(this);
         this.handleFirstNameChange = this.handleFirstNameChange.bind(this);
         this.handleLastNameChange = this.handleLastNameChange.bind(this);
         this.setNames = this.setNames.bind(this);
-        this.checkEnabling = this.checkEnabling.bind(this);
+    }
+
+    componentWillUnmount() {
+        SoundPlayer.unmount()
     }
 
     handleFirstNameChange(text) {
         this.setState({
             firstName: text
-        }, this.checkEnabling);
+        });
 
     }
 
     handleLastNameChange(text) {
         this.setState({
             lastName: text
-        }, this.checkEnabling);
+        });
     }
 
-    checkEnabling() {
-        if (this.state.firstName !== '' && this.state.lastName !== '') {
-            this.setState({
-                    disabled: false,
-                }
-            )
-        }
-        else {
-            this.setState({
-                    disabled: true,
-                }
-            )
-        }
-
-    }
 
     renderMid() {
         switch (this.state.index) {
@@ -63,6 +51,44 @@ class SignIn extends Component {
                     perfect pitch!
                 </AppText>);
             case 1:
+                return(
+                    <AppText style={styles.text}>
+                        Perfect Pitch is the ability to identify a note when you hear it.
+                    </AppText>
+                )
+            case 2:
+                return(
+                    <AppText style={styles.text}>
+                        For example did you know that this was a D#?
+                    </AppText>
+                )
+            case 3:
+                return(
+                    <AppText style={styles.text}>
+                        Or this was an A?
+                    </AppText>
+                )
+            case 4:
+                return(
+                    <AppText style={styles.text}>
+                        First Pitch will teach you to recognize these notes with reptition and their association with colors.
+                    </AppText>
+                )
+            case 5:
+                return(
+                    <AppText style={styles.text}>
+                        There are two modes. The first is free play where you can modify the game however you want.
+                        The other is to progress through our stages and try to finish the game
+                    </AppText>
+                )
+
+            case 6:
+                return(
+                    <AppText style={styles.text}>
+                        Thanks for downloading and playing First Pitch. Have Fun!
+                    </AppText>
+                )
+            case 7:
                 return (<View>
                     <AppText style={styles.text}>
                         Before we get started, please enter your name in the field
@@ -84,9 +110,19 @@ class SignIn extends Component {
         }
     }
 
-    onForwardPress() {
-        if (this.state.index === this.state.numPages - 1) {
-            if (this.state.firstName !== '' && this.state.lastName !== '') {
+    playSound(){
+        if(this.state.index == 3){
+            SoundPlayer.playSoundFile("piano_a3", "mp3");
+        }
+        if(this.state.index == 2){
+            SoundPlayer.playSoundFile("piano_ds3", "mp3");
+        }
+    }
+
+
+    async onForwardPress() {
+        if (this.state.index === this.state.numPages-1) {
+            if (this.state.firstName !== '') {
                 this.setNames();
                 this.props.navigation.replace("MainMenu");
             }
@@ -97,17 +133,13 @@ class SignIn extends Component {
 
             }
         } else {
-            if (this.state.index === this.state.numPages - 2) {
-                this.setState({
-                    disabled: true,
-                })
-            }
-            this.setState((prevState) => (
+            await this.setState((prevState) => (
                 {
                     index: prevState.index + 1,
                 })
             )
         }
+        this.playSound();
     }
 
     async setNames() {
@@ -121,11 +153,6 @@ class SignIn extends Component {
         }
     }
 
-    buttonStyle() {
-        return {
-            color: this.state.disabled ? '#222222' : '#000000'
-        }
-    }
 
     render() {
         return (
@@ -138,9 +165,9 @@ class SignIn extends Component {
                     {this.renderMid()}
                 </View>
                 <View style={styles.buttonContainer}>
-                    <TouchableOpacity style={[styles.forwardButton]} onPress={this.onForwardPress}
-                                      disabled={this.state.disabled}>
-                        <Image source={this.state.disabled ? Buttons.forwardGray : Buttons.forwardButton}/>
+                    <TouchableOpacity disabled = {this.state.index == 7 && this.state.firstName == ''}
+                        onPress={this.onForwardPress}>
+                        <Image source={Buttons.forwardButton}/>
                     </TouchableOpacity>
                 </View>
             </SafeAreaView>
@@ -162,13 +189,6 @@ const styles = {
         },
         middleContainer: {
             margin: 30,
-        },
-        forwardButtonContainer: {
-            marginTop: 50,
-            justifyContent: "right",
-            height: 50,
-            width: 50,
-            alignItems: "flex-end",
         },
         formField: {
             alignSelf: "center",

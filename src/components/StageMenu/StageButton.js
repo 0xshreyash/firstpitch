@@ -8,7 +8,6 @@ const {width: viewportWidth, height: viewportHeight} = Dimensions.get('window');
 
 
 class StageButton extends Component {
-
     buttonStyle() {
         let columns = this.props.columns;
         let margin = this.props.buttonMargin;
@@ -39,7 +38,7 @@ class StageButton extends Component {
     render() {
         if(this.props.levelNum <= this.props.unlockedLevels){
             return (
-                <TouchableOpacity style={[this.buttonStyle()]} onPress={()=>this.props.navigation.navigate("Game", {...this.props})}>
+                <TouchableOpacity style={[this.buttonStyle()]} onPress={()=>this.props.navigation.navigate("StageLevelInfo", {...this.props})}>
                     <Text style={[styles.levelTitle]}>{this.props.index+1 }</Text>
                 </TouchableOpacity>
             );

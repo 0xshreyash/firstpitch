@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {
     Dimensions,
     View,
+    AsyncStorage
 } from 'react-native';
 import PianoKey from './PianoKey';
 import PropTypes from 'prop-types';
@@ -49,9 +50,24 @@ export default class Piano extends Component {
                 blackHeight: 150,
                 borderColor: "black",
             },
+            solfege: false,
+            sharp: "#"
         };
         this.generatePianoStyle = this.generatePianoStyle.bind(this);
+        this.setRepresentation = this.setRepresentation.bind(this)
         this.getName = this.getName.bind(this);
+        this.setRepresentation()
+    }
+
+    async setRepresentation(){
+        solfege = await AsyncStorage.getItem("solfege");
+        solfege = await JSON.parse(solfege);
+        flat = await AsyncStorage.getItem("flat");
+        flat = await JSON.parse(flat);
+        this.setState({
+            solfege: solfege,
+            sharp: flat? '\u266D' : '#'
+        })
     }
 
     generatePianoStyle = function () {
@@ -67,14 +83,14 @@ export default class Piano extends Component {
         let val = name;
         if (val[val.length - 1] === 's') {
             val = val.slice(0, val.length - 1);
-            if (this.props.sharp !== '#') {
+            if (this.state.sharp !== '#') {
                 val = this.state.keys[(this.state.keys.indexOf(val) + 1) % 7];
             }
-            val = this.props.solfege ? this.state.repMap[val] + '\n' : val;
-            val += this.props.solfege ? '(' + this.props.sharp + ')' : this.props.sharp;
+            val = this.state.solfege ? this.state.repMap[val] + '\n' : val;
+            val += this.state.solfege ? '(' + this.state.sharp + ')' : this.state.sharp;
         }
         else {
-            val = this.props.solfege ? this.state.repMap[val] + '\n' : val;
+            val = this.state.solfege ? this.state.repMap[val] + '\n' : val;
         }
 
         return val;
@@ -87,7 +103,7 @@ export default class Piano extends Component {
                     (this.state.keys).map(
                         (name) => {
                             return (
-                                <PianoKey keyNum={this.state.keyMap[name][1]} keyColor={this.state.keyMap[name][0]}
+                                <PianoKey key = {name} keyNum={this.state.keyMap[name][1]} keyColor={this.state.keyMap[name][0]}
                                           keyName={this.getName(name)} {...this.state.keyProps} {...this.props}
                                           disabled={this.props.disabled || !this.props.options.has(name)}
                                           onPress={(event) => this.props.onChooseAnswer(event, name)}/>
@@ -105,8 +121,6 @@ Piano.propTypes = {
 };
 
 Piano.defaultProps = {
-    solfege: false,
-    sharp: "#",
     fillColor: true,
     options: new Set(['C', 'D', 'E', 'F', 'G', 'A', 'B', 'Cs', 'Ds', 'Fs', 'Gs', 'As'])
 };

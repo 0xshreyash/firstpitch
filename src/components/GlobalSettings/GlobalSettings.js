@@ -35,8 +35,20 @@ class GlobalSettings extends Component {
             flat: false,
             solfege: false,
         }
+        this.changeRep();
         this.repSelected = this.repSelected.bind(this);
         this.restartApp = this.restartApp.bind(this)
+    }
+
+    async changeRep(){
+        rep = await AsyncStorage.getItem("rep");
+        rep = await JSON.parse(rep);
+        if(rep){
+            this.setState({
+                rep: rep
+            })
+        }
+
     }
 
     restartApp(){
@@ -51,6 +63,9 @@ class GlobalSettings extends Component {
     repSelected(rep) {
         let solfege = rep.includes("Solfege");
         let flat = !rep.includes("#");
+        AsyncStorage.setItem("rep", JSON.stringify(rep));
+        AsyncStorage.setItem("flat", JSON.stringify(flat));
+        AsyncStorage.setItem("solfege", JSON.stringify(solfege));
         this.setState({
             rep: rep,
             flat: flat,
@@ -74,7 +89,7 @@ class GlobalSettings extends Component {
                             {
                                 this.state.representationOptions.map(
                                     (item) => (
-                                        <Picker.Item label={item.name} value={item.id}/>
+                                        <Picker.Item key = {item.id} label={item.name} value={item.id}/>
                                     )
                                 )
                             }
@@ -84,6 +99,12 @@ class GlobalSettings extends Component {
                 <TouchableOpacity onPress={this.restartApp}>
                     <AppText>--Reset App--</AppText>
                 </TouchableOpacity>
+                <Text>First Pitch came from a fascination with perfect pitch.
+                      Over time, our ears become used to the timbre of instruments
+                      and the pitches of notes, that is the point where people learn relative pitch
+                      rather than perfect pitch. That is why the first pitch every day is the most important:
+                      because your ears are the freshest right then. 
+                </Text>
                 <Text>Developed by Harry Zhang and Shreyash Patodia 2018</Text>
             </View>
         );

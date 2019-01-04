@@ -4,6 +4,7 @@ import Wave from '../Wave/Wave';
 import {withNavigation, NavigationActions, StackActions} from 'react-navigation';
 import AppText from "../AppText/AppText";
 import Buttons from '@assets/buttons';
+import SoundPlayer from 'react-native-sound-player';
 
 
 const {width: viewportWidth, height: viewportHeight} = Dimensions.get('window');
@@ -26,6 +27,7 @@ class MainMenu extends Component {
             }]
         };
         MainMenu.getFirstName = MainMenu.getFirstName.bind(this)
+        this.playSoundAndNavigate = this.playSoundAndNavigate.bind(this)
     }
 
     async componentDidMount() {
@@ -35,6 +37,9 @@ class MainMenu extends Component {
         });
     }
 
+    componentWillUnmount() {
+        SoundPlayer.unmount()
+    }
 
     static async getFirstName() {
         try {
@@ -44,11 +49,17 @@ class MainMenu extends Component {
         }
     }
 
+    playSoundAndNavigate(filename, screen){
+        SoundPlayer.playSoundFile(filename, "mp3");
+        this.props.navigation.navigate(screen)
+    }
+
     render() {
         return (
             <SafeAreaView style={styles.container}>
                 <View>
-                    <TouchableOpacity onPress = {()=>this.props.navigation.navigate("GlobalSettings")} style = {{height:50, width: 50, borderWidth: 2, borderRadius: 8}}>
+                    <TouchableOpacity onPress = {()=>this.playSoundAndNavigate("pop_2", "GlobalSettings")}
+                        style = {{height:50, width: 50, borderWidth: 2, borderRadius: 8}}>
                         <Image source = {Buttons.settingsButton} style={{ width: "100%", height: "100%" }} resizeMode={'contain'}/>
                     </TouchableOpacity>
                 </View>
@@ -73,7 +84,10 @@ class MainMenu extends Component {
                         {
                             this.state.options.map((item, index) => (
                                 <TouchableOpacity key = {index} style={styles.optionButton}
-                                                  onPress={() => this.props.navigation.navigate(item.goto)}>
+                                                  onPress={() => {
+                                                      SoundPlayer.playSoundFile("pop", "mp3")
+                                                      this.props.navigation.navigate(item.goto)
+                                                  }}>
                                     <AppText style={styles.optionText}>--{item.name}--</AppText>
                                 </TouchableOpacity>))
                         }

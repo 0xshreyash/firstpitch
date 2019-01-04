@@ -34,7 +34,7 @@ class StageEntry extends Component {
             (level, index) => {
                 combinedProps = {...this.levelButtonProps, ...level, unlockedLevels: this.props.unlockedLevels, index:index};
                 return [
-                      <StageButton {...combinedProps}/>
+                      <StageButton key = {index} {...combinedProps}/>
                 ]
             }
         ))

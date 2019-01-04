@@ -3,17 +3,24 @@ import React, {Component} from "react";
 import {withMappedNavigationProps} from "react-navigation-props-mapper";
 import WaveView from "../WaveView/WaveView";
 import AppText from '../AppText/AppText';
+import SoundPlayer from 'react-native-sound-player';
 
 class WelcomePage extends Component {
 
     constructor(props) {
         super(props);
         this.handleMove = this.handleMove.bind(this);
+        SoundPlayer.playSoundFile("welcome", "mp3")
     }
 
     componentDidMount() {
-        setTimeout(async () => await this.handleMove(), 1500);
+        setTimeout(async () => await this.handleMove(), 2000);
     }
+
+    componentWillUnmount() {
+        SoundPlayer.unmount()
+    }
+
 
     async handleMove() {
         try {

@@ -16,24 +16,8 @@ export default class BottomPanel extends Component {
         this.state = {
             pianoHeight: 250,
             fillColor: true,
-            sharpSymbol: '',
-
         }
     }
-
-    componentDidMount() {
-        if(this.props.flat) {
-            this.setState({
-                sharpSymbol: '\u266D',
-            })
-        }
-        else {
-            this.setState({
-                sharpSymbol: '#',
-            })
-        }
-    }
-
 
     render() {
         return (!this.props.started ?
@@ -45,8 +29,6 @@ export default class BottomPanel extends Component {
                 </TouchableOpacity>
             </View> : <Piano height={this.state.pianoHeight} disabled={this.props.disabled}
                              options={this.props.options}
-                             solfege={this.props.solfege}
-                             sharp={this.state.sharpSymbol}
                              onChooseAnswer={this.props.onChooseAnswer}
                              fillColor={this.state.fillColor}/>
         );

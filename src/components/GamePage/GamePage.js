@@ -7,7 +7,8 @@ import {
     SafeAreaView,
     AsyncStorage,
     TouchableOpacity,
-    Image
+    Image,
+    Text
 } from 'react-native';
 import SoundPlayer from 'react-native-sound-player';
 import Header from './Header';
@@ -16,6 +17,7 @@ import BottomPanel from './BottomPanel';
 import {withMappedNavigationProps} from "react-navigation-props-mapper";
 import {ColorTutorialEntries} from "../../static/ColorTutorialEntries"
 import Buttons from '@assets/buttons';
+import styles from "./GamePageStyles";
 
 
 class GamesPage extends Component {
@@ -26,7 +28,6 @@ class GamesPage extends Component {
         this.updateTrack = this.updateTrack.bind(this);
         this.onChooseAnswer = this.onChooseAnswer.bind(this);
         this.playSound = this.playSound.bind(this);
-        this.playNextTrack = this.playNextTrack.bind(this);
         this.state = {
             // wave
             startAnimation: true,
@@ -46,7 +47,11 @@ class GamesPage extends Component {
             score: 0,
             waveColor: '#000000',
             numberOfWaves: 5,
+
+            //correcting
+            displayNote: "",
         };
+        this.gapDuration = 800
     }
 
 
@@ -122,30 +127,28 @@ class GamesPage extends Component {
 
     onChooseAnswer(event, buttonID) {
         // console.warn(this.state.correctAnswer, buttonID);
+        this.setState({
+            displayNote: this.state.correctAnswer
+        })
+        setTimeout(() => this.setState({displayNote:""}), this.gapDuration);
         if (!(this.state.correctAnswer.toLowerCase() === buttonID.toLowerCase())) {
-
             this.setState(prevState => ({
                 numWrong: prevState.numWrong + 1,
-                buttonDisabled: true,
+                buttonsDisabled: true,
             }), this.updateTrack);
         } else {
+            SoundPlayer.playSoundFile("correct", "mp3");
             this.setState(prevState => ({
                 score: prevState.score + 1,
-                buttonDisabled: true
+                buttonsDisabled: true
             }), this.updateTrack);
         }
     }
 
-    playNextTrack() {
-        this.setState({
-            buttonsDisabled: false
-        }, this.playSound);
-    }
-
-
 
     playSound() {
         //Sound.setCategory('Playback');
+
         this.setState({
             buttonsDisabled: false
         });
@@ -162,12 +165,14 @@ class GamesPage extends Component {
     }
 
     gameLost(){
+        SoundPlayer.playSoundFile("fail_piano", "mp3")
         this.props.navigation.navigate("ScoreScreen", {
             score: this.state.score,
         });
     }
 
     gameWon = async()=>{
+        SoundPlayer.playSoundFile("success_piano", "mp3")
         if(this.props.levelNum){
             currUnlocked = await AsyncStorage.getItem("unlockedLevels");
             currUnlocked = JSON.parse(currUnlocked)
@@ -208,13 +213,13 @@ class GamesPage extends Component {
             currentPosition: nextPos,
             currentTrack: nextTrack,
             correctAnswer: nextAns.toUpperCase(),
-        }, () => (setTimeout(this.playSound, 0)));
+        }, () => (setTimeout(this.playSound, this.gapDuration)));
     }
 
     render() {
         //replay is only available when the game is started.
         let replay;
-        if(this.state.started){
+        if(this.state.started && !this.buttonDisabled){
             replay = (<TouchableOpacity onPress = {this.playSound} style = {{height:50, width: 50, borderWidth: 2, borderRadius: 8}}>
                             <Image source = {Buttons.replay} style={{ width: "100%", height: "100%" }} resizeMode={'contain'}/>
                         </TouchableOpacity>);
@@ -230,15 +235,14 @@ class GamesPage extends Component {
                       waveColor={this.state.waveColor}
                       numberOfWaves={this.state.numberOfWaves}/>
                 {replay}
+                <Text style = {{color: this.state.waveColor }}>{this.state.displayNote}</Text>
             </View>
 
             <View style={[styles.bottomPanelContainer]}>
                 <BottomPanel started={this.state.started} options={new Set(this.props.notes)}
                              onPressPlay={this.onPressPlay} onChooseAnswer={this.onChooseAnswer}
                              disabled={this.state.buttonsDisabled}
-                             pianoHeight={this.state.pianoHeight}
-                             solfege={this.props.solfege}
-                             flat={this.props.flat}/>
+                             pianoHeight={this.state.pianoHeight}/>
 
             </View>
         </SafeAreaView>;
@@ -255,26 +259,3 @@ GamesPage.defaultProps = {
     instruments: ["piano"],
     octaves: [3]
 };
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "stretch",
-        backgroundColor: "#FFFFFF",
-    },
-    headerContainer: {
-        flex: 1
-    },
-    waveContainer: {
-        flex: 3,
-        justifyContent: "center",
-        alignItems: "stretch",
-    },
-    bottomPanelContainer: {
-        alignItems: "stretch",
-        justifyContent: "center",
-        margin: 1,
-        //padding: 20,
-    },
-});

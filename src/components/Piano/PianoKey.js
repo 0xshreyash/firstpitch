@@ -24,7 +24,7 @@ export default class PianoKey extends Component {
     generateTextStyle() {
         let color = 'black';
         if(this.props.keyName === 'C#') {
-            console.warn(this.props.keyColor, this.props.fillColor);
+            // console.warn(this.props.keyColor, this.props.fillColor);
         }
         if(this.props.keyColor === 'B' && this.props.fillColor) {
             color = 'white';

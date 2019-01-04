@@ -35,8 +35,8 @@ class PauseScreen extends Component {
                 </TouchableOpacity>
                 <View style={styles.options}>
                     {
-                        this.state.options.map((item) => (
-                            <TouchableOpacity style={styles.optionButton}
+                        this.state.options.map((item, index) => (
+                            <TouchableOpacity key = {index} style={styles.optionButton}
                                               onPress={() => this.props.navigation.replace(item.goto)}>
                                 <AppText style={styles.optionText}>{item.name}</AppText>
                             </TouchableOpacity>))

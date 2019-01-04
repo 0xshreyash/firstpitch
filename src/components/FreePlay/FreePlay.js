@@ -41,7 +41,7 @@ class FreePlay extends Component {
             octaves: this.state.octaves,
             notes: this.state.notes,
             waveColorProbability: this.state.waveColorProbability,
-            wrongsAllowed: this.state.wrongsAllowed
+            wrongsAllowed: this.state.wrongsAllowed,
         })
     }
 
@@ -64,6 +64,9 @@ class FreePlay extends Component {
     render() {
         return (
             <ScrollView style={styles.settingsContainer}>
+                <TouchableOpacity onPress={()=>this.props.navigation.goBack()}>
+                    <Image source={Buttons.backButton} styles={styles.backButtonImage}/>
+                </TouchableOpacity>
                 <View style={styles.setting}>
                     <View style={styles.settingText}>
                         <Text>Color Help Probability: {this.state.waveColorProbability}</Text>

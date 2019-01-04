@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {AsyncStorage, View} from 'react-native';
+import {AsyncStorage, View, TouchableOpacity} from 'react-native';
 import AppText from '../AppText/AppText';
 import {withMappedNavigationProps} from "react-navigation-props-mapper";
 
@@ -44,11 +44,24 @@ class ScoreScreen extends Component {
     }
 
     render() {
+        if(this.props.win){
+            title = "Success"
+            subtitle = "You nailed those notes!"
+        }else{
+            title = "Close one"
+            subtitle = "Practice makes perfect!"
+        }
         return (
             <View style={styles.container}>
-                <AppText style={styles.titleText}>Game Over</AppText>
-                <AppText style={styles.scoreText}>Score: {this.props.score}</AppText>
-                <AppText style={styles.bestScoreText}>Best Score: {this.state.bestScore}</AppText>
+                <AppText style={styles.titleText}>{ title }</AppText>
+                <AppText style={styles.titleText}>{ subtitle}</AppText>
+                <AppText style={styles.scoreText}>Final Score: {this.props.score}</AppText>
+                <AppText style={styles.bestScoreText}>Best Overall Score: {this.state.bestScore}</AppText>
+                <AppText style={styles.bestScoreText}>Accuracy: {this.props.score/(this.props.score+this.props.numWrong)}</AppText>
+                <TouchableOpacity style={styles.optionButton}
+                                  onPress={() => this.props.navigation.navigate("MainMenu")}>
+                    <AppText style={styles.optionText}>Menu</AppText>
+                </TouchableOpacity>
             </View>
         );
     }
@@ -56,6 +69,15 @@ class ScoreScreen extends Component {
 
 
 const styles = {
+    optionButton: {
+        backgroundColor: "#eeeeee",
+        width: 160,
+        height: 80,
+        borderRadius: 25,
+        marginBottom: 30,
+        justifyContent: "center",
+        alignItems: "center",
+    },
     container: {
         flex: 1,
         flexDirection: "column",

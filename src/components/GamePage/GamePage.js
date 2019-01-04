@@ -8,7 +8,8 @@ import {
     AsyncStorage,
     TouchableOpacity,
     Image,
-    Text
+    Text,
+    BackHandler
 } from 'react-native';
 import SoundPlayer from 'react-native-sound-player';
 import Header from './Header';
@@ -56,6 +57,7 @@ class GamesPage extends Component {
 
 
     componentDidMount() {
+        BackHandler.addEventListener('hardwareBackPress', this.handleBackButtonClick);
         SoundPlayer.onFinishedPlaying((success: boolean) => { // success is true when the sound is played
           console.log("Finished playing note!", success);
         });
@@ -68,8 +70,16 @@ class GamesPage extends Component {
     }
 
     componentWillUnmount() {
+        //prevent back button
+        BackHandler.removeEventListener('hardwareBackPress', this.handleBackButtonClick);
         SoundPlayer.unmount()
     }
+
+
+    handleBackButtonClick = () => {
+        return true;
+    };
+
 
     extractNoteFromAudiofile(filename){
         //remove the instrument
@@ -114,7 +124,6 @@ class GamesPage extends Component {
                 }
             }
         }
-        // console.warn(files);
         return files;
     };
 
@@ -167,7 +176,9 @@ class GamesPage extends Component {
     gameLost(){
         SoundPlayer.playSoundFile("fail_piano", "mp3")
         this.props.navigation.navigate("ScoreScreen", {
-            score: this.state.score,
+            win: false,
+            ...this.state,
+            ...this.props
         });
     }
 
@@ -180,7 +191,9 @@ class GamesPage extends Component {
             await AsyncStorage.setItem("unlockedLevels", JSON.stringify(nextLevel));
         }
         this.props.navigation.navigate("ScoreScreen", {
-            score: this.state.score,
+            win: true,
+            ...this.state,
+            ...this.props
         });
     }
 
@@ -189,7 +202,6 @@ class GamesPage extends Component {
         // let nextPos = this.state.currentPosition === undefined ? 0 : this.state.currentPosition + 1;
 
         let nextPos = Math.floor(Math.random()*this.state.audioFiles.length)
-
         //lost the game
         if(this.state.numWrong >= this.props.wrongsAllowed){
             this.gameLost();
@@ -201,7 +213,7 @@ class GamesPage extends Component {
             this.gameWon();
             return;
         }
-        let nextTrack = this.state.audioFiles[nextPos % this.state.totalFiles];
+        let nextTrack = this.state.audioFiles[nextPos];
         let parts = nextTrack.split('/');
         let file = parts[parts.length - 1];
         let name = (file.split('.'))[0];

@@ -10,44 +10,26 @@ class PauseScreen extends Component {
 
     constructor(props) {
         super(props);
-        this.state = {
-            options: [{
-                name: 'Main Menu',
-                goto: 'MainMenu',
-            },
-                {
-                    name: 'Restart',
-                    goto: 'FreePlay',
-                }]
-        };
-        this.goBack = this.goBack.bind(this);
-    }
-
-    goBack() {
-        this.props.navigation.dispatch(NavigationActions.back())
     }
 
     render() {
         return (
             <SafeAreaView style={styles.container}>
-                <TouchableOpacity style={styles.backButton} onPress={this.goBack}>
-                    <Image source={Buttons.backButton} styles={styles.backButtonImage}/>
-                </TouchableOpacity>
+
                 <View style={styles.options}>
-                    {
-                        this.state.options.map((item, index) => (
-                            <TouchableOpacity key = {index} style={styles.optionButton}
-                                              onPress={() => this.props.navigation.replace(item.goto)}>
-                                <AppText style={styles.optionText}>{item.name}</AppText>
-                            </TouchableOpacity>))
-                    }
+                    <TouchableOpacity style={styles.optionButton} onPress={()=>this.props.navigation.goBack()}>
+                        <AppText style={styles.optionText}>Resume</AppText>
+                    </TouchableOpacity>
+                    <TouchableOpacity style={styles.optionButton}
+                                      onPress={() => this.props.navigation.navigate("MainMenu")}>
+                        <AppText style={styles.optionText}>Quit</AppText>
+                    </TouchableOpacity>
                 </View>
 
             </SafeAreaView>
         );
     }
 }
-
 
 const styles = {
     container: {

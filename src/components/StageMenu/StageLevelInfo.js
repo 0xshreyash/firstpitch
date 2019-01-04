@@ -8,7 +8,6 @@ class StageLevelInfo extends Component {
     constructor(props) {
         super(props);
         this.goBack = this.goBack.bind(this);
-        console.warn(this.props.notes);
     }
 
     goBack() {

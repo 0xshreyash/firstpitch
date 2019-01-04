@@ -76,6 +76,9 @@ class GlobalSettings extends Component {
     render() {
         return (
             <View>
+                <TouchableOpacity style={styles.backButton} onPress={()=>this.props.navigation.goBack()}>
+                    <Image source={Buttons.backButton} styles={styles.backButtonImage}/>
+                </TouchableOpacity>
                 <View style={styles.dropDownSetting}>
                     <View style={styles.dropDownSettingText}>
                         <AppText>Representation: </AppText>
@@ -103,9 +106,10 @@ class GlobalSettings extends Component {
                       Over time, our ears become used to the timbre of instruments
                       and the pitches of notes, that is the point where people learn relative pitch
                       rather than perfect pitch. That is why the first pitch every day is the most important:
-                      because your ears are the freshest right then. 
+                      because your ears are the freshest right then.
                 </Text>
                 <Text>Developed by Harry Zhang and Shreyash Patodia 2018</Text>
+                <Text>Icon made by SmashIcons from www.flaticon.com</Text>
             </View>
         );
     }

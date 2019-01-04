@@ -185,7 +185,10 @@ class GamesPage extends Component {
     }
 
     updateTrack() {
-        let nextPos = this.state.currentPosition === undefined ? 0 : this.state.currentPosition + 1;
+        //commented it out because we want randomness in production
+        // let nextPos = this.state.currentPosition === undefined ? 0 : this.state.currentPosition + 1;
+
+        let nextPos = Math.floor(Math.random()*this.state.audioFiles.length)
 
         //lost the game
         if(this.state.numWrong >= this.props.wrongsAllowed){

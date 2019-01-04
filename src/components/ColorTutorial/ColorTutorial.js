@@ -71,6 +71,9 @@ class ColorTutorial extends Component {
                     <TouchableOpacity style={styles.backButton} onPress={this.goBack}>
                         <Image source={Buttons.backButton} style={styles.backButtonImage}/>
                     </TouchableOpacity>
+                    <TouchableOpacity style={[styles.backButton, {borderWidth:2, height: 50, width: 50}]} onPress={()=>this.props.navigation.navigate("ColorInfo")}>
+                        <Image source={Buttons.information} style = {{height: "100%", width: "100%"}}/>
+                    </TouchableOpacity>
                 </SafeAreaView>
                 <View style = {{flex:3}}>
                     <Wave startAnimation={this.state.startAnimation} stopAnimation={this.state.stopAnimation}

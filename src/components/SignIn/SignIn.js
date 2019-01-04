@@ -71,7 +71,7 @@ class SignIn extends Component {
             case 4:
                 return(
                     <AppText style={styles.text}>
-                        First Pitch will teach you to recognize these notes with reptition and their association with colors.
+                        First Pitch will teach you to recognize these notes with repetition and their association with colors.
                     </AppText>
                 )
             case 5:

@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {SafeAreaView, View, Text,
-    TouchableOpacity, Image, Platform, AsyncStorage, Picker} from 'react-native';
+    TouchableOpacity, Image, Platform, AsyncStorage, Picker, Linking} from 'react-native';
 import Buttons from '@assets/buttons';
 import {withMappedNavigationProps} from "react-navigation-props-mapper";
 import Wave from '../Wave/Wave';
@@ -110,6 +110,9 @@ class GlobalSettings extends Component {
                 </Text>
                 <Text>Developed by Harry Zhang and Shreyash Patodia 2018</Text>
                 <Text>Icon made by SmashIcons from www.flaticon.com</Text>
+                <TouchableOpacity onPress={() => Linking.openURL('mailto:firstpitchapp@gmail.com,') }>
+                    <Text>Got Questions or Feedback? Contact Us</Text>
+                </TouchableOpacity>
             </View>
         );
     }

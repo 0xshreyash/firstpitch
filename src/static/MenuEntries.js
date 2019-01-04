@@ -120,7 +120,7 @@ export const MenuEntries = [
                     levelNum: 11,
                     levelName: "Even more octaves",
                     instruments: ["synth", "piano"],
-                    octaves: [2, 3, 4, 5],
+                    octaves: [2, 3, 4],
                     notes: ["C", "E", "D", "F", "G", "A", "B"],
                     waveColorProbability: 0.8,
                     gameLen: 5

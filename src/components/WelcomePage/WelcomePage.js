@@ -1,9 +1,9 @@
-import {View, AsyncStorage} from "react-native";
+import {View, AsyncStorage, Image} from "react-native";
 import React, {Component} from "react";
 import {withMappedNavigationProps} from "react-navigation-props-mapper";
 import WaveView from "../WaveView/WaveView";
-import AppText from '../AppText/AppText';
 import SoundPlayer from 'react-native-sound-player';
+import Buttons from '@assets/buttons';
 
 class WelcomePage extends Component {
 
@@ -39,21 +39,22 @@ class WelcomePage extends Component {
 
     }
 
+    // <WaveView
+    //     style={styles.waveBall}
+    //     H={50}
+    //     waveParams={[
+    //         {A: 0, T: 100, fill: '#62c2ff'},
+    //         {A: 40, T: 100, fill: '#ff5555'},
+    //     ]}
+    //     animated={false}
+    //     speedIncreasePerWave={0}
+    // />
+    // <AppText style={styles.welcomeText}>First Pitch</AppText>
+
     render() {
         return (
             <View style={styles.welcomeTextContainer}>
-                <WaveView
-                    style={styles.waveBall}
-                    H={50}
-                    waveParams={[
-                        {A: 0, T: 100, fill: '#62c2ff'},
-                        {A: 40, T: 100, fill: '#ff5555'},
-                    ]}
-                    animated={false}
-                    speedIncreasePerWave={0}
-                />
-                <AppText style={styles.welcomeText}>First Pitch</AppText>
-
+                <Image style = {{width: "70%"}} source={Buttons.iconName} resizeMode="contain"/>
             </View>
         );
     }

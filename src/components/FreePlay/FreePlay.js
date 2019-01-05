@@ -13,7 +13,15 @@ import {
 } from "react-native";
 import React, {Component} from "react"
 import {withMappedNavigationProps} from "react-navigation-props-mapper";
-import AppText from "../AppText/AppText";
+import {TextButton,
+        GlobalStyles,
+        Wave,
+        LargeText,
+        Header,
+        IconButton,
+        SmallText,
+        ParagraphText,
+        Piano} from "../Index"
 import Buttons from "@assets/buttons";
 import styles from "./FreePlayStyles";
 
@@ -63,82 +71,110 @@ class FreePlay extends Component {
 
     render() {
         return (
-            <ScrollView style={styles.settingsContainer}>
-                <TouchableOpacity onPress={()=>this.props.navigation.goBack()}>
-                    <Image source={Buttons.backButton} styles={styles.backButtonImage}/>
-                </TouchableOpacity>
-                <View style={styles.setting}>
+            <SafeAreaView  style={[GlobalStyles.container]}>
+            <ScrollView style = {styles.container} showsVerticalScrollIndicator={false}>
+                <Header leftIcon="backButton"
+                        leftOnPress ={()=>this.props.navigation.goBack()}
+                        rightIcon="tick"
+                        rightOnPress={this.onForwardPress}
+                        style = {{margin:0}}>
+                        Free Play
+                </Header>
+                <View style={[styles.setting, {marginTop:60}]}>
                     <View style={styles.settingText}>
-                        <Text>Color Help Probability: {this.state.waveColorProbability}</Text>
+                        <SmallText>{ "Color Help Probability".toUpperCase()}</SmallText>
+                        <SmallText>{Math.round(this.state.waveColorProbability * 10) / 10}</SmallText>
                     </View>
                     <Slider
                         style={styles.settingInput}
                         step={0.1}
                         minimumValue={0}
                         maximumValue={1}
+                        minimumTrackTintColor='black'
+                        thumbTintColor='black'
                         onValueChange={(value)=>this.setState({waveColorProbability:value})}
                         value={this.state.waveColorProbability}
                     />
                 </View>
                 <View style={styles.setting}>
                     <View style={styles.settingText}>
-                        <Text>Wrongs Allowed: {this.state.wrongsAllowed}</Text>
+                        <SmallText>{ "Wrongs Allowed".toUpperCase()}</SmallText>
+                        <SmallText>{this.state.wrongsAllowed}</SmallText>
                     </View>
                     <Slider
                         style={styles.settingInput}
                         step={1}
                         minimumValue={1}
                         maximumValue={10}
+                        minimumTrackTintColor='black'
+                        thumbTintColor='black'
                         onValueChange={(value)=>this.setState({wrongsAllowed:value})}
                         value={this.state.wrongsAllowed}
                     />
                 </View>
                 <View style={styles.setting}>
                     <View style={styles.settingText}>
-                        <Text>Game Length: {this.state.gameLen}</Text>
+                        <SmallText>{ "Game Length".toUpperCase()}</SmallText>
+                        <SmallText>{this.state.gameLen}</SmallText>
                     </View>
                     <Slider
                         style={styles.settingInput}
                         step={1}
                         minimumValue={1}
                         maximumValue={100}
+                        minimumTrackTintColor='black'
+                        thumbTintColor='black'
                         onValueChange={(value)=>this.setState({gameLen:value})}
                         value={this.state.gameLen}
                     />
                 </View>
 
-                <View style = {styles.buttonContainer}>
-                    {(['A', 'B', 'C', 'D', 'E', 'F', 'G', 'As', 'Cs', 'Ds', 'Fs', 'Gs']).map((noteName) => {return (
-                        <TouchableOpacity key = {noteName} onPress = {()=>this.toggleList("notes", noteName)} style = {[styles.settingButton, this.state.notes.includes(noteName) ? styles.buttonOn : styles.buttonOff]}>
-                            <Text style = {styles.settingText }>{ noteName.replace("s", "#") }</Text>
-                        </TouchableOpacity>
-                    );})}
+                <View>
+                    <SmallText>NOTES</SmallText>
+                    <View style = {styles.buttonContainer}>
+                        {(['A', 'B', 'C', 'D', 'E', 'F', 'G', 'As', 'Cs', 'Ds', 'Fs', 'Gs']).map((noteName) => {return (
+                            <TextButton size = "small"
+                                        inverse = {true}
+                                        key = {noteName}
+                                        onPress = {()=>this.toggleList("notes", noteName)}
+                                        style = {[{height: 70, width: 70,}, styles.button, this.state.notes.includes(noteName) ? styles.buttonOn : styles.buttonOff]}>
+                                { noteName.replace("s", "#") }
+                            </TextButton>
+                        );})}
+                    </View>
                 </View>
-                <View style = {styles.buttonContainer}>
-                    {([0, 1, 2, 3, 4]).map((octaveNumber) => {return (
-                        <TouchableOpacity key = {octaveNumber} onPress = {()=>this.toggleList("octaves", octaveNumber)} style = {[styles.settingButton, this.state.octaves.includes(octaveNumber) ? styles.buttonOn : styles.buttonOff]}>
-                            <Text style = {styles.settingText }>{ octaveNumber }</Text>
-                        </TouchableOpacity>
-                    );})}
+
+                <View>
+                    <SmallText>OCTAVES</SmallText>
+                    <View style = {styles.buttonContainer}>
+                        {([0, 1, 2, 3, 4]).map((octaveNumber) => {return (
+                            <TextButton
+                                size = "small"
+                                key = {octaveNumber}
+                                onPress = {()=>this.toggleList("octaves", octaveNumber)}
+                                style = {[{width:150}, styles.button, this.state.octaves.includes(octaveNumber) ? styles.buttonOn : styles.buttonOff]}>
+                                { GlobalStyles.toOctave(octaveNumber) }
+                            </TextButton>
+                        );})}
+                    </View>
                 </View>
-                <View style = {styles.buttonContainer}>
-                    {(["piano", "epiano", "sqwave", "strings", "synth", "synthtrumpet"]).map((instrument) => {return (
-                        <TouchableOpacity key = {instrument} onPress = {()=>this.toggleList("instruments", instrument)} style = {[styles.settingButton, {width: 150, textAlign: "center"}, this.state.instruments.includes(instrument) ? styles.buttonOn : styles.buttonOff]}>
-                            <Text style = {styles.settingText }>{ instrument }</Text>
-                        </TouchableOpacity>
-                    );})}
-                </View>
-                <View style={styles.buttonContainer}>
-                    <TouchableOpacity
-                        style={styles.forwardButton}
-                        onPress={this.onForwardPress}
-                        disabled={this.state.disabled}>
-                        <Image
-                            source={this.state.disabled ? Buttons.forwardGray : Buttons.forwardButton}
-                        />
-                    </TouchableOpacity>
+
+                <View>
+                    <SmallText>INSTRUMENTS</SmallText>
+                    <View style = {styles.buttonContainer}>
+                        {(["piano", "epiano", "sqwave", "strings", "synth", "synthtrumpet"]).map((instrument) => {return (
+                            <TextButton
+                                size = "small"
+                                key = {instrument}
+                                onPress = {()=>this.toggleList("instruments", instrument)}
+                                style = {[{width: 150}, styles.button, this.state.instruments.includes(instrument) ? styles.buttonOn : styles.buttonOff]}>
+                                { GlobalStyles.toInstrument(instrument) }
+                            </TextButton>
+                        );})}
+                    </View>
                 </View>
             </ScrollView>
+            </SafeAreaView>
         )
             ;
     }

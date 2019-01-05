@@ -1,68 +1,41 @@
 import { StyleSheet, Dimensions, Platform } from 'react-native';
+import {GlobalStyles} from "../Index"
 
 export default StyleSheet.create({
-    buttonContainer:{
+    container:{
         margin: 25,
-        flexDirection: "row",
-        flexWrap: "wrap"
     },
-    settingButton:{
-        margin: 10,
-        padding: 10,
-        justifyContent: "center",
-        alignItems: "center",
-        height: 70,
-        width: 70,
-        borderWidth: 2,
-    },
-    buttonOn:{
-        opacity: 1,
-        backgroundColor: "green"
-    },
-    buttonOff:{
-        backgroundColor: "white",
-        opacity: 0.5,
-    },
-    settingsContainer: {
-        flex: 1,
-    },
+
     setting: {
-        padding: 10,
+        marginTop:30,
         zIndex: 1000,
-    },
-    repSetting: {
-        flexDirection: 'row',
-        zIndex: 1000,
+        marginBottom: 30,
     },
     settingText: {
-        padding: 10,
+        marginBottom: 15,
         flexDirection: "row",
         justifyContent: "space-between"
     },
     settingInput: {
         zIndex: 1000,
+        color:"black"
+
     },
-    waveContainer: {
-        marginBottom: 50,
+
+    button:{
+        borderRadius: GlobalStyles.borderRadiusLow,
+        margin: 10,
     },
-    menuContainer: {
-        margin: 30,
+    buttonContainer:{
+        marginTop: 20,
+        flexDirection: "row",
+        flexWrap: "wrap",
+        marginBottom: 40,
     },
-    formField: {
-        alignSelf: "center",
-        textAlign: "center",
-        height: 40,
-        borderBottomColor: 'black',
-        borderBottomWidth: 1,
-        width: 250,
-        padding: 8,
-        fontSize: 18,
-        marginBottom: 10,
+    buttonOn:{
+        backgroundColor: "#b0aeaa"
     },
-    text: {
-        fontSize: 20,
-        margin: 20,
-        alignSelf: 'center',
-        color: 'black',
+    buttonOff:{
+        backgroundColor: "#ececec",
     },
 })

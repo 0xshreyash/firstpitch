@@ -33,7 +33,7 @@ Wave.defaultProps = {
     width: Dimensions.get("window").width,
 };
 
-const styles = StyleSheet.create({
+const styles = {
     container: {
         marginTop: 3,
         marginRight: 3,
@@ -47,4 +47,4 @@ const styles = StyleSheet.create({
         height: 40,
         width: 40
     }
-});
+};

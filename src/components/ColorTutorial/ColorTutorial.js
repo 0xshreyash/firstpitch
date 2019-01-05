@@ -1,15 +1,19 @@
 import React, {Component} from 'react';
 import {SafeAreaView, View, Text, TouchableOpacity, Image, Platform} from 'react-native';
-import {sliderWidth, itemWidth} from './ColorTutorialStyle';
-import styles from './ColorTutorialStyle';
 import {ColorTutorialEntries} from '../../static/ColorTutorialEntries';
 import {NavigationActions, withNavigation} from "react-navigation";
 import Buttons from '@assets/buttons';
 import {withMappedNavigationProps} from "react-navigation-props-mapper";
-import Piano from "../Piano/Piano";
-import Wave from '../Wave/Wave';
 import SoundPlayer from 'react-native-sound-player';
-
+import {TextButton,
+        GlobalStyles,
+        Wave,
+        LargeText,
+        Header,
+        IconButton,
+        SmallText,
+        ParagraphText,
+        Piano} from "../Index"
 
 class ColorTutorial extends Component {
 
@@ -52,7 +56,7 @@ class ColorTutorial extends Component {
             obj = ColorTutorialEntries[i]
             if(obj["note"] == noteName){
                 this.setState({
-                    backgroundColor: obj["color"],
+                    waveColor: obj["color"],
                     note: obj["note"],
                     subtitle: obj["subtitle"]
                 })
@@ -66,24 +70,22 @@ class ColorTutorial extends Component {
         const {navigation} = this.props.navigation;
 
         return (
-            <SafeAreaView style={[styles.container, {backgroundColor: this.state.backgroundColor}]}>
-                <SafeAreaView style={styles.header}>
-                    <TouchableOpacity style={styles.backButton} onPress={this.goBack}>
-                        <Image source={Buttons.backButton} style={styles.backButtonImage}/>
-                    </TouchableOpacity>
-                    <TouchableOpacity style={[styles.backButton, {borderWidth:2, height: 50, width: 50}]} onPress={()=>this.props.navigation.navigate("ColorInfo")}>
-                        <Image source={Buttons.information} style = {{height: "100%", width: "100%"}}/>
-                    </TouchableOpacity>
-                </SafeAreaView>
-                <View style = {{flex:3}}>
+            <SafeAreaView style={GlobalStyles.container}>
+                <Header leftOnPress={this.goBack} leftIcon = "backButton"
+                        rightOnPress={()=>this.props.navigation.navigate("ColorInfo")} rightIcon={"information"}>
+                    Tutorial
+                </Header>
+                <View style = {styles.waveContainer}>
                     <Wave startAnimation={this.state.startAnimation} stopAnimation={this.state.stopAnimation}
                           waveAmplitude={this.state.waveAmplitude} waveWidth={this.state.waveWidth}
                           waveColor={this.state.waveColor}
                           numberOfWaves={this.state.numberOfWaves}/>
-                    <Text>Note: {this.state.note}</Text>
-                    <Text>Explanation: {this.state.subtitle}</Text>
                 </View>
-                <View style = {{flex:3}}>
+                <View style = {styles.middle}>
+                    <LargeText style = {{color:this.state.waveColor, marginBottom: 20}}>{this.state.note.replace("s", "#")}</LargeText>
+                    <ParagraphText style = {styles.explanation}>{this.state.subtitle}</ParagraphText>
+                </View>
+                <View style = {styles.pianoContainer}>
                     <Piano onChooseAnswer = {this.onChooseAnswer}/>
                 </View>
             </SafeAreaView>
@@ -91,4 +93,22 @@ class ColorTutorial extends Component {
     }
 }
 
+const styles = {
+    waveContainer:{
+        marginTop: 60,
+    },
+    explanation:{
+        marginLeft: 30,
+        marginRight: 30,
+        textAlign: "center",
+    },
+    middle:{
+        flex:3,
+        flexDirection: "column",
+        alignItems: "center"
+    },
+    pianoContainer:{
+        alignSelf: "stretch"
+     }
+}
 export default withMappedNavigationProps()(ColorTutorial);

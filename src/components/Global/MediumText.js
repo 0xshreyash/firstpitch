@@ -2,7 +2,7 @@ import {Text, Platform} from "react-native";
 import React, {Component} from "react"
 import {withMappedNavigationProps} from "react-navigation-props-mapper";
 
-class AppText extends Component {
+class MediumText extends Component {
 
     generateTextStyle() {
         const ios = Platform.OS === 'ios';
@@ -16,16 +16,16 @@ class AppText extends Component {
                 color: "#000000",
             }
         }
-        return {...style, ...this.props.style};
+        return {...style, ...this.props.style, fontSize: 20};
     }
 
     render() {
         return (
             <Text style={this.generateTextStyle()}>
-                {this.props.children}
+                {this.props.children.toUpperCase()}
             </Text>
         );
     }
 }
 
-export default withMappedNavigationProps()(AppText);
+export default withMappedNavigationProps()(MediumText);

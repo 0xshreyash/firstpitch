@@ -7,13 +7,13 @@ export const MenuEntries = [
         levels:[
                 {
 
-                    levelName: "Starting with C and G",
+                    levelName: "Warm Up",
                     instruments: ["piano"],
                     octaves: [3],
                     notes: ["C", "G"],
                     waveColorProbability: 1,
-                    gameLen: 20,
-                    wrongsAllowed: 5
+                    gameLen: 5,
+                    wrongsAllowed: 3
                 },
                 {
 
@@ -314,7 +314,8 @@ export const MenuEntries = [
                     octaves: [1, 4],
                     notes: ["C", "E", "D", "F", "G", "A", "B", "Cs", "Ds"],
                     waveColorProbability: 0.5,
-                    gameLen: 5
+                    gameLen: 30,
+                    wrongsAllowed: 5,
                 },
         ],
     },

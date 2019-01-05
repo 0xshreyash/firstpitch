@@ -20,20 +20,11 @@ class StageButton extends Component {
         let rows = 2;
         return {
             margin: margin,
-            shadowColor: "#7e7d7d",
-             shadowOffset: {
-                 width: 0,
-                 height: 2,
-             },
-             shadowOpacity: 0.30,
-             shadowRadius: 2,
-             elevation: 8,
-            backgroundColor: "#eeeeee",
             borderRadius: 5,
-            borderColor: "blue",
             alignItems: "center",
             justifyContent: "center",
             flex: 1,
+            borderWidth: 2,
             minWidth: (viewportWidth * widthPercentage * 0.01 - 2 * margin * columns) / columns - 3,
             height: (viewportHeight * heightPercentage * 0.01 - 2 * margin * rows) / rows - 3,
         }
@@ -57,8 +48,6 @@ class StageButton extends Component {
 
     }
 }
-
-
 
 const styles = StyleSheet.create({
     levelImage: {

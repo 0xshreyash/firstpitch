@@ -12,14 +12,20 @@ import {
     BackHandler
 } from 'react-native';
 import SoundPlayer from 'react-native-sound-player';
-import Header from './Header';
-import Wave from '../Wave/Wave';
 import BottomPanel from './BottomPanel';
 import {withMappedNavigationProps} from "react-navigation-props-mapper";
 import {ColorTutorialEntries} from "../../static/ColorTutorialEntries"
 import Buttons from '@assets/buttons';
 import styles from "./GamePageStyles";
-
+import {TextButton,
+        GlobalStyles,
+        Wave,
+        LargeText,
+        Header,
+        IconButton,
+        SmallText,
+        ParagraphText,
+        Piano} from "../Index"
 
 class GamesPage extends Component {
     constructor(props) {
@@ -29,6 +35,7 @@ class GamesPage extends Component {
         this.updateTrack = this.updateTrack.bind(this);
         this.onChooseAnswer = this.onChooseAnswer.bind(this);
         this.playSound = this.playSound.bind(this);
+        this.pausePress = this.pausePress.bind(this);
         this.state = {
             // wave
             startAnimation: true,
@@ -50,7 +57,7 @@ class GamesPage extends Component {
             numberOfWaves: 5,
 
             //correcting
-            displayNote: "",
+            displayNote: " ",
         };
         this.gapDuration = 800
     }
@@ -137,9 +144,9 @@ class GamesPage extends Component {
     onChooseAnswer(event, buttonID) {
         // console.warn(this.state.correctAnswer, buttonID);
         this.setState({
-            displayNote: this.state.correctAnswer
+            displayNote: this.state.correctAnswer.replace("S", "#")
         })
-        setTimeout(() => this.setState({displayNote:""}), this.gapDuration);
+        setTimeout(() => this.setState({displayNote:" "}), this.gapDuration);
         if (!(this.state.correctAnswer.toLowerCase() === buttonID.toLowerCase())) {
             this.setState(prevState => ({
                 numWrong: prevState.numWrong + 1,
@@ -157,7 +164,9 @@ class GamesPage extends Component {
 
     playSound() {
         //Sound.setCategory('Playback');
-
+        if(!this.state.started){
+            return;
+        }
         this.setState({
             buttonsDisabled: false
         });
@@ -231,36 +240,34 @@ class GamesPage extends Component {
         }, () => (setTimeout(this.playSound, this.gapDuration)));
     }
 
+
+    pausePress() {
+        this.props.navigation.navigate("PauseScreen", {levelNum:this.props.levelNum});
+    }
     render() {
-        //replay is only available when the game is started.
-        let replay;
-        if(this.state.started && !this.buttonDisabled){
-            replay = (<TouchableOpacity onPress = {this.playSound} style = {{height:50, width: 50, borderWidth: 2, borderRadius: 8}}>
-                            <Image source = {Buttons.replay} style={{ width: "100%", height: "100%" }} resizeMode={'contain'}/>
-                        </TouchableOpacity>);
-        }
-        return <SafeAreaView style={styles.container}>
-            <View style={[styles.headerContainer]}>
-                <Header score={this.state.score} numWrong = {this.state.numWrong} wrongsAllowed = {this.props.wrongsAllowed} navigation={this.props.navigation}/>
-            </View>
+        return (
+            <SafeAreaView style={GlobalStyles.container}>
+                <Header pauseButtonIsTOOPHAT={true} rightIcon = "pauseButton" rightOnPress={this.pausePress}>
+                    {"Score: " + this.state.score + "  Wrongs: " + this.state.numWrong + " / " + this.props.wrongsAllowed}
+                </Header>
+                <View style={[styles.pianoContainer]}>
+                    <LargeText style = {{color: this.state.waveColor }}>{this.state.displayNote}</LargeText>
+                    <BottomPanel started={this.state.started} options={new Set(this.props.notes)}
+                                 onPressPlay={this.onPressPlay} onChooseAnswer={this.onChooseAnswer}
+                                 disabled={this.state.buttonsDisabled}
+                                 pianoHeight={this.state.pianoHeight}/>
 
-            <View style={[styles.waveContainer]}>
-                <Wave startAnimation={this.state.startAnimation} stopAnimation={this.state.stopAnimation}
-                      waveAmplitude={this.state.waveAmplitude} waveWidth={this.state.waveWidth}
-                      waveColor={this.state.waveColor}
-                      numberOfWaves={this.state.numberOfWaves}/>
-                {replay}
-                <Text style = {{color: this.state.waveColor }}>{this.state.displayNote}</Text>
-            </View>
+                </View>
+                <TouchableOpacity onPress = {this.playSound} style={[styles.waveContainer]}>
+                    <Wave startAnimation={this.state.startAnimation} stopAnimation={this.state.stopAnimation}
+                          waveAmplitude={this.state.waveAmplitude} waveWidth={this.state.waveWidth}
+                          waveColor={this.state.waveColor}
+                          numberOfWaves={this.state.numberOfWaves}
+                          />
+                </TouchableOpacity>
+            </SafeAreaView>
+        );
 
-            <View style={[styles.bottomPanelContainer]}>
-                <BottomPanel started={this.state.started} options={new Set(this.props.notes)}
-                             onPressPlay={this.onPressPlay} onChooseAnswer={this.onChooseAnswer}
-                             disabled={this.state.buttonsDisabled}
-                             pianoHeight={this.state.pianoHeight}/>
-
-            </View>
-        </SafeAreaView>;
     }
 }
 export default withMappedNavigationProps()(GamesPage);

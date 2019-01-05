@@ -1,11 +1,17 @@
 import React, {Component} from 'react';
 import {AsyncStorage, Dimensions, Text, TouchableOpacity, View, SafeAreaView, Image} from 'react-native';
-import Wave from '../Wave/Wave';
 import {withNavigation, NavigationActions, StackActions} from 'react-navigation';
-import AppText from "../AppText/AppText";
 import Buttons from '@assets/buttons';
 import SoundPlayer from 'react-native-sound-player';
-
+import {TextButton,
+        GlobalStyles,
+        Wave,
+        LargeText,
+        Header,
+        IconButton,
+        SmallText,
+        ParagraphText,
+        Piano} from "../Index"
 
 const {width: viewportWidth, height: viewportHeight} = Dimensions.get('window');
 
@@ -56,42 +62,32 @@ class MainMenu extends Component {
 
     render() {
         return (
-            <SafeAreaView style={styles.container}>
-                <View>
-                    <TouchableOpacity onPress = {()=>this.playSoundAndNavigate("pop_2", "GlobalSettings")}
-                        style = {{height:50, width: 50, borderWidth: 2, borderRadius: 8}}>
-                        <Image source = {Buttons.settingsButton} style={{ width: "100%", height: "100%" }} resizeMode={'contain'}/>
-                    </TouchableOpacity>
-                </View>
-                <View style={styles.waveBackground}>
+            <SafeAreaView style={[GlobalStyles.container]}>
+                <Header rightIcon="settingsButton" rightOnPress = {()=>this.playSoundAndNavigate("pop_2", "GlobalSettings")}>
+                </Header>
+                <View style = {styles.waveContainer}>
                     <Wave startAnimation={true} stopAnimation={false}
                           waveColor={'#000000'}
                           backgroundColor={'#ffffff'}
-                          numberOfWaves={2}
+                          numberOfWaves={1}
                           amplitude={0.25}
-                          height={100}/>
+                          height={150}
+                          primaryWaveLineWidth={150}/>
                 </View>
-                <View styles={styles.content}>
-                    <View style={styles.welcomeText}>
-                        <AppText style={styles.titleText}>
-                            First Pitch
-                        </AppText>
-                        <AppText style={styles.subtitleText}>
-                            Hello {this.state.name}!
-                        </AppText>
-                    </View>
-                    <View style={styles.options}>
-                        {
-                            this.state.options.map((item, index) => (
-                                <TouchableOpacity key = {index} style={styles.optionButton}
-                                                  onPress={() => {
-                                                      SoundPlayer.playSoundFile("pop", "mp3")
-                                                      this.props.navigation.navigate(item.goto)
-                                                  }}>
-                                    <AppText style={styles.optionText}>--{item.name}--</AppText>
-                                </TouchableOpacity>))
-                        }
-                    </View>
+                <LargeText style = {styles.titleText}>FIRST{"\n"}PITCH</LargeText>
+                <View style = {styles.buttonContainer}>
+                    <SmallText style = {{margin: 10, marginBottom: 30}}>{ ("Hello " + this.state.name + "!").toUpperCase()}</SmallText>
+                    {
+                        this.state.options.map((item, index) => (
+                            <TextButton key = {index}
+                                            inverse = {true}
+                                              onPress={() => {
+                                                  SoundPlayer.playSoundFile("pop", "mp3")
+                                                  this.props.navigation.navigate(item.goto)
+                                              }} style = {[styles.menuButton]}>
+                                    {item.name}
+                            </TextButton>))
+                    }
                 </View>
             </SafeAreaView>
         );
@@ -99,30 +95,30 @@ class MainMenu extends Component {
 }
 
 const styles = {
-    container: {
-        flex: 1,
-        flexDirection: 'column',
+    waveContainer:{
+        position: "absolute",
+        top: "40%",
     },
-    content: {
-        alignItems: 'center',
+    buttonContainer:{
+        padding: 20,
+        borderRadius: GlobalStyles.borderRadiusLow,
+        flexDirection: "column",
+        borderWidth: 2,
+        alignItems: "center",
+        width: "80%",
+        paddingBottom: 30,
     },
-    welcomeText: {
-        alignItems: 'center',
+    titleText:{
+        letterSpacing: 5,
+        fontSize: 60,
+        marginTop: "10%",
+        marginBottom: "10%",
+        lineHeight: 80,
     },
-    titleText: {
-        fontSize: 50,
-        fontWeight: 'bold',
-    },
-    subtitleText: {
-        fontSize: 30,
-        fontWeight: 'bold',
-    },
-    options: {
-        marginTop: 50,
-        alignItems: 'center',
-    },
-    optionText: {
-        fontSize: 30,
+    menuButton:{
+        alignSelf: "stretch",
+        margin: 10,
+        padding: 10,
     }
 };
 

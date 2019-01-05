@@ -16,36 +16,45 @@ import ColorInfo from "./src/components/ColorTutorial/ColorInfo"
 // 2. Add a mechanism where you lose if you have 3 wrongs
 // 3. Make stages unlockable. So you start with one stage then you unlock the next by completing the previous one
 const AppNavigator = createStackNavigator({
+
     WelcomePage: {
         screen: WelcomePage
-    },
-    SignIn: {
-        screen: SignIn
-    },
-    ScoreScreen: {
-        screen: ScoreScreen,
-    },
-    PauseScreen: {
-        screen: PauseScreen,
-    },
-    FreePlay: {
-        screen: FreePlay,
-    },
-    Game: {
-        screen: GamePage
-    },
-    MainMenu: {
-        screen: MainMenu
-    },
-    StageMenu: {
-        screen: StageMenu
     },
     ColorTutorial: {
         screen: ColorTutorial
     },
+
+
+    ScoreScreen: {
+        screen: ScoreScreen,
+    },
+    StageMenu: {
+        screen: StageMenu
+    },
+    Game: {
+        screen: GamePage
+    },
+    FreePlay: {
+        screen: FreePlay,
+    },
+    MainMenu: {
+        screen: MainMenu
+    },
+    SignIn: {
+        screen: SignIn
+    },
     GlobalSettings:{
         screen: GlobalSettings
     },
+
+
+
+    PauseScreen: {
+        screen: PauseScreen,
+    },
+
+
+
     StageLevelInfo:{
         screen: StageLevelInfo
     },

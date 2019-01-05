@@ -1,13 +1,22 @@
 import React, {Component} from 'react';
-import {Image, Platform, SafeAreaView, TouchableOpacity, View, AsyncStorage} from 'react-native';
+import {Image, Platform, SafeAreaView, TouchableOpacity, View, AsyncStorage, Dimensions} from 'react-native';
 import Carousel, {Pagination} from 'react-native-snap-carousel';
 import StageEntry from './StageEntry';
-import styles, {sliderWidth, itemWidth} from './StageStyle';
 import {MenuEntries} from '../../static/MenuEntries';
 import {NavigationActions} from 'react-navigation';
-import Wave from "../Wave/Wave";
 import Buttons from "@assets/buttons";
 import {withMappedNavigationProps} from "react-navigation-props-mapper";
+import {TextButton,
+        GlobalStyles,
+        Wave,
+        LargeText,
+        Header,
+        IconButton,
+        SmallText,
+        ParagraphText,
+        Piano} from "../Index"
+
+const { width: viewportWidth, height: viewportHeight } = Dimensions.get('window');
 
 
 class StageMenu extends Component {
@@ -72,14 +81,14 @@ class StageMenu extends Component {
         const {slider1ActiveSlide} = this.state;
         return (
             <SafeAreaView style={styles.stageMenuContainer}>
+                <Header leftIcon="backButton" leftOnPress={this.goBack}>
+                    Stages
+                </Header>
                 <SafeAreaView style={styles.waveBackground}>
-                    <TouchableOpacity style={styles.backButton} onPress={this.goBack}>
-                        <Image source={Buttons.backButton} styles={styles.backButtonImage}/>
-                    </TouchableOpacity>
                     <Wave startAnimation={true} stopAnimation={false}
-                          waveColor={'#000000'}
+                          waveColor={"#dddddd"}
                           backgroundColor={'#ffffff'}
-                          numberOfWaves={2}
+                          numberOfWaves={1}
                           primaryWaveLineWidth={Platform.OS === 'ios' ? 0.25 : 100}
                           amplitude={0.25}
                           height={100}/>
@@ -89,8 +98,8 @@ class StageMenu extends Component {
                         ref={c => this._slider1Ref = c}
                         data={MenuEntries}
                         renderItem={this._renderItem}
-                        sliderWidth={sliderWidth}
-                        itemWidth={itemWidth}
+                        sliderWidth={viewportWidth}
+                        itemWidth={viewportWidth}
                         firstItem={this.state.slider1ActiveSlide}
                         inactiveSlideScale={0.94}
                         inactiveSlideOpacity={0.7}
@@ -117,3 +126,29 @@ class StageMenu extends Component {
 }
 
 export default withMappedNavigationProps()(StageMenu);
+
+const styles = {
+    carouselContainer: {
+        paddingVertical: 0,
+        flex: 4,
+    },
+    paginationContainer: {
+        paddingVertical: 32
+    },
+    paginationDot: {
+        width: 15,
+        height: 15,
+        borderRadius: 8,
+        marginHorizontal: 4
+    },
+
+    waveBackground:{
+        position: "absolute",
+        bottom: "20%",
+        left: 0,
+        zIndex: -1,
+    },
+    stageMenuContainer: {
+        flex: 5,
+    },
+}

@@ -63,7 +63,7 @@ class StageEntry extends Component {
                     { this.generateButtons() }
                 </View>
                 <View style = {styles.titles}>
-                    <Text style = {styles.titleText}>{ title.toUpperCase() }</Text>
+                    <Text style = {styles.titleText}>{"Stage " + this.props.stageNum }</Text>
                     <Text style = {styles.subtitleText}>{ subtitle.toLowerCase() }</Text>
                 </View>
             </SafeAreaView>

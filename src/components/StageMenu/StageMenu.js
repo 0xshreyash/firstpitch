@@ -17,18 +17,37 @@ class StageMenu extends Component {
         this.state = {
             slider1ActiveSlide: 0
         };
-        this.goBack = this.goBack.bind(this);
         this.getUnlockedLevels();
+        this.goBack = this.goBack.bind(this);
         this._renderItem=this._renderItem.bind(this);
         this.prevLevels = 0;
+        this.currLevel = 0;
+        this.addLevelNums(MenuEntries);
+    }
+
+    addLevelNums(obj){
+        levelNum = 1;
+        for(let i = 0;i<obj.length;i++){
+            stageLevels = obj[i]["levels"];
+            for(let j=0;j<stageLevels.length;j++){
+                level = stageLevels[j];
+                level["levelNum"] = levelNum;
+                levelNum +=1;
+            }
+        }
+        console.warn(levelNum);
+
     }
 
     goBack() {
         this.props.navigation.dispatch(NavigationActions.back())
     }
 
-    _renderItem({item, }){
-        return <StageEntry data={item} unlockedLevels={this.state.unlockedLevels}/>;
+    _renderItem({item, index}){
+        // oldCurrLevel = this.currLevel;
+        // this.currLevel += item.levels.length;
+        // console.warn("oldCurrLevel", oldCurrLevel);
+        return <StageEntry data={item} unlockedLevels={this.state.unlockedLevels} stageNum ={index+1}/>;
     }
 
     storeUnlockedLevels = async (value) => {
@@ -42,9 +61,9 @@ class StageMenu extends Component {
     getUnlockedLevels = async ()=>{
         value = await AsyncStorage.getItem('unlockedLevels');
         if(!value){
-            this.setState({"unlockedLevels":1});
+            await this.setState({"unlockedLevels":1});
         }else{
-            this.setState({"unlockedLevels":JSON.parse(value)});
+            await this.setState({"unlockedLevels":JSON.parse(value)});
         }
     }
 

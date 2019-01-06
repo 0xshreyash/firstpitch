@@ -141,14 +141,13 @@ const styles = {
         borderRadius: 8,
         marginHorizontal: 4
     },
-
     waveBackground:{
         position: "absolute",
-        bottom: "20%",
+        top: "10%",
         left: 0,
         zIndex: -1,
     },
     stageMenuContainer: {
         flex: 5,
     },
-}
+};

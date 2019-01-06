@@ -1,28 +1,15 @@
 import {
-    TextInput,
-    AsyncStorage,
     View,
     SafeAreaView,
-    TouchableOpacity,
-    Image,
-    Dimensions,
     ScrollView,
     Slider,
-    Text,
-    Picker,
 } from "react-native";
 import React, {Component} from "react"
 import {withMappedNavigationProps} from "react-navigation-props-mapper";
 import {TextButton,
         GlobalStyles,
-        Wave,
-        LargeText,
         Header,
-        IconButton,
-        SmallText,
-        ParagraphText,
-        Piano} from "../Index"
-import Buttons from "@assets/buttons";
+        SmallText} from "../Index"
 import styles from "./FreePlayStyles";
 
 class FreePlay extends Component {
@@ -54,7 +41,7 @@ class FreePlay extends Component {
     }
 
     toggleList(listName, element){
-        list = this.state[listName];
+        let list = this.state[listName];
         //cannot have less than one option. eg must have one note and one octave
         if(list.length <= 1){
             return;
@@ -128,7 +115,6 @@ class FreePlay extends Component {
                         value={this.state.gameLen}
                     />
                 </View>
-
                 <View>
                     <SmallText>NOTES</SmallText>
                     <View style = {styles.buttonContainer}>

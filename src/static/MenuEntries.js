@@ -6,7 +6,6 @@ export const MenuEntries = [
 
         levels:[
                 {
-
                     levelName: "Warm Up",
                     instruments: ["piano"],
                     octaves: [3],

@@ -40,12 +40,12 @@ class GlobalSettings extends Component {
         let rep = await AsyncStorage.getItem("rep");
         this.setState({
             rep: rep,
-            loaded: true,
-        });
+            loaded: true
+        }, () => this.forceUpdate());
     }
 
     async changeRep() {
-        let rep = await AsyncStorage.getItem("rep");
+        rep = await AsyncStorage.getItem("rep");
         rep = await JSON.parse(rep);
         if (rep) {
             this.setState({
@@ -77,54 +77,61 @@ class GlobalSettings extends Component {
     }
 
     render() {
-        return (<SafeAreaView style={GlobalStyles.container}>
-                <Header leftIcon="backButton" leftOnPress={() => this.props.navigation.goBack()}>
-                    Settings
-                </Header>
-                <View style={styles.container}>
-                    <View style={styles.settingContainer}>
-                        <SmallText>REPRESENTATION: </SmallText>
-                        <View style={styles.setting}>
-                            <Picker
-                                mode="dropdown"
-                                selectedValue={(this.state && this.state.rep) || '#'}
-                                onValueChange={this.repSelected}
-                                itemStyle={styles.representationItem}>
-                                {
-                                    this.state.representationOptions.map(
-                                        (item) => (
-                                            <SmallText key={item.id} label={item.name}
-                                                       value={item.id}>{item.name}</SmallText>
+        console.warn(this.state.rep);
+        if (this.state.loaded) {
+            console.warn('Loaded now', this.state.rep);
+            return (
+                <SafeAreaView style={GlobalStyles.container}>
+                    <Header leftIcon="backButton" leftOnPress={() => this.props.navigation.goBack()}>
+                        Settings
+                    </Header>
+                    <View style={styles.container}>
+                        <View style={styles.settingContainer}>
+                            <SmallText>REPRESENTATION: </SmallText>
+                            <View style={styles.setting}>
+                                <Picker
+                                    mode="dropdown"
+                                    selectedValue={this.state.rep}
+                                    onValueChange={this.repSelected}
+                                    itemStyle={styles.representationItem}>
+                                    {
+                                        this.state.representationOptions.map(
+                                            (item) => (
+                                                <SmallText key={item.id} label={item.name}
+                                                           value={item.id}>{item.name}</SmallText>
+                                            )
                                         )
-                                    )
-                                }
-                            </Picker>
+                                    }
+                                </Picker>
+                            </View>
                         </View>
-                    </View>}
-                    <SmallText>ABOUT</SmallText>
-                    <ParagraphText style={{textAlign: "justify", marginBottom: 30, marginTop: 10}}>
-                        First Pitch came from a fascination with perfect pitch.
-                        Over time, our ears become used to the timbre of instruments
-                        and the pitches of notes, that is the point where people learn relative pitch
-                        rather than perfect pitch. That is why the first pitch every day is the most important:
-                        because your ears are the freshest right then.
-                    </ParagraphText>
-                    <View style={styles.buttonContainer}>
-                        <TextButton size="small" inverse={true} onPress={this.resetApp}>Reset App</TextButton>
-                        <TextButton size="small" inverse={true}
-                                    onPress={() => Linking.openURL('mailto:firstpitchapp@gmail.com,')}>Contact
-                            Us</TextButton>
-                    </View>
-                    <View style={styles.credits}>
-                        <ParagraphText style={[styles.creditsText]}>Developed by Harry Zhang and Shreyash Patodia
-                            2018</ParagraphText>
-                        <ParagraphText style={[styles.creditsText]}>Icon made by SmashIcons from
-                            www.flaticon.com</ParagraphText>
-                    </View>
+                        <SmallText>ABOUT</SmallText>
+                        <ParagraphText style={{textAlign: "justify", marginBottom: 30, marginTop: 10}}>
+                            First Pitch came from a fascination with perfect pitch.
+                            Over time, our ears become used to the timbre of instruments
+                            and the pitches of notes, that is the point where people learn relative pitch
+                            rather than perfect pitch. That is why the first pitch every day is the most important:
+                            because your ears are the freshest right then.
+                        </ParagraphText>
+                        <View style={styles.buttonContainer}>
+                            <TextButton size="small" inverse={true} onPress={this.resetApp}>Reset App</TextButton>
+                            <TextButton size="small" inverse={true}
+                                        onPress={() => Linking.openURL('mailto:firstpitchapp@gmail.com,')}>Contact
+                                Us</TextButton>
+                        </View>
+                        <View style={styles.credits}>
+                            <ParagraphText style={[styles.creditsText]}>Developed by Harry Zhang and Shreyash Patodia
+                                2018</ParagraphText>
+                            <ParagraphText style={[styles.creditsText]}>Icon made by SmashIcons from
+                                www.flaticon.com</ParagraphText>
+                        </View>
 
-                </View>
-            </SafeAreaView>
-        );
+                    </View>
+                </SafeAreaView>
+            );
+        } else {
+            return <View></View>;
+        }
     }
 }
 
@@ -156,6 +163,5 @@ const styles = {
     setting: {
         flex: 1,
     }
-};
-
+}
 export default withMappedNavigationProps()(GlobalSettings);

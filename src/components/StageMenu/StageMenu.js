@@ -44,8 +44,6 @@ class StageMenu extends Component {
                 levelNum +=1;
             }
         }
-        console.warn(levelNum);
-
     }
 
     goBack() {

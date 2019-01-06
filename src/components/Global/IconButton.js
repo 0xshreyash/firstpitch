@@ -9,7 +9,7 @@ class IconButton extends Component {
         if(this.props.pauseButtonIsTOOPHAT == true){
             styles.button.height= 30
             styles.button.width= 30
-            console.warn("istoophat")
+            // console.warn("istoophat")
         }
 
     }

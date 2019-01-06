@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {AsyncStorage, Dimensions, Text, TouchableOpacity, View, SafeAreaView, Image} from 'react-native';
+import {Platform, AsyncStorage, Dimensions, Text, TouchableOpacity, View, SafeAreaView, Image} from 'react-native';
 import {withNavigation, NavigationActions, StackActions} from 'react-navigation';
 import Buttons from '@assets/buttons';
 import SoundPlayer from 'react-native-sound-player';
@@ -8,12 +8,12 @@ import {TextButton,
         Wave,
         LargeText,
         Header,
-        IconButton,
         SmallText,
-        ParagraphText,
-        Piano} from "../Index"
+        } from "../Index"
 
 const {width: viewportWidth, height: viewportHeight} = Dimensions.get('window');
+
+const ios = Platform.OS === 'ios';
 
 class MainMenu extends Component {
 
@@ -72,7 +72,7 @@ class MainMenu extends Component {
                           numberOfWaves={1}
                           amplitude={0.25}
                           height={150}
-                          primaryWaveLineWidth={150}/>
+                          primaryWaveLineWidth={ios ? 1 : 150}/>
                 </View>
                 <LargeText style = {styles.titleText}>FIRST{"\n"}PITCH</LargeText>
                 <View style = {styles.buttonContainer}>
@@ -97,7 +97,7 @@ class MainMenu extends Component {
 const styles = {
     waveContainer:{
         position: "absolute",
-        top: "40%",
+        top: "20%",
     },
     buttonContainer:{
         padding: 20,
